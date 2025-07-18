@@ -38,3 +38,8 @@ This script takes the preprocessed data and uses the GLiner model to perform nam
     *   For each chunk, it uses the `gliner.predict_entities` function to identify and label entities based on a predefined set of labels (e.g., "person", "organization", "date").
 
 This entire process allows for the efficient and accurate extraction of valuable information from large and complex legal documents.
+
+
+###Results
+
+<img width="738" height="821" alt="image" src="https://github.com/user-attachments/assets/a3718bea-1187-4c14-8436-792ff171d340" />
