@@ -1,0 +1,64 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# PyCharm/VSCode
+.idea/
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Model checkpoints and data
+*.pt
+*.pth
+*.ckpt
+*.bin
+models/
+checkpoints/
+wandb/
+
+# Logs and databases
+*.log
+*.sqlite
+logs/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# PyTorch/CUDA specific
+*.so
+torch.dll
+*.dll
+
+# Project specific
+extracted_entities.csv

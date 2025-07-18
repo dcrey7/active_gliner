@@ -1,0 +1,35 @@
+[project]
+name = "active-gliner"
+version = "0.1.0"
+description = "Large text processing with GLiNER NER model"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0.0",
+    "tqdm>=4.65.0",
+    "transformers>=4.36.0",
+    "datasets>=2.14.0",
+    "gliner>=0.2.0",
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "torchaudio>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+]
+
+
+
+[tool.uv]
+# Don't set a custom index-url globally
+
+[tool.uv.sources]
+# Only use PyTorch index for PyTorch packages
+torch = { url = "https://download.pytorch.org/whl/cu121/torch-2.1.0%2Bcu121-cp311-cp311-win_amd64.whl" }
+torchvision = { url = "https://download.pytorch.org/whl/cu121/torchvision-0.16.0%2Bcu121-cp311-cp311-win_amd64.whl" }
+torchaudio = { url = "https://download.pytorch.org/whl/cu121/torchaudio-2.1.0%2Bcu121-cp311-cp311-win_amd64.whl" }
