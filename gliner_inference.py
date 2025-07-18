@@ -7,6 +7,8 @@ import torch
 from tqdm import tqdm
 from gliner import GLiNER
 from transformers import AutoTokenizer
+import json
+import gzip
 
 # Configure logging
 logging.basicConfig(
@@ -73,44 +75,52 @@ class GLiNERLargeTextProcessor:
     
     def create_chunks_with_overlap(self, text: str, chunk_size: int = 384, overlap: int = 64) -> List[Tuple[str, int]]:
         """
-        Create overlapping chunks from text.
-        
+        Create overlapping chunks from text based on character counts and word boundaries.
+        This method ensures the character offsets are exact, preventing entity fragmentation.
+
         Args:
             text: Input text to chunk
-            chunk_size: Size of each chunk in tokens
-            overlap: Number of overlapping tokens between chunks
+            chunk_size: Target size of each chunk in TOKENS. This will be approximated to characters.
+            overlap: Target overlap between chunks in TOKENS. This will be approximated to characters.
             
         Returns:
-            List of tuples (chunk_text, start_offset)
+            List of tuples (chunk_text, exact_start_character_offset)
         """
-        # Tokenize the entire text
-        tokens = self.tokenizer.encode(text, add_special_tokens=False)
+        logger.info(f"Creating chunks with word-boundary awareness...")
+        
+        # Approximate character sizes from token sizes. A token is roughly 4 chars.
+        char_chunk_size = chunk_size * 4
+        char_overlap = overlap * 4
         
         chunks = []
-        stride = chunk_size - overlap
+        current_pos = 0
+        text_len = len(text)
         
-        logger.info(f"Creating chunks: chunk_size={chunk_size}, overlap={overlap}, stride={stride}")
-        
-        for i in range(0, len(tokens), stride):
-            # Get chunk tokens
-            chunk_tokens = tokens[i:i + chunk_size]
+        while current_pos < text_len:
+            end_pos = min(current_pos + char_chunk_size, text_len)
             
-            # Decode back to text
-            chunk_text = self.tokenizer.decode(chunk_tokens, skip_special_tokens=True)
+            # If we are not at the end of the text, find the next space to avoid splitting a word.
+            if end_pos < text_len:
+                while end_pos > current_pos and not text[end_pos].isspace():
+                    end_pos -= 1
             
-            # Calculate character offset in original text
-            # This is approximate due to tokenization
-            prefix_tokens = tokens[:i]
-            prefix_text = self.tokenizer.decode(prefix_tokens, skip_special_tokens=True)
-            start_offset = len(prefix_text)
+            # If we couldn't find a space (e.g., a very long word), we'll just use the hard cut.
+            if end_pos == current_pos:
+                end_pos = min(current_pos + char_chunk_size, text_len)
             
-            chunks.append((chunk_text, start_offset))
+            chunk_text = text[current_pos:end_pos]
+            chunks.append((chunk_text, current_pos)) # The offset is the exact current_pos
             
-            # Stop if we've processed all tokens
-            if i + chunk_size >= len(tokens):
-                break
-                
-        logger.info(f"Created {len(chunks)} chunks from {len(tokens)} total tokens")
+            # Move to the next chunk position
+            next_start_pos = end_pos - char_overlap
+            
+            # Ensure we are making progress and don't get stuck in an infinite loop
+            if next_start_pos <= current_pos:
+                current_pos = end_pos
+            else:
+                current_pos = next_start_pos
+
+        logger.info(f"Created {len(chunks)} chunks from {text_len} total characters.")
         return chunks
     
     def merge_overlapping_entities(self, entities: List[Dict]) -> List[Dict]:
@@ -126,34 +136,42 @@ class GLiNERLargeTextProcessor:
         if not entities:
             return []
         
-        # Sort by start position
-        sorted_entities = sorted(entities, key=lambda x: x['start'])
+        # Sort by start position, then by score descending to prioritize higher-confidence entities
+        sorted_entities = sorted(entities, key=lambda x: (x['start'], -x['score']))
         
         merged = []
-        current = sorted_entities[0]
-        
-        for entity in sorted_entities[1:]:
-            # Check if entities overlap
-            if (entity['start'] <= current['end'] and 
-                entity['label'] == current['label'] and
-                abs(entity['start'] - current['start']) < 50):  # Similar position
-                
-                # Keep the one with higher confidence
-                if entity['score'] > current['score']:
-                    current = entity
+        if not sorted_entities:
+            return merged
+
+        current_entity = sorted_entities[0]
+
+        for next_entity in sorted_entities[1:]:
+            # Check for overlap: if next_entity starts before current_entity ends
+            if next_entity['start'] < current_entity['end']:
+                # If they overlap, we decide which one to keep.
+                # Since we sorted by score descending, the current_entity is likely better.
+                # We can refine this logic, e.g., if one is fully contained in another.
+                # For simplicity, we keep the one that started first and had a higher score.
+                # If next_entity has a higher score, we might replace current_entity
+                if next_entity['score'] > current_entity['score']:
+                    # This check prevents a shorter, high-score entity from overwriting a longer one
+                    # if they are not the same label or very similar.
+                    if next_entity['end'] > current_entity['end']:
+                         current_entity = next_entity
+                # Otherwise, we just skip the `next_entity` as it's an inferior overlap
             else:
-                # No overlap, add current and move to next
-                merged.append(current)
-                current = entity
+                # No overlap, so we finalize the current_entity
+                merged.append(current_entity)
+                current_entity = next_entity
         
-        # Don't forget the last entity
-        merged.append(current)
+        # Add the last entity
+        merged.append(current_entity)
         
         logger.info(f"Merged {len(entities)} entities down to {len(merged)}")
         return merged
     
     def process_text(self, text: str, labels: List[str], chunk_size: int = 384, 
-                    overlap: int = 64, threshold: float = 0.5) -> Tuple[pd.DataFrame, ProcessingStats]:
+                     overlap: int = 64, threshold: float = 0.5) -> Tuple[pd.DataFrame, ProcessingStats]:
         """
         Process large text and extract entities.
         
@@ -195,7 +213,7 @@ class GLiNERLargeTextProcessor:
                         threshold=threshold
                     )
                     
-                    # Adjust positions based on chunk offset
+                    # Adjust positions based on chunk's EXACT offset
                     for entity in chunk_entities:
                         entity['start'] += offset
                         entity['end'] += offset
@@ -214,7 +232,7 @@ class GLiNERLargeTextProcessor:
         logger.info(f"Found {len(all_entities)} total entities before merging")
         merged_entities = self.merge_overlapping_entities(all_entities)
         
-        # Extract actual text for each entity
+        # Extract actual text for each entity using now-correct coordinates
         for entity in merged_entities:
             try:
                 entity['text'] = text[entity['start']:entity['end']]
@@ -265,7 +283,8 @@ class GLiNERLargeTextProcessor:
         print(f"Total text length: {stats.total_text_length:,} characters")
         print(f"Total tokens: {stats.total_tokens:,}")
         print(f"Number of chunks: {stats.num_chunks}")
-        print(f"Average chunk size: {sum(stats.chunk_sizes)/len(stats.chunk_sizes):.1f} tokens")
+        if stats.chunk_sizes:
+            print(f"Average chunk size: {sum(stats.chunk_sizes)/len(stats.chunk_sizes):.1f} tokens")
         print(f"Overlap size: {stats.overlap_size} tokens")
         print(f"Processing time: {stats.processing_time:.2f} seconds")
         print(f"Entities found: {stats.entities_found}")
@@ -275,34 +294,81 @@ class GLiNERLargeTextProcessor:
 
 # Example usage
 if __name__ == "__main__":
-    from datasets import load_dataset
+    # from datasets import load_dataset
     
     # Load dataset
-    logger.info("Loading dataset...")
-    ds = load_dataset("hugsid/legal-contracts", split="train")
+    # logger.info("Loading dataset...")
+    # ds = load_dataset("hugsid/legal-contracts", split="train")
+    # Show a side-by-side comparison from the saved files
     
-    # Initialize processor with the large model
-    processor = GLiNERLargeTextProcessor(model_name="xomad/gliner-model-merge-large-v1.0")
+    def show_raw_example(file_path, doc_id=0):
+        """Loads and displays a single raw document from a .jsonl.gz file."""
+        logger.info("\n--- RAW EXAMPLE (ID: {}) ---".format(doc_id))
+        try:
+            with gzip.open(file_path, 'rt', encoding='utf-8') as f:
+                for line in f:
+                    item = json.loads(line)
+                    if item.get("id") == doc_id:
+                        raw_text = item.get("text", "Text not found.")
+                        logger.info(f"Total Chars: {len(raw_text)}\nPreview: {raw_text[:100]}...")
+                        # This function doesn't need to return anything for the script flow
+                        return
+            logger.warning(f"Document with ID {doc_id} not found in {file_path}")
+        except FileNotFoundError:
+            logger.error(f"Raw data file not found at: {file_path}")
+
+
+    def show_processed_example(file_path, doc_id=0):
+        """Loads and displays a single processed document from a .parquet file."""
+        logger.info("\n--- PROCESSED EXAMPLE (ID: {}) ---".format(doc_id))
+        try:
+            df = pd.read_parquet(file_path)
+            doc = df[df['id'] == doc_id]
+            if not doc.empty:
+                processed_text = doc['text'].iloc[0]
+                logger.info(f"Total Chars: {len(processed_text)}\nPreview: {processed_text[:100]}...")
+                return processed_text # Return the full text for processing
+            else:
+                logger.warning(f"Document with ID {doc_id} not found in {file_path}")
+                return None
+        except FileNotFoundError:
+            logger.error(f"Processed data file not found at: {file_path}")
+            return None
+
+    EXAMPLE_ID = 0
+    show_raw_example("./data/raw/legal_contracts_sample.jsonl.gz", doc_id=EXAMPLE_ID)
+    text = show_processed_example("./data/processed/legal_contracts_processed.parquet", doc_id=EXAMPLE_ID)
     
-    # Process text
-    text = ds[1]['text']
-    labels = ["person", "organization", "location", "date", "money", "percentage"]
-    
-    # Run processing
-    results_df, stats = processor.process_text(
-        text=text,
-        labels=labels,
-        chunk_size=384,  # Adjust based on your needs
-        overlap=64,      # Overlap to catch entities at boundaries
-        threshold=0.5
-    )
-    
-    # Display results
-    print("\nENTITY EXTRACTION RESULTS")
-    print(results_df.head(20))  # Show top 20 entities
-    
-    # Display statistics
-    processor.print_stats(stats)
-    
-    # Save results if needed
-    # results_df.to_csv("extracted_entities.csv", index=False)
+    if text:
+        # Initialize processor with the large model
+        processor = GLiNERLargeTextProcessor(model_name="xomad/gliner-model-merge-large-v1.0")
+        
+        # Process text
+        # text = ds[1]['text']
+        
+        labels = ["person", "company", "location", "date", "money", "percentage"]
+        
+        # Run processing
+        results_df, stats = processor.process_text(
+            text=text,
+            labels=labels,
+            chunk_size=384,  # Adjust based on your needs
+            overlap=64,      # Overlap to catch entities at boundaries
+            threshold=0.5
+        )
+        
+        # Display results
+        print("\nENTITY EXTRACTION RESULTS")
+        results_df = (results_df
+              .sort_values('Probability Score', ascending=False)
+              .drop_duplicates(subset=['Value', 'Entity'], keep='first')
+              .reset_index(drop=True))
+        print(results_df.head(20))  # Show top 20 entities
+        
+        # Display statistics
+        processor.print_stats(stats)
+        
+        # Save results if needed
+        # results_df.to_csv("extracted_entities.csv", index=False)
+    else:
+        logger.error("Could not load processed text, skipping GLiNER processing.")
