@@ -352,7 +352,7 @@ if __name__ == "__main__":
         results_df, stats = processor.process_text(
             text=text,
             labels=labels,
-            chunk_size=384,  # Adjust based on your needs
+            chunk_size=1000,  # Adjust based on your needs
             overlap=64,      # Overlap to catch entities at boundaries
             threshold=0.5
         )

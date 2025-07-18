@@ -17,7 +17,7 @@ This script is responsible for taking the raw data and transforming it into a fo
 
 #### Key Functions
 
-*   **Dataset**: The raw data is sourced from the `Hugging Face` dataset `nlpaueb/legal-contracts`. A sample of this dataset is provided in `data/raw/legal_contracts_sample.jsonl.gz`.
+*   **Dataset**: The raw data is sourced from the `Hugging Face` dataset `nlpaueb/legal-contracts`(https://huggingface.co/datasets/albertvillanova/legal_contracts/blob/main/legal_contracts.py). A sample of this dataset is provided in `data/raw/legal_contracts_sample.jsonl.gz`.
 *   **Sentence Segmentation**: The script uses the `spaCy` library to intelligently split the legal text into individual sentences. This is a crucial step to ensure that the meaning and context of the text are preserved.
 *   **Chunking Strategy**:
     *   Legal documents can be very long. To handle this, the script splits the text into smaller, manageable chunks.
@@ -32,7 +32,7 @@ This script takes the preprocessed data and uses the GLiner model to perform nam
 
 #### Key Functions
 
-*   **Model**: The script loads a pre-trained `GLiner` model from `Hugging Face`: `urchade/gliner_base`. This model has been trained to recognize a variety of entities and can be adapted for specific use cases.
+*   **Model**: The script loads a pre-trained `GLiner` model from `Hugging Face`: `urchade/gliner_base` (https://huggingface.co/xomad/gliner-model-merge-large-v1.0). This model has been trained to recognize a variety of entities and can be adapted for specific use cases.
 *   **Inference**:
     *   The script reads the processed data (the text chunks).
     *   For each chunk, it uses the `gliner.predict_entities` function to identify and label entities based on a predefined set of labels (e.g., "person", "organization", "date").
