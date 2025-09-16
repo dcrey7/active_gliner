@@ -1,10 +1,10 @@
 """
-Simple Synthetic Data Generator with Mistral Inference
-Sweet, Simple, and Solid - Fully Generic Approach
+Simple Synthetic Data Generator with Mistral Inference and Token Tracking
+Sweet, Simple, and Solid - Fully Generic Approach with Exact Token Metrics
 
 Usage:
     generator = SyntheticDataGenerator()
-    data = generator.generate(
+    data, avg_entities, token_metrics = generator.generate(
         corrected_examples=examples,
         num_samples=100,
         entity_types=["PERSON", "ORG", "LOCATION"],
@@ -18,7 +18,7 @@ Usage:
 import json
 import random
 import sys
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 from tqdm import tqdm
 from pathlib import Path
 
@@ -27,12 +27,20 @@ from mistral_inference.generate import generate
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
-
+from utils.logging import setup_logging
+from utils.reproducibility import set_all_seeds
+from utils.device import setup_device
 from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
+from config.settings import Settings
 
+settings = Settings()
+settings.setup()
+logger = setup_logging(log_dir=str(settings.logs_dir))
+set_all_seeds(seed=settings.global_seed, logger=logger)
+device = setup_device(logger=logger)
 
 class SyntheticDataGenerator:
-    """Simple, generic synthetic data generator using Mistral Inference"""
+    """Simple, generic synthetic data generator using Mistral Inference with exact token tracking"""
     
     def __init__(self, model_path: str = None):
         """
@@ -46,15 +54,29 @@ class SyntheticDataGenerator:
         else:
             self.model_path = Path(model_path)
         
-        print(f"Loading Mistral model from: {self.model_path}")
+        logger.info(f"Loading Mistral model from: {self.model_path}")
         
         # Initialize tokenizer and model
         tokenizer_path = self.model_path / "tokenizer.model.v3"
         self.tokenizer = MistralTokenizer.from_file(str(tokenizer_path))
         self.model = Transformer.from_folder(self.model_path)
         self.model_name = "MISTRAL 7B v0.3 (mistral inference)"
-        print(f"✅ Mistral model loaded successfully")
-        print(f"Mistral model loaded from {self.model_path}")
+        logger.info(f"✅ Mistral model loaded successfully")
+        logger.info(f"Mistral model loaded from {self.model_path}")
+    
+    def _count_tokens(self, text: str) -> int:
+        """
+        Count exact tokens using Mistral tokenizer
+        
+        Args:
+            text: Text to tokenize
+            
+        Returns:
+            Exact token count
+        """
+        # Use the tokenizer to get exact token count
+        tokens = self.tokenizer.instruct_tokenizer.tokenizer.encode(text, bos=False, eos=False)
+        return len(tokens)
     
     def _create_prompt(self, corrected_examples: List[Dict], entity_types: List[str], 
                       subject: str, country: str, genre: str) -> str:
@@ -143,9 +165,9 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
         
         return prompt
     
-    def _generate_single_sample(self, prompt: str, max_tokens: int = 800, temperature: float = 0.7) -> str:
+    def _generate_single_sample(self, prompt: str, max_tokens: int = 800, temperature: float = 0.7) -> Tuple[str, int, int]:
         """
-        Generate a single sample using Mistral inference
+        Generate a single sample using Mistral inference with exact token tracking
         
         Args:
             prompt: The generation prompt
@@ -153,15 +175,16 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             temperature: Generation temperature
             
         Returns:
-            Generated text response
+            Tuple of (generated_text, input_tokens, output_tokens)
         """
         # Create chat completion request
         completion_request = ChatCompletionRequest(
             messages=[UserMessage(content=prompt)]
         )
         
-        # Encode the prompt
+        # Encode the prompt and count input tokens
         tokens = self.tokenizer.encode_chat_completion(completion_request).tokens
+        input_token_count = len(tokens)
         
         # Generate response
         out_tokens, _ = generate(
@@ -172,16 +195,19 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             eos_id=self.tokenizer.instruct_tokenizer.tokenizer.eos_id
         )
         
+        # Count output tokens (out_tokens[0] is already just the generated tokens)
+        output_token_count = len(out_tokens[0])
+        
         # Decode the response
         result = self.tokenizer.instruct_tokenizer.tokenizer.decode(out_tokens[0])
         
-        return result
+        return result, input_token_count, output_token_count
     
     def generate(self, corrected_examples: List[Dict], num_samples: int, 
                 entity_types: List[str], countries: List[str], genres: List[str], syn_cache: List[str],
-                subject: str, verbose: bool = True) -> List[Dict]:
+                subject: str, verbose: bool = True) -> Tuple[List[Dict], float, Dict[str, Any]]:
         """
-        Generate synthetic data with full user control
+        Generate synthetic data with full user control and exact token tracking from Mistral
         
         Args:
             corrected_examples: Template examples showing desired format/style
@@ -194,31 +220,53 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             verbose: Whether to show progress
             
         Returns:
-            List of cleaned NER formatted examples (cached + newly generated)
+            Tuple of (cleaned NER formatted examples, avg_entities, token_metrics)
+            token_metrics contains: avg_input_tokens (exact), model_input_output (limits), avg_output_tokens (exact)
         """
         if verbose:
-            print("="*60)
-            print("SYNTHETIC DATA GENERATION (MISTRAL)")
-            print("="*60)
-            print(f"Model path: {self.model_path}")
-            print(f"Subject: {subject}")
-            print(f"Entity types: {entity_types}")
-            print(f"Countries: {countries}")
-            print(f"Genres: {genres}")
-            print(f"Template examples: {len(corrected_examples)}")
-            print(f"Target samples: {num_samples}")
-            print(f"Cached samples: {len(syn_cache)}")
-            print("="*60)
+            logger.info("="*60)
+            logger.info("SYNTHETIC DATA GENERATION (MISTRAL)")
+            logger.info("="*60)
+            logger.info(f"Model path: {self.model_path}")
+            logger.info(f"Subject: {subject}")
+            logger.info(f"Entity types: {entity_types}")
+            logger.info(f"Countries: {countries}")
+            logger.info(f"Genres: {genres}")
+            logger.info(f"Template examples: {len(corrected_examples)}")
+            logger.info(f"Target samples: {num_samples}")
+            logger.info(f"Cached samples: {len(syn_cache)}")
+            logger.info("="*60)
+        
+        # Initialize token tracking
+        input_tokens_list = []
+        output_tokens_list = []
+        
+        # Model configuration for Mistral 7B
+        model_context_limit = 32768  # Mistral 7B context window
+        model_output_limit = 800     # Max generation tokens
+        model_limits = (model_context_limit, model_output_limit)
         
         # Calculate how many new samples we actually need
         if len(syn_cache) >= num_samples:
             if verbose:
-                print(f"✅ Using {num_samples} samples from cache (no generation needed)")
-            return syn_cache[:num_samples]
+                logger.info(f"✅ Using {num_samples} samples from cache (no generation needed)")
+            
+            avg_entities = sum(len(ex['ner']) for ex in syn_cache[:num_samples]) / len(syn_cache[:num_samples])
+            
+            token_metrics = {
+                'avg_input_tokens': 0,  # No generation, so no input
+                'model_input_output': model_limits,
+                'avg_output_tokens': 0,  # No generation, so no output
+            }
+            
+            if verbose:
+                logger.info(f"📊 Token metrics (cached): model_limits={model_limits}, no generation needed")
+            
+            return syn_cache[:num_samples], avg_entities, token_metrics
         
         no_new_syn_needed = num_samples - len(syn_cache)
         if verbose:
-            print(f"📝 Need to generate {no_new_syn_needed} new samples ({len(syn_cache)} already cached)")
+            logger.info(f"📝 Need to generate {no_new_syn_needed} new samples ({len(syn_cache)} already cached)")
         
         synthetic_outputs = []
         
@@ -240,15 +288,21 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             # Immediate retry logic
             max_retries = 3
             success = False
-            print(f"generating {i+1} sample")
+            if verbose:
+                logger.info(f"generating {i+1} sample")
+            
             for attempt in range(max_retries + 1):  # +1 for initial attempt
                 try:
-                    # Generate with Mistral inference
-                    response_text = self._generate_single_sample(
+                    # Generate with Mistral inference and get exact token counts
+                    response_text, input_tokens, output_tokens = self._generate_single_sample(
                         prompt=prompt,
-                        max_tokens=800,
+                        max_tokens=model_output_limit,
                         temperature=0.7
                     )
+                    
+                    # Store exact token counts
+                    input_tokens_list.append(input_tokens)
+                    output_tokens_list.append(output_tokens)
                     
                     # Clean up response (remove any markdown formatting and extract JSON)
                     response_text = response_text.strip()
@@ -280,65 +334,95 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
                     js = json.loads(response_text)
                     synthetic_outputs.append(js)
                     success = True
+                    logger.info(f"used [{country,subject,genre} to get sample: {js}] ")
                     break  # Success, exit retry loop
                     
                 except json.JSONDecodeError as e:
                     error_msg = f"⚠️ JSON parsing failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        print(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
+                        logger.info(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
                         sys.stdout.flush()  # Force flush for Jupyter notebooks
                     if attempt == max_retries:
                         if verbose:
-                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            logger.info(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                        # Add zeros for failed attempts (no token data available)
+                        input_tokens_list.append(0)
+                        output_tokens_list.append(0)
                 except Exception as e:
                     error_msg = f"❌ Generation failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        print(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
+                        logger.info(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
                         sys.stdout.flush()  # Force flush for Jupyter notebooks
                     if attempt == max_retries:
                         if verbose:
-                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            logger.info(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                        # Add zeros for failed attempts (no token data available)
+                        input_tokens_list.append(0)
+                        output_tokens_list.append(0)
                 
             if verbose and success and i % 10 == 0:
-                print(f"\n✅ Generated {i+1}/{no_new_syn_needed} samples...", flush=True)
+                # logger.info token metrics every 10 samples using EXACT counts
+                avg_input_so_far = sum(input_tokens_list) / len(input_tokens_list) if input_tokens_list else 0
+                avg_output_so_far = sum(output_tokens_list) / len(output_tokens_list) if output_tokens_list else 0
+                logger.info(f"\n✅ Generated {i+1}/{no_new_syn_needed} samples...")
+                logger.info(f"📊 EXACT Token metrics: avg_input={avg_input_so_far:.0f}, avg_output={avg_output_so_far:.0f}, limits={model_limits}", flush=True)
                 sys.stdout.flush()
         
         if verbose:
-            print(f"\n✅ Successfully generated {len(synthetic_outputs)}/{no_new_syn_needed} raw samples")
+            logger.info(f"\n✅ Successfully generated {len(synthetic_outputs)}/{no_new_syn_needed} raw samples")
         
         # Convert to NER format using existing pipeline
         ner_formatted_data = convert_synthetic_to_ner_format(synthetic_outputs)
         if verbose:
-            print(f"📝 Converted to NER format: {len(ner_formatted_data)} examples")
+            logger.info(f"📝 Converted to NER format: {len(ner_formatted_data)} examples")
         
         # Clean and validate using existing pipeline
         cleaned_data = validate_and_clean_ner_data(ner_formatted_data, entity_types)
         
         if verbose:
-            print(f"🧹 Final cleaned examples: {len(cleaned_data)}")
+            logger.info(f"🧹 Final cleaned examples: {len(cleaned_data)}")
         
         # Add new cleaned data to cache
         syn_cache.extend(cleaned_data)
         
+        # Calculate average entities
+        samples_for_stats = syn_cache[:num_samples]
+        avg_entities = sum(len(ex['ner']) for ex in samples_for_stats) / len(samples_for_stats) if samples_for_stats else 0
+        
+        # Calculate token metrics
+        token_metrics = {
+            'avg_input_tokens': sum(input_tokens_list) / len(input_tokens_list) if input_tokens_list else 0,
+            'model_input_output': model_limits,
+            'avg_output_tokens': sum(output_tokens_list) / len(output_tokens_list) if output_tokens_list else 0,
+        }
+        
         if verbose:
-            print(f"💾 Cache updated: {len(syn_cache)} total samples")
-            print("="*60)
+            logger.info(f"💾 Cache updated: {len(syn_cache)} total samples")
+            logger.info("="*60)
+            
+            # Show token metrics
+            logger.info(f"📊 TOKEN METRICS (EXACT FROM MISTRAL TOKENIZER):")
+            logger.info(f"   Average input tokens: {token_metrics['avg_input_tokens']:.0f} (EXACT)")
+            logger.info(f"   Model limits (input,output): {token_metrics['model_input_output']}")
+            logger.info(f"   Average output tokens: {token_metrics['avg_output_tokens']:.0f} (EXACT)")
+            
+            # Warning if approaching limits
+            if token_metrics['avg_input_tokens'] > model_context_limit * 0.9:
+                logger.info(f"⚠️  WARNING: Input tokens approaching context limit!")
+            if token_metrics['avg_output_tokens'] > model_output_limit * 0.9:
+                logger.info(f"⚠️  WARNING: Output tokens approaching generation limit!")
             
             # Show some stats for all data (cached + new)
-            if syn_cache:
-                # Use first num_samples for stats
-                samples_for_stats = syn_cache[:num_samples]
-                total_entities = sum(len(ex['ner']) for ex in samples_for_stats)
-                avg_entities = total_entities / len(samples_for_stats)
-                print(f"📊 Average entities per example: {avg_entities:.1f}")
+            if samples_for_stats:
+                logger.info(f"📊 Average entities per example: {avg_entities:.1f}")
                 
                 # Entity type distribution
                 entity_counts = {}
                 for ex in samples_for_stats:
                     for _, _, label in ex['ner']:
                         entity_counts[label] = entity_counts.get(label, 0) + 1
-                print(f"📈 Entity distribution: {entity_counts}")
-            print("="*60)
+                logger.info(f"📈 Entity distribution: {entity_counts}")
+            logger.info("="*60)
 
         # Return exactly num_samples (from cache + newly generated)
-        return syn_cache[:num_samples],avg_entities
+        return syn_cache[:num_samples], avg_entities, token_metrics

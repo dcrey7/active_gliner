@@ -167,7 +167,7 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
         output_tokens_list = []
         
         # Model configuration (from your current settings)
-        model_context_limit = 12800
+        model_context_limit = 128000
         model_output_limit = 800
         model_limits = (model_context_limit, model_output_limit)
         
@@ -248,6 +248,7 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
                     js = json.loads(response_text)
                     synthetic_outputs.append(js)
                     success = True
+                    print(f"used [{country,subject,genre} to get sample: {js}] ")
                     break  # Success, exit retry loop
                     
                 except json.JSONDecodeError as e:
