@@ -27,7 +27,7 @@ from mistral_inference.generate import generate
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
-from utils.logging import setup_logging
+from utils.logging import get_logger  # ← Add this import
 from utils.reproducibility import set_all_seeds
 from utils.device import setup_device
 from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
@@ -35,10 +35,9 @@ from config.settings import Settings
 
 settings = Settings()
 settings.setup()
-logger = setup_logging(log_dir=str(settings.logs_dir))
+logger = get_logger("ActiveLearning")  # ← Use existing logger, don't create new one
 set_all_seeds(seed=settings.global_seed, logger=logger)
 device = setup_device(logger=logger)
-
 class SyntheticDataGenerator:
     """Simple, generic synthetic data generator using Mistral Inference with exact token tracking"""
     
@@ -60,7 +59,7 @@ class SyntheticDataGenerator:
         tokenizer_path = self.model_path / "tokenizer.model.v3"
         self.tokenizer = MistralTokenizer.from_file(str(tokenizer_path))
         self.model = Transformer.from_folder(self.model_path)
-        self.model_name = "MISTRAL 7B v0.3 (mistral inference)"
+        self.model_name = "MISTRAL 7B v0.3 (mistrl inf)"
         logger.info(f"✅ Mistral model loaded successfully")
         logger.info(f"Mistral model loaded from {self.model_path}")
     
@@ -340,32 +339,32 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
                 except json.JSONDecodeError as e:
                     error_msg = f"⚠️ JSON parsing failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        logger.info(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
+                        print(f"\n{error_msg}", flush=True)  # print() can use flush=True
                         sys.stdout.flush()  # Force flush for Jupyter notebooks
                     if attempt == max_retries:
                         if verbose:
-                            logger.info(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
                         # Add zeros for failed attempts (no token data available)
                         input_tokens_list.append(0)
                         output_tokens_list.append(0)
                 except Exception as e:
                     error_msg = f"❌ Generation failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        logger.info(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
+                        print(f"\n{error_msg}", flush=True)  # print() can use flush=True
                         sys.stdout.flush()  # Force flush for Jupyter notebooks
                     if attempt == max_retries:
                         if verbose:
-                            logger.info(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
                         # Add zeros for failed attempts (no token data available)
                         input_tokens_list.append(0)
                         output_tokens_list.append(0)
                 
             if verbose and success and i % 10 == 0:
-                # logger.info token metrics every 10 samples using EXACT counts
+                # Log token metrics every 10 samples using EXACT counts
                 avg_input_so_far = sum(input_tokens_list) / len(input_tokens_list) if input_tokens_list else 0
                 avg_output_so_far = sum(output_tokens_list) / len(output_tokens_list) if output_tokens_list else 0
                 logger.info(f"\n✅ Generated {i+1}/{no_new_syn_needed} samples...")
-                logger.info(f"📊 EXACT Token metrics: avg_input={avg_input_so_far:.0f}, avg_output={avg_output_so_far:.0f}, limits={model_limits}", flush=True)
+                logger.info(f"📊 EXACT Token metrics: avg_input={avg_input_so_far:.0f}, avg_output={avg_output_so_far:.0f}, limits={model_limits}")  # ✅ FIXED: removed flush=True
                 sys.stdout.flush()
         
         if verbose:

@@ -8,7 +8,93 @@ import torch
 from gliner import GLiNER
 from gliner.data_processing.collator import DataCollator
 from gliner.training import Trainer, TrainingArguments
+from transformers import TrainerCallback
 from peft import LoraConfig, get_peft_model, TaskType, PeftModel
+from utils.logging import get_logger  # ← Add this import
+from utils.reproducibility import set_all_seeds
+from utils.device import setup_device
+from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
+from config.settings import Settings
+import psutil
+import time
+import pandas as np
+import numpy as np
+settings = Settings()
+
+settings.setup()
+logger = get_logger("ActiveLearning")  # ← Use existing logger, don't create new one
+set_all_seeds(seed=settings.global_seed, logger=logger)
+device = setup_device(logger=logger)
+
+
+class SimpleTrainingMonitor(TrainerCallback):
+    """Simple training monitor with resource tracking"""
+    
+    def __init__(self, patience=10):
+        self.train_losses = []
+        self.eval_losses = []
+        self.learning_rates = []
+        self.steps = []
+        self.eval_steps = []
+        self.patience = patience
+        self.best_loss = float('inf')
+        self.patience_counter = 0
+        
+        # Resource trackingPeftModel
+        self.gpu_memory = []
+        self.cpu_memory = []
+        self.timestamps = []
+        self.start_time = time.time()
+        
+    def on_log(self, args, state, control, logs=None, **kwargs):
+        if logs is not None:
+            if 'loss' in logs:
+                self.train_losses.append(logs['loss'])
+                self.steps.append(state.global_step)
+                
+                # Track resources
+                current_time = (time.time() - self.start_time) / 60  # minutes
+                self.timestamps.append(current_time)
+                
+                if torch.cuda.is_available():
+                    gpu_mem = torch.cuda.memory_allocated() / 1024**3  # GB
+                    self.gpu_memory.append(gpu_mem)
+                
+                cpu_mem = psutil.virtual_memory().percent
+                self.cpu_memory.append(cpu_mem)
+                
+            if 'learning_rate' in logs:
+                self.learning_rates.append(logs['learning_rate'])
+
+    def on_step_begin(self, args, state, control, **kwargs):
+      if state.global_step % 50 == 0:  # Every 50 steps
+          torch.cuda.empty_cache()
+          gc.collect()
+    
+    def on_evaluate(self, args, state, control, metrics=None, **kwargs):
+        if metrics is not None and 'eval_loss' in metrics:
+            eval_loss = metrics['eval_loss']
+            
+            # Check for NaN - CRITICAL FIX
+            if np.isnan(eval_loss) or np.isinf(eval_loss):
+                logger.info(f"🚨 NaN validation loss detected! Stopping training.")
+                control.should_training_stop = True
+                return
+                
+            self.eval_losses.append(eval_loss)
+            self.eval_steps.append(state.global_step)
+            
+            if eval_loss < self.best_loss:
+                self.best_loss = eval_loss
+                self.patience_counter = 0
+                logger.info(f"🎯 New best validation loss: {eval_loss:.4f}")
+            else:
+                self.patience_counter += 1
+                logger.info(f"📈 Validation loss: {eval_loss:.4f} | Patience: {self.patience_counter}/{self.patience}")
+                
+            if self.patience_counter >= self.patience:
+                logger.info("🛑 Early stopping triggered!")
+                control.should_training_stop = True
 
 
 def intialize_model():
@@ -21,9 +107,9 @@ def intialize_model():
 
     # Get base parameter count
     base_total = sum(p.numel() for p in model.model.parameters())
-    print(f"Base Parameters: {base_total:,}")
+    logger.info(f"Base Parameters: {base_total:,}")
 
-    print("\n🔧 Applying LoRA Configuration...")
+    logger.info("\n🔧 Applying LoRA Configuration...")
 
     # LoRA config
     lora_config = LoraConfig(
@@ -48,11 +134,11 @@ def intialize_model():
 
     # Apply LoRA
     model.model = get_peft_model(model.model, lora_config)
-    print("✅ LoRA applied successfully!")
+    logger.info("✅ LoRA applied successfully!")
 
     # Get LoRA parameter count
     lora_trainable = sum(p.numel() for p in model.model.parameters() if p.requires_grad)
-    print(f"📊 Trainable Parameters: {lora_trainable:,} ({100*lora_trainable/base_total:.1f}% of original)")
+    logger.info(f"📊 Trainable Parameters: {lora_trainable:,} ({100*lora_trainable/base_total:.1f}% of original)")
 
     return model
 
@@ -67,7 +153,7 @@ def load_evaluation_model(adapter_path, device='cuda'):
         model.data_processor.transformer_tokenizer.model_max_length = 8192
 
     # Load LoRA adapter
-    print(f"🔧 Loading LoRA adapters from {adapter_path}...")
+    logger.info(f"🔧 Loading LoRA adapters from {adapter_path}...")
     model.model = PeftModel.from_pretrained(model.model, adapter_path)
     model.eval()
     model.to(device)
@@ -90,10 +176,10 @@ def train_lora_model(model, train_data, eval_data, training_config, adapter_save
         bool: True if training completed successfully
     """
     
-    print(f"🚀 Starting LoRA Training...")
-    print(f"📊 Training samples: {len(train_data)}")
-    print(f"📊 Eval samples: {len(eval_data)}")
-    print(f"💾 Adapter will be saved to: {adapter_save_path}")
+    logger.info(f"🚀 Starting LoRA Training...")
+    logger.info(f"📊 Training samples: {len(train_data)}")
+    logger.info(f"📊 Eval samples: {len(eval_data)}")
+    logger.info(f"💾 Adapter will be saved to: {adapter_save_path}")
     
     # Create output directory for training checkpoints
     checkpoint_dir = os.path.join(os.path.dirname(adapter_save_path), "checkpoints")
@@ -106,6 +192,8 @@ def train_lora_model(model, train_data, eval_data, training_config, adapter_save
         data_processor=model.data_processor,
         prepare_labels=True
     )
+    monitor = SimpleTrainingMonitor(patience=training_config['patience'])
+
     
     # Create training arguments using the config
     training_args = TrainingArguments(
@@ -159,17 +247,18 @@ def train_lora_model(model, train_data, eval_data, training_config, adapter_save
         eval_dataset=eval_data,
         tokenizer=model.data_processor.transformer_tokenizer,
         data_collator=data_collator,
+        callbacks=[monitor]
     )
     
     # Start training
-    print("🔥 Training started...")
+    logger.info("🔥 Training started...")
     train_result = trainer.train()
     
     # Save the LoRA adapter weights
-    print(f"💾 Saving LoRA adapter to: {adapter_save_path}")
+    logger.info(f"💾 Saving LoRA adapter to: {adapter_save_path}")
     model.model.save_pretrained(adapter_save_path)
     
-    print("✅ Training completed successfully!")
+    logger.info("✅ Training completed successfully!")
     
     # Cleanup trainer
     del trainer

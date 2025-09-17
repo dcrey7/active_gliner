@@ -22,23 +22,22 @@ import sys
 from typing import List, Dict, Any, Tuple
 from tqdm import tqdm
 from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
+from utils.logging import get_logger
 
 
 class SyntheticDataGenerator:
-    """Simple, generic synthetic data generator using Ollama with custom Mistral model and token tracking"""
+    """Simple, generic synthetic data generator using Ollama with custom model and token tracking"""
     
     def __init__(self, model_name: str = "gemma3:12b"):
         """
         Initialize the generator
         
         Args:
-            model_name: Ollama model to use for generation (default: mistral_32k with 32k context)
+            model_name: Ollama model to use for generation
         """
-
         self.model_name = model_name
-        print(f"{self.model_name}")
-        print(self.model_name)
-    
+        self.logger = get_logger("ActiveLearning")  # Use existing logger
+        self.logger.info(f"Generator model: {self.model_name}")
 
     
     def _create_prompt(self, corrected_examples: List[Dict], entity_types: List[str], 
@@ -149,18 +148,18 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             token_metrics contains: avg_input_tokens (exact), model_input_output (limits), avg_output_tokens (exact)
         """
         if verbose:
-            print("="*60)
-            print("SYNTHETIC DATA GENERATION")
-            print("="*60)
-            print(f"Model: {self.model_name}")
-            print(f"Subject: {subject}")
-            print(f"Entity types: {entity_types}")
-            print(f"Countries: {countries}")
-            print(f"Genres: {genres}")
-            print(f"Template examples: {len(corrected_examples)}")
-            print(f"Target samples: {num_samples}")
-            print(f"Cached samples: {len(syn_cache)}")
-            print("="*60)
+            self.logger.info("="*60)
+            self.logger.info("SYNTHETIC DATA GENERATION")
+            self.logger.info("="*60)
+            self.logger.info(f"Model: {self.model_name}")
+            self.logger.info(f"Subject: {subject}")
+            self.logger.info(f"Entity types: {entity_types}")
+            self.logger.info(f"Countries: {countries}")
+            self.logger.info(f"Genres: {genres}")
+            self.logger.info(f"Template examples: {len(corrected_examples)}")
+            self.logger.info(f"Target samples: {num_samples}")
+            self.logger.info(f"Cached samples: {len(syn_cache)}")
+            self.logger.info("="*60)
         
         # Initialize token tracking
         input_tokens_list = []
@@ -174,7 +173,7 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
         # Calculate how many new samples we actually need
         if len(syn_cache) >= num_samples:
             if verbose:
-                print(f"✅ Using {num_samples} samples from cache (no generation needed)")
+                self.logger.info(f"Using {num_samples} samples from cache (no generation needed)")
             
             avg_entities = sum(len(ex['ner']) for ex in syn_cache[:num_samples]) / len(syn_cache[:num_samples])
             
@@ -185,13 +184,13 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             }
             
             if verbose:
-                print(f"📊 Token metrics (cached): model_limits={model_limits}, no generation needed")
+                self.logger.info(f"Token metrics (cached): model_limits={model_limits}, no generation needed")
             
             return syn_cache[:num_samples], avg_entities, token_metrics
         
         no_new_syn_needed = num_samples - len(syn_cache)
         if verbose:
-            print(f"📝 Need to generate {no_new_syn_needed} new samples ({len(syn_cache)} already cached)")
+            self.logger.info(f"Need to generate {no_new_syn_needed} new samples ({len(syn_cache)} already cached)")
         
         synthetic_outputs = []
         
@@ -216,7 +215,7 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
             
             for attempt in range(max_retries + 1):  # +1 for initial attempt
                 try:
-                    # Generate with Ollama (using custom model with 32k context)
+                    # Generate with Ollama (using custom model with context)
                     response = ollama.generate(
                         model=self.model_name,
                         prompt=prompt,
@@ -248,53 +247,50 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
                     js = json.loads(response_text)
                     synthetic_outputs.append(js)
                     success = True
-                    print(f"used [{country,subject,genre} to get sample: {js}] ")
+                    self.logger.info(f"used [{country,subject,genre}] to get sample: {js}")
                     break  # Success, exit retry loop
                     
                 except json.JSONDecodeError as e:
-                    error_msg = f"⚠️ JSON parsing failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
+                    error_msg = f"JSON parsing failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        print(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
-                        sys.stdout.flush()  # Force flush for Jupyter notebooks
+                        self.logger.warning(error_msg)
                     if attempt == max_retries:
                         if verbose:
-                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            self.logger.error(f"FINAL FAILURE: Sample {i+1} failed after all retries")
                         # Add zeros for failed attempts (no token data available)
                         input_tokens_list.append(0)
                         output_tokens_list.append(0)
                 except Exception as e:
-                    error_msg = f"❌ Generation failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
+                    error_msg = f"Generation failed for sample {i+1}, attempt {attempt+1}/{max_retries+1}: {str(e)[:100]}"
                     if verbose:
-                        print(f"\n{error_msg}", flush=True)  # flush=True for Jupyter
-                        sys.stdout.flush()  # Force flush for Jupyter notebooks
+                        self.logger.error(error_msg)
                     if attempt == max_retries:
                         if verbose:
-                            print(f"❌ FINAL FAILURE: Sample {i+1} failed after all retries", flush=True)
+                            self.logger.error(f"FINAL FAILURE: Sample {i+1} failed after all retries")
                         # Add zeros for failed attempts (no token data available)
                         input_tokens_list.append(0)
                         output_tokens_list.append(0)
                 
             if verbose and success and i % 10 == 0:
-                # Print token metrics every 10 samples using EXACT counts
+                # Log token metrics every 10 samples using EXACT counts
                 avg_input_so_far = sum(input_tokens_list) / len(input_tokens_list) if input_tokens_list else 0
                 avg_output_so_far = sum(output_tokens_list) / len(output_tokens_list) if output_tokens_list else 0
-                print(f"\n✅ Generated {i+1}/{no_new_syn_needed} samples...")
-                print(f"📊 EXACT Token metrics: avg_input={avg_input_so_far:.0f}, avg_output={avg_output_so_far:.0f}, limits={model_limits}", flush=True)
-                sys.stdout.flush()
+                self.logger.info(f"Generated {i+1}/{no_new_syn_needed} samples...")
+                self.logger.info(f"EXACT Token metrics: avg_input={avg_input_so_far:.0f}, avg_output={avg_output_so_far:.0f}, limits={model_limits}")
         
         if verbose:
-            print(f"\n✅ Successfully generated {len(synthetic_outputs)}/{no_new_syn_needed} raw samples")
+            self.logger.info(f"Successfully generated {len(synthetic_outputs)}/{no_new_syn_needed} raw samples")
         
         # Convert to NER format using existing pipeline
         ner_formatted_data = convert_synthetic_to_ner_format(synthetic_outputs)
         if verbose:
-            print(f"📝 Converted to NER format: {len(ner_formatted_data)} examples")
+            self.logger.info(f"Converted to NER format: {len(ner_formatted_data)} examples")
         
         # Clean and validate using existing pipeline
         cleaned_data = validate_and_clean_ner_data(ner_formatted_data, entity_types)
         
         if verbose:
-            print(f"🧹 Final cleaned examples: {len(cleaned_data)}")
+            self.logger.info(f"Final cleaned examples: {len(cleaned_data)}")
         
         # Add new cleaned data to cache
         syn_cache.extend(cleaned_data)
@@ -311,33 +307,32 @@ CRITICAL: Generate ONLY ONE example in the specified JSON format. Start immediat
         }
         
         if verbose:
-            print(f"💾 Cache updated: {len(syn_cache)} total samples")
-            print("="*60)
+            self.logger.info(f"Cache updated: {len(syn_cache)} total samples")
+            self.logger.info("="*60)
             
             # Show token metrics
-            print(f"📊 TOKEN METRICS (EXACT FROM OLLAMA):")
-            print(f"   Average input tokens: {token_metrics['avg_input_tokens']:.0f} (EXACT)")
-            print(f"   Model limits (input,output): {token_metrics['model_input_output']}")
-            print(f"   Average output tokens: {token_metrics['avg_output_tokens']:.0f} (EXACT)")
+            self.logger.info(f"TOKEN METRICS (EXACT FROM OLLAMA):")
+            self.logger.info(f"   Average input tokens: {token_metrics['avg_input_tokens']:.0f} (EXACT)")
+            self.logger.info(f"   Model limits (input,output): {token_metrics['model_input_output']}")
+            self.logger.info(f"   Average output tokens: {token_metrics['avg_output_tokens']:.0f} (EXACT)")
             
             # Warning if approaching limits
             if token_metrics['avg_input_tokens'] > model_context_limit * 0.9:
-                print(f"⚠️  WARNING: Input tokens approaching context limit!")
+                self.logger.warning(f"WARNING: Input tokens approaching context limit!")
             if token_metrics['avg_output_tokens'] > model_output_limit * 0.9:
-                print(f"⚠️  WARNING: Output tokens approaching generation limit!")
+                self.logger.warning(f"WARNING: Output tokens approaching generation limit!")
             
             # Show some stats for all data (cached + new)
             if samples_for_stats:
-                total_entities = sum(len(ex['ner']) for ex in samples_for_stats)
-                print(f"📊 Average entities per example: {avg_entities:.1f}")
+                self.logger.info(f"Average entities per example: {avg_entities:.1f}")
                 
                 # Entity type distribution
                 entity_counts = {}
                 for ex in samples_for_stats:
                     for _, _, label in ex['ner']:
                         entity_counts[label] = entity_counts.get(label, 0) + 1
-                print(f"📈 Entity distribution: {entity_counts}")
-            print("="*60)
+                self.logger.info(f"Entity distribution: {entity_counts}")
+            self.logger.info("="*60)
 
         # Return exactly num_samples (from cache + newly generated)
         return syn_cache[:num_samples], avg_entities, token_metrics

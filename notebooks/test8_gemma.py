@@ -30,7 +30,7 @@ from utils.reproducibility import set_all_seeds
 from utils.device import setup_device
 from data.loader import load_mit_dataset
 from evaluation.evaluator import enhanced_evaluate
-from generation.mistral_simple_gen import SyntheticDataGenerator
+from generation.simple_generator import SyntheticDataGenerator
 from gliner import GLiNER
 
 # Import the training module
@@ -258,7 +258,7 @@ def main():
     pd.reset_option('display.max_colwidth')
     
     # Save results
-    results_path = f"../results/mistral/synthetic_earlystoping_results_{generator.model_name}.csv"
+    results_path = f"../results/gemma/synthetic_earlystoping_results_{generator.model_name}.csv"
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
     final_results_df.to_csv(results_path, index=False)
     logger.info(f"\n💾 Results saved to: {results_path}")
@@ -318,7 +318,7 @@ def main():
     plt.tight_layout()
     
     # Save plot
-    plot_path = f"../results/mistral/{generator.model_name}_earlystoping_results.png"
+    plot_path = f"../results/gemma/{generator.model_name}_earlystoping_results.png"
     plt.savefig(plot_path, dpi=150, bbox_inches='tight')
     logger.info(f"📊 Plots saved to: {plot_path}")
     plt.show()

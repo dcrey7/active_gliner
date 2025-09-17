@@ -17,7 +17,7 @@ def setup_logging(log_dir="logs", logger_name="ActiveLearning"):
     
     # Create timestamp for unique log files
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_filename = Path(log_dir) / f"active_learning_{timestamp}.log"
+    log_filename = Path(log_dir) / f"{logger_name}_{timestamp}.log"
     
     # Configure logging
     logging.basicConfig(
