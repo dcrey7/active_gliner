@@ -44,12 +44,10 @@ def main():
     # 1. Setup and Configuration
     # ===============================================================================
     
-
-    
     # Setup
     settings = Settings()
     settings.setup()
-    logger = setup_logging(log_dir=str(settings.logs_dir))
+    logger = setup_logging(log_dir=str(settings.logs_dir))  # ← Main logger setup
     set_all_seeds(seed=settings.global_seed, logger=logger)
     device = setup_device(logger=logger)
     
@@ -161,22 +159,23 @@ def main():
             adapter_path = f"../models/corr_syn_model_{i}/corr_syn_model_{j}"
             
             # ===============================================================================
-            # 5. Training Phase
+            # 5. Training Phase - UPDATED WITH LOGGER PASSING
             # ===============================================================================
             
             logger.info(f"\n🔥 Training Phase: {i} corrected → {j} synthetic")
             
-            # Initialize model with LoRA
-            model = intialize_model()
+            # Initialize model with LoRA - PASS LOGGER
+            model = intialize_model(logger=logger)  # ← UPDATED
             model.to(device)
             
-            # Train the model
+            # Train the model - PASS LOGGER
             train_lora_model(
                 model=model,
                 train_data=synthetic_data,
                 eval_data=test_data,
                 training_config=training_config,
-                adapter_save_path=adapter_path
+                adapter_save_path=adapter_path,
+                logger=logger  # ← UPDATED
             )
             
             # Cleanup training model
@@ -185,13 +184,13 @@ def main():
             gc.collect()
             
             # ===============================================================================
-            # 6. Evaluation Phase
+            # 6. Evaluation Phase - UPDATED WITH LOGGER PASSING
             # ===============================================================================
             
             logger.info(f"\n📊 Evaluation Phase...")
             
-            # Load model with trained adapter
-            eval_model = load_evaluation_model(adapter_path, device)
+            # Load model with trained adapter - PASS LOGGER
+            eval_model = load_evaluation_model(adapter_path, device, logger=logger)  # ← UPDATED
             
             # Enhanced evaluation
             with torch.no_grad():
