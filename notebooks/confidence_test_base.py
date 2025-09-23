@@ -68,7 +68,7 @@ def main():
     
     # Load pre-saved low confidence examples
     logger.info("📂 Loading pre-saved low confidence examples...")
-    with open('../results/low_score_1000_examples.json', 'r') as file:
+    with open('../results/high_mse_2500_examples.json', 'r') as file:
         low_n = json.load(file)
     logger.info(f"📊 Loaded {len(low_n)} low confidence examples")
     
@@ -89,7 +89,7 @@ def main():
     # Experiment Configuration
     # ===============================================================================
     
-    subset_sizes = [10, 25,50,75,100,150,250,500,750,800,1000]
+    subset_sizes = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250,2500]
     
     # Results storage
     results = {
@@ -230,7 +230,7 @@ def main():
     pd.reset_option('display.max_colwidth')
     
     # Save results
-    results_path = f"../results/gemma/confidence_base_performance.csv"
+    results_path = f"../results/gemma/confidence_base_performance_mse2.csv"
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
     results_df.to_csv(results_path, index=False)
     logger.info(f"💾 Results saved to: {results_path}")
@@ -282,7 +282,7 @@ def main():
     plt.tight_layout()
     
     # Save plot
-    plot_path = f"../results/gemma/confidence_base_performance_trend.png"
+    plot_path = f"../results/gemma/confidence_base_performance_trend_mse2.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     logger.info(f"📊 Plot saved to: {plot_path}")
     plt.show()

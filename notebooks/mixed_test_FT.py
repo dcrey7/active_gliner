@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """
-Confidence Analysis Script 2: Fine-tuning Performance Analysis
-Tests GLiNER fine-tuned on LLM labels vs GT labels of worst confidence examples
+Mixed Ratio Fine-tuning Experiment
+Tests GLiNER fine-tuned on different GT/LLM label ratios
 Evaluates fine-tuned models on FULL MIT test set
-WITH CACHING to avoid re-labeling same examples
-
-Similar to test8_gemma.py but using worst confidence examples for training
+Single loop approach with 5 models trained per subset size
 """
 
 import sys
@@ -18,6 +16,7 @@ import warnings
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import random
 from tqdm import tqdm
 
 # Suppress warnings
@@ -38,8 +37,44 @@ from generation.gemma_labeler import LabelGenerator
 from training.trainer import train_lora_model, intialize_model, load_evaluation_model
 
 
+def create_mixed_training_data(examples, llm_labels, gt_ratio):
+    """
+    Create training data with specified GT/LLM ratio
+    
+    Args:
+        examples: Original examples with GT labels
+        llm_labels: LLM-generated labels for same examples  
+        gt_ratio: Percentage of examples to use GT labels (0-100)
+        
+    Returns:
+        List of training examples with mixed labels
+    """
+    n_examples = len(examples)
+    n_gt = int(n_examples * gt_ratio / 100)
+    
+    # Randomly select which examples get GT labels
+    gt_indices = random.sample(range(n_examples), n_gt)
+    
+    mixed_data = []
+    for i, (example, llm_example) in enumerate(zip(examples, llm_labels)):
+        if i in gt_indices:
+            # Use GT labels
+            mixed_data.append({
+                "tokenized_text": example["tokenized_text"],
+                "ner": example["ner"]
+            })
+        else:
+            # Use LLM labels
+            mixed_data.append({
+                "tokenized_text": llm_example["tokenized_text"], 
+                "ner": llm_example["ner"]
+            })
+    
+    return mixed_data
+
+
 def main():
-    """Confidence Analysis: Fine-tuning Performance on Worst Examples"""
+    """Mixed Ratio Fine-tuning Analysis"""
     
     # ===============================================================================
     # Setup and Configuration
@@ -61,7 +96,7 @@ def main():
     test_data, entity_types = load_mit_dataset(str(test_data_path), str(labels_path), "test")
     logger.info(f"📊 Loaded FULL test data: {len(test_data)} examples, {len(entity_types)} entity types")
     
-    # Load pre-saved low confidence examples for training
+    # Load pre-saved low confidence examples
     logger.info("📂 Loading pre-saved low confidence examples...")
     with open('../results/high_mse_2500_examples.json', 'r') as file:
         low_n = json.load(file)
@@ -102,12 +137,16 @@ def main():
     # ===============================================================================
     
     subset_sizes = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250,2500]
+    gt_ratios = [0, 25, 50, 75, 100]  # Percentage of GT labels
     
-    # Results storage
+    # Results storage - single row per subset size
     results = {
         'no_worst_examples': [],
-        'gliner_ft_llm_f1': [],
-        'gliner_ft_gt_f1': [],
+        'gliner_ft_0gt_100llm_f1': [],    # 0% GT, 100% LLM
+        'gliner_ft_25gt_75llm_f1': [],    # 25% GT, 75% LLM  
+        'gliner_ft_50gt_50llm_f1': [],    # 50% GT, 50% LLM
+        'gliner_ft_75gt_25llm_f1': [],    # 75% GT, 25% LLM
+        'gliner_ft_100gt_0llm_f1': [],    # 100% GT, 0% LLM
         'confidence': [],
         'avg_entities': [],
         'avg_input_tokens': [],
@@ -116,92 +155,108 @@ def main():
     }
     
     # ===============================================================================
-    # Initialize Label Cache (CRITICAL FOR CACHING)
+    # Initialize Label Cache
     # ===============================================================================
     
-    # Initialize label cache - this persists across all experiments like in test8_gemma.py
     label_cache = []
     
-    total_iterations = len(subset_sizes) * 2  # 2 experiments per subset (LLM + GT)
-    logger.info(f"\n🔬 Experiment Overview:")
+    total_iterations = len(subset_sizes) * len(gt_ratios)
+    logger.info(f"\n🔬 Mixed Ratio Experiment Overview:")
     logger.info(f"   • Subset sizes to test: {subset_sizes}")
-    logger.info(f"   • Total training experiments: {total_iterations}")
+    logger.info(f"   • GT ratios to test: {gt_ratios}%")
+    logger.info(f"   • Total model trainings: {total_iterations}")
     logger.info(f"   • Evaluation dataset: FULL test set ({len(test_data)} examples)")
-    logger.info(f"   • Label cache initialized: {len(label_cache)} examples")
     
     # ===============================================================================
     # Main Experiment Loop
     # ===============================================================================
     
-    logger.info(f"\n🚀 Starting Fine-tuning Analysis...")
+    logger.info(f"\n🚀 Starting Mixed Ratio Analysis...")
     logger.info("-" * 60)
     
-    for n_examples in tqdm(subset_sizes, desc="Training Experiments", position=0):
-        logger.info(f"\n📝 Training on {n_examples} worst confidence examples")
+    for n_examples in tqdm(subset_sizes, desc="Training Mixed Ratios", position=0):
+        logger.info(f"\n📝 Processing {n_examples} examples with 5 different ratios")
         
         # Get subset for training
         train_subset = low_n[:n_examples]
-        logger.info(f"Training subset size: {len(train_subset)} examples")
         
         # ===============================================================================
-        # Generate LLM Labels WITH CACHING
+        # Generate LLM Labels ONCE (with caching)
         # ===============================================================================
         
         logger.info(f"🤖 Generating LLM labels for {n_examples} examples (with caching)...")
         
-        # Use the SAME caching mechanism as test8_gemma.py
-        # The label_cache persists across iterations and only generates new labels when needed
         llm_labeled_data = label_generator.generate(
-            low_n_examples=train_subset,  # Use the subset as input 
-            num_samples=n_examples,       # How many we want
+            low_n_examples=train_subset,
+            num_samples=n_examples,
             entity_types=entity_types,
-            label_cache=label_cache,      # This persists and accumulates
+            label_cache=label_cache,
             verbose=True
         )
         
         # Calculate metrics from generated data
         if len(llm_labeled_data) > 0:
             avg_entities = sum(len(ex['ner']) for ex in llm_labeled_data) / len(llm_labeled_data)
-            
-            # Token metrics - these would come from the labeler if it tracked them
-            # For now using estimates based on Gemma performance
             token_metrics = {
-                'avg_input_tokens': 450.0,  # Approximate for labeling prompts
-                'model_input_output': (128000, 500),  # Gemma context limits
-                'avg_output_tokens': 120.0  # Approximate for label generation
+                'avg_input_tokens': 450.0,
+                'model_input_output': (128000, 500),
+                'avg_output_tokens': 120.0
             }
         else:
             avg_entities = 0.0
             token_metrics = {
                 'avg_input_tokens': 0.0,
-                'model_input_output': (128000, 500),
+                'model_input_output': (128000, 500), 
                 'avg_output_tokens': 0.0
             }
         
-        logger.info(f"📊 Generated/Retrieved: {len(llm_labeled_data)} examples, avg entities: {avg_entities:.1f}")
         logger.info(f"💾 Label cache now contains: {len(label_cache)} total examples")
         
         # ===============================================================================
-        # Training Phase 1: GLiNER FT on LLM Labels
+        # Train 5 Models with Different Ratios
         # ===============================================================================
         
-        if len(llm_labeled_data) > 0:
-            logger.info(f"\n🔥 Training GLiNER on LLM labels ({n_examples} examples)")
+        ratio_f1_scores = []
+        avg_confidence = 0.0
+        
+        for gt_ratio in gt_ratios:
+            logger.info(f"\n🔥 Training GLiNER with {gt_ratio}% GT + {100-gt_ratio}% LLM labels")
+            
+            # Create mixed training data
+            if gt_ratio == 0:
+                # Pure LLM labels
+                mixed_training_data = llm_labeled_data
+                logger.info(f"   Using 100% LLM labels ({len(mixed_training_data)} examples)")
+            elif gt_ratio == 100:
+                # Pure GT labels
+                mixed_training_data = [{
+                    "tokenized_text": ex["tokenized_text"],
+                    "ner": ex["ner"]
+                } for ex in train_subset]
+                logger.info(f"   Using 100% GT labels ({len(mixed_training_data)} examples)")
+            else:
+                # Mixed labels
+                mixed_training_data = create_mixed_training_data(
+                    train_subset, llm_labeled_data, gt_ratio
+                )
+                n_gt = int(len(mixed_training_data) * gt_ratio / 100)
+                n_llm = len(mixed_training_data) - n_gt
+                logger.info(f"   Using {n_gt} GT + {n_llm} LLM labels ({len(mixed_training_data)} total)")
             
             # Define adapter save path
-            llm_adapter_path = f"../models/confidence_llm_model_{n_examples}"
+            adapter_path = f"../models/mixed_ratio_model_{n_examples}_{gt_ratio}gt"
             
             # Initialize model with LoRA
             model = intialize_model(logger=logger)
             model.to(device)
             
-            # Train the model on LLM labels
+            # Train the model
             train_lora_model(
                 model=model,
-                train_data=llm_labeled_data,
-                eval_data=test_data[:100],  # Small eval subset to speed up training
+                train_data=mixed_training_data,
+                eval_data=test_data[:100],  # Small eval subset for speed
                 training_config=training_config,
-                adapter_save_path=llm_adapter_path,
+                adapter_save_path=adapter_path,
                 logger=logger
             )
             
@@ -211,112 +266,52 @@ def main():
             gc.collect()
             
             # ===============================================================================
-            # Evaluation Phase 1: GLiNER FT on LLM Labels
+            # Evaluation
             # ===============================================================================
             
-            logger.info(f"📊 Evaluating GLiNER FT (LLM labels) on FULL test set...")
+            logger.info(f"📊 Evaluating {gt_ratio}% GT model on FULL test set...")
             
             # Load model with trained adapter
-            eval_model = load_evaluation_model(llm_adapter_path, device, logger=logger)
+            eval_model = load_evaluation_model(adapter_path, device, logger=logger)
             
             # Enhanced evaluation on FULL test set
             with torch.no_grad():
-                llm_ft_results = enhanced_evaluate(
+                eval_results = enhanced_evaluate(
                     eval_model, test_data, entity_types,
                     threshold=0.5, batch_size=8, has_ground_truth=True, logger=logger
                 )
             
-            llm_ft_f1 = llm_ft_results["overall_metrics"]["overall_f1_pct"]
-            llm_ft_conf = llm_ft_results["overall_metrics"]["overall_confidence_pct"]
+            ratio_f1 = eval_results["overall_metrics"]["overall_f1_pct"]
+            ratio_conf = eval_results["overall_metrics"]["overall_confidence_pct"]
             
-            logger.info(f"✅ GLiNER FT (LLM labels) Results: F1={llm_ft_f1:.1f}%, Confidence={llm_ft_conf:.1f}%")
+            logger.info(f"✅ {gt_ratio}% GT Results: F1={ratio_f1:.1f}%, Confidence={ratio_conf:.1f}%")
+            
+            ratio_f1_scores.append(ratio_f1)
+            avg_confidence += ratio_conf
             
             # Cleanup evaluation model
             del eval_model
             torch.cuda.empty_cache()
             gc.collect()
-        else:
-            llm_ft_f1 = 0.0
-            llm_ft_conf = 0.0
-            logger.error(f"❌ No valid LLM labeled data for {n_examples} examples")
         
         # ===============================================================================
-        # Training Phase 2: GLiNER FT on GT Labels
-        # ===============================================================================
-        
-        logger.info(f"\n🔥 Training GLiNER on GT labels ({n_examples} examples)")
-        
-        # Use ground truth labels from train_subset
-        gt_labeled_data = []
-        for example in train_subset:
-            gt_labeled_data.append({
-                "tokenized_text": example["tokenized_text"],
-                "ner": example["ner"]  # Use ground truth labels
-            })
-        
-        # Define adapter save path
-        gt_adapter_path = f"../models/confidence_gt_model_{n_examples}"
-        
-        # Initialize model with LoRA
-        model = intialize_model(logger=logger)
-        model.to(device)
-        
-        # Train the model on GT labels
-        train_lora_model(
-            model=model,
-            train_data=gt_labeled_data,
-            eval_data=test_data[:100],  # Small eval subset to speed up training
-            training_config=training_config,
-            adapter_save_path=gt_adapter_path,
-            logger=logger
-        )
-        
-        # Cleanup training model
-        del model
-        torch.cuda.empty_cache()
-        gc.collect()
-        
-        # ===============================================================================
-        # Evaluation Phase 2: GLiNER FT on GT Labels
-        # ===============================================================================
-        
-        logger.info(f"📊 Evaluating GLiNER FT (GT labels) on FULL test set...")
-        
-        # Load model with trained adapter
-        eval_model = load_evaluation_model(gt_adapter_path, device, logger=logger)
-        
-        # Enhanced evaluation on FULL test set
-        with torch.no_grad():
-            gt_ft_results = enhanced_evaluate(
-                eval_model, test_data, entity_types,
-                threshold=0.5, batch_size=8, has_ground_truth=True, logger=logger
-            )
-        
-        gt_ft_f1 = gt_ft_results["overall_metrics"]["overall_f1_pct"]
-        gt_ft_conf = gt_ft_results["overall_metrics"]["overall_confidence_pct"]
-        
-        logger.info(f"✅ GLiNER FT (GT labels) Results: F1={gt_ft_f1:.1f}%, Confidence={gt_ft_conf:.1f}%")
-        
-        # Cleanup evaluation model
-        del eval_model
-        torch.cuda.empty_cache()
-        gc.collect()
-        
-        # ===============================================================================
-        # Store Results
+        # Store Results for This Subset Size
         # ===============================================================================
         
         results['no_worst_examples'].append(n_examples)
-        results['gliner_ft_llm_f1'].append(llm_ft_f1)
-        results['gliner_ft_gt_f1'].append(gt_ft_f1)
-        results['confidence'].append((llm_ft_conf + gt_ft_conf) / 2)  # Average confidence
+        results['gliner_ft_0gt_100llm_f1'].append(ratio_f1_scores[0])   # 0% GT
+        results['gliner_ft_25gt_75llm_f1'].append(ratio_f1_scores[1])   # 25% GT
+        results['gliner_ft_50gt_50llm_f1'].append(ratio_f1_scores[2])   # 50% GT
+        results['gliner_ft_75gt_25llm_f1'].append(ratio_f1_scores[3])   # 75% GT
+        results['gliner_ft_100gt_0llm_f1'].append(ratio_f1_scores[4])   # 100% GT
+        results['confidence'].append(avg_confidence / len(gt_ratios))
         results['avg_entities'].append(avg_entities)
         results['avg_input_tokens'].append(token_metrics['avg_input_tokens'])
         results['model_input_output'].append(token_metrics['model_input_output'])
         results['avg_output_tokens'].append(token_metrics['avg_output_tokens'])
         
         logger.info(f"💾 Results stored for {n_examples} examples")
-        logger.info(f"📦 Cache efficiency: {len(label_cache)} total labels available for reuse")
+        logger.info(f"📊 F1 Scores: 0%GT={ratio_f1_scores[0]:.1f}%, 25%GT={ratio_f1_scores[1]:.1f}%, 50%GT={ratio_f1_scores[2]:.1f}%, 75%GT={ratio_f1_scores[3]:.1f}%, 100%GT={ratio_f1_scores[4]:.1f}%")
     
     # ===============================================================================
     # Results Analysis and Visualization
@@ -333,7 +328,7 @@ def main():
     pd.set_option('display.max_colwidth', None)
     
     logger.info("\n" + "="*60)
-    logger.info("FINE-TUNING PERFORMANCE ANALYSIS RESULTS")
+    logger.info("MIXED RATIO FINE-TUNING ANALYSIS RESULTS")
     logger.info("="*60)
     logger.info(final_results_df.to_string(index=False))
     
@@ -344,7 +339,7 @@ def main():
     pd.reset_option('display.max_colwidth')
     
     # Save results
-    results_path = f"../results/gemma/confidence_finetuning_performance.csv"
+    results_path = f"../results/gemma/mixed_ratio_finetuning_performance.csv"
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
     final_results_df.to_csv(results_path, index=False)
     logger.info(f"\n💾 Results saved to: {results_path}")
@@ -353,67 +348,70 @@ def main():
     # Visualization
     # ===============================================================================
     
-    logger.info(f"\n📈 Generating Fine-tuning Trend Plot...")
+    logger.info(f"\n📈 Generating Mixed Ratio Performance Plot...")
     
     # Set style
     plt.style.use('default')
     sns.set_palette("viridis")
     
     # Create trend line plot
-    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+    fig, ax = plt.subplots(1, 1, figsize=(14, 10))
     
-    # Plot GLiNER FT on LLM labels
-    ax.plot(
-        final_results_df['no_worst_examples'], final_results_df['gliner_ft_llm_f1'],
-        marker='o', markersize=8, linewidth=3, 
-        label='GLiNER FT (LLM Labels)', color='green', alpha=0.8
-    )
+    # Plot all 5 ratio curves
+    ratio_columns = [
+        ('gliner_ft_0gt_100llm_f1', '0% GT + 100% LLM', 'red'),
+        ('gliner_ft_25gt_75llm_f1', '25% GT + 75% LLM', 'orange'), 
+        ('gliner_ft_50gt_50llm_f1', '50% GT + 50% LLM', 'yellow'),
+        ('gliner_ft_75gt_25llm_f1', '75% GT + 25% LLM', 'lightgreen'),
+        ('gliner_ft_100gt_0llm_f1', '100% GT + 0% LLM', 'green')
+    ]
     
-    # Plot GLiNER FT on GT labels
-    ax.plot(
-        final_results_df['no_worst_examples'], final_results_df['gliner_ft_gt_f1'],
-        marker='s', markersize=8, linewidth=3,
-        label='GLiNER FT (GT Labels)', color='orange', alpha=0.8
-    )
+    for col_name, label, color in ratio_columns:
+        ax.plot(
+            final_results_df['no_worst_examples'], final_results_df[col_name],
+            marker='o', markersize=8, linewidth=3, 
+            label=label, color=color, alpha=0.8
+        )
     
     # Formatting
-    ax.set_title('Fine-tuning Performance: LLM vs GT Labels (Evaluated on Full Test Set)', 
+    ax.set_title('Mixed Ratio Fine-tuning Performance: GT vs LLM Labels (Evaluated on Full Test Set)', 
                  fontsize=16, fontweight='bold', pad=20)
     ax.set_xlabel('Number of Worst Confidence Examples (Training)', fontsize=14)
     ax.set_ylabel('F1 Score (%) on Full Test Set', fontsize=14)
     ax.grid(True, alpha=0.3)
-    ax.legend(fontsize=12)
+    ax.legend(fontsize=12, loc='best')
     
-    # Add value annotations
-    for i, (x, y1, y2) in enumerate(zip(final_results_df['no_worst_examples'], 
-                                       final_results_df['gliner_ft_llm_f1'], 
-                                       final_results_df['gliner_ft_gt_f1'])):
-        ax.annotate(f'{y1:.1f}%', (x, y1), textcoords="offset points", 
-                   xytext=(0,10), ha='center', fontsize=10, color='green')
-        ax.annotate(f'{y2:.1f}%', (x, y2), textcoords="offset points", 
-                   xytext=(0,10), ha='center', fontsize=10, color='orange')
+    # Add value annotations for key points
+    for i, (col_name, label, color) in enumerate(ratio_columns):
+        if i % 2 == 0:  # Annotate every other line to avoid clutter
+            for j, (x, y) in enumerate(zip(final_results_df['no_worst_examples'], 
+                                         final_results_df[col_name])):
+                if j % 3 == 0:  # Annotate every 3rd point
+                    ax.annotate(f'{y:.1f}%', (x, y), textcoords="offset points", 
+                               xytext=(0,15), ha='center', fontsize=9, color=color)
     
     plt.tight_layout()
     
     # Save plot
-    plot_path = f"../results/gemma/confidence_finetuning_performance_trend.png"
+    plot_path = f"../results/gemma/mixed_ratio_finetuning_performance.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     logger.info(f"📊 Plot saved to: {plot_path}")
     plt.show()
     
     # ===============================================================================
-    # Final Summary with Cache Statistics
+    # Final Summary
     # ===============================================================================
     
-    logger.info(f"\n🎉 Fine-tuning Analysis completed successfully!")
-    logger.info(f"📋 Best LLM FT F1: {max(results['gliner_ft_llm_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_llm_f1'].index(max(results['gliner_ft_llm_f1']))]} examples")
-    logger.info(f"🏆 Best GT FT F1: {max(results['gliner_ft_gt_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_gt_f1'].index(max(results['gliner_ft_gt_f1']))]} examples")
-    logger.info(f"💾 Total labels cached for reuse: {len(label_cache)} examples")
+    logger.info(f"\n🎉 Mixed Ratio Analysis completed successfully!")
     
-    # Calculate cache efficiency
-    max_subset_size = max(subset_sizes)
-    cache_efficiency = (len(label_cache) / (max_subset_size * len(subset_sizes))) * 100 if max_subset_size > 0 else 0
-    logger.info(f"📊 Cache efficiency: {cache_efficiency:.1f}% (saved {len(subset_sizes) * max_subset_size - len(label_cache)} redundant labelings)")
+    # Find best performance for each ratio
+    for col_name, label, _ in ratio_columns:
+        best_f1 = max(results[col_name])
+        best_idx = results[col_name].index(best_f1)
+        best_examples = results['no_worst_examples'][best_idx]
+        logger.info(f"🏆 {label}: Best F1={best_f1:.1f}% with {best_examples} examples")
+    
+    logger.info(f"💾 Total labels cached for reuse: {len(label_cache)} examples")
 
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ from utils.reproducibility import set_all_seeds
 from utils.device import setup_device
 from data.loader import load_mit_dataset
 from evaluation.evaluator import enhanced_evaluate
-from evaluation.llm_evaluator import LLMEvaluator, convert_ner_to_gliner_format, FakeModelWrapper
+from evaluation.llm_evaluator import LLMEvaluator, convert_ner_to_gliner_format, LLMModelWrapper
 
 def main():
     """Main evaluation function"""
@@ -47,6 +47,8 @@ def main():
     
     test_data, entity_types = load_mit_dataset(str(test_data_path), str(labels_path), "test")
     logger.info(f"Loaded test data: {len(test_data)} examples, {len(entity_types)} entity types")
+
+    evaluation_cache=[]
     
     # ===============================================================================
     # 2. LLM Evaluation Setup
@@ -57,6 +59,7 @@ def main():
     model_name = "gemma3:12b"  # for ollama
     # model_type = "mistral"  # uncomment for mistral
     # model_name = None  # for mistral (uses default path)
+    test_data=test_data[:100]
     
     logger.info(f"Evaluating {model_type.upper()} model: {model_name or 'default'}")
     
@@ -73,7 +76,7 @@ def main():
     logger.info("Starting LLM prediction generation...")
     
     # Get predictions for all test examples
-    cleaned_predictions = llm_evaluator.predict_all(test_data, entity_types)
+    cleaned_predictions = llm_evaluator.predict_all(test_data, entity_types,evaluation_cache)
     
     logger.info(f"Generated predictions for {len(cleaned_predictions)} examples")
     
@@ -95,7 +98,7 @@ def main():
     logger.info("Running enhanced evaluation...")
     
     # Create fake model wrapper
-    fake_model = FakeModelWrapper(gliner_format_predictions)
+    fake_model = LLMModelWrapper(gliner_format_predictions)
     
     # Run enhanced evaluation
     evaluation_results = enhanced_evaluate(
