@@ -48,7 +48,7 @@ class LabelGenerator:
         """
         text = " ".join(tokenized_text)
         
-        prompt = f"""CRITICAL: Label the given text with named entities.
+        prompt = f"""CRITICAL: You are an expert at Name Entity Reconginition information extractor. Label the given text with named entities.
 
 **Objective:**
 Identify and extract named entities from the provided text using the specified entity types.

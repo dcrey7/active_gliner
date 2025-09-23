@@ -1,0 +1,24 @@
+{
+  "train_evaluation_metrics": {
+    "f1_score": 47.78185690665022,
+    "confidence": 78.79972288355692,
+    "total_examples": 9774
+  },
+  "strategy_comparison": {
+    "overlap_count": 28,
+    "overlap_percentage": 28.000000000000004,
+    "minimum_strategy_stats": {
+      "avg_confidence": 0.6572555737561344,
+      "min_confidence": 0.5000379085540771,
+      "avg_mse": 0.16594727717299385,
+      "num_examples": 100
+    },
+    "mse_strategy_stats": {
+      "avg_confidence": 0.5120780002503168,
+      "min_confidence": 0.5000994801521301,
+      "avg_mse": 0.23830230570430916,
+      "num_examples": 100
+    }
+  },
+  "high_mse_examples_count": 2500
+}

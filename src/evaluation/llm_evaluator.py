@@ -1,6 +1,7 @@
 """
-LLM Evaluator for Direct NER Evaluation
+LLM Evaluator for Direct NER Evaluation WITH CACHING
 Evaluates Mistral/Gemma predictions directly using existing GLiNER evaluation pipeline
+FIXED: Custom cleaning that preserves indices for correct cache alignment
 """
 
 import ollama
@@ -15,12 +16,12 @@ from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
 
-from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
+from data.transforms import convert_synthetic_to_ner_format
 from utils.logging import get_logger
 
 
 class LLMEvaluator:
-    """Evaluate LLM NER predictions directly against test set"""
+    """Evaluate LLM NER predictions directly against test set WITH CACHING"""
     
     def __init__(self, model_type: str = "ollama", model_name: str = "gemma3:12b", model_path: str = None):
         """
@@ -108,26 +109,170 @@ CRITICAL: Generate ONLY the JSON format above.
         result = self.tokenizer.instruct_tokenizer.tokenizer.decode(out_tokens[0])
         return result
     
-    def predict_all(self, test_data: List[Dict], entity_types: List[str]) -> List[Dict]:
+    def _clean_predictions_preserve_indices(self, ner_data: List[Dict], valid_entity_types: List[str]) -> List[Dict]:
         """
-        Generate predictions for all test examples
+        Clean NER data while preserving ALL examples for correct cache alignment
+        This is the critical fix - never removes examples, just cleans their entities
+        """
+        cleaned_data = []
+        stats = {
+            'examples_processed': 0,
+            'entities_removed': 0,
+            'out_of_bounds': 0,
+            'invalid_order': 0,
+            'invalid_types': 0,
+            'examples_with_empty_entities': 0
+        }
+        
+        invalid_types_found = set()
+        
+        for i, example in enumerate(ner_data):
+            try:
+                tokenized_text = example.get('tokenized_text', [])
+                ner = example.get('ner', [])
+                text_len = len(tokenized_text)
+                
+                cleaned_entities = []
+                
+                # Skip validation for empty text, but still preserve the example
+                if text_len >= 2:
+                    for entity in ner:
+                        # Check if entity has correct format [start, end, type]
+                        if not isinstance(entity, (list, tuple)) or len(entity) != 3:
+                            stats['entities_removed'] += 1
+                            continue
+                            
+                        start, end, entity_type = entity
+                        
+                        # Check index types
+                        if not isinstance(start, int) or not isinstance(end, int):
+                            stats['entities_removed'] += 1
+                            continue
+                        
+                        # Check index order (start should not be greater than end)
+                        if start > end:
+                            stats['invalid_order'] += 1
+                            stats['entities_removed'] += 1
+                            continue
+                        
+                        # Check index bounds (most critical - this was causing the crash)
+                        if start < 0 or end >= text_len:
+                            stats['out_of_bounds'] += 1
+                            stats['entities_removed'] += 1
+                            continue
+                        
+                        # Check for extremely long spans (likely errors)
+                        if (end - start) > 15:  # More than 15 tokens is suspicious
+                            stats['entities_removed'] += 1
+                            continue
+                        
+                        # Check entity type validity
+                        if entity_type not in valid_entity_types:
+                            invalid_types_found.add(entity_type)
+                            stats['invalid_types'] += 1
+                            stats['entities_removed'] += 1
+                            continue
+                        
+                        # If we get here, entity is valid
+                        cleaned_entities.append([start, end, entity_type])
+                
+                # CRITICAL: Always append example, even if it has no valid entities
+                cleaned_data.append({
+                    "tokenized_text": tokenized_text,
+                    "ner": cleaned_entities
+                })
+                
+                if len(cleaned_entities) == 0:
+                    stats['examples_with_empty_entities'] += 1
+                
+                stats['examples_processed'] += 1
+                        
+            except Exception as e:
+                self.logger.warning(f"Error validating example {i}: {e}")
+                # Still append the example to preserve indexing
+                cleaned_data.append({
+                    "tokenized_text": example.get('tokenized_text', []),
+                    "ner": []
+                })
+                stats['examples_processed'] += 1
+                stats['examples_with_empty_entities'] += 1
+        
+        # Log cleaning results
+        self.logger.info(f"Index-preserving validation completed:")
+        self.logger.info(f"  Examples processed: {stats['examples_processed']}")
+        self.logger.info(f"  Examples with empty entities: {stats['examples_with_empty_entities']}")
+        self.logger.info(f"  Entities removed: {stats['entities_removed']}")
+        
+        if stats['out_of_bounds'] > 0:
+            self.logger.info(f"  - Out of bounds indices: {stats['out_of_bounds']}")
+        if stats['invalid_order'] > 0:
+            self.logger.info(f"  - Invalid index order: {stats['invalid_order']}")
+        if stats['invalid_types'] > 0:
+            self.logger.info(f"  - Invalid entity types: {stats['invalid_types']}")
+            
+        if invalid_types_found:
+            self.logger.info(f"  Invalid types found: {sorted(invalid_types_found)}")
+        
+        # CRITICAL: Verify index preservation
+        assert len(cleaned_data) == len(ner_data), f"Index preservation failed: {len(ner_data)} -> {len(cleaned_data)}"
+        
+        return cleaned_data
+    
+    def predict_all(self, test_data: List[Dict], entity_types: List[str], 
+                   evaluation_cache: List[Dict], verbose: bool = True) -> List[Dict]:
+        """
+        Generate predictions for test examples WITH CACHING
+        Similar to gemma_labeler.py generate() method
         
         Args:
             test_data: Test dataset with tokenized_text and ner
             entity_types: List of entity types
+            evaluation_cache: Cache list that persists evaluation data
+            verbose: Whether to show progress
             
         Returns:
-            List of cleaned NER predictions
+            List of cleaned NER predictions (same length as test_data)
         """
-        self.logger.info(f"Generating {self.model_type.upper()} predictions for {len(test_data)} examples...")
+        if verbose:
+            self.logger.info("="*60)
+            self.logger.info("LLM EVALUATION WITH CACHING")
+            self.logger.info("="*60)
+            self.logger.info(f"Model: {self.model_name}")
+            self.logger.info(f"Entity types: {entity_types}")
+            self.logger.info(f"Test examples available: {len(test_data)}")
+            self.logger.info(f"Target evaluations: {len(test_data)}")
+            self.logger.info(f"Cached evaluations: {len(evaluation_cache)}")
+            self.logger.info("="*60)
         
-        all_synthetic_outputs = []
+        # Calculate how many new evaluations we actually need
+        if len(evaluation_cache) >= len(test_data):
+            if verbose:
+                self.logger.info(f"Using {len(test_data)} evaluations from cache (no evaluation needed)")
+            return evaluation_cache[:len(test_data)]
         
-        for i, example in enumerate(tqdm(test_data, desc="LLM Labeling")):
+        no_new_evals_needed = len(test_data) - len(evaluation_cache)
+        if verbose:
+            self.logger.info(f"Need to evaluate {no_new_evals_needed} new examples ({len(evaluation_cache)} already cached)")
+        
+        # Check if we have enough examples to evaluate
+        available_examples = len(test_data) - len(evaluation_cache)
+        if available_examples < no_new_evals_needed:
+            self.logger.warning(f"Not enough examples! Need {no_new_evals_needed}, have {available_examples}")
+            no_new_evals_needed = available_examples
+        
+        synthetic_outputs = []
+        
+        # Evaluation loop with immediate retry logic
+        for i in tqdm(range(no_new_evals_needed), desc="LLM Evaluating", disable=not verbose):
+            # Get next example to evaluate (skip already cached ones)
+            example_idx = len(evaluation_cache) + i
+            example = test_data[example_idx]
             tokenized_text = example['tokenized_text']
+            
+            # Create evaluation prompt
             prompt = self._create_prompt(tokenized_text, entity_types)
             
-            # Generate prediction
+            # Immediate retry logic
             max_retries = 3
             success = False
             
@@ -151,31 +296,46 @@ CRITICAL: Generate ONLY the JSON format above.
                     
                     import json
                     js = json.loads(response_text)
-                    all_synthetic_outputs.append(js)
+                    synthetic_outputs.append(js)
                     success = True
+                    
+                    if verbose:
+                        self.logger.info(f"Evaluated example {i+1}: {tokenized_text} -> {js.get('entities', [])}")
+                    
                     break
                     
                 except Exception as e:
                     if attempt == max_retries:
-                        self.logger.error(f"Failed to parse example {i+1} after {max_retries+1} attempts")
+                        self.logger.error(f"Failed to evaluate example {i+1} after {max_retries+1} attempts")
                         # Add empty prediction for failed examples
-                        all_synthetic_outputs.append({
+                        synthetic_outputs.append({
                             "text": " ".join(tokenized_text),
                             "entities": []
                         })
                         break
         
-        self.logger.info(f"Generated {len(all_synthetic_outputs)} predictions")
+        if verbose:
+            self.logger.info(f"Successfully evaluated {len(synthetic_outputs)}/{no_new_evals_needed} new examples")
         
         # Convert to NER format using existing pipeline
-        ner_formatted_data = convert_synthetic_to_ner_format(all_synthetic_outputs)
-        self.logger.info(f"Converted to NER format: {len(ner_formatted_data)} examples")
+        ner_formatted_data = convert_synthetic_to_ner_format(synthetic_outputs)
+        if verbose:
+            self.logger.info(f"Converted to NER format: {len(ner_formatted_data)} examples")
         
-        # Clean and validate using existing pipeline
-        cleaned_predictions = validate_and_clean_ner_data(ner_formatted_data, entity_types, self.logger)
-        self.logger.info(f"Final cleaned predictions: {len(cleaned_predictions)}")
+        # CRITICAL FIX: Use custom cleaning that preserves indices
+        cleaned_predictions = self._clean_predictions_preserve_indices(ner_formatted_data, entity_types)
+        if verbose:
+            self.logger.info(f"Final cleaned predictions: {len(cleaned_predictions)} (index-preserved)")
         
-        return cleaned_predictions
+        # Add new cleaned data to cache
+        evaluation_cache.extend(cleaned_predictions)
+        
+        if verbose:
+            self.logger.info(f"Cache updated: {len(evaluation_cache)} total evaluations")
+            self.logger.info("="*60)
+        
+        # Return exactly len(test_data) (from cache + newly evaluated)
+        return evaluation_cache[:len(test_data)]
 
 
 def convert_ner_to_gliner_format(cleaned_predictions: List[Dict]) -> List[List[Dict]]:
@@ -225,7 +385,7 @@ def convert_ner_to_gliner_format(cleaned_predictions: List[Dict]) -> List[List[D
     return gliner_predictions
 
 
-class FakeModelWrapper:
+class LLMModelWrapper:
     """Wrapper to make LLM predictions look like GLiNER model for evaluation"""
     
     def __init__(self, gliner_predictions: List[List[Dict]]):
@@ -264,3 +424,32 @@ class FakeModelWrapper:
         f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
         
         return {}, f1
+
+
+class LLMEvaluationPipeline:
+    """Simple evaluation pipeline wrapper for compatibility"""
+    
+    def __init__(self, model_type: str = "ollama", model_name: str = "gemma3:12b"):
+        self.evaluator = LLMEvaluator(model_type=model_type, model_name=model_name)
+    
+    def evaluate_dataset(self, test_data: List[Dict], entity_types: List[str], 
+                        evaluation_cache: List[Dict] = None) -> List[List[Dict]]:
+        """Evaluate dataset with caching support"""
+        if evaluation_cache is None:
+            evaluation_cache = []
+        
+        # Get cleaned predictions with preserved indices
+        cleaned_predictions = self.evaluator.predict_all(
+            test_data=test_data,
+            entity_types=entity_types,
+            evaluation_cache=evaluation_cache,
+            verbose=True
+        )
+        
+        # Convert to GLiNER format
+        gliner_predictions = convert_ner_to_gliner_format(cleaned_predictions)
+        
+        # Verify final indexing
+        assert len(gliner_predictions) == len(test_data), "Final index preservation failed"
+        
+        return gliner_predictions
