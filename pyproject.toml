@@ -18,4 +18,6 @@ dependencies = [
     "ollama>=0.3.0",
     "bitsandbytes>=0.47.0",
     "mistral-inference>=1.6.0",
+    "cerebras-cloud-sdk>=1.50.1",
+    "python-dotenv>=1.1.1",
 ]

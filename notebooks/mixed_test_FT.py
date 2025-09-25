@@ -18,7 +18,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random
 from tqdm import tqdm
-
+from dotenv import load_dotenv
+load_dotenv() 
 # Suppress warnings
 warnings.filterwarnings('ignore')
 
@@ -33,7 +34,8 @@ from utils.reproducibility import set_all_seeds
 from utils.device import setup_device
 from data.loader import load_mit_dataset
 from evaluation.evaluator import enhanced_evaluate
-from generation.gemma_labeler import LabelGenerator
+# from generation.gemma_labeler import LabelGenerator
+from generation.api_labeler import LabelGenerator
 from training.trainer import train_lora_model, intialize_model, load_evaluation_model
 
 
@@ -103,7 +105,7 @@ def main():
     logger.info(f"📊 Loaded {len(low_n)} low confidence examples for training")
     
     # Initialize LLM labeler
-    label_generator = LabelGenerator(model_name="gemma3:12b")
+    label_generator = LabelGenerator(model_name="qwen-3-235b-a22b-instruct-2507")  #gemma3:12b
     logger.info(f"🤖 LLM Labeler: {label_generator.model_name}")
     
     # ===============================================================================
@@ -137,6 +139,7 @@ def main():
     # ===============================================================================
     
     subset_sizes = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250,2500]
+    # subset_sizes = [10,20]
     gt_ratios = [0, 25, 50, 75, 100]  # Percentage of GT labels
     
     # Results storage - single row per subset size
@@ -254,7 +257,7 @@ def main():
             train_lora_model(
                 model=model,
                 train_data=mixed_training_data,
-                eval_data=test_data[:100],  # Small eval subset for speed
+                eval_data=test_data,  # Small eval subset for speed
                 training_config=training_config,
                 adapter_save_path=adapter_path,
                 logger=logger
@@ -339,7 +342,7 @@ def main():
     pd.reset_option('display.max_colwidth')
     
     # Save results
-    results_path = f"../results/gemma/mixed_ratio_finetuning_performance.csv"
+    results_path = f"../results/gemma/mixed_ratio_finetuning_performance_qwen.csv"
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
     final_results_df.to_csv(results_path, index=False)
     logger.info(f"\n💾 Results saved to: {results_path}")
@@ -361,7 +364,7 @@ def main():
     ratio_columns = [
         ('gliner_ft_0gt_100llm_f1', '0% GT + 100% LLM', 'red'),
         ('gliner_ft_25gt_75llm_f1', '25% GT + 75% LLM', 'orange'), 
-        ('gliner_ft_50gt_50llm_f1', '50% GT + 50% LLM', 'yellow'),
+        ('gliner_ft_50gt_50llm_f1', '50% GT + 50% LLM', 'blue'),
         ('gliner_ft_75gt_25llm_f1', '75% GT + 25% LLM', 'lightgreen'),
         ('gliner_ft_100gt_0llm_f1', '100% GT + 0% LLM', 'green')
     ]
@@ -393,7 +396,7 @@ def main():
     plt.tight_layout()
     
     # Save plot
-    plot_path = f"../results/gemma/mixed_ratio_finetuning_performance.png"
+    plot_path = f"../results/gemma/mixed_ratio_finetuning_performance_qwen.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     logger.info(f"📊 Plot saved to: {plot_path}")
     plt.show()
