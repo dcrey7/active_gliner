@@ -1,0 +1,4 @@
+no_worst_examples,gliner_ft_0gt_100llm_f1,gliner_ft_25gt_75llm_f1,gliner_ft_50gt_50llm_f1,gliner_ft_75gt_25llm_f1,gliner_ft_100gt_0llm_f1,confidence,avg_entities,avg_input_tokens,model_input_output,avg_output_tokens,completion_status,completion_percentage
+2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,500.0,"(65536, 500)",150.0,complete,100.0
+4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,500.0,"(65536, 500)",150.0,complete,100.0
+6,0.0,0.0,0.0,0.0,0.0,0.0,1.1666666666666667,500.0,"(65536, 500)",150.0,complete,100.0
