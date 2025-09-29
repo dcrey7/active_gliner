@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Mixed Ratio Fine-tuning Experiment with API Resilience
-Tests GLiNER fine-tuned on different GT/LLM label ratios with graceful API failure handling
+Mixed Ratio Fine-tuning Experiment with Enhanced API Quota Handling
+Tests GLiNER fine-tuned on different GT/LLM label ratios with graceful failure handling
 
 Features:
 - Resilient to API quota limits and rate limiting
@@ -9,6 +9,7 @@ Features:
 - Persistent cache loading and resume capability
 - Graceful plotting with incomplete datasets
 - Zero data loss on API failures
+- Incremental result saving
 
 Enhanced from mixed_test_FT.py to handle Cerebras API constraints gracefully.
 """
@@ -42,7 +43,7 @@ from utils.reproducibility import set_all_seeds
 from utils.device import setup_device
 from data.loader import load_mit_dataset
 from evaluation.evaluator import enhanced_evaluate
-from generation.enc_api_label import LabelGenerator  # Using enhanced API labeler
+from generation.enc_api_label import LabelGenerator, QuotaExceededException
 from training.trainer import train_lora_model, intialize_model, load_evaluation_model
 
 
@@ -82,73 +83,12 @@ def create_mixed_training_data(examples, llm_labels, gt_ratio):
     return mixed_data
 
 
-def safe_label_generation(label_generator, train_subset, num_samples, entity_types, 
-                         label_cache, logger, max_attempts=2):
-    """
-    Safely generate labels with quota limit handling
-    
-    Args:
-        label_generator: Enhanced LabelGenerator instance
-        train_subset: Training examples subset
-        num_samples: Target number of samples
-        entity_types: Entity types list
-        label_cache: Cache list
-        logger: Logger instance
-        max_attempts: Maximum attempts if partial generation occurs
-        
-    Returns:
-        Tuple of (generated_labels, success_status, completion_percentage)
-    """
-    for attempt in range(max_attempts):
-        try:
-            logger.info(f"Attempting label generation (attempt {attempt + 1}/{max_attempts})")
-            
-            # Try to generate the requested number of labels
-            llm_labeled_data = label_generator.generate(
-                low_n_examples=train_subset,
-                num_samples=num_samples,
-                entity_types=entity_types,
-                label_cache=label_cache,
-                verbose=True
-            )
-            
-            completion_percentage = (len(llm_labeled_data) / num_samples) * 100
-            
-            if len(llm_labeled_data) == num_samples:
-                logger.info(f"✅ Successfully generated {len(llm_labeled_data)}/{num_samples} labels (100%)")
-                return llm_labeled_data, "complete", 100.0
-            elif len(llm_labeled_data) > 0:
-                logger.warning(f"⚠️ Partial generation: {len(llm_labeled_data)}/{num_samples} labels ({completion_percentage:.1f}%)")
-                return llm_labeled_data, "partial", completion_percentage
-            else:
-                logger.error(f"❌ No labels generated on attempt {attempt + 1}")
-                if attempt < max_attempts - 1:
-                    logger.info("Retrying label generation...")
-                    continue
-                else:
-                    return [], "failed", 0.0
-                    
-        except Exception as e:
-            logger.error(f"Label generation failed on attempt {attempt + 1}: {str(e)[:200]}")
-            if "quota" in str(e).lower() or "token" in str(e).lower():
-                logger.error("API quota exceeded - stopping label generation")
-                return label_cache[:min(len(label_cache), num_samples)], "quota_exceeded", (len(label_cache) / num_samples) * 100
-            elif attempt < max_attempts - 1:
-                logger.warning("Retrying after error...")
-                continue
-            else:
-                logger.error("All label generation attempts failed")
-                return [], "failed", 0.0
-    
-    return [], "failed", 0.0
-
-
 def main():
-    """Mixed Ratio Fine-tuning Analysis with API Resilience"""
+    """Enhanced Mixed Ratio Fine-tuning Analysis with Quota Handling"""
     
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     # Setup and Configuration
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     
     settings = Settings()
     settings.setup()
@@ -182,9 +122,9 @@ def main():
         logger.error("Please check CEREBRAS_API_KEY environment variable")
         return
     
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     # Training Configuration
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     
     training_config = {
         'num_steps': 1000,
@@ -208,50 +148,36 @@ def main():
     for key, value in training_config.items():
         logger.info(f"   • {key}: {value}")
     
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     # Experiment Parameters with Adaptive Capability
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     
-    subset_sizes = [2,4,6]
+    # subset_sizes = [10, 50, 100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500]
+    subset_sizes = [2,5,8]
     gt_ratios = [0, 25, 50, 75, 100]  # Percentage of GT labels
     
-    # Results storage - single row per subset size
+    # Results storage with status tracking
     results = {
         'no_worst_examples': [],
-        'gliner_ft_0gt_100llm_f1': [],    # 0% GT, 100% LLM
-        'gliner_ft_25gt_75llm_f1': [],    # 25% GT, 75% LLM  
-        'gliner_ft_50gt_50llm_f1': [],    # 50% GT, 50% LLM
-        'gliner_ft_75gt_25llm_f1': [],    # 75% GT, 25% LLM
-        'gliner_ft_100gt_0llm_f1': [],    # 100% GT, 0% LLM
+        'gliner_ft_0gt_100llm_f1': [],
+        'gliner_ft_25gt_75llm_f1': [],
+        'gliner_ft_50gt_50llm_f1': [],
+        'gliner_ft_75gt_25llm_f1': [],
+        'gliner_ft_100gt_0llm_f1': [],
         'confidence': [],
         'avg_entities': [],
         'avg_input_tokens': [],
         'model_input_output': [],
         'avg_output_tokens': [],
-        'completion_status': [],          # Track completion status
-        'completion_percentage': []       # Track completion percentage
+        'completion_status': [],
+        'completion_percentage': []
     }
     
-    # ===============================================================================
-    # Initialize Label Cache with Disk Cache Loading
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
+    # Initialize Label Cache
+    # ═══════════════════════════════════════════════════════════════════════
     
     label_cache = []
-    
-    # Check for existing cache files
-    cache_files_found = list(label_generator.cache_dir.glob("*.json"))
-    if cache_files_found:
-        logger.info(f"📁 Found {len(cache_files_found)} existing cache files:")
-        for cache_file in sorted(cache_files_found):
-            try:
-                with open(cache_file, 'r') as f:
-                    cache_data = json.load(f)
-                labels_count = len(cache_data.get('labels', []))
-                logger.info(f"   • {cache_file.name}: {labels_count} labels")
-            except:
-                logger.warning(f"   • {cache_file.name}: Invalid cache file")
-    else:
-        logger.info("📁 No existing cache files found - starting fresh")
     
     total_iterations = len(subset_sizes) * len(gt_ratios)
     logger.info(f"\n🔬 Enhanced Mixed Ratio Experiment Overview:")
@@ -260,10 +186,11 @@ def main():
     logger.info(f"   • Total model trainings: {total_iterations}")
     logger.info(f"   • Evaluation dataset: FULL test set ({len(test_data)} examples)")
     logger.info(f"   • API resilience: ✅ Enabled")
+    logger.info(f"   • Incremental saving: ✅ Enabled")
     
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     # Main Experiment Loop with API Resilience
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
     
     logger.info(f"\n🚀 Starting Enhanced Mixed Ratio Analysis...")
     logger.info("-" * 60)
@@ -272,63 +199,83 @@ def main():
     
     for subset_idx, n_examples in enumerate(tqdm(subset_sizes, desc="Training Mixed Ratios", position=0)):
         if experiment_interrupted:
-            logger.warning(f"Experiment interrupted - skipping remaining subset sizes")
+            logger.warning(f"⏭️  Skipping remaining subset sizes due to quota limit")
             break
             
-        logger.info(f"\n📝 Processing {n_examples} examples with 5 different ratios")
+        logger.info(f"\n{'='*60}")
+        logger.info(f"📝 ITERATION {subset_idx+1}/{len(subset_sizes)}: Processing {n_examples} examples")
+        logger.info(f"{'='*60}")
         
         # Get subset for training
         train_subset = low_n[:n_examples]
         
-        # ===============================================================================
-        # Generate LLM Labels ONCE (with enhanced caching and resilience)
-        # ===============================================================================
+        # ═══════════════════════════════════════════════════════════════════
+        # Generate LLM Labels WITH QUOTA HANDLING
+        # ═══════════════════════════════════════════════════════════════════
         
-        logger.info(f"🤖 Generating LLM labels for {n_examples} examples (with persistent caching)...")
+        logger.info(f"🤖 Generating LLM labels for {n_examples} examples...")
         
-        # Safe label generation with quota handling
-        llm_labeled_data, generation_status, completion_pct = safe_label_generation(
-            label_generator=label_generator,
-            train_subset=train_subset,
-            num_samples=n_examples,
-            entity_types=entity_types,
-            label_cache=label_cache,
-            logger=logger
-        )
-        
-        if generation_status == "failed":
-            logger.error(f"❌ Complete failure to generate labels for {n_examples} examples - skipping")
-            continue
-        elif generation_status == "quota_exceeded":
-            logger.error(f"🚫 API quota exceeded during generation for {n_examples} examples")
-            logger.info(f"💾 Saved progress: {len(llm_labeled_data)} labels cached")
+        try:
+            llm_labeled_data = label_generator.generate(
+                low_n_examples=train_subset,
+                num_samples=n_examples,
+                entity_types=entity_types,
+                label_cache=label_cache,
+                verbose=True
+            )
+            
+            actual_examples = n_examples
+            completion_status = "complete"
+            completion_pct = 100.0
+            
+            logger.info(f"✅ Successfully generated {len(llm_labeled_data)} labels")
+            
+        except QuotaExceededException as qe:
+            logger.error("="*60)
+            logger.error("🚨 QUOTA EXCEEDED - HANDLING GRACEFULLY")
+            logger.error("="*60)
+            logger.error(qe.message)
+            logger.error(f"Requested: {qe.requested} labels")
+            logger.error(f"Generated: {qe.actual} labels")
+            logger.error(f"Completion: {(qe.actual/qe.requested)*100:.1f}%")
+            logger.error("="*60)
+            
+            llm_labeled_data = qe.partial_labels
+            actual_examples = qe.actual
+            completion_status = "quota_exceeded"
+            completion_pct = (qe.actual / qe.requested) * 100
             experiment_interrupted = True
+            
+            logger.warning(f"⚠️  Will complete current iteration with {actual_examples} labels, then stop experiment")
         
-        # Calculate metrics from generated data
+        except Exception as e:
+            logger.error(f"❌ Unexpected error during label generation: {str(e)[:200]}")
+            logger.error("Skipping this iteration and continuing...")
+            continue
+        
+        # ═══════════════════════════════════════════════════════════════════
+        # Calculate Metrics
+        # ═══════════════════════════════════════════════════════════════════
+        
         if len(llm_labeled_data) > 0:
             avg_entities = sum(len(ex['ner']) for ex in llm_labeled_data) / len(llm_labeled_data)
             
-            # Token metrics estimation (actual metrics come from the API calls)
+            # Token metrics estimation
             token_metrics = {
-                'avg_input_tokens': 500.0,  # Updated during actual generation
-                'model_input_output': (65536, 500),  # Cerebras context limits
-                'avg_output_tokens': 150.0  # Updated during actual generation
+                'avg_input_tokens': 500.0,
+                'model_input_output': (65536, 500),
+                'avg_output_tokens': 150.0
             }
         else:
-            avg_entities = 0.0
-            token_metrics = {
-                'avg_input_tokens': 0.0,
-                'model_input_output': (65536, 500),
-                'avg_output_tokens': 0.0
-            }
+            logger.error(f"❌ No valid LLM labeled data for {n_examples} examples")
+            logger.error("Skipping this iteration...")
+            continue
         
-        logger.info(f"📊 Generated/Retrieved: {len(llm_labeled_data)} examples, avg entities: {avg_entities:.1f}")
-        logger.info(f"📈 Completion: {completion_pct:.1f}% ({generation_status})")
-        logger.info(f"💾 Label cache now contains: {len(label_cache)} total examples")
+        logger.info(f"📊 Metrics: avg_entities={avg_entities:.1f}, completion={completion_pct:.1f}%")
         
-        # ===============================================================================
-        # Train 5 Models with Different Ratios (Adaptive to Available Data)
-        # ===============================================================================
+        # ═══════════════════════════════════════════════════════════════════
+        # Train 5 Models with Different Ratios
+        # ═══════════════════════════════════════════════════════════════════
         
         ratio_f1_scores = []
         avg_confidence = 0.0
@@ -339,19 +286,19 @@ def main():
             logger.info(f"\n🔥 Training GLiNER with {gt_ratio}% GT + {100-gt_ratio}% LLM labels")
             logger.info(f"   Available data: {effective_examples} examples")
             
-            # Skip training if we don't have enough data
-            if effective_examples < 10:
-                logger.warning(f"   ⚠️ Insufficient data ({effective_examples} examples) - recording zero F1")
+            # Skip training if insufficient data
+            if effective_examples < 1:
+                logger.warning(f"   ⚠️  Insufficient data ({effective_examples} examples) - recording zero F1")
                 ratio_f1_scores.append(0.0)
                 continue
             
-            # Create mixed training data with available examples
+            # Create mixed training data
             if gt_ratio == 0:
                 # Pure LLM labels
                 mixed_training_data = llm_labeled_data
                 logger.info(f"   Using 100% LLM labels ({len(mixed_training_data)} examples)")
             elif gt_ratio == 100:
-                # Pure GT labels - use corresponding subset of original data
+                # Pure GT labels
                 mixed_training_data = [{
                     "tokenized_text": ex["tokenized_text"],
                     "ner": ex["ner"]
@@ -379,7 +326,7 @@ def main():
                 train_lora_model(
                     model=model,
                     train_data=mixed_training_data,
-                    eval_data=test_data[:100],  # Small eval subset for speed
+                    eval_data=test_data[:100],
                     training_config=training_config,
                     adapter_save_path=adapter_path,
                     logger=logger
@@ -390,9 +337,9 @@ def main():
                 torch.cuda.empty_cache()
                 gc.collect()
                 
-                # ===============================================================================
+                # ═══════════════════════════════════════════════════════════
                 # Evaluation
-                # ===============================================================================
+                # ═══════════════════════════════════════════════════════════
                 
                 logger.info(f"📊 Evaluating {gt_ratio}% GT model on FULL test set...")
                 
@@ -421,49 +368,69 @@ def main():
                 
             except Exception as e:
                 logger.error(f"❌ Training/evaluation failed for {gt_ratio}% GT ratio: {str(e)[:200]}")
-                ratio_f1_scores.append(0.0)  # Record failure as zero F1
+                ratio_f1_scores.append(0.0)
         
-        # ===============================================================================
-        # Store Results for This Subset Size (Adaptive to Partial Completion)
-        # ===============================================================================
+        # ═══════════════════════════════════════════════════════════════════
+        # Store Results for This Iteration
+        # ═══════════════════════════════════════════════════════════════════
         
         # Ensure we have results for all 5 ratios
         while len(ratio_f1_scores) < 5:
             ratio_f1_scores.append(0.0)
         
-        results['no_worst_examples'].append(n_examples)
-        results['gliner_ft_0gt_100llm_f1'].append(ratio_f1_scores[0])   # 0% GT
-        results['gliner_ft_25gt_75llm_f1'].append(ratio_f1_scores[1])   # 25% GT
-        results['gliner_ft_50gt_50llm_f1'].append(ratio_f1_scores[2])   # 50% GT
-        results['gliner_ft_75gt_25llm_f1'].append(ratio_f1_scores[3])   # 75% GT
-        results['gliner_ft_100gt_0llm_f1'].append(ratio_f1_scores[4])   # 100% GT
+        results['no_worst_examples'].append(actual_examples)  # Use ACTUAL number!
+        results['gliner_ft_0gt_100llm_f1'].append(ratio_f1_scores[0])
+        results['gliner_ft_25gt_75llm_f1'].append(ratio_f1_scores[1])
+        results['gliner_ft_50gt_50llm_f1'].append(ratio_f1_scores[2])
+        results['gliner_ft_75gt_25llm_f1'].append(ratio_f1_scores[3])
+        results['gliner_ft_100gt_0llm_f1'].append(ratio_f1_scores[4])
         results['confidence'].append(avg_confidence / len(gt_ratios) if avg_confidence > 0 else 0.0)
         results['avg_entities'].append(avg_entities)
         results['avg_input_tokens'].append(token_metrics['avg_input_tokens'])
         results['model_input_output'].append(token_metrics['model_input_output'])
         results['avg_output_tokens'].append(token_metrics['avg_output_tokens'])
-        results['completion_status'].append(generation_status)
+        results['completion_status'].append(completion_status)
         results['completion_percentage'].append(completion_pct)
         
-        logger.info(f"💾 Results stored for {n_examples} examples")
+        logger.info(f"💾 Results stored for {actual_examples} examples")
         logger.info(f"📊 F1 Scores: 0%GT={ratio_f1_scores[0]:.1f}%, 25%GT={ratio_f1_scores[1]:.1f}%, 50%GT={ratio_f1_scores[2]:.1f}%, 75%GT={ratio_f1_scores[3]:.1f}%, 100%GT={ratio_f1_scores[4]:.1f}%")
-        logger.info(f"📈 Status: {generation_status} ({completion_pct:.1f}% complete)")
+        logger.info(f"📈 Status: {completion_status} ({completion_pct:.1f}% complete)")
+        
+        # ═══════════════════════════════════════════════════════════════════
+        # Incremental Save (Prevent Data Loss)
+        # ═══════════════════════════════════════════════════════════════════
+        
+        temp_df = pd.DataFrame(results)
+        incremental_path = "../results/api/mixed_ratio_performance_incremental.csv"
+        os.makedirs(os.path.dirname(incremental_path), exist_ok=True)
+        temp_df.to_csv(incremental_path, index=False)
+        logger.info(f"💾 Saved incremental results: {len(temp_df)} iterations completed")
         
         # If experiment was interrupted, break here
         if experiment_interrupted:
-            logger.warning(f"🚫 Experiment interrupted due to API limits - proceeding with analysis of completed data")
+            logger.error("="*60)
+            logger.error("🛑 EXPERIMENT INTERRUPTED DUE TO QUOTA EXCEEDED")
+            logger.error("="*60)
+            logger.error(f"Completed iterations: {len(results['no_worst_examples'])}")
+            logger.error(f"Last successful size: {actual_examples} examples")
+            logger.error("Proceeding to final analysis with collected data...")
+            logger.error("="*60)
             break
     
-    # ===============================================================================
-    # Results Analysis and Visualization (Adaptive to Partial Data)
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
+    # Final Results Analysis (Works with Partial Data)
+    # ═══════════════════════════════════════════════════════════════════════
     
-    logger.info(f"\n📋 Creating Results DataFrame...")
+    logger.info(f"\n📋 Creating Final Results DataFrame...")
     
     final_results_df = pd.DataFrame(results)
     
-    # Filter out any completely empty rows (in case experiment ended early)
+    # Filter out any completely empty rows
     final_results_df = final_results_df[final_results_df['no_worst_examples'] > 0]
+    
+    # Calculate completion statistics
+    completed_iterations = len(final_results_df)
+    planned_iterations = len(subset_sizes)
     
     # Configure pandas for full display
     pd.set_option('display.max_columns', None)
@@ -473,8 +440,13 @@ def main():
     
     logger.info("\n" + "="*60)
     logger.info("ENHANCED MIXED RATIO FINE-TUNING ANALYSIS RESULTS")
+    if completed_iterations < planned_iterations:
+        logger.warning(f"⚠️  PARTIAL RESULTS: {completed_iterations}/{planned_iterations} iterations")
+        logger.warning(f"Experiment stopped at {final_results_df['no_worst_examples'].iloc[-1]} examples")
+    else:
+        logger.info(f"✅ COMPLETE RESULTS: {completed_iterations}/{planned_iterations} iterations")
     logger.info("="*60)
-    logger.info(final_results_df.to_string(index=False))
+    logger.info("\n" + final_results_df.to_string(index=False))
     
     # Reset pandas display options
     pd.reset_option('display.max_columns')
@@ -482,19 +454,19 @@ def main():
     pd.reset_option('display.width')
     pd.reset_option('display.max_colwidth')
     
-    # Save results with experiment status indicators
+    # Save results with appropriate filename
     results_filename = "mixed_ratio_finetuning_performance_qwen_enhanced"
-    if experiment_interrupted:
+    if completed_iterations < planned_iterations:
         results_filename += "_partial"
     
-    results_path = f"../results/gemma/{results_filename}.csv"
+    results_path = f"../results/api/{results_filename}.csv"
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
     final_results_df.to_csv(results_path, index=False)
-    logger.info(f"\n💾 Results saved to: {results_path}")
+    logger.info(f"\n💾 Final results saved to: {results_path}")
     
-    # ===============================================================================
-    # Adaptive Visualization (Works with Partial Data)
-    # ===============================================================================
+    # ═══════════════════════════════════════════════════════════════════════
+    # Visualization (Adaptive to Partial Data)
+    # ═══════════════════════════════════════════════════════════════════════
     
     logger.info(f"\n📈 Generating Enhanced Mixed Ratio Performance Plot...")
     
@@ -506,7 +478,7 @@ def main():
     plt.style.use('default')
     sns.set_palette("viridis")
     
-    # Create trend line plot with adaptive sizing
+    # Create trend line plot
     fig, ax = plt.subplots(1, 1, figsize=(14, 10))
     
     # Plot all 5 ratio curves
@@ -525,20 +497,19 @@ def main():
             label=label, color=color, alpha=0.8
         )
     
-    # Add completion status indicators
+    # Add completion status indicators for incomplete data
     for i, (idx, row) in enumerate(final_results_df.iterrows()):
         if row['completion_status'] != 'complete':
-            # Mark incomplete data points
             for col_name, label, color in ratio_columns:
                 y_val = row[col_name]
-                if y_val > 0:  # Only mark if there's actual data
+                if y_val > 0:
                     ax.scatter(row['no_worst_examples'], y_val, 
                              marker='x', s=100, color=color, alpha=0.7)
     
     # Formatting with adaptive title
     title = 'Enhanced Mixed Ratio Fine-tuning Performance: GT vs LLM Labels'
-    if experiment_interrupted:
-        title += ' (Partial Results - API Quota Exceeded)'
+    if completed_iterations < planned_iterations:
+        title += f'\n(Partial Results - Stopped at {final_results_df["no_worst_examples"].iloc[-1]} examples)'
     
     ax.set_title(title, fontsize=16, fontweight='bold', pad=20)
     ax.set_xlabel('Number of Worst Confidence Examples (Training)', fontsize=14)
@@ -546,50 +517,52 @@ def main():
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=12, loc='best')
     
-    # Add completion status legend
-    if experiment_interrupted:
+    # Add completion status legend if needed
+    if completed_iterations < planned_iterations:
         ax.text(0.02, 0.98, 'Legend:\n○ Complete data\n× Partial data (API quota hit)', 
                 transform=ax.transAxes, fontsize=10, verticalalignment='top',
                 bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
     
-    # Add value annotations for key points (reduced density for partial data)
-    annotation_interval = 2 if experiment_interrupted else 3
+    # Add value annotations (reduced density for readability)
+    annotation_interval = 2 if completed_iterations < planned_iterations else 3
     for i, (col_name, label, color) in enumerate(ratio_columns):
-        if i % 2 == 0:  # Annotate every other line to avoid clutter
+        if i % 2 == 0:  # Annotate every other line
             for j, (x, y) in enumerate(zip(final_results_df['no_worst_examples'], 
                                          final_results_df[col_name])):
-                if j % annotation_interval == 0 and y > 0:  # Annotate every Nth point if has data
+                if j % annotation_interval == 0 and y > 0:
                     ax.annotate(f'{y:.1f}%', (x, y), textcoords="offset points", 
                                xytext=(0,15), ha='center', fontsize=9, color=color)
     
     plt.tight_layout()
     
-    # Save plot with appropriate filename
-    plot_filename = "mixed_ratio_finetuning_performance_qwen_enhanced"
-    if experiment_interrupted:
-        plot_filename += "_partial"
-    
-    plot_path = f"../results/gemma/{plot_filename}.png"
-    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-    logger.info(f"📊 Plot saved to: {plot_path}")
+    # Save plot
+    plot_filename = f"../results/api/{results_filename}.png"
+    plt.savefig(plot_filename, dpi=300, bbox_inches='tight')
+    logger.info(f"📊 Plot saved to: {plot_filename}")
     plt.show()
     
-    # ===============================================================================
-    # Final Summary with Resilience Report
-    # ===============================================================================
-    
-    completed_experiments = len(final_results_df)
-    planned_experiments = len(subset_sizes)
+    # ═══════════════════════════════════════════════════════════════════════
+    # Final Summary with Completion Status
+    # ═══════════════════════════════════════════════════════════════════════
     
     logger.info(f"\n🎉 Enhanced Mixed Ratio Analysis Summary:")
-    logger.info(f"📊 Completed experiments: {completed_experiments}/{planned_experiments}")
+    logger.info(f"📊 Completed iterations: {completed_iterations}/{planned_iterations}")
     
-    if experiment_interrupted:
-        logger.info(f"⚠️ Experiment interrupted due to API quota limits")
-        logger.info(f"💾 All progress saved to persistent cache")
-        logger.info(f"🔄 Experiment can be resumed by running again tomorrow")
+    if completed_iterations < planned_iterations:
+        logger.warning("="*60)
+        logger.warning("⚠️  EXPERIMENT INCOMPLETE")
+        logger.warning("="*60)
+        logger.warning("API quota was exceeded during execution")
+        logger.warning(f"Results available for: {list(final_results_df['no_worst_examples'])}")
+        logger.warning("To complete experiment:")
+        logger.warning("  1. Wait for quota reset (typically 24 hours)")
+        logger.warning("  2. Re-run script - will resume from disk cache")
+        logger.warning("  3. Or use partial results for preliminary analysis")
+        logger.warning("="*60)
+    else:
+        logger.info("✅ All iterations completed successfully!")
     
-    # Find best performance for each ratio (from completed data)
+    # Find best performance for each ratio
     for col_name, label, _ in ratio_columns:
         if not final_results_df[col_name].empty:
             best_f1 = final_results_df[col_name].max()
@@ -614,11 +587,12 @@ def main():
     logger.info(f"💾 Total labels in persistent cache: {total_cached_labels}")
     logger.info(f"📁 Cache directory: {label_generator.cache_dir}")
     
-    if experiment_interrupted:
+    if completed_iterations < planned_iterations:
         logger.info(f"\n📋 Next Steps:")
         logger.info(f"   1. Wait for API quota reset (typically 24 hours)")
         logger.info(f"   2. Re-run this script - it will automatically resume from cache")
         logger.info(f"   3. Experiment will continue from where it left off")
+        logger.info(f"   4. Or analyze partial results for preliminary insights")
 
 
 if __name__ == "__main__":
