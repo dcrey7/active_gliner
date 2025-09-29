@@ -1,13 +1,14 @@
 """
 Enhanced Label Generator for Existing Text using Cerebras API
-Robust, Persistent, and Resilient - Generate Labels with Graceful Failure Handling
+Production-Ready with Disk Caching, Structured Outputs, and Graceful Quota Handling
 
 Features:
-- Persistent caching to disk (results/data/)
+- Structured outputs (native JSON schema validation)
+- Persistent disk caching to results/data/
 - Graceful handling of API quota limits
-- Structured output validation with Pydantic
 - Resume capability from disk cache
 - Zero data loss on quota exceeded errors
+- Atomic file writes for safety
 
 Usage:
     generator = LabelGenerator()
@@ -25,39 +26,81 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Tuple
 from tqdm import tqdm
 
 import cerebras.cloud.sdk
 from cerebras.cloud.sdk import Cerebras
-from pydantic import BaseModel, ValidationError
 
 from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
 from utils.logging import get_logger
 
 
-class EntityAnnotation(BaseModel):
-    """Pydantic model for entity annotation"""
-    entity: str
-    types: List[str]
+# ═══════════════════════════════════════════════════════════════════════════
+# Custom Exception for Quota Handling
+# ═══════════════════════════════════════════════════════════════════════════
+
+class QuotaExceededException(Exception):
+    """
+    Raised when API quota is exceeded with partial results
+    
+    Attributes:
+        partial_labels: List of labels that were successfully generated
+        requested: Number of labels that were requested
+        actual: Actual number of labels generated
+        message: Human-readable error message
+    """
+    
+    def __init__(self, partial_labels: List[Dict], requested: int, actual: int, message: str):
+        self.partial_labels = partial_labels
+        self.requested = requested
+        self.actual = actual
+        self.message = message
+        super().__init__(message)
 
 
-class LabelResponse(BaseModel):
-    """Pydantic model for labeling response"""
-    text: str
-    entities: List[EntityAnnotation]
-
+# ═══════════════════════════════════════════════════════════════════════════
+# Enhanced Label Generator Class
+# ═══════════════════════════════════════════════════════════════════════════
 
 class LabelGenerator:
-    """Enhanced label generator with persistent caching and graceful failure handling"""
+    """
+    Enhanced label generator with structured outputs and disk caching
+    """
     
-    def __init__(self, model_name: str = "qwen-3-235b-a22b-instruct-2507"):
+    # JSON Schema for Cerebras Structured Outputs
+    LABEL_SCHEMA = {
+        "type": "object",
+        "properties": {
+            "text": {
+                "type": "string"
+            },
+            "entities": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "entity": {"type": "string"},
+                        "types": {
+                            "type": "array",
+                            "items": {"type": "string"}
+                        }
+                    },
+                    "required": ["entity", "types"],
+                    "additionalProperties": False
+                }
+            }
+        },
+        "required": ["text", "entities"],
+        "additionalProperties": False
+    }
+    
+    def __init__(self, model_name: str = "qwen-3-235b-a22b-thinking-2507"):
         """
         Initialize the enhanced label generator
         
         Args:
             model_name: Cerebras model to use for labeling
-                      Options: "qwen-3-235b-a22b-instruct-2507", "gpt-oss-120b"
         """
         self.model_name = model_name
         self.logger = get_logger("ActiveLearning")
@@ -69,31 +112,44 @@ class LabelGenerator:
         
         self.client = Cerebras(
             api_key=api_key,
-            max_retries=2,  # Let us handle retries manually for better control
-            timeout=90.0    # Increase timeout for complex prompts
+            max_retries=2,
+            timeout=90.0
         )
         
-        self.logger.info(f"Enhanced Label Generator model: {self.model_name}")
+        self.logger.info(f"Enhanced Label Generator initialized: {self.model_name}")
         
         # Rate limiting tracking
         self.requests_per_minute = 0
         self.minute_start_time = time.time()
         self.tokens_per_minute = 0
         
-        # Model limits (both models have same limits)
+        # Model limits for qwen-3-235b-a22b-thinking-2507
         self.max_requests_per_minute = 30
-        self.max_tokens_per_minute = 64000 if "gpt-oss" in model_name else 60000
+        self.max_tokens_per_minute = 60000
         self.context_limit = 65536
         
         # Cache directory
-        self.cache_dir = Path("results/data")
+        self.cache_dir = Path("../results/data")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-
+        self.logger.info(f"Cache directory: {self.cache_dir}")
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # Disk Caching Methods
+    # ═══════════════════════════════════════════════════════════════════════
+    
     def _get_cache_filename(self, num_labels: int) -> Path:
-        """Generate cache filename based on model and label count"""
+        """
+        Generate cache filename based on model and label count
+        
+        Args:
+            num_labels: Number of labels in cache
+            
+        Returns:
+            Path to cache file
+        """
         safe_model_name = self.model_name.replace("/", "_").replace(":", "_")
         return self.cache_dir / f"{safe_model_name}_{num_labels}_labels.json"
-
+    
     def _load_cache_from_disk(self, target_labels: int) -> List[Dict]:
         """
         Load existing cache from disk if available
@@ -104,20 +160,20 @@ class LabelGenerator:
         Returns:
             List of cached labels (empty list if no cache found)
         """
-        # Check for exact match first
+        # Try exact match first
         cache_file = self._get_cache_filename(target_labels)
         if cache_file.exists():
             try:
                 with open(cache_file, 'r') as f:
                     cache_data = json.load(f)
                 labels = cache_data.get('labels', [])
-                self.logger.info(f"Loaded {len(labels)} labels from exact cache: {cache_file}")
+                self.logger.info(f"📂 Loaded {len(labels)} labels from exact cache: {cache_file.name}")
                 return labels
             except Exception as e:
                 self.logger.warning(f"Failed to load cache from {cache_file}: {e}")
         
         # Check for smaller cache files we can build upon
-        for num_labels in range(target_labels - 500, target_labels, 50):
+        for num_labels in range(target_labels - 500, 0, -50):
             if num_labels > 0:
                 cache_file = self._get_cache_filename(num_labels)
                 if cache_file.exists():
@@ -125,15 +181,15 @@ class LabelGenerator:
                         with open(cache_file, 'r') as f:
                             cache_data = json.load(f)
                         labels = cache_data.get('labels', [])
-                        self.logger.info(f"Loaded {len(labels)} labels from partial cache: {cache_file}")
+                        self.logger.info(f"📂 Loaded {len(labels)} labels from partial cache: {cache_file.name}")
                         return labels
                     except Exception as e:
                         self.logger.warning(f"Failed to load partial cache from {cache_file}: {e}")
         
         self.logger.info("No existing cache found, starting fresh")
         return []
-
-    def _save_cache_to_disk(self, label_cache: List[Dict], reason: str = "quota_exceeded") -> None:
+    
+    def _save_cache_to_disk(self, label_cache: List[Dict], reason: str = "completed") -> None:
         """
         Save cache to disk atomically
         
@@ -166,13 +222,17 @@ class LabelGenerator:
                 json.dump(cache_data, f, indent=2)
             
             temp_file.rename(cache_file)
-            self.logger.info(f"Successfully saved {num_labels} labels to {cache_file} (reason: {reason})")
+            self.logger.info(f"💾 Saved {num_labels} labels to {self.cache_dir} {cache_file.name} (reason: {reason})")
             
         except Exception as e:
             self.logger.error(f"Failed to save cache to {cache_file}: {e}")
             if temp_file.exists():
                 temp_file.unlink()
-
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # Error Handling Methods
+    # ═══════════════════════════════════════════════════════════════════════
+    
     def _is_hard_quota_error(self, error: Exception) -> bool:
         """
         Check if error is a hard quota limit (daily/hourly) vs temporary rate limit
@@ -189,16 +249,27 @@ class LabelGenerator:
         hard_quota_indicators = [
             "token_quota_exceeded",
             "tokens per day limit exceeded",
-            "daily limit exceeded", 
+            "tokens per hour limit exceeded",
+            "daily limit exceeded",
+            "hourly limit exceeded",
             "requests per day limit exceeded",
-            "quota exceeded",
-            "too_many_tokens_error"
+            "requests per hour limit exceeded",
+            "quota exceeded"
         ]
         
         return any(indicator in error_str for indicator in hard_quota_indicators)
-
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # Rate Limiting Methods
+    # ═══════════════════════════════════════════════════════════════════════
+    
     def _wait_for_rate_limit(self, estimated_tokens: int = 500):
-        """Intelligent rate limiting based on current usage"""
+        """
+        Intelligent rate limiting based on current usage
+        
+        Args:
+            estimated_tokens: Estimated tokens for next request
+        """
         current_time = time.time()
         
         # Reset counters every minute
@@ -227,11 +298,38 @@ class LabelGenerator:
                 self.tokens_per_minute = 0
                 self.minute_start_time = time.time()
         
-        # Add buffer between requests
+        # Add small buffer between requests
         time.sleep(2.1)
-
+    
+    def _update_rate_limits_from_headers(self, response_headers):
+        """Update rate limit tracking from response headers"""
+        try:
+            remaining_requests = response_headers.get('x-ratelimit-remaining-requests-day')
+            remaining_tokens = response_headers.get('x-ratelimit-remaining-tokens-minute')
+            
+            if remaining_requests:
+                self.logger.debug(f"Remaining requests today: {remaining_requests}")
+            if remaining_tokens:
+                self.logger.debug(f"Remaining tokens this minute: {remaining_tokens}")
+                
+        except Exception as e:
+            self.logger.debug(f"Could not parse rate limit headers: {e}")
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # Prompt Creation
+    # ═══════════════════════════════════════════════════════════════════════
+    
     def _create_prompt(self, tokenized_text: List[str], entity_types: List[str]) -> str:
-        """Create labeling prompt with Pydantic schema instructions"""
+        """
+        Create labeling prompt (unchanged from api_labeler.py)
+        
+        Args:
+            tokenized_text: Text tokens to label
+            entity_types: Entity types to identify
+            
+        Returns:
+            Formatted prompt string
+        """
         text = " ".join(tokenized_text)
         
         prompt = f"""CRITICAL: You are an expert at Named Entity Recognition. Label the given text with named entities.
@@ -240,13 +338,14 @@ class LabelGenerator:
 Identify and extract named entities from the provided text using the specified entity types.
 
 **MANDATORY Format Requirements:**
-- Output MUST be valid JSON matching the exact schema below
+- Output MUST be in JSON format with "text" and "entities" fields
 - Each entity MUST be accurately labeled with the specified entity types
 - Use ONLY the provided entity types
 
 **Entity Types to Use (ONLY these types):**
 """
         
+        # Add entity types dynamically
         for entity_type in entity_types:
             prompt += f"- {entity_type}: Entities of type {entity_type}\n"
         
@@ -261,7 +360,7 @@ Identify and extract named entities from the provided text using the specified e
 - Do not modify or paraphrase entity names
 - Include entities even if you're not 100% certain
 
-**MANDATORY JSON Schema:**
+**MANDATORY Output Format:**
 {{
   "text": "{text}",
   "entities": [
@@ -270,80 +369,80 @@ Identify and extract named entities from the provided text using the specified e
   ]
 }}
 
-**Example Format:**
-{{
-  "text": "John works at Microsoft in Seattle",
-  "entities": [
-    {{"entity": "John", "types": ["PERSON"]}},
-    {{"entity": "Microsoft", "types": ["ORG"]}},
-    {{"entity": "Seattle", "types": ["LOCATION"]}}
-  ]
-}}
-
 CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON object.
 """
         
         return prompt
-
-    def _make_api_call_with_validation(self, prompt: str) -> tuple[LabelResponse, int, int]:
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # API Call with Structured Outputs
+    # ═══════════════════════════════════════════════════════════════════════
+    
+    def _make_api_call(self, prompt: str) -> Tuple[str, int, int]:
         """
-        Make API call with Pydantic validation
+        Make API call with structured outputs and proper error handling
         
+        Args:
+            prompt: The labeling prompt
+            
         Returns:
-            Tuple of (validated_response, input_tokens, output_tokens)
+            Tuple of (response_text, input_tokens, output_tokens)
         """
+        # Estimate tokens (rough approximation: 4 chars per token)
         estimated_tokens = len(prompt) // 4
+        
+        # Wait for rate limits
         self._wait_for_rate_limit(estimated_tokens)
         
         try:
             response = self.client.chat.completions.create(
                 model=self.model_name,
-                messages=[{"role": "user", "content": prompt}],
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
                 temperature=0.3,
-                max_completion_tokens=500,
+                max_completion_tokens=60000,
                 top_p=0.8,
-                # Note: Structured outputs would go here if using JSON schema mode
-                # response_format={"type": "json_schema", "json_schema": {...}}
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "ner_label",
+                        "strict": True,
+                        "schema": self.LABEL_SCHEMA
+                    }
+                }
             )
             
             # Update rate limiting counters
             self.requests_per_minute += 1
             
-            # Extract token counts
+            # Extract token counts from response
             input_tokens = response.usage.prompt_tokens if response.usage else 0
             output_tokens = response.usage.completion_tokens if response.usage else 0
+            
             self.tokens_per_minute += input_tokens + output_tokens
             
-            # Parse and validate response
-            response_text = response.choices[0].message.content
+            # Update from response headers if available
+            if hasattr(response, 'response') and hasattr(response.response, 'headers'):
+                self._update_rate_limits_from_headers(response.response.headers)
             
-            # Clean response text
-            if response_text.startswith('```json'):
-                response_text = response_text.replace('```json', '').replace('```', '').strip()
-            
-            if '{' in response_text and '}' in response_text:
-                start_idx = response_text.find('{')
-                end_idx = response_text.rfind('}') + 1
-                response_text = response_text[start_idx:end_idx]
-            
-            # Parse JSON and validate with Pydantic
-            json_data = json.loads(response_text)
-            validated_response = LabelResponse(**json_data)
-            
-            return validated_response, input_tokens, output_tokens
+            return response.choices[0].message.content, input_tokens, output_tokens
             
         except cerebras.cloud.sdk.RateLimitError as e:
+            self.logger.warning(f"Rate limit hit: {e}")
             if self._is_hard_quota_error(e):
-                self.logger.error(f"Hard quota limit reached: {e}")
-                raise  # This will be caught by the quota handler
-            else:
-                self.logger.warning(f"Temporary rate limit: {e}")
-                wait_time = min(60, 2 ** 3)
-                time.sleep(wait_time)
-                raise  # Re-raise for retry
-                
-        except (cerebras.cloud.sdk.APITimeoutError, cerebras.cloud.sdk.APIConnectionError) as e:
-            self.logger.warning(f"API error (retryable): {e}")
+                raise  # Re-raise hard quota errors
+            # Exponential backoff for soft rate limits
+            wait_time = min(60, 2 ** 3)
+            time.sleep(wait_time)
+            raise  # Re-raise to trigger retry
+            
+        except cerebras.cloud.sdk.APITimeoutError as e:
+            self.logger.warning(f"API timeout: {e}")
+            raise
+            
+        except cerebras.cloud.sdk.APIConnectionError as e:
+            self.logger.warning(f"Connection error: {e}")
             time.sleep(5)
             raise
             
@@ -352,22 +451,29 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
             if e.status_code >= 500:
                 time.sleep(10)
             raise
-
+    
+    # ═══════════════════════════════════════════════════════════════════════
+    # Main Generation Method
+    # ═══════════════════════════════════════════════════════════════════════
+    
     def generate(self, low_n_examples: List[Dict], num_samples: int, 
                 entity_types: List[str], label_cache: List[Dict], 
                 verbose: bool = True) -> List[Dict]:
         """
-        Generate labels with persistent caching and graceful failure handling
+        Generate labels with persistent caching and graceful quota handling
         
         Args:
             low_n_examples: Low confidence examples with tokenized_text
             num_samples: Number of examples to label
             entity_types: Entity types to identify
-            label_cache: Cache list that gets extended (for compatibility)
+            label_cache: Cache list that gets extended
             verbose: Whether to show progress
             
         Returns:
             List of cleaned NER formatted examples
+            
+        Raises:
+            QuotaExceededException: When daily/hourly quota is exceeded (contains partial results)
         """
         if verbose:
             self.logger.info("="*60)
@@ -379,23 +485,24 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
             self.logger.info(f"Low confidence examples available: {len(low_n_examples)}")
             self.logger.info(f"Target labels: {num_samples}")
             self.logger.info(f"Current cache size: {len(label_cache)}")
-            
+            self.logger.info(f"Rate limits: {self.max_requests_per_minute} req/min, {self.max_tokens_per_minute:,} tokens/min")
+        
         # Try to load existing cache from disk
         disk_cache = self._load_cache_from_disk(num_samples)
         
-        # Merge disk cache with runtime cache (prefer disk cache for completeness)
-        if disk_cache:
-            if len(disk_cache) > len(label_cache):
-                self.logger.info(f"Using disk cache ({len(disk_cache)} labels) over runtime cache ({len(label_cache)} labels)")
-                label_cache.clear()
-                label_cache.extend(disk_cache)
-            else:
-                self.logger.info(f"Runtime cache ({len(label_cache)} labels) is larger than disk cache ({len(disk_cache)} labels)")
+        # Merge disk cache with runtime cache (prefer disk cache if larger)
+        if disk_cache and len(disk_cache) > len(label_cache):
+            self.logger.info(f"Using disk cache ({len(disk_cache)} labels) over runtime cache ({len(label_cache)} labels)")
+            label_cache.clear()
+            label_cache.extend(disk_cache)
+        elif disk_cache:
+            self.logger.info(f"Runtime cache ({len(label_cache)} labels) is larger than disk cache ({len(disk_cache)} labels)")
         
         # Calculate how many new labels we need
         if len(label_cache) >= num_samples:
             if verbose:
                 self.logger.info(f"Using {num_samples} labels from cache (no generation needed)")
+                self.logger.info("="*60)
             return label_cache[:num_samples]
         
         no_new_labels_needed = num_samples - len(label_cache)
@@ -414,6 +521,9 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
         input_tokens_list = []
         output_tokens_list = []
         
+        if verbose:
+            self.logger.info("="*60)
+        
         # Generation loop with quota-aware error handling
         try:
             for i in tqdm(range(no_new_labels_needed), desc="Enhanced Labeling", disable=not verbose):
@@ -423,37 +533,35 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
                 
                 prompt = self._create_prompt(tokenized_text, entity_types)
                 
+                # Check prompt length
+                estimated_prompt_tokens = len(prompt) // 4
+                if estimated_prompt_tokens > self.context_limit * 0.9:
+                    self.logger.warning(f"Prompt for example {i+1} may be too long ({estimated_prompt_tokens} est. tokens)")
+                
                 # Retry logic for this specific example
                 max_retries = 3
                 success = False
                 
                 for attempt in range(max_retries + 1):
                     try:
-                        validated_response, input_tokens, output_tokens = self._make_api_call_with_validation(prompt)
+                        response_text, input_tokens, output_tokens = self._make_api_call(prompt)
                         
-                        # Convert Pydantic model to our expected format
-                        synthetic_output = {
-                            "text": validated_response.text,
-                            "entities": [
-                                {"entity": ent.entity, "types": ent.types}
-                                for ent in validated_response.entities
-                            ]
-                        }
+                        # With structured outputs, JSON is guaranteed valid
+                        js = json.loads(response_text)
                         
-                        synthetic_outputs.append(synthetic_output)
+                        synthetic_outputs.append(js)
                         input_tokens_list.append(input_tokens)
                         output_tokens_list.append(output_tokens)
                         success = True
                         
                         if verbose and i % 20 == 0:
-                            self.logger.info(f"Labeled example {i+1}/{no_new_labels_needed}: {synthetic_output.get('entities', [])}")
+                            self.logger.info(f"Labeled example {i+1}/{no_new_labels_needed}: {js.get('entities', [])}")
                         
                         break  # Success, exit retry loop
                         
                     except cerebras.cloud.sdk.RateLimitError as e:
                         if self._is_hard_quota_error(e):
-                            self.logger.error(f"HARD QUOTA EXCEEDED at example {i+1}! Processing remaining data and saving...")
-                            raise  # This will be caught by outer try-catch
+                            raise  # Let outer handler deal with hard quota
                         else:
                             if attempt < max_retries:
                                 wait_time = min(60, 2 ** (attempt + 1))
@@ -463,8 +571,9 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
                                 self.logger.error(f"Rate limit retries exhausted for example {i+1}")
                                 break
                                 
-                    except (json.JSONDecodeError, ValidationError) as e:
-                        error_msg = f"Validation failed for example {i+1}, attempt {attempt+1}: {str(e)[:100]}"
+                    except json.JSONDecodeError as e:
+                        # Should rarely happen with structured outputs
+                        error_msg = f"JSON parsing failed for example {i+1}, attempt {attempt+1}: {str(e)[:100]}"
                         if verbose:
                             self.logger.warning(error_msg)
                         if attempt == max_retries:
@@ -483,13 +592,24 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
                 if not success:
                     self.logger.warning(f"Failed to label example {i+1} after all attempts")
                 
+                # Progress update every 50 examples
+                if verbose and success and (i + 1) % 50 == 0:
+                    avg_input = sum(input_tokens_list) / len(input_tokens_list) if input_tokens_list else 0
+                    avg_output = sum(output_tokens_list) / len(output_tokens_list) if output_tokens_list else 0
+                    remaining = no_new_labels_needed - (i + 1)
+                    eta = (remaining * 2.1) / 60
+                    self.logger.info(f"Progress: {i+1}/{no_new_labels_needed} | Tokens: in={avg_input:.0f}, out={avg_output:.0f} | ETA: {eta:.1f}min")
+                
         except cerebras.cloud.sdk.RateLimitError as e:
             if self._is_hard_quota_error(e):
-                self.logger.error("HARD QUOTA LIMIT REACHED - Entering graceful shutdown mode")
+                self.logger.error("="*60)
+                self.logger.error("🚨 HARD QUOTA LIMIT REACHED")
+                self.logger.error("="*60)
+                self.logger.error(str(e))
                 
                 # Process any remaining synthetic outputs through the cleaning pipeline
                 if synthetic_outputs:
-                    self.logger.info(f"Processing {len(synthetic_outputs)} remaining synthetic outputs...")
+                    self.logger.info(f"Processing {len(synthetic_outputs)} pending synthetic outputs...")
                     
                     # Convert to NER format
                     ner_formatted_data = convert_synthetic_to_ner_format(synthetic_outputs)
@@ -506,9 +626,14 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
                 # Save current progress to disk
                 self._save_cache_to_disk(label_cache, reason="quota_exceeded")
                 
-                # Return whatever we have so far
-                self.logger.info(f"Graceful exit: returning {len(label_cache)} labels (requested {num_samples})")
-                return label_cache
+                # Raise exception with partial data
+                actual_labels = len(label_cache)
+                raise QuotaExceededException(
+                    partial_labels=label_cache,
+                    requested=num_samples,
+                    actual=actual_labels,
+                    message=f"Daily quota exceeded. Generated {actual_labels}/{num_samples} labels."
+                )
             else:
                 # Re-raise if not a hard quota error
                 raise
@@ -542,7 +667,7 @@ CRITICAL: Generate ONLY the JSON format above. Start immediately with the JSON o
                 total_tokens = sum(input_tokens_list) + sum(output_tokens_list)
                 
                 self.logger.info("="*60)
-                self.logger.info(f"TOKEN METRICS (ENHANCED CEREBRAS API):")
+                self.logger.info(f"TOKEN METRICS (CEREBRAS API):")
                 self.logger.info(f"   Average input tokens: {avg_input:.0f}")
                 self.logger.info(f"   Average output tokens: {avg_output:.0f}")
                 self.logger.info(f"   Total tokens used: {total_tokens:,}")

@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "model_name": "qwen-3-235b-a22b-instruct-2507",
+    "timestamp": "2025-09-29T14:27:59.136807",
+    "total_labels": 8,
+    "reason": "completed",
+    "context_limit": 65536
+  },
+  "labels": [
+    {
+      "tokenized_text": [
+        "the",
+        "african",
+        "queen"
+      ],
+      "ner": [
+        [
+          0,
+          2,
+          "title"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "would",
+        "you",
+        "be",
+        "able",
+        "to",
+        "direct",
+        "me",
+        "to",
+        "where",
+        "i",
+        "might",
+        "find",
+        "the",
+        "movie",
+        "priest"
+      ],
+      "ner": [
+        [
+          14,
+          14,
+          "title"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "what",
+        "movies",
+        "were",
+        "olivia",
+        "newton",
+        "john",
+        "in"
+      ],
+      "ner": [
+        [
+          3,
+          5,
+          "actor"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "was",
+        "there",
+        "a",
+        "time",
+        "travelling",
+        "astronaut",
+        "film"
+      ],
+      "ner": [
+        [
+          3,
+          4,
+          "genre"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "is",
+        "there",
+        "a",
+        "good",
+        "movie",
+        "that",
+        "could",
+        "be",
+        "recommended",
+        "which",
+        "is",
+        "funny"
+      ],
+      "ner": [
+        [
+          11,
+          11,
+          "genre"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "i",
+        "want",
+        "to",
+        "watch",
+        "a",
+        "vampire",
+        "movie",
+        "made",
+        "in",
+        "the",
+        "1960s"
+      ],
+      "ner": [
+        [
+          5,
+          5,
+          "genre"
+        ],
+        [
+          10,
+          10,
+          "year"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "who",
+        "directed",
+        "happy",
+        "feet"
+      ],
+      "ner": [
+        [
+          2,
+          3,
+          "title"
+        ],
+        [
+          1,
+          1,
+          "director"
+        ]
+      ]
+    },
+    {
+      "tokenized_text": [
+        "what",
+        "is",
+        "the",
+        "name",
+        "of",
+        "the",
+        "movie",
+        "that",
+        "came",
+        "out",
+        "in",
+        "the",
+        "2000",
+        "s",
+        "and",
+        "was",
+        "about",
+        "a",
+        "town"
+      ],
+      "ner": [
+        [
+          12,
+          13,
+          "year"
+        ],
+        [
+          16,
+          18,
+          "plot"
+        ]
+      ]
+    }
+  ]
+}
