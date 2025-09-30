@@ -2,16 +2,6 @@
 """
 Mixed Ratio Fine-tuning Experiment with Enhanced API Quota Handling
 Tests GLiNER fine-tuned on different GT/LLM label ratios with graceful failure handling
-
-Features:
-- Resilient to API quota limits and rate limiting
-- Adaptive experiment continuation with partial data
-- Persistent cache loading and resume capability
-- Graceful plotting with incomplete datasets
-- Zero data loss on API failures
-- Incremental result saving
-
-Enhanced from mixed_test_FT.py to handle Cerebras API constraints gracefully.
 """
 
 import sys
@@ -29,14 +19,11 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 load_dotenv() 
 
-# Suppress warnings
 warnings.filterwarnings('ignore')
 
-# Add src path
 src_path = os.path.join(os.path.dirname(os.getcwd()), 'src')
 sys.path.append(src_path)
 
-# Import modules
 from config.settings import Settings
 from utils.logging import setup_logging
 from utils.reproducibility import set_all_seeds
@@ -48,33 +35,20 @@ from training.trainer import train_lora_model, intialize_model, load_evaluation_
 
 
 def create_mixed_training_data(examples, llm_labels, gt_ratio):
-    """
-    Create training data with specified GT/LLM ratio
-    
-    Args:
-        examples: Original examples with GT labels
-        llm_labels: LLM-generated labels for same examples  
-        gt_ratio: Percentage of examples to use GT labels (0-100)
-        
-    Returns:
-        List of training examples with mixed labels
-    """
+    """Create training data with specified GT/LLM ratio"""
     n_examples = len(examples)
     n_gt = int(n_examples * gt_ratio / 100)
     
-    # Randomly select which examples get GT labels
     gt_indices = random.sample(range(n_examples), n_gt)
     
     mixed_data = []
     for i, (example, llm_example) in enumerate(zip(examples, llm_labels)):
         if i in gt_indices:
-            # Use GT labels
             mixed_data.append({
                 "tokenized_text": example["tokenized_text"],
                 "ner": example["ner"]
             })
         else:
-            # Use LLM labels
             mixed_data.append({
                 "tokenized_text": llm_example["tokenized_text"], 
                 "ner": llm_example["ner"]
@@ -86,17 +60,12 @@ def create_mixed_training_data(examples, llm_labels, gt_ratio):
 def main():
     """Enhanced Mixed Ratio Fine-tuning Analysis with Quota Handling"""
     
-    # ═══════════════════════════════════════════════════════════════════════
-    # Setup and Configuration
-    # ═══════════════════════════════════════════════════════════════════════
-    
     settings = Settings()
     settings.setup()
     logger = setup_logging(log_dir=str(settings.logs_dir))
     set_all_seeds(seed=settings.global_seed, logger=logger)
     device = setup_device(logger=logger)
     
-    # Load FULL test data for evaluation
     test_data_path = settings.data_path / settings.test_file
     labels_path = settings.data_path / settings.labels_file
     
@@ -106,25 +75,19 @@ def main():
     test_data, entity_types = load_mit_dataset(str(test_data_path), str(labels_path), "test")
     logger.info(f"📊 Loaded FULL test data: {len(test_data)} examples, {len(entity_types)} entity types")
     
-    # Load pre-saved low confidence examples
     logger.info("📂 Loading pre-saved low confidence examples...")
     with open('../results/high_mse_2500_examples.json', 'r') as file:
         low_n = json.load(file)
     logger.info(f"📊 Loaded {len(low_n)} low confidence examples for training")
     
-    # Initialize Enhanced LLM labeler with API resilience
     try:
-        label_generator = LabelGenerator(model_name="qwen-3-235b-a22b-instruct-2507")
+        label_generator = LabelGenerator(model_name="qwen-3-235b-a22b-thinking-2507")
         logger.info(f"🤖 Enhanced LLM Labeler: {label_generator.model_name}")
         logger.info(f"📁 Cache directory: {label_generator.cache_dir}")
     except Exception as e:
         logger.error(f"Failed to initialize label generator: {e}")
         logger.error("Please check CEREBRAS_API_KEY environment variable")
         return
-    
-    # ═══════════════════════════════════════════════════════════════════════
-    # Training Configuration
-    # ═══════════════════════════════════════════════════════════════════════
     
     training_config = {
         'num_steps': 1000,
@@ -148,15 +111,13 @@ def main():
     for key, value in training_config.items():
         logger.info(f"   • {key}: {value}")
     
-    # ═══════════════════════════════════════════════════════════════════════
-    # Experiment Parameters with Adaptive Capability
-    # ═══════════════════════════════════════════════════════════════════════
+
     
-    # subset_sizes = [10, 50, 100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500]
-    subset_sizes = [2,5,8]
-    gt_ratios = [0, 25, 50, 75, 100]  # Percentage of GT labels
+    subset_sizes = [10,50,100,247,507,750,1000,1250,1500,1750,2000,2250,2500]
+
+    # subset_sizes = [10,20]
+    gt_ratios = [0, 25, 50, 75, 100]
     
-    # Results storage with status tracking
     results = {
         'no_worst_examples': [],
         'gliner_ft_0gt_100llm_f1': [],
@@ -173,10 +134,6 @@ def main():
         'completion_percentage': []
     }
     
-    # ═══════════════════════════════════════════════════════════════════════
-    # Initialize Label Cache
-    # ═══════════════════════════════════════════════════════════════════════
-    
     label_cache = []
     
     total_iterations = len(subset_sizes) * len(gt_ratios)
@@ -187,10 +144,6 @@ def main():
     logger.info(f"   • Evaluation dataset: FULL test set ({len(test_data)} examples)")
     logger.info(f"   • API resilience: ✅ Enabled")
     logger.info(f"   • Incremental saving: ✅ Enabled")
-    
-    # ═══════════════════════════════════════════════════════════════════════
-    # Main Experiment Loop with API Resilience
-    # ═══════════════════════════════════════════════════════════════════════
     
     logger.info(f"\n🚀 Starting Enhanced Mixed Ratio Analysis...")
     logger.info("-" * 60)
@@ -206,12 +159,7 @@ def main():
         logger.info(f"📝 ITERATION {subset_idx+1}/{len(subset_sizes)}: Processing {n_examples} examples")
         logger.info(f"{'='*60}")
         
-        # Get subset for training
         train_subset = low_n[:n_examples]
-        
-        # ═══════════════════════════════════════════════════════════════════
-        # Generate LLM Labels WITH QUOTA HANDLING
-        # ═══════════════════════════════════════════════════════════════════
         
         logger.info(f"🤖 Generating LLM labels for {n_examples} examples...")
         
@@ -234,7 +182,7 @@ def main():
             logger.error("="*60)
             logger.error("🚨 QUOTA EXCEEDED - HANDLING GRACEFULLY")
             logger.error("="*60)
-            logger.error(qe.message)
+            logger.error(f"Full message: {qe.message}")
             logger.error(f"Requested: {qe.requested} labels")
             logger.error(f"Generated: {qe.actual} labels")
             logger.error(f"Completion: {(qe.actual/qe.requested)*100:.1f}%")
@@ -249,33 +197,39 @@ def main():
             logger.warning(f"⚠️  Will complete current iteration with {actual_examples} labels, then stop experiment")
         
         except Exception as e:
-            logger.error(f"❌ Unexpected error during label generation: {str(e)[:200]}")
+            logger.error(f"❌ Unexpected error during label generation: {str(e)}")
             logger.error("Skipping this iteration and continuing...")
             continue
-        
-        # ═══════════════════════════════════════════════════════════════════
-        # Calculate Metrics
-        # ═══════════════════════════════════════════════════════════════════
         
         if len(llm_labeled_data) > 0:
             avg_entities = sum(len(ex['ner']) for ex in llm_labeled_data) / len(llm_labeled_data)
             
-            # Token metrics estimation
-            token_metrics = {
-                'avg_input_tokens': 500.0,
-                'model_input_output': (65536, 500),
-                'avg_output_tokens': 150.0
-            }
+            # Calculate ACTUAL token metrics from cached labels with metadata
+            samples_with_tokens = [ex for ex in llm_labeled_data if '_token_input' in ex]
+            
+            if samples_with_tokens:
+                avg_input = sum(ex['_token_input'] for ex in samples_with_tokens) / len(samples_with_tokens)
+                avg_output = sum(ex['_token_output'] for ex in samples_with_tokens) / len(samples_with_tokens)
+                
+                token_metrics = {
+                    'avg_input_tokens': avg_input,
+                    'model_input_output': (65536, 60000),
+                    'avg_output_tokens': avg_output
+                }
+            else:
+                # Fallback if no token metadata (shouldn't happen with fixed enc_api_label)
+                token_metrics = {
+                    'avg_input_tokens': 0,
+                    'model_input_output': (65536, 60000),
+                    'avg_output_tokens': 0
+                }
         else:
             logger.error(f"❌ No valid LLM labeled data for {n_examples} examples")
             logger.error("Skipping this iteration...")
             continue
         
         logger.info(f"📊 Metrics: avg_entities={avg_entities:.1f}, completion={completion_pct:.1f}%")
-        
-        # ═══════════════════════════════════════════════════════════════════
-        # Train 5 Models with Different Ratios
-        # ═══════════════════════════════════════════════════════════════════
+        logger.info(f"📊 Token metrics: input={token_metrics['avg_input_tokens']:.0f}, output={token_metrics['avg_output_tokens']:.0f}")
         
         ratio_f1_scores = []
         avg_confidence = 0.0
@@ -286,26 +240,21 @@ def main():
             logger.info(f"\n🔥 Training GLiNER with {gt_ratio}% GT + {100-gt_ratio}% LLM labels")
             logger.info(f"   Available data: {effective_examples} examples")
             
-            # Skip training if insufficient data
             if effective_examples < 1:
                 logger.warning(f"   ⚠️  Insufficient data ({effective_examples} examples) - recording zero F1")
                 ratio_f1_scores.append(0.0)
                 continue
             
-            # Create mixed training data
             if gt_ratio == 0:
-                # Pure LLM labels
                 mixed_training_data = llm_labeled_data
                 logger.info(f"   Using 100% LLM labels ({len(mixed_training_data)} examples)")
             elif gt_ratio == 100:
-                # Pure GT labels
                 mixed_training_data = [{
                     "tokenized_text": ex["tokenized_text"],
                     "ner": ex["ner"]
                 } for ex in train_subset[:effective_examples]]
                 logger.info(f"   Using 100% GT labels ({len(mixed_training_data)} examples)")
             else:
-                # Mixed labels
                 gt_subset = train_subset[:effective_examples]
                 mixed_training_data = create_mixed_training_data(
                     gt_subset, llm_labeled_data, gt_ratio
@@ -314,15 +263,12 @@ def main():
                 n_llm = len(mixed_training_data) - n_gt
                 logger.info(f"   Using {n_gt} GT + {n_llm} LLM labels ({len(mixed_training_data)} total)")
             
-            # Define adapter save path
             adapter_path = f"../models/mixed_ratio_model_{effective_examples}_{gt_ratio}gt"
             
             try:
-                # Initialize model with LoRA
                 model = intialize_model(logger=logger)
                 model.to(device)
                 
-                # Train the model
                 train_lora_model(
                     model=model,
                     train_data=mixed_training_data,
@@ -332,21 +278,14 @@ def main():
                     logger=logger
                 )
                 
-                # Cleanup training model
                 del model
                 torch.cuda.empty_cache()
                 gc.collect()
                 
-                # ═══════════════════════════════════════════════════════════
-                # Evaluation
-                # ═══════════════════════════════════════════════════════════
-                
                 logger.info(f"📊 Evaluating {gt_ratio}% GT model on FULL test set...")
                 
-                # Load model with trained adapter
                 eval_model = load_evaluation_model(adapter_path, device, logger=logger)
                 
-                # Enhanced evaluation on FULL test set
                 with torch.no_grad():
                     eval_results = enhanced_evaluate(
                         eval_model, test_data, entity_types,
@@ -361,24 +300,18 @@ def main():
                 ratio_f1_scores.append(ratio_f1)
                 avg_confidence += ratio_conf
                 
-                # Cleanup evaluation model
                 del eval_model
                 torch.cuda.empty_cache()
                 gc.collect()
                 
             except Exception as e:
-                logger.error(f"❌ Training/evaluation failed for {gt_ratio}% GT ratio: {str(e)[:200]}")
+                logger.error(f"❌ Training/evaluation failed for {gt_ratio}% GT ratio: {str(e)}")
                 ratio_f1_scores.append(0.0)
         
-        # ═══════════════════════════════════════════════════════════════════
-        # Store Results for This Iteration
-        # ═══════════════════════════════════════════════════════════════════
-        
-        # Ensure we have results for all 5 ratios
         while len(ratio_f1_scores) < 5:
             ratio_f1_scores.append(0.0)
         
-        results['no_worst_examples'].append(actual_examples)  # Use ACTUAL number!
+        results['no_worst_examples'].append(actual_examples)
         results['gliner_ft_0gt_100llm_f1'].append(ratio_f1_scores[0])
         results['gliner_ft_25gt_75llm_f1'].append(ratio_f1_scores[1])
         results['gliner_ft_50gt_50llm_f1'].append(ratio_f1_scores[2])
@@ -396,17 +329,12 @@ def main():
         logger.info(f"📊 F1 Scores: 0%GT={ratio_f1_scores[0]:.1f}%, 25%GT={ratio_f1_scores[1]:.1f}%, 50%GT={ratio_f1_scores[2]:.1f}%, 75%GT={ratio_f1_scores[3]:.1f}%, 100%GT={ratio_f1_scores[4]:.1f}%")
         logger.info(f"📈 Status: {completion_status} ({completion_pct:.1f}% complete)")
         
-        # ═══════════════════════════════════════════════════════════════════
-        # Incremental Save (Prevent Data Loss)
-        # ═══════════════════════════════════════════════════════════════════
-        
         temp_df = pd.DataFrame(results)
         incremental_path = "../results/api/mixed_ratio_performance_incremental.csv"
         os.makedirs(os.path.dirname(incremental_path), exist_ok=True)
         temp_df.to_csv(incremental_path, index=False)
         logger.info(f"💾 Saved incremental results: {len(temp_df)} iterations completed")
         
-        # If experiment was interrupted, break here
         if experiment_interrupted:
             logger.error("="*60)
             logger.error("🛑 EXPERIMENT INTERRUPTED DUE TO QUOTA EXCEEDED")
@@ -417,22 +345,14 @@ def main():
             logger.error("="*60)
             break
     
-    # ═══════════════════════════════════════════════════════════════════════
-    # Final Results Analysis (Works with Partial Data)
-    # ═══════════════════════════════════════════════════════════════════════
-    
     logger.info(f"\n📋 Creating Final Results DataFrame...")
     
     final_results_df = pd.DataFrame(results)
-    
-    # Filter out any completely empty rows
     final_results_df = final_results_df[final_results_df['no_worst_examples'] > 0]
     
-    # Calculate completion statistics
     completed_iterations = len(final_results_df)
     planned_iterations = len(subset_sizes)
     
-    # Configure pandas for full display
     pd.set_option('display.max_columns', None)
     pd.set_option('display.max_rows', None)
     pd.set_option('display.width', None)
@@ -448,13 +368,11 @@ def main():
     logger.info("="*60)
     logger.info("\n" + final_results_df.to_string(index=False))
     
-    # Reset pandas display options
     pd.reset_option('display.max_columns')
     pd.reset_option('display.max_rows') 
     pd.reset_option('display.width')
     pd.reset_option('display.max_colwidth')
     
-    # Save results with appropriate filename
     results_filename = "mixed_ratio_finetuning_performance_qwen_enhanced"
     if completed_iterations < planned_iterations:
         results_filename += "_partial"
@@ -464,24 +382,17 @@ def main():
     final_results_df.to_csv(results_path, index=False)
     logger.info(f"\n💾 Final results saved to: {results_path}")
     
-    # ═══════════════════════════════════════════════════════════════════════
-    # Visualization (Adaptive to Partial Data)
-    # ═══════════════════════════════════════════════════════════════════════
-    
     logger.info(f"\n📈 Generating Enhanced Mixed Ratio Performance Plot...")
     
     if len(final_results_df) == 0:
         logger.error("❌ No data to plot - experiment failed completely")
         return
     
-    # Set style
     plt.style.use('default')
     sns.set_palette("viridis")
     
-    # Create trend line plot
     fig, ax = plt.subplots(1, 1, figsize=(14, 10))
     
-    # Plot all 5 ratio curves
     ratio_columns = [
         ('gliner_ft_0gt_100llm_f1', '0% GT + 100% LLM', 'red'),
         ('gliner_ft_25gt_75llm_f1', '25% GT + 75% LLM', 'orange'), 
@@ -497,7 +408,6 @@ def main():
             label=label, color=color, alpha=0.8
         )
     
-    # Add completion status indicators for incomplete data
     for i, (idx, row) in enumerate(final_results_df.iterrows()):
         if row['completion_status'] != 'complete':
             for col_name, label, color in ratio_columns:
@@ -506,7 +416,6 @@ def main():
                     ax.scatter(row['no_worst_examples'], y_val, 
                              marker='x', s=100, color=color, alpha=0.7)
     
-    # Formatting with adaptive title
     title = 'Enhanced Mixed Ratio Fine-tuning Performance: GT vs LLM Labels'
     if completed_iterations < planned_iterations:
         title += f'\n(Partial Results - Stopped at {final_results_df["no_worst_examples"].iloc[-1]} examples)'
@@ -517,16 +426,14 @@ def main():
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=12, loc='best')
     
-    # Add completion status legend if needed
     if completed_iterations < planned_iterations:
         ax.text(0.02, 0.98, 'Legend:\n○ Complete data\n× Partial data (API quota hit)', 
                 transform=ax.transAxes, fontsize=10, verticalalignment='top',
                 bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
     
-    # Add value annotations (reduced density for readability)
     annotation_interval = 2 if completed_iterations < planned_iterations else 3
     for i, (col_name, label, color) in enumerate(ratio_columns):
-        if i % 2 == 0:  # Annotate every other line
+        if i % 2 == 0:
             for j, (x, y) in enumerate(zip(final_results_df['no_worst_examples'], 
                                          final_results_df[col_name])):
                 if j % annotation_interval == 0 and y > 0:
@@ -535,15 +442,10 @@ def main():
     
     plt.tight_layout()
     
-    # Save plot
     plot_filename = f"../results/api/{results_filename}.png"
     plt.savefig(plot_filename, dpi=300, bbox_inches='tight')
     logger.info(f"📊 Plot saved to: {plot_filename}")
     plt.show()
-    
-    # ═══════════════════════════════════════════════════════════════════════
-    # Final Summary with Completion Status
-    # ═══════════════════════════════════════════════════════════════════════
     
     logger.info(f"\n🎉 Enhanced Mixed Ratio Analysis Summary:")
     logger.info(f"📊 Completed iterations: {completed_iterations}/{planned_iterations}")
@@ -562,7 +464,6 @@ def main():
     else:
         logger.info("✅ All iterations completed successfully!")
     
-    # Find best performance for each ratio
     for col_name, label, _ in ratio_columns:
         if not final_results_df[col_name].empty:
             best_f1 = final_results_df[col_name].max()
@@ -573,7 +474,6 @@ def main():
             else:
                 logger.info(f"❌ {label}: No successful results")
     
-    # Cache efficiency report
     cache_files = list(label_generator.cache_dir.glob("*.json"))
     total_cached_labels = 0
     for cache_file in cache_files:
