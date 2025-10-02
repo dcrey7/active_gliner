@@ -1,0 +1,83 @@
+{
+  "total_examples": 9774,
+  "target_examples_per_bucket": 500,
+  "num_buckets": 5,
+  "bucketing_method": "mse_range_based",
+  "bucket_summaries": [
+    {
+      "bucket_number": 1,
+      "mse_range_definition": [
+        0.19960913700074628,
+        0.24951142125093284
+      ],
+      "num_examples": 292,
+      "mse_range": [
+        0.19985085600780295,
+        0.24951142125093284
+      ],
+      "avg_mse": 0.22217869715678468,
+      "avg_confidence_pct": 53.01171621661977,
+      "avg_entities": 1.6883561643835616
+    },
+    {
+      "bucket_number": 2,
+      "mse_range_definition": [
+        0.1497068527505597,
+        0.19960913700074628
+      ],
+      "num_examples": 462,
+      "mse_range": [
+        0.14976712733472652,
+        0.19958304623300194
+      ],
+      "avg_mse": 0.17335104823981518,
+      "avg_confidence_pct": 58.90104746587442,
+      "avg_entities": 1.896103896103896
+    },
+    {
+      "bucket_number": 3,
+      "mse_range_definition": [
+        0.09980456850037311,
+        0.1497068527505597
+      ],
+      "num_examples": 500,
+      "mse_range": [
+        0.09980943330797369,
+        0.14967930283639852
+      ],
+      "avg_mse": 0.12093704075751831,
+      "avg_confidence_pct": 67.58429958425218,
+      "avg_entities": 2.258
+    },
+    {
+      "bucket_number": 4,
+      "mse_range_definition": [
+        0.04990228425018656,
+        0.09980456850037311
+      ],
+      "num_examples": 500,
+      "mse_range": [
+        0.049902641002992944,
+        0.0997274554441141
+      ],
+      "avg_mse": 0.07325709081730784,
+      "avg_confidence_pct": 75.72673854569496,
+      "avg_entities": 2.544
+    },
+    {
+      "bucket_number": 5,
+      "mse_range_definition": [
+        0.0,
+        0.04990228425018656
+      ],
+      "num_examples": 500,
+      "mse_range": [
+        0.0,
+        0.0498387934648612
+      ],
+      "avg_mse": 0.016792008382690914,
+      "avg_confidence_pct": 86.27817026286755,
+      "avg_entities": 1.97
+    }
+  ]
+}

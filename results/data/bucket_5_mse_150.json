@@ -1,0 +1,5888 @@
+[
+  {
+    "tokenized_text": [
+      "is",
+      "violence",
+      "liked",
+      "by",
+      "many"
+    ],
+    "ner": [
+      [
+        1,
+        1,
+        "genre"
+      ],
+      [
+        2,
+        4,
+        "average ratings"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "when",
+      "did",
+      "the",
+      "one",
+      "eyed",
+      "monster",
+      "come",
+      "out"
+    ],
+    "ner": [
+      [
+        3,
+        5,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        5,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8131493926048279
+    ],
+    "mse": 0.03491314948394475
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "an",
+      "r",
+      "rated",
+      "urban",
+      "legend",
+      "movie",
+      "you",
+      "like",
+      "from",
+      "the",
+      "past",
+      "ten",
+      "years"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "plot"
+      ],
+      [
+        12,
+        14,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        5,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.9336967468261719,
+      0.7035424113273621
+    ],
+    "mse": 0.04614161163151387
+  },
+  {
+    "tokenized_text": [
+      "find",
+      "movies",
+      "directed",
+      "with",
+      "martin",
+      "scorsese",
+      "starring",
+      "leonardo",
+      "dicaprio"
+    ],
+    "ner": [
+      [
+        4,
+        5,
+        "director"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        5,
+        "director"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8315756916999817,
+      0.9176298975944519
+    ],
+    "mse": 0.01757579069832005
+  },
+  {
+    "tokenized_text": [
+      "name",
+      "a",
+      "romantic",
+      "comedy",
+      "that",
+      "starred",
+      "tom",
+      "hanks"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.9118536114692688,
+      0.8195322751998901
+    ],
+    "mse": 0.020169192752769405
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "name",
+      "of",
+      "the",
+      "r",
+      "rated",
+      "romance",
+      "movie",
+      "directed",
+      "by",
+      "jerry",
+      "schatzberg",
+      "about",
+      "a",
+      "best",
+      "friend"
+    ],
+    "ner": [
+      [
+        6,
+        6,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8217984437942505,
+      0.875027060508728,
+      0.9230569005012512,
+      0.8119266033172607
+    ],
+    "mse": 0.022166468334874345
+  },
+  {
+    "tokenized_text": [
+      "can",
+      "you",
+      "recommend",
+      "a",
+      "crime",
+      "movie"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8223286867141724
+    ],
+    "mse": 0.03156709556471071
+  },
+  {
+    "tokenized_text": [
+      "does",
+      "paul",
+      "newman",
+      "star",
+      "in",
+      "a",
+      "avant",
+      "garde",
+      "film"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        7,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        7,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.7352623343467712,
+      0.95516037940979
+    ],
+    "mse": 0.03604831159509736
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "biographical",
+      "movie",
+      "from",
+      "francis",
+      "ford",
+      "coppola"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        8,
+        "director"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "most",
+      "horrific",
+      "movie",
+      "ever",
+      "created"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "directed",
+      "dimples"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        2,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8047317266464233
+    ],
+    "mse": 0.03812969857848714
+  },
+  {
+    "tokenized_text": [
+      "did",
+      "jane",
+      "fonda",
+      "do",
+      "an",
+      "period",
+      "picture"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        5,
+        6,
+        "genre"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "films",
+      "had",
+      "jim",
+      "carrey",
+      "in",
+      "them"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.9164977669715881
+    ],
+    "mse": 0.006972622920731197
+  },
+  {
+    "tokenized_text": [
+      "please",
+      "give",
+      "me",
+      "a",
+      "list",
+      "of",
+      "military",
+      "flicks",
+      "that",
+      "were",
+      "directed",
+      "by",
+      "joseph",
+      "kell"
+    ],
+    "ner": [
+      [
+        6,
+        6,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.8381825685501099,
+      0.7460869550704956
+    ],
+    "mse": 0.045328357753206205
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "1980",
+      "s",
+      "r",
+      "rated",
+      "crime",
+      "movie",
+      "starred",
+      "alec",
+      "guiness"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "year"
+      ],
+      [
+        3,
+        3,
+        "rating"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        1,
+        "year"
+      ],
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.6596753001213074,
+      0.8608874678611755,
+      0.8509406447410583,
+      0.8423107266426086
+    ],
+    "mse": 0.04556444906694779
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "really",
+      "good",
+      "romance",
+      "with",
+      "roxann",
+      "dawson",
+      "released",
+      "in",
+      "the",
+      "last",
+      "decade"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "average ratings"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ],
+      [
+        12,
+        13,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8070462942123413
+    ],
+    "mse": 0.03723113257719035
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "there",
+      "been",
+      "a",
+      "g",
+      "rated",
+      "movie",
+      "from",
+      "the",
+      "last",
+      "six",
+      "years",
+      "about",
+      "a",
+      "parole",
+      "hearing",
+      "starring",
+      "talisa",
+      "soto"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "rating"
+      ],
+      [
+        9,
+        11,
+        "year"
+      ],
+      [
+        14,
+        15,
+        "plot"
+      ],
+      [
+        17,
+        18,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        5,
+        "rating"
+      ],
+      [
+        17,
+        18,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8774145841598511,
+      0.8258588314056396
+    ],
+    "mse": 0.022676165388055836
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "past",
+      "seven",
+      "years",
+      "what",
+      "film",
+      "noir",
+      "movies",
+      "got",
+      "a",
+      "four",
+      "star",
+      "rating"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "year"
+      ],
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        11,
+        12,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        11,
+        13,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7984817624092102,
+      0.958978533744812
+    ],
+    "mse": 0.021146180387711766
+  },
+  {
+    "tokenized_text": [
+      "with",
+      "which",
+      "movie",
+      "brad",
+      "pitt",
+      "stars",
+      "as",
+      "achilles"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "actor"
+      ],
+      [
+        7,
+        7,
+        "character"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "actor"
+      ],
+      [
+        7,
+        7,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.9622843265533447,
+      0.9544133543968201
+    ],
+    "mse": 0.001750307140442331
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "is",
+      "in",
+      "the",
+      "movie",
+      "the",
+      "kids",
+      "are",
+      "all",
+      "right"
+    ],
+    "ner": [
+      [
+        5,
+        9,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "had",
+      "an",
+      "average",
+      "rating",
+      "of",
+      "nine",
+      "that",
+      "was",
+      "about",
+      "love",
+      "at",
+      "first",
+      "sight"
+    ],
+    "ner": [
+      [
+        7,
+        7,
+        "average ratings"
+      ],
+      [
+        11,
+        14,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        7,
+        "rating"
+      ],
+      [
+        11,
+        14,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.6972213983535767,
+      0.9818952679634094
+    ],
+    "mse": 0.04600133146854013
+  },
+  {
+    "tokenized_text": [
+      "movie",
+      "famous",
+      "for",
+      "the",
+      "quote",
+      "go",
+      "ahead",
+      "make",
+      "my",
+      "day"
+    ],
+    "ner": [],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "cameron",
+      "diaz",
+      "been",
+      "in",
+      "any",
+      "horror",
+      "movies"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8811984062194824,
+      0.8122104406356812
+    ],
+    "mse": 0.024689368645518073
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "some",
+      "alan",
+      "autry",
+      "movies",
+      "from",
+      "the",
+      "past",
+      "seven",
+      "decades"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "actor"
+      ],
+      [
+        8,
+        10,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "find",
+      "the",
+      "movie",
+      "with",
+      "the",
+      "famous",
+      "quote",
+      "heres",
+      "looking",
+      "at",
+      "you",
+      "kid"
+    ],
+    "ner": [],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "the",
+      "movie",
+      "grizzly",
+      "park"
+    ],
+    "ner": [
+      [
+        6,
+        7,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.9156439304351807
+    ],
+    "mse": 0.007115946472424639
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "good",
+      "thriller",
+      "movie",
+      "directed",
+      "by",
+      "michael",
+      "bay"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.8556808233261108,
+      0.8449048399925232
+    ],
+    "mse": 0.022441266706787033
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "a",
+      "western",
+      "with",
+      "a",
+      "rating",
+      "of",
+      "nc",
+      "17",
+      "and",
+      "starring",
+      "jennifer",
+      "jason",
+      "leigh"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "rating"
+      ],
+      [
+        11,
+        13,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9583635330200195,
+      0.9053927659988403
+    ],
+    "mse": 0.005342062053962593
+  },
+  {
+    "tokenized_text": [
+      "play",
+      "a",
+      "trailerfor",
+      "cars"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "trailer"
+      ],
+      [
+        3,
+        3,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "featured",
+      "the",
+      "quote",
+      "i",
+      "see",
+      "dead",
+      "people"
+    ],
+    "ner": [],
+    "predictions": [
+      [
+        5,
+        8,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8687204718589783
+    ],
+    "mse": 0.017234314508929316
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "good",
+      "horror",
+      "movie",
+      "directed",
+      "by",
+      "orson",
+      "welles"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.7715455889701843,
+      0.7861147522926331
+    ],
+    "mse": 0.04896915855291084
+  },
+  {
+    "tokenized_text": [
+      "was",
+      "robin",
+      "williams",
+      "in",
+      "the",
+      "movie",
+      "aladdin"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        6,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.7965004444122314,
+      0.8709279298782349
+    ],
+    "mse": 0.02903583420496858
+  },
+  {
+    "tokenized_text": [
+      "get",
+      "me",
+      "some",
+      "razzie",
+      "award",
+      "winners",
+      "from",
+      "2010"
+    ],
+    "ner": [
+      [
+        3,
+        5,
+        "review"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "scores": [
+      0.9166897535324097
+    ],
+    "mse": 0.006940597166490647
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "starred",
+      "in",
+      "the",
+      "shining"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8889836668968201
+    ],
+    "mse": 0.012324626215676204
+  },
+  {
+    "tokenized_text": [
+      "comedy",
+      "with",
+      "quotes",
+      "have",
+      "you",
+      "seen",
+      "my",
+      "stapler",
+      "and",
+      "case",
+      "of",
+      "the",
+      "mondays"
+    ],
+    "ner": [],
+    "predictions": [
+      [
+        0,
+        0,
+        "genre"
+      ],
+      [
+        9,
+        12,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8545190095901489,
+      0.8843746781349182
+    ],
+    "mse": 0.01726696681351747
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "want",
+      "to",
+      "watch",
+      "an",
+      "action",
+      "movie",
+      "with",
+      "harrison",
+      "ford"
+    ],
+    "ner": [
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7668069005012512,
+      0.9309479594230652
+    ],
+    "mse": 0.029573602980836
+  },
+  {
+    "tokenized_text": [
+      "tell",
+      "me",
+      "about",
+      "a",
+      "film",
+      "called",
+      "hardware"
+    ],
+    "ner": [
+      [
+        6,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8484548926353455
+    ],
+    "mse": 0.022965919566164672
+  },
+  {
+    "tokenized_text": [
+      "did",
+      "alfred",
+      "hitchcock",
+      "make",
+      "any",
+      "comedies",
+      "during",
+      "the",
+      "1940s"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        8,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8877450823783875
+    ],
+    "mse": 0.01260116653023502
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "has",
+      "the",
+      "line",
+      "of",
+      "dialog",
+      "cherry",
+      "get",
+      "me",
+      "a",
+      "pepsie"
+    ],
+    "ner": [],
+    "predictions": [
+      [
+        7,
+        7,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8100550770759583
+    ],
+    "mse": 0.03607907374462016
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "am",
+      "looking",
+      "for",
+      "a",
+      "rated",
+      "nc",
+      "17",
+      "political",
+      "movie",
+      "based",
+      "on",
+      "crime",
+      "with",
+      "a",
+      "ratings",
+      "of",
+      "mediocre",
+      "starring",
+      "chris",
+      "cooper"
+    ],
+    "ner": [
+      [
+        6,
+        7,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        12,
+        12,
+        "plot"
+      ],
+      [
+        17,
+        17,
+        "average ratings"
+      ],
+      [
+        19,
+        20,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        8,
+        9,
+        "genre"
+      ],
+      [
+        12,
+        12,
+        "plot"
+      ],
+      [
+        17,
+        17,
+        "rating"
+      ],
+      [
+        19,
+        20,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7468852996826172,
+      0.7191150188446045,
+      0.920918881893158,
+      0.9737185835838318
+    ],
+    "mse": 0.037476990061323434
+  },
+  {
+    "tokenized_text": [
+      "find",
+      "a",
+      "1960",
+      "comedy",
+      "rated",
+      "pg",
+      "13",
+      "directed",
+      "by",
+      "junichi",
+      "fujisaku"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "year"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        5,
+        6,
+        "rating"
+      ],
+      [
+        9,
+        10,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        2,
+        "year"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        5,
+        6,
+        "rating"
+      ],
+      [
+        9,
+        10,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.9657608866691589,
+      0.9732749462127686,
+      0.9066367149353027,
+      0.8321643471717834
+    ],
+    "mse": 0.009693013684989538
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "1950",
+      "what",
+      "pg",
+      "13",
+      "police",
+      "film",
+      "about",
+      "secrets",
+      "was",
+      "directed",
+      "by",
+      "christopher",
+      "forbes"
+    ],
+    "ner": [
+      [
+        1,
+        1,
+        "year"
+      ],
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        8,
+        "plot"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        1,
+        "year"
+      ],
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "plot"
+      ],
+      [
+        12,
+        13,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.9351518154144287,
+      0.6920458078384399,
+      0.7938292622566223,
+      0.9224773049354553
+    ],
+    "mse": 0.036889303216410596
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "woody",
+      "allen",
+      "ever",
+      "directed",
+      "a",
+      "movie",
+      "with",
+      "morgan",
+      "freeman",
+      "in",
+      "it"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.9011346101760864,
+      0.8882373571395874
+    ],
+    "mse": 0.011132626822089264
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "movie",
+      "eyes",
+      "wide",
+      "shut",
+      "rated"
+    ],
+    "ner": [
+      [
+        4,
+        6,
+        "title"
+      ],
+      [
+        7,
+        7,
+        "rating"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8898645639419556
+    ],
+    "mse": 0.012129814275695594
+  },
+  {
+    "tokenized_text": [
+      "show",
+      "movies",
+      "from",
+      "the",
+      "1980s",
+      "about",
+      "classical",
+      "musicians"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "year"
+      ],
+      [
+        6,
+        7,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "1960",
+      "s",
+      "thriller",
+      "directed",
+      "by",
+      "eric",
+      "sykes",
+      "and",
+      "with",
+      "a",
+      "rating",
+      "average",
+      "of",
+      "four",
+      "stars"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "year"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.8933677673339844,
+      0.8689894676208496,
+      0.8375520706176758
+    ],
+    "mse": 0.0183078407994041
+  },
+  {
+    "tokenized_text": [
+      "when",
+      "did",
+      "denzel",
+      "washington",
+      "star",
+      "in",
+      "his",
+      "first",
+      "movie"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        3,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7911487817764282
+    ],
+    "mse": 0.04361883135347
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "science",
+      "fiction",
+      "film",
+      "directed",
+      "by",
+      "akira",
+      "kurosawa"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.931317925453186
+    ],
+    "mse": 0.004717227364054111
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "going",
+      "to",
+      "be",
+      "a",
+      "24",
+      "movie"
+    ],
+    "ner": [
+      [
+        6,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "a",
+      "movie",
+      "set",
+      "during",
+      "the",
+      "civil",
+      "war",
+      "starring",
+      "denzel",
+      "washington"
+    ],
+    "ner": [
+      [
+        9,
+        10,
+        "plot"
+      ],
+      [
+        12,
+        13,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        9,
+        10,
+        "plot"
+      ],
+      [
+        12,
+        13,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7758346796035767,
+      0.8722564578056335
+    ],
+    "mse": 0.033284251720397506
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "year",
+      "was",
+      "crazy",
+      "heart",
+      "released"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.900635302066803
+    ],
+    "mse": 0.009873343195355488
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "past",
+      "seven",
+      "decades",
+      "what",
+      "g",
+      "rated",
+      "fantasy",
+      "movie",
+      "has",
+      "alexander",
+      "hall",
+      "directed",
+      "that",
+      "received",
+      "five",
+      "stars"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        11,
+        12,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "rating"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        11,
+        12,
+        "director"
+      ],
+      [
+        16,
+        17,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.6791101694107056,
+      0.8801502585411072,
+      0.8206309080123901,
+      0.9182142615318298
+    ],
+    "mse": 0.03904910552015828
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "trailer",
+      "features",
+      "the",
+      "pre",
+      "911",
+      "world",
+      "trade",
+      "center",
+      "covered",
+      "in",
+      "web"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "trailer"
+      ],
+      [
+        5,
+        9,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "was",
+      "that",
+      "unrated",
+      "movie",
+      "in",
+      "1950",
+      "that",
+      "was",
+      "about",
+      "fantasy",
+      "and",
+      "imagination"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "rating"
+      ],
+      [
+        6,
+        6,
+        "year"
+      ],
+      [
+        10,
+        10,
+        "genre"
+      ],
+      [
+        12,
+        12,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        6,
+        "year"
+      ],
+      [
+        10,
+        10,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.9211748838424683,
+      0.8390129208564758
+    ],
+    "mse": 0.016065119294205843
+  },
+  {
+    "tokenized_text": [
+      "find",
+      "a",
+      "documentary",
+      "from",
+      "the",
+      "2000",
+      "s"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        5,
+        6,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "which",
+      "films",
+      "did",
+      "clint",
+      "eastwood",
+      "direct"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "director"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "was",
+      "stacey",
+      "dash",
+      "in",
+      "a",
+      "spaghetti",
+      "western",
+      "about",
+      "bandits",
+      "that",
+      "was",
+      "rated",
+      "two",
+      "thumbs",
+      "up"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        5,
+        6,
+        "genre"
+      ],
+      [
+        8,
+        8,
+        "plot"
+      ],
+      [
+        12,
+        14,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "character"
+      ],
+      [
+        5,
+        6,
+        "genre"
+      ],
+      [
+        12,
+        14,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9598908424377441,
+      0.94617760181427,
+      0.8317602872848511
+    ],
+    "mse": 0.010936732000430993
+  },
+  {
+    "tokenized_text": [
+      "search",
+      "for",
+      "the",
+      "movie",
+      "made",
+      "by",
+      "peter",
+      "jackson"
+    ],
+    "ner": [
+      [
+        6,
+        7,
+        "director"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "did",
+      "frank",
+      "darabont",
+      "ever",
+      "direct",
+      "a",
+      "film",
+      "noir",
+      "movie",
+      "that",
+      "was",
+      "rated",
+      "pg",
+      "13"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "rating"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        12,
+        13,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7686026692390442,
+      0.8654921650886536,
+      0.9352138042449951
+    ],
+    "mse": 0.02527811116541301
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "the",
+      "title",
+      "of",
+      "the",
+      "delbert",
+      "mann",
+      "directed",
+      "fantasy",
+      "film",
+      "that",
+      "came",
+      "out",
+      "this",
+      "year"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "director"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        13,
+        14,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "director"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8341995477676392,
+      0.7700996994972229
+    ],
+    "mse": 0.04017196906586129
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "ridley",
+      "scott",
+      "directed",
+      "any",
+      "comedy",
+      "movies"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.7491335272789001,
+      0.8462918400764465
+    ],
+    "mse": 0.04328009278130551
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "plot",
+      "of",
+      "the",
+      "movie",
+      "spinout"
+    ],
+    "ner": [
+      [
+        7,
+        7,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "did",
+      "rod",
+      "serling",
+      "appear",
+      "in"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8529585003852844
+    ],
+    "mse": 0.0216212026089444
+  },
+  {
+    "tokenized_text": [
+      "looking",
+      "for",
+      "a",
+      "movie",
+      "with",
+      "lindsey",
+      "lohan",
+      "as",
+      "twins"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        8,
+        8,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8683794736862183,
+      0.8751450777053833
+    ],
+    "mse": 0.016456357284155843
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "newest",
+      "version",
+      "of",
+      "superman"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        6,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8026046752929688
+    ],
+    "mse": 0.0389649142161943
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "rating",
+      "average",
+      "of",
+      "the",
+      "movie",
+      "angels",
+      "with",
+      "dirty",
+      "faces"
+    ],
+    "ner": [
+      [
+        8,
+        11,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        8,
+        11,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8546231389045715
+    ],
+    "mse": 0.021134431741959503
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "movie",
+      "with",
+      "josh",
+      "lucas",
+      "in",
+      "it",
+      "that",
+      "is",
+      "rated",
+      "pg"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        12,
+        12,
+        "rating"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        12,
+        12,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7465387582778931,
+      0.908775269985199
+    ],
+    "mse": 0.03628227621079283
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "played",
+      "in",
+      "practical",
+      "magic"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.9015917778015137
+    ],
+    "mse": 0.009684178196266657
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "crime",
+      "movies",
+      "starring",
+      "angelina",
+      "jolie",
+      "considered",
+      "must",
+      "see"
+    ],
+    "ner": [
+      [
+        1,
+        1,
+        "genre"
+      ],
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "review"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        1,
+        "genre"
+      ],
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "review"
+      ]
+    ],
+    "scores": [
+      0.8338600397109985,
+      0.9105885624885559,
+      0.8728262186050415
+    ],
+    "mse": 0.017256687412328848
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "were",
+      "the",
+      "must",
+      "see",
+      "movies",
+      "of",
+      "2010"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "review"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "scores": [
+      0.9288474321365356
+    ],
+    "mse": 0.0050626879135649006
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "the",
+      "shining",
+      "martin",
+      "scorseses",
+      "most",
+      "famous",
+      "film"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "title"
+      ],
+      [
+        3,
+        4,
+        "director"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "jfk",
+      "was",
+      "our",
+      "president"
+    ],
+    "ner": [
+      [
+        0,
+        0,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "title"
+      ]
+    ],
+    "scores": [
+      0.8963984847068787
+    ],
+    "mse": 0.010733273971030854
+  },
+  {
+    "tokenized_text": [
+      "was",
+      "there",
+      "a",
+      "horror",
+      "movie",
+      "that",
+      "featured",
+      "jason",
+      "and",
+      "freddy"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        7,
+        7,
+        "character"
+      ],
+      [
+        9,
+        9,
+        "character"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        7,
+        7,
+        "character"
+      ],
+      [
+        9,
+        9,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.7826186418533325,
+      0.8093288540840149,
+      0.9505439400672913
+    ],
+    "mse": 0.028685347539557426
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "some",
+      "good",
+      "comedy",
+      "movies"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8983495831489563
+    ],
+    "mse": 0.01033280724599095
+  },
+  {
+    "tokenized_text": [
+      "whats",
+      "a",
+      "mainstream",
+      "movie",
+      "about",
+      "old",
+      "killers"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8931560516357422
+    ],
+    "mse": 0.01141562930206419
+  },
+  {
+    "tokenized_text": [
+      "did",
+      "roman",
+      "polanski",
+      "direct",
+      "any",
+      "western",
+      "movies"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8213891386985779,
+      0.8771481513977051
+    ],
+    "mse": 0.02349720823991852
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "directed",
+      "orange",
+      "county"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "pg",
+      "rated",
+      "drama",
+      "movies",
+      "with",
+      "minnie",
+      "driver"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "rating"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "rating"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8633291125297546,
+      0.9258414506912231,
+      0.8264512419700623
+    ],
+    "mse": 0.018099197777073545
+  },
+  {
+    "tokenized_text": [
+      "the",
+      "sting"
+    ],
+    "ner": [
+      [
+        0,
+        1,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "was",
+      "francois",
+      "truffaut",
+      "offered",
+      "to",
+      "direct",
+      "inception"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        6,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "2010",
+      "s",
+      "was",
+      "bill",
+      "murray",
+      "in",
+      "an",
+      "unrated",
+      "science",
+      "fiction",
+      "film"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "year"
+      ],
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        9,
+        9,
+        "rating"
+      ],
+      [
+        10,
+        11,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        9,
+        9,
+        "rating"
+      ],
+      [
+        10,
+        11,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8857957720756531,
+      0.6762544512748718,
+      0.9555309414863586
+    ],
+    "mse": 0.039943761053406725
+  },
+  {
+    "tokenized_text": [
+      "get",
+      "a",
+      "drama",
+      "on",
+      "alcoholism"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        4,
+        4,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "last",
+      "eight",
+      "decades",
+      "was",
+      "there",
+      "a",
+      "police",
+      "movie",
+      "about",
+      "imprisonment",
+      "rated",
+      "r"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "year"
+      ],
+      [
+        8,
+        8,
+        "genre"
+      ],
+      [
+        11,
+        11,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "tell",
+      "me",
+      "all",
+      "adventure",
+      "films",
+      "that",
+      "were",
+      "released",
+      "in",
+      "the",
+      "last",
+      "three",
+      "years"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        10,
+        12,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8331105709075928
+    ],
+    "mse": 0.02785208154278962
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "the",
+      "top",
+      "ten",
+      "nc",
+      "17",
+      "films",
+      "from",
+      "the",
+      "last",
+      "ten",
+      "years"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "review"
+      ],
+      [
+        5,
+        6,
+        "rating"
+      ],
+      [
+        10,
+        12,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "past",
+      "ten",
+      "decades",
+      "what",
+      "documentary",
+      "was",
+      "rated",
+      "pg",
+      "13",
+      "that",
+      "starred",
+      "matthew",
+      "modine"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ],
+      [
+        9,
+        10,
+        "rating"
+      ],
+      [
+        13,
+        14,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        9,
+        10,
+        "rating"
+      ],
+      [
+        13,
+        14,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8615320324897766,
+      0.8544756770133972
+    ],
+    "mse": 0.020175353303560684
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "david",
+      "fincher",
+      "ever",
+      "directed",
+      "a",
+      "movie",
+      "that",
+      "vivien",
+      "leigh",
+      "acted",
+      "in"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "director"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8372790813446045,
+      0.8247210383415222
+    ],
+    "mse": 0.028600405884064983
+  },
+  {
+    "tokenized_text": [
+      "do",
+      "you",
+      "have",
+      "the",
+      "r",
+      "rated",
+      "movie",
+      "from",
+      "the",
+      "last",
+      "decade",
+      "that",
+      "was",
+      "rated",
+      "six",
+      "stars",
+      "and",
+      "was",
+      "about",
+      "money"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "rating"
+      ],
+      [
+        9,
+        10,
+        "year"
+      ],
+      [
+        14,
+        15,
+        "average ratings"
+      ],
+      [
+        19,
+        19,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        14,
+        15,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9323815703392029
+    ],
+    "mse": 0.004572252029792168
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "psychological",
+      "drama",
+      "rated",
+      "pg",
+      "13",
+      "with",
+      "a",
+      "downtown",
+      "plot"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "rating"
+      ],
+      [
+        10,
+        10,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.8787157535552979,
+      0.9312841296195984
+    ],
+    "mse": 0.0097158696388977
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "want",
+      "to",
+      "watch",
+      "an",
+      "action",
+      "comedy",
+      "rated",
+      "r"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "genre"
+      ],
+      [
+        8,
+        8,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9240472316741943,
+      0.826858401298523
+    ],
+    "mse": 0.017873418108628414
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "pg",
+      "13",
+      "biography",
+      "films",
+      "about",
+      "robbery",
+      "in",
+      "the",
+      "past",
+      "four",
+      "years"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "rating"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        6,
+        "plot"
+      ],
+      [
+        9,
+        11,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "the",
+      "grapes",
+      "of",
+      "wrath"
+    ],
+    "ner": [
+      [
+        0,
+        3,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "the",
+      "movies",
+      "that",
+      "owen",
+      "wilson",
+      "has",
+      "helped",
+      "to",
+      "write"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "actor"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "has",
+      "robbie",
+      "the",
+      "robot"
+    ],
+    "ner": [
+      [
+        3,
+        5,
+        "character"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        5,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8498705625534058
+    ],
+    "mse": 0.022538847988030852
+  },
+  {
+    "tokenized_text": [
+      "jaws"
+    ],
+    "ner": [
+      [
+        0,
+        0,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "2010",
+      "s",
+      "thriller",
+      "that",
+      "stars",
+      "stephen",
+      "baldwin",
+      "and",
+      "is",
+      "rated",
+      "eight",
+      "stars"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "year"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ],
+      [
+        13,
+        13,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "actor"
+      ],
+      [
+        13,
+        14,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7927489876747131,
+      0.9532683491706848,
+      0.9339287877082825,
+      0.9335072040557861
+    ],
+    "mse": 0.013480881576316328
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "g",
+      "rated",
+      "highly",
+      "liked",
+      "movie",
+      "from",
+      "1980",
+      "starring",
+      "billy",
+      "dee",
+      "williams",
+      "about",
+      "a",
+      "king"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "rating"
+      ],
+      [
+        5,
+        6,
+        "average ratings"
+      ],
+      [
+        9,
+        9,
+        "year"
+      ],
+      [
+        11,
+        13,
+        "actor"
+      ],
+      [
+        16,
+        16,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        5,
+        6,
+        "average ratings"
+      ],
+      [
+        9,
+        9,
+        "year"
+      ],
+      [
+        11,
+        13,
+        "actor"
+      ],
+      [
+        16,
+        16,
+        "title"
+      ]
+    ],
+    "scores": [
+      0.905139148235321,
+      0.5827150940895081,
+      0.9590892791748047,
+      0.8689981698989868,
+      0.9172593951225281
+    ],
+    "mse": 0.041761289632398044
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "an",
+      "unrated",
+      "fantasy",
+      "film",
+      "are",
+      "there",
+      "any"
+    ],
+    "ner": [
+      [
+        5,
+        5,
+        "rating"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "rating"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8553140759468079,
+      0.8513980507850647
+    ],
+    "mse": 0.021508277964802147
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "a",
+      "decent",
+      "adventure",
+      "film",
+      "with",
+      "director",
+      "phil",
+      "nibbelink",
+      "with",
+      "a",
+      "nc",
+      "17",
+      "rating"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "average ratings"
+      ],
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "director"
+      ],
+      [
+        11,
+        12,
+        "rating"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "director"
+      ],
+      [
+        11,
+        12,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7098456025123596,
+      0.8214372992515564,
+      0.8593660593032837
+    ],
+    "mse": 0.04528403925196045
+  },
+  {
+    "tokenized_text": [
+      "did",
+      "the",
+      "director",
+      "of",
+      "gone",
+      "with",
+      "the",
+      "wind",
+      "direct",
+      "anything",
+      "else"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "director"
+      ],
+      [
+        4,
+        7,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        7,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8805322647094727
+    ],
+    "mse": 0.014272539775447513
+  },
+  {
+    "tokenized_text": [
+      "show",
+      "me",
+      "a",
+      "movie",
+      "with",
+      "kevin",
+      "bacon",
+      "as",
+      "lead",
+      "actor"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "actor"
+      ],
+      [
+        8,
+        9,
+        "character"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.9086698293685913
+    ],
+    "mse": 0.008341200067562227
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "stephen",
+      "j",
+      "anderson",
+      "directed",
+      "movie",
+      "about",
+      "love",
+      "at",
+      "first",
+      "sight",
+      "with",
+      "an",
+      "eight",
+      "star",
+      "rating"
+    ],
+    "ner": [
+      [
+        3,
+        5,
+        "director"
+      ],
+      [
+        9,
+        12,
+        "plot"
+      ],
+      [
+        15,
+        16,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        5,
+        "director"
+      ],
+      [
+        9,
+        12,
+        "plot"
+      ],
+      [
+        15,
+        17,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.7738146185874939,
+      0.9811873435974121,
+      0.9489025473594666
+    ],
+    "mse": 0.018041564157331418
+  },
+  {
+    "tokenized_text": [
+      "which",
+      "well",
+      "rated",
+      "science",
+      "fiction",
+      "piece",
+      "was",
+      "directed",
+      "by",
+      "grace",
+      "lee",
+      "in",
+      "the",
+      "past",
+      "year"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "average ratings"
+      ],
+      [
+        3,
+        4,
+        "genre"
+      ],
+      [
+        9,
+        10,
+        "director"
+      ],
+      [
+        13,
+        14,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "rating"
+      ],
+      [
+        3,
+        4,
+        "genre"
+      ],
+      [
+        9,
+        10,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.6703447699546814,
+      0.9372298121452332,
+      0.9036591053009033
+    ],
+    "mse": 0.04063141172365903
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "jason",
+      "gedrick",
+      "ever",
+      "been",
+      "in",
+      "a",
+      "sci",
+      "fi",
+      "movie"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8196155428886414,
+      0.8809510469436646
+    ],
+    "mse": 0.023355602795584574
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "was",
+      "the",
+      "first",
+      "supernatural",
+      "movie"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        4,
+        4,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "2010",
+      "s",
+      "r",
+      "rated",
+      "movie",
+      "centered",
+      "on",
+      "a",
+      "jungle",
+      "with",
+      "a",
+      "nine",
+      "star",
+      "rating",
+      "that",
+      "is",
+      "directed",
+      "by",
+      "peter",
+      "webber"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "year"
+      ],
+      [
+        4,
+        4,
+        "rating"
+      ],
+      [
+        10,
+        10,
+        "plot"
+      ],
+      [
+        13,
+        13,
+        "average ratings"
+      ],
+      [
+        20,
+        21,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        2,
+        "year"
+      ],
+      [
+        13,
+        15,
+        "rating"
+      ],
+      [
+        20,
+        21,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.8231913447380066,
+      0.9014661908149719,
+      0.9554198384284973
+    ],
+    "mse": 0.014319200977935745
+  },
+  {
+    "tokenized_text": [
+      "are",
+      "there",
+      "any",
+      "r",
+      "rated",
+      "movies",
+      "starring",
+      "george",
+      "clooney"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7894737720489502,
+      0.953974187374115
+    ],
+    "mse": 0.02321983404158523
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "unrivaled",
+      "about"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "best",
+      "movie",
+      "from",
+      "2007"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "review"
+      ],
+      [
+        6,
+        6,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        6,
+        "year"
+      ]
+    ],
+    "scores": [
+      0.9528105854988098
+    ],
+    "mse": 0.0022268408409651386
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "played",
+      "frodo",
+      "in",
+      "the",
+      "lord",
+      "of",
+      "the",
+      "rings"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "character"
+      ],
+      [
+        4,
+        8,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        2,
+        "character"
+      ],
+      [
+        5,
+        8,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.9193229079246521,
+      0.896660327911377
+    ],
+    "mse": 0.00859394050655915
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "any",
+      "documentary",
+      "that",
+      "was",
+      "released",
+      "in",
+      "the",
+      "2010",
+      "s"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        8,
+        9,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "want",
+      "to",
+      "watch",
+      "a",
+      "comedy",
+      "that",
+      "came",
+      "out",
+      "in",
+      "the",
+      "past",
+      "eight",
+      "years"
+    ],
+    "ner": [
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        11,
+        13,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.9310401082038879
+    ],
+    "mse": 0.0047554666765314835
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "fantasy",
+      "movie",
+      "was",
+      "liked",
+      "a",
+      "lot",
+      "and",
+      "had",
+      "the",
+      "director",
+      "sean",
+      "skelding"
+    ],
+    "ner": [
+      [
+        1,
+        1,
+        "genre"
+      ],
+      [
+        3,
+        6,
+        "average ratings"
+      ],
+      [
+        11,
+        12,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        1,
+        "genre"
+      ],
+      [
+        11,
+        12,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.8017147779464722,
+      0.8488029837608337
+    ],
+    "mse": 0.031088783502221773
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "1970",
+      "r",
+      "rated",
+      "movie",
+      "with",
+      "a",
+      "seven",
+      "rating",
+      "directed",
+      "by",
+      "bo",
+      "zenga",
+      "about",
+      "a",
+      "jedi",
+      "knight"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        4,
+        4,
+        "rating"
+      ],
+      [
+        9,
+        9,
+        "average ratings"
+      ],
+      [
+        13,
+        14,
+        "director"
+      ],
+      [
+        17,
+        18,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        9,
+        10,
+        "rating"
+      ],
+      [
+        13,
+        13,
+        "director"
+      ],
+      [
+        17,
+        18,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.839215874671936,
+      0.8528844118118286,
+      0.9253270626068115,
+      0.8583006262779236
+    ],
+    "mse": 0.018287322834404485
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "that",
+      "came",
+      "out",
+      "in",
+      "1970",
+      "that",
+      "starred",
+      "stan",
+      "kirsch"
+    ],
+    "ner": [
+      [
+        6,
+        6,
+        "year"
+      ],
+      [
+        9,
+        10,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        6,
+        "year"
+      ],
+      [
+        9,
+        10,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.8154049515724182,
+      0.9230530261993408
+    ],
+    "mse": 0.019998084340530298
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "was",
+      "the",
+      "plot",
+      "of",
+      "jaws",
+      "3"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "the",
+      "last",
+      "pink",
+      "panther",
+      "movie",
+      "came",
+      "out",
+      "in",
+      "what",
+      "year"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "title"
+      ],
+      [
+        8,
+        9,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "has",
+      "harrison",
+      "ford",
+      "ever",
+      "been",
+      "in",
+      "an",
+      "avant",
+      "garde",
+      "movie"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        1,
+        2,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.832744300365448,
+      0.9054473042488098
+    ],
+    "mse": 0.01845734066703031
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "rated",
+      "r",
+      "movies",
+      "focus",
+      "around",
+      "serial",
+      "killers"
+    ],
+    "ner": [
+      [
+        1,
+        2,
+        "rating"
+      ],
+      [
+        6,
+        7,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "was",
+      "that",
+      "movie",
+      "in",
+      "97",
+      "that",
+      "had",
+      "dr",
+      "evil",
+      "in",
+      "it"
+    ],
+    "ner": [
+      [
+        5,
+        5,
+        "year"
+      ],
+      [
+        8,
+        9,
+        "character"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        5,
+        "year"
+      ],
+      [
+        8,
+        9,
+        "character"
+      ]
+    ],
+    "scores": [
+      0.8958927989006042,
+      0.9524382948875427
+    ],
+    "mse": 0.006550212556977186
+  },
+  {
+    "tokenized_text": [
+      "show",
+      "me",
+      "bugs",
+      "life"
+    ],
+    "ner": [
+      [
+        2,
+        3,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "the",
+      "movie",
+      "theater",
+      "of",
+      "war",
+      "about"
+    ],
+    "ner": [
+      [
+        4,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.9081519842147827
+    ],
+    "mse": 0.008436058003681524
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "was",
+      "that",
+      "1960",
+      "mockumentary",
+      "called",
+      "that",
+      "everyone",
+      "said",
+      "was",
+      "all",
+      "right"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        10,
+        11,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8897612690925598,
+      0.9016135334968567
+    ],
+    "mse": 0.010916237291528574
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "recent",
+      "george",
+      "clooney",
+      "movie",
+      "with",
+      "high",
+      "viewers",
+      "rating"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "year"
+      ],
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        8,
+        10,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        8,
+        10,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.892484188079834,
+      0.8168345093727112
+    ],
+    "mse": 0.02255462338479397
+  },
+  {
+    "tokenized_text": [
+      "show",
+      "me",
+      "the",
+      "star",
+      "of",
+      "the",
+      "movie",
+      "mirror",
+      "mirror"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        8,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8216977715492249
+    ],
+    "mse": 0.03179168467051241
+  },
+  {
+    "tokenized_text": [
+      "i",
+      "like",
+      "the",
+      "work",
+      "of",
+      "laura",
+      "san",
+      "giacomo",
+      "is",
+      "there",
+      "a",
+      "short",
+      "that",
+      "she",
+      "stars",
+      "in",
+      "that",
+      "is",
+      "rated",
+      "with",
+      "five",
+      "stars"
+    ],
+    "ner": [
+      [
+        5,
+        7,
+        "actor"
+      ],
+      [
+        11,
+        11,
+        "genre"
+      ],
+      [
+        20,
+        21,
+        "average ratings"
+      ]
+    ],
+    "predictions": [
+      [
+        20,
+        21,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9644747376441956
+    ],
+    "mse": 0.0012620442654487363
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "movie",
+      "was",
+      "a",
+      "drama",
+      "starring",
+      "phillip",
+      "seymour",
+      "hoffman"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        6,
+        8,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.9480558037757874
+    ],
+    "mse": 0.0026981995213795074
+  },
+  {
+    "tokenized_text": [
+      "whats",
+      "a",
+      "teen",
+      "film",
+      "directed",
+      "by",
+      "wes",
+      "anderson"
+    ],
+    "ner": [
+      [
+        2,
+        2,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        2,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        7,
+        "director"
+      ]
+    ],
+    "scores": [
+      0.7844285368919373,
+      0.829910397529602
+    ],
+    "mse": 0.03770076428754443
+  },
+  {
+    "tokenized_text": [
+      "in",
+      "the",
+      "past",
+      "two",
+      "years",
+      "what",
+      "political",
+      "films",
+      "was",
+      "colin",
+      "firth",
+      "in"
+    ],
+    "ner": [
+      [
+        2,
+        4,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ],
+      [
+        9,
+        10,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        6,
+        7,
+        "genre"
+      ],
+      [
+        9,
+        10,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7724173069000244,
+      0.8146198987960815
+    ],
+    "mse": 0.04307983206050636
+  },
+  {
+    "tokenized_text": [
+      "list",
+      "rated",
+      "r",
+      "thriller",
+      "films",
+      "in",
+      "the",
+      "last",
+      "seven",
+      "years"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        7,
+        9,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        3,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8126999139785767
+    ],
+    "mse": 0.03508132222363258
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "the",
+      "top",
+      "rated",
+      "documentaries",
+      "from",
+      "2008"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "average ratings"
+      ],
+      [
+        5,
+        5,
+        "genre"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "review"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "scores": [
+      0.7689898014068604,
+      0.920150101184845
+    ],
+    "mse": 0.029870859097416158
+  },
+  {
+    "tokenized_text": [
+      "do",
+      "you",
+      "know",
+      "any",
+      "movies",
+      "about",
+      "a",
+      "town"
+    ],
+    "ner": [
+      [
+        7,
+        7,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "pg",
+      "13",
+      "movie",
+      "staring",
+      "emilio",
+      "estevez"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.7638559341430664,
+      0.9529683589935303
+    ],
+    "mse": 0.028987997547602617
+  },
+  {
+    "tokenized_text": [
+      "intolerance"
+    ],
+    "ner": [
+      [
+        0,
+        0,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "qualifies",
+      "a",
+      "movie",
+      "to",
+      "be",
+      "a",
+      "drama"
+    ],
+    "ner": [
+      [
+        7,
+        7,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        7,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.9165641665458679
+    ],
+    "mse": 0.006961538304185666
+  },
+  {
+    "tokenized_text": [
+      "can",
+      "i",
+      "buy",
+      "a",
+      "box",
+      "set",
+      "of",
+      "toy",
+      "story"
+    ],
+    "ner": [
+      [
+        7,
+        8,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "movie",
+      "called",
+      "dr",
+      "no"
+    ],
+    "ner": [
+      [
+        5,
+        6,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        5,
+        6,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.797885537147522
+    ],
+    "mse": 0.04085025609414572
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "is",
+      "a",
+      "good",
+      "thriller",
+      "with",
+      "an",
+      "r",
+      "rating"
+    ],
+    "ner": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        7,
+        7,
+        "rating"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        4,
+        "genre"
+      ],
+      [
+        7,
+        8,
+        "rating"
+      ]
+    ],
+    "scores": [
+      0.9300593733787537,
+      0.8831923007965088
+    ],
+    "mse": 0.009267864922692937
+  },
+  {
+    "tokenized_text": [
+      "looking",
+      "for",
+      "a",
+      "french",
+      "christmas",
+      "movie",
+      "with",
+      "catherine",
+      "deneuve"
+    ],
+    "ner": [
+      [
+        3,
+        5,
+        "plot"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        8,
+        "actor"
+      ]
+    ],
+    "scores": [
+      0.9021668434143066
+    ],
+    "mse": 0.009571326527520796
+  },
+  {
+    "tokenized_text": [
+      "are",
+      "there",
+      "any",
+      "animated",
+      "movies",
+      "with",
+      "rabbits",
+      "from",
+      "the",
+      "2010s"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "genre"
+      ],
+      [
+        6,
+        6,
+        "plot"
+      ],
+      [
+        9,
+        9,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "are",
+      "some",
+      "award",
+      "winning",
+      "movies",
+      "from",
+      "2006"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "average ratings"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "predictions": [
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "scores": [
+      0.9355246424674988
+    ],
+    "mse": 0.004157071728943862
+  },
+  {
+    "tokenized_text": [
+      "id",
+      "like",
+      "a",
+      "boxing",
+      "film",
+      "from",
+      "the",
+      "1940s"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "plot"
+      ],
+      [
+        7,
+        7,
+        "year"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "helen",
+      "barkin",
+      "starred",
+      "in",
+      "the",
+      "1960",
+      "adventure",
+      "movie"
+    ],
+    "ner": [
+      [
+        0,
+        1,
+        "actor"
+      ],
+      [
+        5,
+        5,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "predictions": [
+      [
+        0,
+        1,
+        "actor"
+      ],
+      [
+        5,
+        5,
+        "year"
+      ],
+      [
+        6,
+        6,
+        "genre"
+      ]
+    ],
+    "scores": [
+      0.8222588896751404,
+      0.964350700378418,
+      0.8391127586364746
+    ],
+    "mse": 0.01958249309886284
+  },
+  {
+    "tokenized_text": [
+      "what",
+      "year",
+      "did",
+      "hostel",
+      "release"
+    ],
+    "ner": [
+      [
+        3,
+        3,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "find",
+      "the",
+      "movie",
+      "where",
+      "tony",
+      "collette",
+      "and",
+      "greg",
+      "kinnear",
+      "take",
+      "a",
+      "little",
+      "girl",
+      "to",
+      "a",
+      "beauty",
+      "contest"
+    ],
+    "ner": [
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        7,
+        8,
+        "actor"
+      ],
+      [
+        9,
+        16,
+        "plot"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        5,
+        "actor"
+      ],
+      [
+        11,
+        12,
+        "character"
+      ],
+      [
+        15,
+        16,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.7971433997154236,
+      0.8528925776481628,
+      0.7146307826042175
+    ],
+    "mse": 0.04807566140903319
+  },
+  {
+    "tokenized_text": [
+      "bringing",
+      "up",
+      "baby"
+    ],
+    "ner": [
+      [
+        0,
+        2,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "is",
+      "there",
+      "a",
+      "pg",
+      "13",
+      "movie",
+      "dealing",
+      "with",
+      "an",
+      "air",
+      "raid",
+      "that",
+      "was",
+      "directed",
+      "by",
+      "jag",
+      "mundhra"
+    ],
+    "ner": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        9,
+        10,
+        "plot"
+      ],
+      [
+        15,
+        16,
+        "director"
+      ]
+    ],
+    "predictions": [
+      [
+        3,
+        4,
+        "rating"
+      ],
+      [
+        9,
+        10,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.7578737735748291,
+      0.8968314528465271
+    ],
+    "mse": 0.034634429322325744
+  },
+  {
+    "tokenized_text": [
+      "raiders",
+      "of",
+      "the",
+      "lost",
+      "ark"
+    ],
+    "ner": [
+      [
+        0,
+        4,
+        "title"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "how",
+      "many",
+      "movies",
+      "were",
+      "based",
+      "on",
+      "alex",
+      "haleys",
+      "books"
+    ],
+    "ner": [
+      [
+        6,
+        8,
+        "plot"
+      ]
+    ],
+    "predictions": [],
+    "scores": [],
+    "mse": 0.0
+  },
+  {
+    "tokenized_text": [
+      "who",
+      "co",
+      "starred",
+      "in",
+      "pirates",
+      "of",
+      "the",
+      "caribbean"
+    ],
+    "ner": [
+      [
+        4,
+        7,
+        "title"
+      ]
+    ],
+    "predictions": [
+      [
+        4,
+        7,
+        "plot"
+      ]
+    ],
+    "scores": [
+      0.8653857111930847
+    ],
+    "mse": 0.018121006750991597
+  }
+]

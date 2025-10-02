@@ -19,3 +19,6 @@ models/
 **/.ipynb_checkpoints
 .venv/
 *.pyc
+
+
+results/api/
