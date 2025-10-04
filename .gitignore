@@ -14,11 +14,12 @@ CLAUDE.md
 
 .claude/
 logs/
-models/
 
 **/.ipynb_checkpoints
 .venv/
 *.pyc
 
+GLiNER/
+models/
 
 results/api/

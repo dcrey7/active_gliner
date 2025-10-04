@@ -78,7 +78,7 @@ def analyze_tp_fp_confidence(tp_scores_by_entity, fp_scores_by_entity, entity_ty
     # Initialize data structures
     tp_data = {label: {entity: 0 for entity in entity_types} for label in bin_labels}
     fp_data = {label: {entity: 0 for entity in entity_types} for label in bin_labels}
-    batch_size
+    
     # Process TP scores
     for entity_type, scores in tp_scores_by_entity.items():
         for score in scores:
