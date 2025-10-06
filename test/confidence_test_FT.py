@@ -26,14 +26,21 @@ warnings.filterwarnings('ignore')
 src_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src')
 sys.path.append(src_path)
 
-# Import with new abstractions
-from config import Settings, GLOBAL_SEED
-from utils import setup_logging, set_all_seeds, setup_device, cleanup_memory
-from data import load_mit_dataset, NERValidator
-from evaluation import enhanced_evaluate
-from generation import create_label_generator
-from training import train_lora_model
+# Import with full paths (no __init__ dependencies!)
+from config.settings import Settings
+from utils.logging import setup_logging, get_logger
+from utils.reproducibility import set_all_seeds
+from utils.device import setup_device
+from utils.memory import cleanup_memory
+from data.loader import load_mit_dataset
+from data.validator import NERValidator
+from evaluation.evaluator import enhanced_evaluate
+from generation.label_generator import create_label_generator
+from training.trainer import train_lora_model
 from models.gloner import GLONER
+
+# Constants
+GLOBAL_SEED = 42
 
 
 def main():
@@ -202,7 +209,7 @@ def main():
             train_lora_model(
                 model=model,
                 train_data=llm_labeled_data,
-                eval_data=test_data,  # Small eval subset to speed up training
+                eval_data=test_data[:100],  # Small eval subset to speed up training
                 training_config=training_config,
                 adapter_save_path=llm_adapter_path,
                 logger=logger
@@ -267,7 +274,7 @@ def main():
         train_lora_model(
             model=model,
             train_data=gt_labeled_data,
-            eval_data=test_data,  # Small eval subset to speed up training
+            eval_data=test_data[:100],  # Small eval subset to speed up training
             training_config=training_config,
             adapter_save_path=gt_adapter_path,
             logger=logger
@@ -408,7 +415,6 @@ def main():
     logger.info(f"\nFine-tuning Analysis completed successfully!")
     logger.info(f"Best LLM FT F1: {max(results['gliner_ft_llm_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_llm_f1'].index(max(results['gliner_ft_llm_f1']))]} examples")
     logger.info(f"Best GT FT F1: {max(results['gliner_ft_gt_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_gt_f1'].index(max(results['gliner_ft_gt_f1']))]} examples")
-    logger.info(f"Total labels cached: {len(label_generator.cache.get_all())} examples")
 
 
 if __name__ == "__main__":

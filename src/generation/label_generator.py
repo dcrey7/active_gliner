@@ -7,10 +7,14 @@ Extracted and refactored from gemma_labeler.py, mistral_labeler.py, api_labeler.
 from typing import List, Dict, Any
 from tqdm import tqdm
 
-from llm_backends import BackendFactory, LLMBackend
-from prompting import StandardPromptBuilder, StructuredPromptBuilder
-from parsing import ResponseParser
-from caching import Cache, MemoryCache, DiskCache
+from llm_backends.factory import BackendFactory
+from llm_backends.base import LLMBackend
+from prompting.standard_prompt import StandardPromptBuilder
+from prompting.structured_prompt import StructuredPromptBuilder
+from parsing.response_parser import ResponseParser
+from caching.base import Cache
+from caching.memory_cache import MemoryCache
+from caching.disk_cache import DiskCache
 from data.transforms import convert_synthetic_to_ner_format, validate_and_clean_ner_data
 from utils.logging import get_logger
 
