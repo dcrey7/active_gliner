@@ -23,3 +23,12 @@ GLiNER/
 models/
 
 results/api/
+
+# Cache files (but keep cache/ folder structure)
+cache/**/*.pkl
+cache/**/*.pickle
+*.pkl
+*.pickle
+
+# But ignore hidden .cache folder if created
+.cache/

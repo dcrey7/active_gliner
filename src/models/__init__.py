@@ -1,7 +1,5 @@
-"""
-Model initialization and management
-"""
-
-from .gloner import GLONER
-
-__all__ = ['GLONER']
+"""Models Module"""
+try:
+    from .gloner import GLONER
+except:
+    pass
