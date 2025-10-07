@@ -169,7 +169,7 @@ def main():
 
         llm_labeled_data = llm_gen_results['all_labels']
 
-        # Validate and clean LLM labels
+        # Validate using validator (additional validation layer)
         logger.info("Validating LLM labels...")
         llm_labeled_data, llm_report = validator.validate(llm_labeled_data, strict=True)
         logger.info(f"Validation: {len(llm_labeled_data)} valid examples")
@@ -209,7 +209,7 @@ def main():
             train_lora_model(
                 model=model,
                 train_data=llm_labeled_data,
-                eval_data=test_data[:100],  # Small eval subset to speed up training
+                eval_data=test_data,  # Small eval subset to speed up training
                 training_config=training_config,
                 adapter_save_path=llm_adapter_path,
                 logger=logger
@@ -274,7 +274,7 @@ def main():
         train_lora_model(
             model=model,
             train_data=gt_labeled_data,
-            eval_data=test_data[:100],  # Small eval subset to speed up training
+            eval_data=test_data,  # Small eval subset to speed up training
             training_config=training_config,
             adapter_save_path=gt_adapter_path,
             logger=logger
