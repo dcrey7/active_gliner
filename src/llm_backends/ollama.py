@@ -31,7 +31,6 @@ class OllamaBackend(LLMBackend):
 
         Returns:
             Tuple of (response_text, input_tokens, output_tokens)
-            Note: Ollama doesn't provide token counts, returns 0 for both
         """
         response = ollama.generate(
             model=self.model_name,
@@ -41,9 +40,10 @@ class OllamaBackend(LLMBackend):
 
         response_text = response['response'].strip()
 
-        # Ollama doesn't provide token counts
-        input_tokens = 0
-        output_tokens = 0
+        # Extract token counts from Ollama response
+        # prompt_eval_count = input tokens, eval_count = output tokens
+        input_tokens = response.get('prompt_eval_count', 0)
+        output_tokens = response.get('eval_count', 0)
 
         return response_text, input_tokens, output_tokens
 
@@ -57,4 +57,4 @@ class OllamaBackend(LLMBackend):
 
     def get_model_limits(self) -> Tuple[int, int]:
         """Get Ollama model limits"""
-        return (128000, 500)
+        return (self.config['context_limit'], self.config['num_predict'])

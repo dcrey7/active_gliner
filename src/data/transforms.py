@@ -7,6 +7,7 @@ import json
 from typing import List, Dict, Any, Tuple
 from collections import Counter
 import logging
+import random
 
 
 def tokenize_text(text: str) -> List[str]:
@@ -222,37 +223,104 @@ def get_ner_statistics(ner_data: List[Dict], entity_types: List[str] = None) -> 
     return stats
 
 
-def log_ner_statistics(ner_data: List[Dict], dataset_name: str, logger: logging.Logger, 
+def log_ner_statistics(ner_data: List[Dict], dataset_name: str, logger: logging.Logger,
                       entity_types: List[str] = None):
     """
     Log NER statistics (unified function for all NER data)
     Replaces both log_dataset_stats and log_ner_statistics from original code
-    
+
     Args:
         ner_data: List of NER examples
-        dataset_name: Name for logging  
+        dataset_name: Name for logging
         logger: Logger instance
         entity_types: Optional list of entity types
     """
     if not ner_data:
         logger.info(f"{dataset_name}: No data to analyze")
         return
-        
+
     stats = get_ner_statistics(ner_data, entity_types)
-    
+
     logger.info(f"{dataset_name} Dataset Statistics:")
     logger.info(f"  Total examples: {stats['total_examples']}")
     logger.info(f"  Avg num tokens: {stats['avg_num_tokens']:.2f}")
     logger.info(f"  Avg num entities: {stats['avg_num_entities']:.2f}")
     logger.info(f"  Total entities: {stats['total_entities']}")
     logger.info(f"  Unique entity types: {stats['unique_entity_types']}")
-    
+
     # Top entity types
     top_types = stats['entity_type_counts'].most_common(5)
     logger.info(f"  Top entity types: {top_types}")
-    
+
     # Coverage info if entity_types provided
     if entity_types and 'entity_type_coverage' in stats:
         missing_types = [t for t in entity_types if stats['entity_type_coverage'][t] == 0]
         if missing_types:
             logger.info(f"  Missing entity types: {missing_types}")
+
+
+def prepare_texts_for_inference(data: List[Dict]) -> Tuple[List[str], List[List] | None]:
+    """
+    Prepare texts from NER format data for model inference.
+    Extracts tokenized text and optional ground truth labels.
+
+    Args:
+        data: List of NER examples with "tokenized_text" and optionally "ner" fields
+
+    Returns:
+        Tuple of (texts, ground_truths) where:
+        - texts: List of joined text strings ready for inference
+        - ground_truths: List of NER spans if available, None otherwise
+    """
+    texts = []
+    has_ground_truth = all("ner" in example for example in data)
+    ground_truths = [] if has_ground_truth else None
+
+    for example in data:
+        # Join tokenized text into single string
+        text = " ".join(example["tokenized_text"])
+        texts.append(text)
+
+        # Extract ground truth if available
+        if has_ground_truth and "ner" in example:
+            ground_truths.append(example["ner"])
+
+    return texts, ground_truths
+
+
+
+def create_mixed_training_data(examples, llm_labels, gt_ratio):
+    """
+    Create training data with specified GT/LLM ratio
+
+    Args:
+        examples: Original examples with GT labels
+        llm_labels: LLM-generated labels for same examples
+        gt_ratio: Percentage of examples to use GT labels (0-100)
+
+    Returns:
+        List of training examples with mixed labels
+    """
+    n_examples = len(examples)
+    n_gt = int(n_examples * gt_ratio / 100)
+
+    # Randomly select which examples get GT labels
+    gt_indices = random.sample(range(n_examples), n_gt)
+
+    mixed_data = []
+    for i, (example, llm_example) in enumerate(zip(examples, llm_labels)):
+        if i in gt_indices:
+            # Use GT labels
+            mixed_data.append({
+                "tokenized_text": example["tokenized_text"],
+                "ner": example["ner"]
+            })
+        else:
+            # Use LLM labels
+            mixed_data.append({
+                "tokenized_text": llm_example["tokenized_text"],
+                "ner": llm_example["ner"]
+            })
+
+    return mixed_data
+

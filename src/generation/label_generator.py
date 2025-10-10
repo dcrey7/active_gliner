@@ -66,7 +66,7 @@ class NERLabelGenerator:
         num_samples: int,
         entity_types: List[str],
         verbose: bool = True
-    ) -> List[Dict]:
+    ) -> Dict[str, Any]:
         """
         Generate labels for low confidence examples
 
@@ -77,7 +77,10 @@ class NERLabelGenerator:
             verbose: Whether to show progress
 
         Returns:
-            List of cleaned NER formatted examples
+            Dictionary with:
+                - 'all_labels': List of cleaned NER formatted examples
+                - 'total_input_tokens': Total input tokens used
+                - 'total_output_tokens': Total output tokens used
         """
         if verbose:
             self.logger.info("="*60)
@@ -92,11 +95,19 @@ class NERLabelGenerator:
             self.logger.info(f"Cached labels: {self.cache.size()}")
             self.logger.info("="*60)
 
+        # Token tracking
+        total_input_tokens = 0
+        total_output_tokens = 0
+
         # Calculate how many new labels we actually need
         if self.cache.size() >= num_samples:
             if verbose:
                 self.logger.info(f"Using {num_samples} labels from cache (no generation needed)")
-            return self.cache.get_subset(num_samples)
+            return {
+                'all_labels': self.cache.get_subset(num_samples),
+                'total_input_tokens': 0,
+                'total_output_tokens': 0
+            }
 
         no_new_labels_needed = num_samples - self.cache.size()
         if verbose:
@@ -129,6 +140,10 @@ class NERLabelGenerator:
                 try:
                     # Generate with backend
                     response_text, input_tokens, output_tokens = self.backend.generate(prompt)
+
+                    # Track tokens
+                    total_input_tokens += input_tokens
+                    total_output_tokens += output_tokens
 
                     # Parse JSON response
                     js = self.parser.extract_json(response_text)
@@ -185,8 +200,16 @@ class NERLabelGenerator:
 
             self.logger.info("="*60)
 
-        # Return exactly num_samples (from cache + newly generated)
-        return self.cache.get_subset(num_samples)
+        # Log token usage
+        if verbose and total_input_tokens > 0:
+            self.logger.info(f"Token usage: {total_input_tokens} input, {total_output_tokens} output")
+
+        # Return exactly num_samples (from cache + newly generated) with token tracking
+        return {
+            'all_labels': self.cache.get_subset(num_samples),
+            'total_input_tokens': total_input_tokens,
+            'total_output_tokens': total_output_tokens
+        }
 
 
 def create_label_generator(

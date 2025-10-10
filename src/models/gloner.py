@@ -1,201 +1,194 @@
 """
 GLONER = GLiNER + LoRA
 
-Simple helper to load GLiNER models with LoRA adapters.
-Returns GLiNER models directly - use all GLiNER methods as normal.
+Clean wrapper for GLiNER models with LoRA support.
 """
 
 from gliner import GLiNER
 from peft import get_peft_model, PeftModel, LoraConfig
 import torch
+from typing import List, Dict, Union
 from config.lora_defaults import DEFAULT_GLINER_MODEL, DEFAULT_LORA_CONFIG, DEFAULT_MAX_LENGTH
+from data.transforms import prepare_texts_for_inference
 
 
 class GLONER:
     """
-    Helper to load GLiNER models with LoRA adapters.
+    GLiNER model wrapper with LoRA support.
 
-    Returns GLiNER models directly - no wrappers, just the model.
-    Use all GLiNER methods directly: predict_entities(), run(), evaluate(), etc.
+    Two factory methods:
+    - for_training(): Creates trainable model with LoRA
+    - for_inference(): Creates inference-only model with frozen adapter
     """
 
+    def __init__(self, model):
+        """Initialize with a GLiNER model"""
+        self.model = model
+
     @staticmethod
-    def default(logger):
+    def for_training(base_model_path=None, lora_config=None, logger=None):
         """
-        Load default GLiNER model with default LoRA applied.
+        Create trainable GLONER with LoRA configuration.
 
         Args:
-            logger: Logger instance
+            base_model_path: Path to base GLiNER model (defaults to DEFAULT_GLINER_MODEL)
+            lora_config: LoRA configuration dict (defaults to DEFAULT_LORA_CONFIG)
+            logger: Optional logger instance
 
         Returns:
-            GLiNER model with LoRA applied (ready for training or inference)
-
-        Example:
-            model = GLONER.default(logger)
-            entities = model.predict_entities(text, labels)
-            train_lora_model(model, ...)
+            GLONER instance with trainable LoRA
         """
+        model_path = base_model_path or DEFAULT_GLINER_MODEL
+        lora_cfg = lora_config or DEFAULT_LORA_CONFIG
+
         if logger:
-            logger.info(f"Loading default GLONER: {DEFAULT_GLINER_MODEL}")
+            logger.info(f"Creating trainable GLONER from {model_path}")
 
         # Load base GLiNER model
-        model = GLiNER.from_pretrained(DEFAULT_GLINER_MODEL)
+        model = GLiNER.from_pretrained(model_path)
         model.config.max_len = DEFAULT_MAX_LENGTH
 
         if hasattr(model.data_processor, 'transformer_tokenizer'):
             model.data_processor.transformer_tokenizer.model_max_length = DEFAULT_MAX_LENGTH
 
-        # Apply LoRA
-        lora_config = LoraConfig(**DEFAULT_LORA_CONFIG)
-        base_params = sum(p.numel() for p in model.model.parameters())
+        # Apply LoRA for training
+        lora_config_obj = LoraConfig(**lora_cfg)
+        model.model = get_peft_model(model.model, lora_config_obj)
+
+        # # Set model to training mode
+        # model.train()
+
+        # Create GLONER wrapper and log parameter info
+        gloner = GLONER(model)
 
         if logger:
-            logger.info(f"Applying LoRA: r={lora_config.r}, alpha={lora_config.lora_alpha}")
+            counts = gloner.get_param_counts()
+            logger.info(f"LoRA applied: r={lora_config_obj.r}, alpha={lora_config_obj.lora_alpha}")
+            logger.info(f"Trainable: {counts['trainable']:,} ({counts['percentage']:.1f}%)")
 
-        model.model = get_peft_model(model.model, lora_config)
-        trainable_params = sum(p.numel() for p in model.model.parameters() if p.requires_grad)
-
-        if logger:
-            logger.info(f"Trainable: {trainable_params:,} ({100*trainable_params/base_params:.1f}%)")
-            logger.info("GLONER ready")
-
-        return model
+        return gloner
 
     @staticmethod
-    def custom(logger, model_name=None, max_length=None, **lora_params):
+    def for_inference(base_model_path, adapter_path, logger=None):
         """
-        Load custom GLiNER model with custom LoRA applied.
+        Create inference GLONER with frozen adapter.
 
         Args:
-            logger: Logger instance
-            model_name: Optional custom GLiNER model (uses default if None)
-            max_length: Optional custom max sequence length (uses default if None)
-            **lora_params: Override any LoRA parameter:
-                - r: LoRA rank
-                - lora_alpha: LoRA alpha scaling
-                - lora_dropout: Dropout probability
-                - target_modules: List of modules to apply LoRA to
-                - bias: Bias strategy ("none", "all", "lora_only")
-                - task_type: PEFT task type
+            base_model_path: Path to base GLiNER model
+            adapter_path: Path to trained LoRA adapter
+            logger: Optional logger instance
 
         Returns:
-            GLiNER model with custom LoRA applied
-
-        Examples:
-            # Custom LoRA only
-            model = GLONER.custom(logger, r=16, lora_alpha=32)
-
-            # Custom model + LoRA
-            model = GLONER.custom(
-                logger,
-                model_name="knowledgator/gliner-base",
-                target_modules=["dense", "query"],
-                r=16
-            )
-
-            # Custom max_length
-            model = GLONER.custom(logger, max_length=4096)
+            GLONER instance with frozen adapter for inference
         """
-        model_name = model_name or DEFAULT_GLINER_MODEL
-        max_length = max_length or DEFAULT_MAX_LENGTH
 
+        base_model_path = base_model_path or DEFAULT_GLINER_MODEL
         if logger:
-            logger.info(f"Loading custom GLONER: {model_name}")
-            if lora_params:
-                logger.info(f"Custom LoRA params: {list(lora_params.keys())}")
+            logger.info(f"Creating inference GLONER from {base_model_path}")
+            logger.info(f"Loading adapter: {adapter_path}")
 
         # Load base GLiNER model
-        model = GLiNER.from_pretrained(model_name)
-        model.config.max_len = max_length
+        model = GLiNER.from_pretrained(base_model_path)
+        model.config.max_len = DEFAULT_MAX_LENGTH
 
         if hasattr(model.data_processor, 'transformer_tokenizer'):
-            model.data_processor.transformer_tokenizer.model_max_length = max_length
+            model.data_processor.transformer_tokenizer.model_max_length = DEFAULT_MAX_LENGTH
 
-        # Apply LoRA with custom params
-        lora_config_dict = DEFAULT_LORA_CONFIG.copy()
-        lora_config_dict.update(lora_params)
-        lora_config = LoraConfig(**lora_config_dict)
-
-        base_params = sum(p.numel() for p in model.model.parameters())
-
-        if logger:
-            logger.info(f"Applying LoRA: r={lora_config.r}, alpha={lora_config.lora_alpha}")
-
-        model.model = get_peft_model(model.model, lora_config)
-        trainable_params = sum(p.numel() for p in model.model.parameters() if p.requires_grad)
-
-        if logger:
-            logger.info(f"Trainable: {trainable_params:,} ({100*trainable_params/base_params:.1f}%)")
-            logger.info("GLONER ready")
-
-        return model
-
-    @staticmethod
-    def load_with_adapter(adapter_path, logger, model_name=None, max_length=None):
-        """
-        Load GLiNER model with trained LoRA adapter for inference.
-
-        Args:
-            adapter_path: Path to saved LoRA adapter
-            logger: Logger instance
-            model_name: Optional custom GLiNER model (uses default if None)
-            max_length: Optional custom max sequence length (uses default if None)
-
-        Returns:
-            GLiNER model with LoRA adapter loaded, in eval mode
-
-        Example:
-            model = GLONER.load_with_adapter("models/exp1/lora_adapter", logger)
-            entities = model.predict_entities(text, labels)
-            results = model.run(texts, labels)
-        """
-        model_name = model_name or DEFAULT_GLINER_MODEL
-        max_length = max_length or DEFAULT_MAX_LENGTH
-
-        if logger:
-            logger.info(f"Loading {model_name} with adapter from {adapter_path}")
-
-        # Load base GLiNER model
-        model = GLiNER.from_pretrained(model_name)
-        model.config.max_len = max_length
-
-        if hasattr(model.data_processor, 'transformer_tokenizer'):
-            model.data_processor.transformer_tokenizer.model_max_length = max_length
-
-        # Load LoRA adapter
+        # Load trained adapter
         model.model = PeftModel.from_pretrained(model.model, adapter_path)
+
+        # Set model to eval mode for inference
         model.eval()
 
-        # Move to device
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        model.to(device)
+        # Create GLONER wrapper and log parameter info
+        gloner = GLONER(model)
 
         if logger:
-            logger.info(f"GLONER ready for inference on {device}")
+            counts = gloner.get_param_counts()
+            logger.info(f"Adapter loaded, model in eval mode")
+            logger.info(f"Total params: {counts['total']:,}, Trainable: {counts['trainable']:,}")
 
-        return model
+        return gloner
 
-    @staticmethod
-    def get_param_counts(model):
+    def get_param_counts(self, verbose: bool = False):
         """
-        Get parameter counts for a GLiNER model with LoRA.
+        Get parameter counts for this model.
 
         Args:
-            model: GLiNER model with LoRA applied
+            verbose: If True, print parameter counts
 
         Returns:
-            dict with 'total', 'trainable', 'percentage' keys
+            Dict with 'total', 'trainable', 'percentage'
         """
-        total = sum(p.numel() for p in model.model.parameters())
-        trainable = sum(p.numel() for p in model.model.parameters() if p.requires_grad)
+        total = sum(p.numel() for p in self.model.model.parameters())
+        trainable = sum(p.numel() for p in self.model.model.parameters() if p.requires_grad)
         percentage = 100 * trainable / total if total > 0 else 0
 
-
-        print(f"Total params: {total:,}")
-        print(f"Trainable params: {trainable:,} , percentage: {percentage:.1f}%")
-              
-        return {
+        counts = {
             'total': total,
             'trainable': trainable,
             'percentage': percentage
         }
+
+        if verbose:
+            print(f"Total params: {counts['total']:,}")
+            print(f"Trainable params: {counts['trainable']:,} ({counts['percentage']:.1f}%)")
+
+        return counts
+
+    def predict(self, data: Union[List[Dict], List[str], str], entity_types: List[str],
+                threshold: float = 0.5, batch_size: int = 8, device: str = 'cpu', flat_ner: bool = True):
+        """
+        Predict entities in texts.
+
+        Args:
+            data: Can be:
+                - List of NER format dicts with "tokenized_text" field
+                - List of text strings
+                - Single text string
+            entity_types: List of entity types to extract
+            threshold: Confidence threshold (0.0 to 1.0)
+            batch_size: Batch size for inference
+            device: Device to run inference on ('cpu' or 'cuda')
+            flat_ner: Whether to use flat NER (no nested entities)
+
+        Returns:
+            Predictions in GLiNER format
+        """
+        # Prepare texts for inference
+        if isinstance(data, str):
+            # Single string
+            texts = [data]
+        elif isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
+            # NER format data - use prepare function
+            texts, _ = prepare_texts_for_inference(data)
+        elif isinstance(data, list):
+            # List of strings
+            texts = data
+        else:
+            raise ValueError(f"Unsupported data type: {type(data)}")
+
+        # Run inference (model.run() handles device internally)
+        with torch.no_grad():
+            predictions = self.model.run(
+                texts,
+                entity_types,
+                flat_ner=flat_ner,
+                threshold=threshold,
+                batch_size=batch_size
+            )
+
+        return predictions
+
+    def to(self, device):
+        """Move model to device"""
+        self.model.to(device)
+        return self
+
+    def evaluate(self, data, entity_types, batch_size=8, threshold=0.5, flat_ner=True):
+        """Evaluate model on data"""
+        return self.model.evaluate(data, entity_types=entity_types, batch_size=batch_size, threshold=threshold, flat_ner=flat_ner)
+    
+
+
+

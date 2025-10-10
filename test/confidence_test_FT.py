@@ -1,420 +1,345 @@
 #!/usr/bin/env python3
 """
-Confidence Analysis Script 2: Fine-tuning Performance Analysis
-Tests GLiNER fine-tuned on LLM labels vs GT labels of worst confidence examples
-Evaluates fine-tuned models on FULL MIT test set
+Confidence-driven fine-tuning experiment using the updated training pipeline.
 
-Uses new abstractions:
-- GLONER for model initialization and loading
-- create_label_generator for LLM labeling with caching
-- train_lora_model for training
-- NERValidator for validation with reporting
+Workflow per subset size:
+1. Generate LLM labels with the unified LLMInference (training mode, Ollama Gemma3).
+2. Fine-tune GLONER (GLiNER + LoRA) on the generated labels.
+3. Fine-tune GLONER on ground-truth labels for comparison.
+4. Evaluate both adapters with the new evaluate_gloner() utility.
+
+All logging, caching, and evaluation use the latest abstractions.
 """
 
-import sys
+import gc
 import os
+import sys
+from pathlib import Path
+from typing import Dict, List, Any
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-import json
-import warnings
+import torch
+
+# Check CUDA
+print(f"CUDA version: {torch.version.cuda}")
+print(f"Number of GPUs visible: {torch.cuda.device_count()}")
+if torch.cuda.is_available():
+    device = "cuda"
+    print(f"Current GPU: {torch.cuda.current_device()}")
+    print(f"GPU Name: {torch.cuda.get_device_name(0)}")
+    print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+else:
+    device = "cpu"
+    print("CUDA not available, using CPU")
 import pandas as pd
+import warnings
 import matplotlib.pyplot as plt
 import seaborn as sns
-from tqdm import tqdm
-warnings.filterwarnings('ignore')
 
-# Add src path
-src_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src')
-sys.path.append(src_path)
+warnings.filterwarnings("ignore")
 
-# Import with full paths (no __init__ dependencies!)
-from config.settings import Settings
-from utils.logging import setup_logging, get_logger
-from utils.reproducibility import set_all_seeds
-from utils.device import setup_device
-from utils.memory import cleanup_memory
-from data.loader import load_mit_dataset
-from data.validator import NERValidator
-from evaluation.evaluator import enhanced_evaluate
-from generation.label_generator import create_label_generator
-from training.trainer import train_lora_model
-from models.gloner import GLONER
+# ---------------------------------------------------------------------------
+# Project paths
+# ---------------------------------------------------------------------------
+sys.path.append('../src')
+SCRIPT_DIR = Path(__file__).resolve().parent
+SRC_PATH = (SCRIPT_DIR / "../src").resolve()
+if str(SRC_PATH) not in sys.path:
+    sys.path.append(str(SRC_PATH))
+PROJECT_ROOT = SRC_PATH.parent
 
-# Constants
-GLOBAL_SEED = 42
+# ---------------------------------------------------------------------------
+# New pipeline imports
+# ---------------------------------------------------------------------------
+from config.settings import Settings  
+from config.training_config import TRAINING_CONFIG  
+from utils.logging import setup_logging, get_logger  
+from utils.reproducibility import set_all_seeds  
+from utils.device import setup_device, log_cuda_info  
+from data.loader import load_mit_dataset  
+from data.loader import load_json_file  
+from generation.llm_inference import create_llm_train_labels  
+from models.gloner import GLONER  
+from training.trainer import train_lora_model  
+from evaluation.eval import evaluate_gloner  
+
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
+LOGGER_NAME = "ConfidenceFineTuning"
+SUBSET_SIZES = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250,2500]
+LLM_BACKEND = "ollama"
+LLM_MODEL = "gemma3:12b"  # Ollama Gemma3
+
+
+
+
+def ensure_directory(path: Path) -> Path:
+    """Create directory (and parents) if missing."""
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def evaluate_adapter(
+    adapter_dir: Path,
+    test_data: List[Dict[str, Any]],
+    entity_types: List[str],
+    device: torch.device,
+    logger
+) -> Dict[str, Any]:
+    """Load adapter into GLONER, run predictions, and evaluate."""
+    gloner = GLONER.for_inference(base_model_path=None, adapter_path=str(adapter_dir), logger=logger)
+    gloner.to(device)
+    device_str = str(device)
+
+    predictions = gloner.predict(
+        data=test_data,
+        entity_types=entity_types,
+        threshold=0.5,
+        batch_size=8,
+        device=device_str,
+        flat_ner=True,
+    )
+
+    results = evaluate_gloner(predictions, test_data, entity_types)
+
+    # Cleanup
+    del gloner
+    torch.cuda.empty_cache()
+    gc.collect()
+
+    return results
 
 
 def main():
-    """Confidence Analysis: Fine-tuning Performance on Worst Examples"""
-
-    # ===============================================================================
-    # Setup and Configuration
-    # ===============================================================================
-
     settings = Settings()
     settings.setup()
-    logger = setup_logging(log_dir=str(settings.logs_dir))
-    set_all_seeds(seed=GLOBAL_SEED, logger=logger)
+
+    logger = setup_logging(log_dir=str(settings.logs_dir), logger_name=LOGGER_NAME)
+    set_all_seeds(seed=settings.global_seed, logger=logger)
     device = setup_device(logger=logger)
+    logger.info("CUDA_VISIBLE_DEVICES=%s", os.environ.get("CUDA_VISIBLE_DEVICES", "unset"))
+    log_cuda_info(logger)
 
-    # LLM Configuration
-    LLM_BACKEND = "ollama"  # ollama, mistral, cerebras
-    LLM_MODEL = "gemma3:12b"
-    USE_STRUCTURED = False  # ollama doesn't support structured
+    logger.info("=" * 80)
+    logger.info("Confidence Fine-tuning Test (new pipeline)")
+    logger.info("=" * 80)
 
-    # Load FULL test data for evaluation
+    # -----------------------------------------------------------------------
+    # Load datasets
+    # -----------------------------------------------------------------------
     test_data_path = settings.data_path / settings.test_file
     labels_path = settings.data_path / settings.labels_file
+    low_conf_path = PROJECT_ROOT / "results" / "high_mse_2500_examples.json"
 
     if not (test_data_path.exists() and labels_path.exists()):
-        raise FileNotFoundError("Test data or labels file not found!")
+        raise FileNotFoundError("Test data or labels file not found.")
+    if not low_conf_path.exists():
+        raise FileNotFoundError(f"Low-confidence file missing: {low_conf_path}")
 
     test_data, entity_types = load_mit_dataset(str(test_data_path), str(labels_path), "test")
-    logger.info(f"Loaded FULL test data: {len(test_data)} examples, {len(entity_types)} entity types")
+    low_conf_examples = load_json_file(str(low_conf_path))
 
-    # Load pre-saved low confidence examples for training
-    logger.info("Loading pre-saved low confidence examples...")
-    low_conf_file = os.path.join(os.path.dirname(__file__), '../results/high_mse_2500_examples.json')
-    with open(low_conf_file, 'r') as f:
-        low_n = json.load(f)
-    logger.info(f"Loaded {len(low_n)} low confidence examples for training")
+    logger.info("Loaded %d test examples and %d entity types", len(test_data), len(entity_types))
+    logger.info("Loaded %d low-confidence examples", len(low_conf_examples))
 
-    # Initialize LLM label generator with disk cache
-    logger.info("Initializing LLM label generator with disk cache...")
-    label_generator = create_label_generator(
+    # -----------------------------------------------------------------------
+    # Initialize LLM generator (training mode with disk cache)
+    # -----------------------------------------------------------------------
+    llm_labeler = create_llm_train_labels(
         backend_type=LLM_BACKEND,
         model_name=LLM_MODEL,
-        cache_type='disk',  # Persistent disk cache
-        use_structured_output=USE_STRUCTURED
+        entity_types=entity_types,
+        cache_type="disk",
+        use_structured_output=False,
+        logger=get_logger(LOGGER_NAME),
     )
-    logger.info(f"LLM Labeler: {LLM_BACKEND} - {LLM_MODEL}")
 
-    # Initialize validator
-    validator = NERValidator(entity_types=entity_types, logger=logger)
+    cache = getattr(llm_labeler, "cache", None)
+    if cache:
+        logger.info("Label cache directory: %s", cache.cache_dir)
+        logger.info("Cached labels available: %d", cache.size())
 
-    # ===============================================================================
-    # Training Configuration
-    # ===============================================================================
+    adapters_base = ensure_directory(settings.models_dir / "confidence_ft_adapters")
+    results_rows: List[Dict[str, Any]] = []
 
-    training_config = {
-        'num_steps': 1000,
-        'train_batch_size': 8,
-        'gradient_accumulation_steps': 1,
-        'learning_rate': 0.00021008343694753508,
-        'others_lr': 0.00021008343694753508,
-        'warmup_ratio': 0.07064690788186724,
-        'eval_steps': 100,
-        'save_steps': 100,
-        'logging_steps': 10,
-        'max_grad_norm': 1,
-        'weight_decay': 0.020216630535603918,
-        'others_weight_decay': 0.020216630535603918,
-        'focal_loss_alpha': 0.75,
-        'focal_loss_gamma': 1.0,
-        'patience': 3
-    }
+    # -----------------------------------------------------------------------
+    # Main experiment loop
+    # -----------------------------------------------------------------------
+    for n_examples in SUBSET_SIZES:
+        logger.info("-" * 80)
+        logger.info("Processing subset size: %d", n_examples)
 
-    logger.info("Training Configuration:")
-    for key, value in training_config.items():
-        logger.info(f"   {key}: {value}")
-
-    # ===============================================================================
-    # Experiment Parameters
-    # ===============================================================================
-
-    subset_sizes = [2, 4, 8, 10]  # Small sizes for testing
-
-    # Results storage
-    results = {
-        'no_worst_examples': [],
-        'gliner_ft_llm_f1': [],
-        'gliner_ft_gt_f1': [],
-        'confidence': [],
-        'avg_entities': [],
-        'avg_input_tokens': [],
-        'avg_output_tokens': []
-    }
-
-    total_iterations = len(subset_sizes) * 2  # 2 experiments per subset (LLM + GT)
-    logger.info(f"\nExperiment Overview:")
-    logger.info(f"   Subset sizes to test: {subset_sizes}")
-    logger.info(f"   Total training experiments: {total_iterations}")
-    logger.info(f"   Evaluation dataset: FULL test set ({len(test_data)} examples)")
-
-    # ===============================================================================
-    # Main Experiment Loop
-    # ===============================================================================
-
-    logger.info(f"\nStarting Fine-tuning Analysis...")
-    logger.info("-" * 60)
-
-    for n_examples in tqdm(subset_sizes, desc="Training Experiments", position=0):
-        logger.info(f"\nTraining on {n_examples} worst confidence examples")
-
-        # Get subset for training
-        train_subset = low_n[:n_examples]
-        logger.info(f"Training subset size: {len(train_subset)} examples")
-
-        # ===============================================================================
-        # Generate LLM Labels with Caching
-        # ===============================================================================
-
-        logger.info(f"Generating LLM labels for {n_examples} examples (with disk caching)...")
-
-        # Generate labels (automatically uses disk cache)
-        llm_gen_results = label_generator.generate(
-            low_n_examples=train_subset,
+        # Generate labels (will reuse disk cache across iterations)
+        llm_result = llm_labeler.generate(
+            examples=low_conf_examples,
+            entity_types=entity_types,
             num_samples=n_examples,
-            entity_types=entity_types
+            verbose=True,
         )
 
-        llm_labeled_data = llm_gen_results['all_labels']
+        llm_labeled_data = llm_result["all_labels"]
+        logger.info("LLM labels obtained: %d examples", len(llm_labeled_data))
+        logger.info("Token usage (input/out): %d / %d",
+                    llm_result["total_input_tokens"],
+                    llm_result["total_output_tokens"])
 
-        # Validate using validator (additional validation layer)
-        logger.info("Validating LLM labels...")
-        llm_labeled_data, llm_report = validator.validate(llm_labeled_data, strict=True)
-        logger.info(f"Validation: {len(llm_labeled_data)} valid examples")
-        if logger:
-            logger.info(llm_report.summary())
+        if cache:
+            logger.info("Cache size after generation: %d", cache.size())
 
-        # Calculate metrics
-        if len(llm_labeled_data) > 0:
-            avg_entities = sum(len(ex['ner']) for ex in llm_labeled_data) / len(llm_labeled_data)
-            avg_input_tokens = llm_gen_results['total_input_tokens'] / len(llm_labeled_data) if len(llm_labeled_data) > 0 else 0
-            avg_output_tokens = llm_gen_results['total_output_tokens'] / len(llm_labeled_data) if len(llm_labeled_data) > 0 else 0
-        else:
-            avg_entities = 0.0
-            avg_input_tokens = 0.0
-            avg_output_tokens = 0.0
+        if not llm_labeled_data:
+            logger.warning("No labeled data produced for %d examples, skipping.", n_examples)
+            continue
 
-        logger.info(f"Generated: {len(llm_labeled_data)} examples, avg entities: {avg_entities:.1f}")
-        logger.info(f"Token usage: {avg_input_tokens:.0f} in, {avg_output_tokens:.0f} out per example")
+        # Prepare ground-truth subset
+        gt_subset = [
+            {"tokenized_text": ex["tokenized_text"], "ner": ex["ner"]}
+            for ex in low_conf_examples[:n_examples]
+        ]
 
-        # ===============================================================================
-        # Training Phase 1: GLiNER FT on LLM Labels
-        # ===============================================================================
+        # -------------------------------------------------------------------
+        # Train & evaluate on LLM labels
+        # -------------------------------------------------------------------
+        llm_adapter_dir = ensure_directory(adapters_base / f"llm_{n_examples}")
+        logger.info("Training GLONER on LLM labels (%d examples)...", len(llm_labeled_data))
 
-        if len(llm_labeled_data) > 0:
-            logger.info(f"\nTraining GLiNER on LLM labels ({n_examples} examples)")
+        gloner_train = GLONER.for_training(logger=logger)
+        gloner_train.to(device)
 
-            # Define adapter save path
-            models_dir = os.path.join(os.path.dirname(__file__), '../models')
-            llm_adapter_path = os.path.join(models_dir, f"confidence_llm_model_{n_examples}")
-            os.makedirs(models_dir, exist_ok=True)
-
-            # Initialize model with LoRA using GLONER
-            model = GLONER.default(logger=logger)
-            model.to(device)
-
-            # Train the model on LLM labels
-            train_lora_model(
-                model=model,
-                train_data=llm_labeled_data,
-                eval_data=test_data,  # Small eval subset to speed up training
-                training_config=training_config,
-                adapter_save_path=llm_adapter_path,
-                logger=logger
-            )
-
-            # Cleanup training model
-            del model
-            cleanup_memory()
-
-            # ===============================================================================
-            # Evaluation Phase 1: GLiNER FT on LLM Labels
-            # ===============================================================================
-
-            logger.info(f"Evaluating GLiNER FT (LLM labels) on FULL test set...")
-
-            # Load model with trained adapter using GLONER
-            eval_model = GLONER.load_with_adapter(llm_adapter_path, logger=logger)
-
-            # Enhanced evaluation on FULL test set
-            import torch
-            with torch.no_grad():
-                llm_ft_results = enhanced_evaluate(
-                    eval_model, test_data, entity_types,
-                    threshold=0.5, batch_size=8, has_ground_truth=True, logger=logger
-                )
-
-            llm_ft_f1 = llm_ft_results["overall_metrics"]["overall_f1_pct"]
-            llm_ft_conf = llm_ft_results["overall_metrics"]["overall_confidence_pct"]
-
-            logger.info(f"GLiNER FT (LLM labels) Results: F1={llm_ft_f1:.1f}%, Confidence={llm_ft_conf:.1f}%")
-
-            # Cleanup evaluation model
-            del eval_model
-            cleanup_memory()
-        else:
-            llm_ft_f1 = 0.0
-            llm_ft_conf = 0.0
-            logger.error(f"No valid LLM labeled data for {n_examples} examples")
-
-        # ===============================================================================
-        # Training Phase 2: GLiNER FT on GT Labels
-        # ===============================================================================
-
-        logger.info(f"\nTraining GLiNER on GT labels ({n_examples} examples)")
-
-        # Use ground truth labels from train_subset
-        gt_labeled_data = []
-        for example in train_subset:
-            gt_labeled_data.append({
-                "tokenized_text": example["tokenized_text"],
-                "ner": example["ner"]  # Use ground truth labels
-            })
-
-        # Define adapter save path
-        gt_adapter_path = os.path.join(models_dir, f"confidence_gt_model_{n_examples}")
-
-        # Initialize model with LoRA using GLONER
-        model = GLONER.default(logger=logger)
-        model.to(device)
-
-        # Train the model on GT labels
         train_lora_model(
-            model=model,
-            train_data=gt_labeled_data,
-            eval_data=test_data,  # Small eval subset to speed up training
-            training_config=training_config,
-            adapter_save_path=gt_adapter_path,
-            logger=logger
+            model=gloner_train.model,
+            train_data=llm_labeled_data,
+            eval_data=test_data,
+            training_config=TRAINING_CONFIG,
+            adapter_save_path=str(llm_adapter_dir),
+            logger=logger,
         )
 
-        # Cleanup training model
-        del model
-        cleanup_memory()
+        # Release training model
+        del gloner_train
+        torch.cuda.empty_cache()
+        gc.collect()
+
+        llm_eval_results = evaluate_adapter(llm_adapter_dir, test_data, entity_types, device, logger)
+        llm_overall = llm_eval_results["overall_metrics"]
+        llm_f1 = llm_overall["overall_f1_pct"]
+        logger.info("LLM labels adapter F1: %.2f%%", llm_f1)
+
+        # -------------------------------------------------------------------
+        # Train & evaluate on ground-truth labels
+        # -------------------------------------------------------------------
+        gt_adapter_dir = ensure_directory(adapters_base / f"gt_{n_examples}")
+        logger.info("Training GLONER on ground-truth labels (%d examples)...", len(gt_subset))
+
+        gloner_train_gt = GLONER.for_training(logger=logger)
+        gloner_train_gt.to(device)
+
+        train_lora_model(
+            model=gloner_train_gt.model,
+            train_data=gt_subset,
+            eval_data=test_data,
+            training_config=TRAINING_CONFIG,
+            adapter_save_path=str(gt_adapter_dir),
+            logger=logger,
+        )
+
+        del gloner_train_gt
+        torch.cuda.empty_cache()
+        gc.collect()
+
+        gt_eval_results = evaluate_adapter(gt_adapter_dir, test_data, entity_types, device, logger)
+        gt_overall = gt_eval_results["overall_metrics"]
+        gt_f1 = gt_overall["overall_f1_pct"]
+        logger.info("Ground-truth adapter F1: %.2f%%", gt_f1)
+
+        results_rows.append({
+            "num_examples": n_examples,
+            "llm_overall_f1": llm_f1,
+            "llm_example_accuracy": llm_overall["example_level_accuracy_pct"],
+            "gt_overall_f1": gt_f1,
+            "gt_example_accuracy": gt_overall["example_level_accuracy_pct"],
+            "avg_entities_per_example": sum(len(ex["ner"]) for ex in llm_labeled_data) / len(llm_labeled_data),
+            "llm_input_tokens": llm_result["total_input_tokens"],
+            "llm_output_tokens": llm_result["total_output_tokens"],
+        })
+
+    # -----------------------------------------------------------------------
+    # Summarize results
+    # -----------------------------------------------------------------------
+    if results_rows:
+        results_df = pd.DataFrame(results_rows)
+        with pd.option_context("display.max_rows", None, "display.max_columns", None):
+            logger.info("Final results table:\n%s", results_df.to_string(index=False))
+
+        results_dir = ensure_directory(PROJECT_ROOT / "results" / "confidence_ft")
+        output_path = results_dir / "confidence_ft_summary.csv"
+        results_df.to_csv(output_path, index=False)
+        logger.info("Results saved to %s", output_path)
 
         # ===============================================================================
-        # Evaluation Phase 2: GLiNER FT on GT Labels
+        # Visualization
         # ===============================================================================
 
-        logger.info(f"Evaluating GLiNER FT (GT labels) on FULL test set...")
+        logger.info("\nGenerating performance comparison plot...")
 
-        # Load model with trained adapter using GLONER
-        eval_model = GLONER.load_with_adapter(gt_adapter_path, logger=logger)
+        plt.style.use('default')
+        sns.set_palette("husl")
 
-        # Enhanced evaluation on FULL test set
-        import torch
-        with torch.no_grad():
-            gt_ft_results = enhanced_evaluate(
-                eval_model, test_data, entity_types,
-                threshold=0.5, batch_size=8, has_ground_truth=True, logger=logger
-            )
+        fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
-        gt_ft_f1 = gt_ft_results["overall_metrics"]["overall_f1_pct"]
-        gt_ft_conf = gt_ft_results["overall_metrics"]["overall_confidence_pct"]
+        # Plot GLiNER Base
+        ax.plot(
+            results_df['num_examples'],
+            results_df['gt_overall_f1'],
+            marker='o', markersize=10, linewidth=3,
+            label='GLiNER GT Finetuned Model', color='blue', alpha=0.8
+        )
 
-        logger.info(f"GLiNER FT (GT labels) Results: F1={gt_ft_f1:.1f}%, Confidence={gt_ft_conf:.1f}%")
+        # Plot LLM
+        ax.plot(
+            results_df['num_examples'],
+            results_df['llm_overall_f1'],
+            marker='s', markersize=10, linewidth=3,
+            label=f'GLiNER LLM Finetuned Model ({LLM_MODEL})', color='green', alpha=0.8
+        )
 
-        # Cleanup evaluation model
-        del eval_model
-        cleanup_memory()
+        # Formatting
+        ax.set_title(
+            'GLINER Finetuning performance: GT vs LLM labels',
+            fontsize=16, fontweight='bold', pad=20
+        )
+        ax.set_xlabel('Number of Worst Confidence Examples', fontsize=14)
+        ax.set_ylabel('F1 Score (%)', fontsize=14)
+        ax.grid(True, alpha=0.3)
+        ax.legend(fontsize=12, loc='best')
 
-        # ===============================================================================
-        # Store Results
-        # ===============================================================================
+        # Add value annotations
+        for i, (x, y1, y2) in enumerate(zip(
+            results_df['num_examples'],
+            results_df['gt_overall_f1'],
+            results_df['llm_overall_f1']
+        )):
+            ax.annotate(f'{y1:.1f}%', (x, y1), textcoords="offset points",
+                       xytext=(0,10), ha='center', fontsize=10, color='blue')
+            ax.annotate(f'{y2:.1f}%', (x, y2), textcoords="offset points",
+                       xytext=(0,-15), ha='center', fontsize=10, color='green')
 
-        results['no_worst_examples'].append(n_examples)
-        results['gliner_ft_llm_f1'].append(llm_ft_f1)
-        results['gliner_ft_gt_f1'].append(gt_ft_f1)
-        results['confidence'].append((llm_ft_conf + gt_ft_conf) / 2)  # Average confidence
-        results['avg_entities'].append(avg_entities)
-        results['avg_input_tokens'].append(avg_input_tokens)
-        results['avg_output_tokens'].append(avg_output_tokens)
+        plt.tight_layout()
 
-        logger.info(f"Results stored for {n_examples} examples")
+        # Save plot
+        plot_file = results_dir / f"confidence_finetuning_performance_trend_{LLM_MODEL.replace(':', '_')}.png"
+        plt.savefig(str(plot_file))
+        logger.info(f" Plot saved to: {plot_file}")
+        plt.close()
+    else:
+        logger.warning("No experiments completed successfully.")
 
-    # ===============================================================================
-    # Results Analysis and Visualization
-    # ===============================================================================
 
-    logger.info(f"\nCreating Results DataFrame...")
 
-    final_results_df = pd.DataFrame(results)
 
-    # Configure pandas for full display
-    pd.set_option('display.max_columns', None)
-    pd.set_option('display.max_rows', None)
-    pd.set_option('display.width', None)
-    pd.set_option('display.max_colwidth', None)
 
-    logger.info("\n" + "="*60)
-    logger.info("FINE-TUNING PERFORMANCE ANALYSIS RESULTS")
-    logger.info("="*60)
-    logger.info(final_results_df.to_string(index=False))
+    logger.info("Confidence fine-tuning test finished.")
 
-    # Reset pandas display options
-    pd.reset_option('display.max_columns')
-    pd.reset_option('display.max_rows')
-    pd.reset_option('display.width')
-    pd.reset_option('display.max_colwidth')
 
-    # Save results
-    results_dir = os.path.join(os.path.dirname(__file__), '../results', LLM_BACKEND)
-    os.makedirs(results_dir, exist_ok=True)
-    results_path = os.path.join(results_dir, f"confidence_finetuning_performance_{LLM_MODEL.replace(':', '_')}.csv")
-    final_results_df.to_csv(results_path, index=False)
-    logger.info(f"\nResults saved to: {results_path}")
-
-    # ===============================================================================
-    # Visualization
-    # ===============================================================================
-
-    logger.info(f"\nGenerating Fine-tuning Trend Plot...")
-
-    # Set style
-    plt.style.use('default')
-    sns.set_palette("viridis")
-
-    # Create trend line plot
-    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
-
-    # Plot GLiNER FT on LLM labels
-    ax.plot(
-        final_results_df['no_worst_examples'], final_results_df['gliner_ft_llm_f1'],
-        marker='o', markersize=8, linewidth=3,
-        label='GLiNER FT (LLM Labels)', color='green', alpha=0.8
-    )
-
-    # Plot GLiNER FT on GT labels
-    ax.plot(
-        final_results_df['no_worst_examples'], final_results_df['gliner_ft_gt_f1'],
-        marker='s', markersize=8, linewidth=3,
-        label='GLiNER FT (GT Labels)', color='orange', alpha=0.8
-    )
-
-    # Formatting
-    ax.set_title('Fine-tuning Performance: LLM vs GT Labels (Evaluated on Full Test Set)',
-                 fontsize=16, fontweight='bold', pad=20)
-    ax.set_xlabel('Number of Worst Confidence Examples (Training)', fontsize=14)
-    ax.set_ylabel('F1 Score (%) on Full Test Set', fontsize=14)
-    ax.grid(True, alpha=0.3)
-    ax.legend(fontsize=12)
-
-    # Add value annotations
-    for i, (x, y1, y2) in enumerate(zip(final_results_df['no_worst_examples'],
-                                       final_results_df['gliner_ft_llm_f1'],
-                                       final_results_df['gliner_ft_gt_f1'])):
-        ax.annotate(f'{y1:.1f}%', (x, y1), textcoords="offset points",
-                   xytext=(0,10), ha='center', fontsize=10, color='green')
-        ax.annotate(f'{y2:.1f}%', (x, y2), textcoords="offset points",
-                   xytext=(0,10), ha='center', fontsize=10, color='orange')
-
-    plt.tight_layout()
-
-    # Save plot
-    plot_path = os.path.join(results_dir, f"confidence_finetuning_performance_trend_{LLM_MODEL.replace(':', '_')}.png")
-    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-    logger.info(f"Plot saved to: {plot_path}")
-    plt.show()
-
-    # ===============================================================================
-    # Final Summary
-    # ===============================================================================
-
-    logger.info(f"\nFine-tuning Analysis completed successfully!")
-    logger.info(f"Best LLM FT F1: {max(results['gliner_ft_llm_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_llm_f1'].index(max(results['gliner_ft_llm_f1']))]} examples")
-    logger.info(f"Best GT FT F1: {max(results['gliner_ft_gt_f1']):.1f}% on {results['no_worst_examples'][results['gliner_ft_gt_f1'].index(max(results['gliner_ft_gt_f1']))]} examples")
 
 
 if __name__ == "__main__":

@@ -7,13 +7,14 @@ Centralized configuration for all LLM backends
 OLLAMA_CONFIG = {
     'top_k': 50,
     'top_p': 0.8,
-    'num_predict': 500,
+    'num_predict': 50000,
     'temperature': 0.3,
+    'context_limit': 128000,
 }
 
 # Mistral Configuration
 MISTRAL_CONFIG = {
-    'max_tokens': 500,
+    'max_tokens': 50000,
     'temperature': 0.3,
     'context_limit': 32768,
 }

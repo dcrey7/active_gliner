@@ -37,11 +37,10 @@ from data.loader import load_mit_dataset
 
 # Model and evaluation
 from models.gloner import GLONER
-from evaluation.evaluator import enhanced_evaluate
-from generation.inference_helper import create_llm_gliner_wrapper
+from evaluation.eval import evaluate_gloner, evaluate_llm
 
 # LLM inference (unified class)
-from generation.llm_inference import create_predictor
+from generation.llm_inference import create_llm_eval_labels
 
 
 def main():
@@ -50,10 +49,10 @@ def main():
     # ===============================================================================
     # Setup and Configuration
     # ===============================================================================
-
+    LOGGER_NAME = "ConfidenceBase"
     settings = Settings()
     settings.setup()
-    logger = setup_logging(log_dir=str(settings.logs_dir))
+    logger = setup_logging(log_dir=str(settings.logs_dir),logger_name=LOGGER_NAME)
     set_all_seeds(seed=GLOBAL_SEED, logger=logger)
     device = setup_device(logger=logger)
 
@@ -101,17 +100,17 @@ def main():
 
     # GLiNER Base Model (no LoRA adapter, just base model)
     logger.info("\nInitializing GLiNER base model...")
-    gliner_base = GLONER.default(logger=logger)
+    gliner_base = GLONER.for_training(logger=logger)
     gliner_base.to(device)
     logger.info("GLiNER base model loaded successfully")
 
     # LLM Predictor (evaluation mode - preserves all indices)
     logger.info(f"\nInitializing LLM predictor ({LLM_BACKEND})...")
-    llm_predictor = create_predictor(
+    llm_predictor = create_llm_eval_labels(
         backend_type=LLM_BACKEND,
         model_name=LLM_MODEL,
         entity_types=entity_types,
-        cache_type='disk',  # Persistent cache for evaluation
+        cache_type='memory',  # Persistent cache for evaluation
         use_structured_output=USE_STRUCTURED,
         logger=logger
     )
@@ -121,7 +120,7 @@ def main():
     # Experiment Configuration
     # ===============================================================================
 
-    subset_sizes = [2, 4, 8, 10]  # Small sizes for testing
+    subset_sizes = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250]  # Small sizes for testing
 
     # Results storage
     results = {
@@ -129,7 +128,7 @@ def main():
         'gliner_base_f1': [],
         'llm_f1': [],
         'gliner_confidence': [],
-        'llm_confidence': [],
+        
         'total_examples': []
     }
 
@@ -165,20 +164,21 @@ def main():
         logger.info("EVALUATING GLINER BASE MODEL")
         logger.info("-"*80)
 
-        gliner_results = enhanced_evaluate(
-            model=gliner_base,
+        predictions=gliner_base.predict(
             data=subset_examples,
             entity_types=entity_types,
             threshold=0.5,
             batch_size=8,
-            has_ground_truth=True,
-            logger=logger
+            device=str(device),
+            flat_ner=True
         )
+
+        gliner_results = evaluate_gloner( predictions, subset_examples, entity_types, has_ground_truth=True)
 
         gliner_f1 = gliner_results["overall_metrics"]["overall_f1_pct"]
         gliner_conf = gliner_results["overall_metrics"]["overall_confidence_pct"]
 
-        logger.info(f"\n✅ GLiNER Base Results:")
+        logger.info(f"\n GLiNER Base Results:")
         logger.info(f"   F1 Score: {gliner_f1:.2f}%")
         logger.info(f"   Confidence: {gliner_conf:.2f}%")
 
@@ -205,28 +205,23 @@ def main():
         llm_predictions = llm_results_dict['all_labels']
         logger.info(f"Generated {len(llm_predictions)} predictions")
 
-        # Step 2: Wrap LLM predictions in mock model for enhanced_evaluate
-        logger.info("\nWrapping LLM predictions for evaluation...")
-        mock_llm_model = create_llm_gliner_wrapper(llm_predictions)
+       
 
         # Step 3: Evaluate using enhanced_evaluate (same as GLiNER)
         logger.info("\nEvaluating LLM predictions against ground truth...")
-        llm_eval_results = enhanced_evaluate(
-            model=mock_llm_model,
-            data=subset_examples,
-            entity_types=entity_types,
-            threshold=0.5,  # Not used for LLM (no confidence scores)
-            batch_size=8,
-            has_ground_truth=True,
-            logger=logger
+        llm_eval_results = evaluate_llm(
+            llm_predictions, 
+            subset_examples, 
+            entity_types, 
+            
         )
 
         llm_f1 = llm_eval_results["overall_metrics"]["overall_f1_pct"]
-        llm_conf = llm_eval_results["overall_metrics"]["overall_confidence_pct"]
+        
 
-        logger.info(f"\n✅ LLM Results:")
+        logger.info(f"\n LLM Results:")
         logger.info(f"   F1 Score: {llm_f1:.2f}%")
-        logger.info(f"   Confidence: {llm_conf:.2f}%")
+        
 
         # ===============================================================================
         # Store Results
@@ -236,7 +231,6 @@ def main():
         results['gliner_base_f1'].append(gliner_f1)
         results['llm_f1'].append(llm_f1)
         results['gliner_confidence'].append(gliner_conf)
-        results['llm_confidence'].append(llm_conf)
         results['total_examples'].append(n_examples)
 
         logger.info(f"\n{'='*80}")
@@ -270,7 +264,7 @@ def main():
     pd.reset_option('display.width')
 
     # Save results
-    results_dir = os.path.join(os.path.dirname(__file__), f'../results/{LLM_BACKEND}')
+    results_dir = os.path.join(os.path.dirname(__file__), f'../results/confidence_base')
     os.makedirs(results_dir, exist_ok=True)
     
     results_file = os.path.join(
@@ -278,7 +272,7 @@ def main():
         f"confidence_base_performance_{LLM_MODEL.replace(':', '_')}.csv"
     )
     final_results_df.to_csv(results_file, index=False)
-    logger.info(f"\n✅ Results saved to: {results_file}")
+    logger.info(f"\n Results saved to: {results_file}")
 
     # ===============================================================================
     # Visualization
@@ -336,32 +330,11 @@ def main():
         f"confidence_base_performance_trend_{LLM_MODEL.replace(':', '_')}.png"
     )
     plt.savefig(plot_file, dpi=300, bbox_inches='tight')
-    logger.info(f"✅ Plot saved to: {plot_file}")
+    logger.info(f" Plot saved to: {plot_file}")
     plt.close()
 
-    # ===============================================================================
-    # Summary Statistics
-    # ===============================================================================
-
-    logger.info("\n" + "="*80)
-    logger.info("SUMMARY STATISTICS")
-    logger.info("="*80)
-    logger.info(f"Average GLiNER F1: {final_results_df['gliner_base_f1'].mean():.2f}%")
-    logger.info(f"Average LLM F1:    {final_results_df['llm_f1'].mean():.2f}%")
-    logger.info(f"Best GLiNER F1:    {final_results_df['gliner_base_f1'].max():.2f}%")
-    logger.info(f"Best LLM F1:       {final_results_df['llm_f1'].max():.2f}%")
-    
-    wins_gliner = (final_results_df['gliner_base_f1'] > final_results_df['llm_f1']).sum()
-    wins_llm = (final_results_df['llm_f1'] > final_results_df['gliner_base_f1']).sum()
-    ties = (final_results_df['gliner_base_f1'] == final_results_df['llm_f1']).sum()
-    
-    logger.info(f"\nHead-to-Head:")
-    logger.info(f"  GLiNER wins: {wins_gliner}")
-    logger.info(f"  LLM wins:    {wins_llm}")
-    logger.info(f"  Ties:        {ties}")
-    logger.info("="*80)
-
-    logger.info("\n✅ Base Performance Analysis completed successfully!")
+   
+    logger.info("\n Base Performance Analysis completed successfully!")
 
 
 if __name__ == "__main__":

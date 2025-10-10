@@ -34,7 +34,7 @@ class DiskCache(Cache):
         self,
         cache_type: str = "labelling",  # "labelling" or "evaluation"
         model_name: str = "default",
-        cache_root: str = "cache"
+        cache_root: str = None
     ):
         """
         Initialize disk cache with organized structure
@@ -42,11 +42,24 @@ class DiskCache(Cache):
         Args:
             cache_type: Type of cache ("labelling" or "evaluation")
             model_name: Model name for folder and file naming
-            cache_root: Root cache directory (default: cache - inside repository)
+            cache_root: Root cache directory (default: None - uses project root/cache)
         """
         self.cache_type = cache_type
         self.model_name = model_name.replace("/", "_").replace(":", "_")
-        self.cache_root = Path(cache_root)
+
+        # If cache_root not provided, use project root/cache
+        if cache_root is None:
+            # Find project root (where pyproject.toml or .git exists)
+            current = Path(__file__).resolve()
+            for parent in current.parents:
+                if (parent / 'pyproject.toml').exists() or (parent / '.git').exists():
+                    self.cache_root = parent / "cache"
+                    break
+            else:
+                # Fallback to relative path if project root not found
+                self.cache_root = Path("cache")
+        else:
+            self.cache_root = Path(cache_root)
 
         # Create organized structure: cache/labelling/gemma3_12b/
         self.cache_dir = self.cache_root / cache_type / self.model_name
@@ -98,20 +111,32 @@ class DiskCache(Cache):
             except Exception as e:
                 self.logger.warning(f"Failed to load cache from {cache_file.name}: {e}")
 
-        # Try to find closest smaller cache
-        for num_labels in range(target_labels - 50, 0, -50):
-            if num_labels > 0:
-                cache_file = self._get_cache_filename(num_labels)
-                if cache_file.exists():
-                    try:
-                        with open(cache_file, 'rb') as f:
-                            cache_data = pickle.load(f)
-                        self._cache = cache_data.get('labels', [])
-                        self.logger.info(f"✅ Loaded {len(self._cache)} labels from partial cache: {cache_file.relative_to(self.cache_root)}")
-                        self._loaded = True
-                        return True
-                    except Exception as e:
-                        self.logger.warning(f"Failed to load partial cache from {cache_file.name}: {e}")
+        # Find the largest existing cache file that's <= target_labels
+        cache_files = list(self.cache_dir.glob(f"{self.model_name}_*_labels.pkl"))
+
+        # Sort by the number in filename (descending)
+        def get_num_labels(path):
+            try:
+                return int(path.stem.split('_')[-2])
+            except:
+                return 0
+
+        cache_files = sorted(cache_files, key=get_num_labels, reverse=True)
+
+        for cache_file in cache_files:
+            # Extract number from filename: gemma3_12b_10_labels.pkl -> 10
+            try:
+                num_in_file = int(cache_file.stem.split('_')[-2])
+                if num_in_file <= target_labels:
+                    with open(cache_file, 'rb') as f:
+                        cache_data = pickle.load(f)
+                    self._cache = cache_data.get('labels', [])
+                    self.logger.info(f"✅ Loaded {len(self._cache)} labels from: {cache_file.relative_to(self.cache_root)}")
+                    self._loaded = True
+                    return True
+            except Exception as e:
+                self.logger.warning(f"Failed to load cache from {cache_file.name}: {e}")
+                continue
 
         self.logger.info("📝 No existing cache found, starting fresh")
         self._loaded = True

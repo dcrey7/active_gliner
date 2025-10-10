@@ -11,66 +11,106 @@ Uses new abstractions:
 - NERValidator for validation
 """
 
-import sys
+import gc
 import os
+import sys
+from pathlib import Path
+from typing import Dict, List, Any
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-import json
-import warnings
+import torch
+from tqdm import tqdm
+# Check CUDA
+print(f"CUDA version: {torch.version.cuda}")
+print(f"Number of GPUs visible: {torch.cuda.device_count()}")
+if torch.cuda.is_available():
+    device = "cuda"
+    print(f"Current GPU: {torch.cuda.current_device()}")
+    print(f"GPU Name: {torch.cuda.get_device_name(0)}")
+    print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+else:
+    device = "cpu"
+    print("CUDA not available, using CPU")
 import pandas as pd
+import warnings
 import matplotlib.pyplot as plt
 import seaborn as sns
-import random
-from tqdm import tqdm
-warnings.filterwarnings('ignore')
+warnings.filterwarnings("ignore")
 
-# Add src path
-src_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src')
-sys.path.append(src_path)
+# ---------------------------------------------------------------------------
+# Project paths
+# ---------------------------------------------------------------------------
+sys.path.append('../src')
+SCRIPT_DIR = Path(__file__).resolve().parent
+SRC_PATH = (SCRIPT_DIR / "../src").resolve()
+if str(SRC_PATH) not in sys.path:
+    sys.path.append(str(SRC_PATH))
+PROJECT_ROOT = SRC_PATH.parent
 
-# Import with new abstractions
-from config import Settings, GLOBAL_SEED
-from utils import setup_logging, set_all_seeds, setup_device, cleanup_memory
-from data import load_mit_dataset, NERValidator
-from evaluation import enhanced_evaluate
-from generation import create_label_generator
-from training import train_lora_model
-from models.gloner import GLONER
+# ---------------------------------------------------------------------------
+# New pipeline imports
+# ---------------------------------------------------------------------------
+from config.settings import Settings  
+from utils.logging import setup_logging, get_logger  
+from config.training_config import TRAINING_CONFIG  
+from utils.reproducibility import set_all_seeds  
+from utils.device import setup_device, log_cuda_info  
+from data.loader import load_mit_dataset  
+from data.loader import load_json_file  
+from generation.llm_inference import create_llm_train_labels  
+from models.gloner import GLONER  
+from training.trainer import train_lora_model  
+from evaluation.eval import evaluate_gloner  
+from data.transforms import create_mixed_training_data
+from utils.memory import cleanup_memory
 
 
-def create_mixed_training_data(examples, llm_labels, gt_ratio):
-    """
-    Create training data with specified GT/LLM ratio
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
+LOGGER_NAME = "MixedFineTuning"
+SUBSET_SIZES = [10,50,100,250,500,750,1000,1250,1500,1750,2000,2250,2500]
+GT_RATIOS = [0, 25, 50, 75, 100]
+LLM_BACKEND = "ollama"
+LLM_MODEL = "gemma3:12b"  # Ollama Gemma3
 
-    Args:
-        examples: Original examples with GT labels
-        llm_labels: LLM-generated labels for same examples
-        gt_ratio: Percentage of examples to use GT labels (0-100)
 
-    Returns:
-        List of training examples with mixed labels
-    """
-    n_examples = len(examples)
-    n_gt = int(n_examples * gt_ratio / 100)
 
-    # Randomly select which examples get GT labels
-    gt_indices = random.sample(range(n_examples), n_gt)
+def ensure_directory(path: Path) -> Path:
+    """Create directory (and parents) if missing."""
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
-    mixed_data = []
-    for i, (example, llm_example) in enumerate(zip(examples, llm_labels)):
-        if i in gt_indices:
-            # Use GT labels
-            mixed_data.append({
-                "tokenized_text": example["tokenized_text"],
-                "ner": example["ner"]
-            })
-        else:
-            # Use LLM labels
-            mixed_data.append({
-                "tokenized_text": llm_example["tokenized_text"],
-                "ner": llm_example["ner"]
-            })
 
-    return mixed_data
+def evaluate_adapter(
+    adapter_dir: Path,
+    test_data: List[Dict[str, Any]],
+    entity_types: List[str],
+    device: torch.device,
+    logger
+) -> Dict[str, Any]:
+    """Load adapter into GLONER, run predictions, and evaluate."""
+    gloner = GLONER.for_inference(base_model_path=None, adapter_path=str(adapter_dir), logger=logger)
+    gloner.to(device)
+    device_str = str(device)
+
+    predictions = gloner.predict(
+        data=test_data,
+        entity_types=entity_types,
+        threshold=0.5,
+        batch_size=8,
+        device=device_str,
+        flat_ner=True,
+    )
+
+    results = evaluate_gloner(predictions, test_data, entity_types)
+
+    # Cleanup
+    del gloner
+    torch.cuda.empty_cache()
+    gc.collect()
+
+    return results
+
 
 
 def main():
@@ -80,80 +120,65 @@ def main():
     # Setup and Configuration
     # ===============================================================================
 
+    LOGGER_NAME = "MixedFintuning"
+
     settings = Settings()
     settings.setup()
-    logger = setup_logging(log_dir=str(settings.logs_dir))
-    set_all_seeds(seed=GLOBAL_SEED, logger=logger)
+
+    logger = setup_logging(log_dir=str(settings.logs_dir), logger_name=LOGGER_NAME)
+    set_all_seeds(seed=settings.global_seed, logger=logger)
     device = setup_device(logger=logger)
+    logger.info("CUDA_VISIBLE_DEVICES=%s", os.environ.get("CUDA_VISIBLE_DEVICES", "unset"))
+    log_cuda_info(logger)
 
-    # LLM Configuration
-    LLM_BACKEND = "ollama"  # ollama, mistral, cerebras
-    LLM_MODEL = "gemma3:12b"
-    USE_STRUCTURED = False
+    logger.info("=" * 80)
+    logger.info("Mixed Fine-tuning Test (new pipeline)")
+    logger.info("=" * 80)
 
-    # Load FULL test data for evaluation
+
+
+    # -----------------------------------------------------------------------
+    # Load datasets
+    # -----------------------------------------------------------------------
     test_data_path = settings.data_path / settings.test_file
     labels_path = settings.data_path / settings.labels_file
+    low_conf_path = PROJECT_ROOT / "results" / "high_mse_2500_examples.json"
 
     if not (test_data_path.exists() and labels_path.exists()):
-        raise FileNotFoundError("Test data or labels file not found!")
+        raise FileNotFoundError("Test data or labels file not found.")
+    if not low_conf_path.exists():
+        raise FileNotFoundError(f"Low-confidence file missing: {low_conf_path}")
 
     test_data, entity_types = load_mit_dataset(str(test_data_path), str(labels_path), "test")
-    logger.info(f"Loaded FULL test data: {len(test_data)} examples, {len(entity_types)} entity types")
+    low_conf_examples = load_json_file(str(low_conf_path))
 
-    # Load pre-saved low confidence examples
-    logger.info("Loading pre-saved low confidence examples...")
-    low_conf_file = os.path.join(os.path.dirname(__file__), '../results/high_mse_2500_examples.json')
-    with open(low_conf_file, 'r') as f:
-        low_n = json.load(f)
-    logger.info(f"Loaded {len(low_n)} low confidence examples for training")
+    logger.info("Loaded %d test examples and %d entity types", len(test_data), len(entity_types))
+    logger.info("Loaded %d low-confidence examples", len(low_conf_examples))
 
-    # Initialize LLM labeler with disk cache
-    logger.info("Initializing LLM label generator with disk cache...")
-    label_generator = create_label_generator(
+
+    # -----------------------------------------------------------------------
+    # Initialize LLM generator (training mode with disk cache)
+    # -----------------------------------------------------------------------
+    llm_labeler = create_llm_train_labels(
         backend_type=LLM_BACKEND,
         model_name=LLM_MODEL,
-        cache_type='disk',
-        use_structured_output=USE_STRUCTURED
+        entity_types=entity_types,
+        cache_type="disk",
+        use_structured_output=False,
+        logger=get_logger(LOGGER_NAME),
     )
-    logger.info(f"LLM Labeler: {LLM_BACKEND} - {LLM_MODEL}")
 
-    # Initialize validator
-    validator = NERValidator(entity_types=entity_types, logger=logger)
+    cache = getattr(llm_labeler, "cache", None)
+    if cache:
+        logger.info("Label cache directory: %s", cache.cache_dir)
+        logger.info("Cached labels available: %d", cache.size())
 
-    # ===============================================================================
-    # Training Configuration
-    # ===============================================================================
 
-    training_config = {
-        'num_steps': 1000,
-        'train_batch_size': 8,
-        'gradient_accumulation_steps': 1,
-        'learning_rate': 0.00021008343694753508,
-        'others_lr': 0.00021008343694753508,
-        'warmup_ratio': 0.07064690788186724,
-        'eval_steps': 100,
-        'save_steps': 100,
-        'logging_steps': 10,
-        'max_grad_norm': 1,
-        'weight_decay': 0.020216630535603918,
-        'others_weight_decay': 0.020216630535603918,
-        'focal_loss_alpha': 0.75,
-        'focal_loss_gamma': 1.0,
-        'patience': 3
-    }
 
-    logger.info("Training Configuration:")
-    for key, value in training_config.items():
-        logger.info(f"   {key}: {value}")
 
-    # ===============================================================================
-    # Experiment Parameters
-    # ===============================================================================
-
-    subset_sizes = [2, 4, 8, 10]  # Small sizes for testing
-    gt_ratios = [0, 25, 50, 75, 100]  # Percentage of GT labels
-
+    # -----------------------------------------------------------------------
+    # Main experiment loop
+    # -----------------------------------------------------------------------
     # Results storage - single row per subset size
     results = {
         'no_worst_examples': [],
@@ -163,57 +188,48 @@ def main():
         'gliner_ft_75gt_25llm_f1': [],    # 75% GT, 25% LLM
         'gliner_ft_100gt_0llm_f1': [],    # 100% GT, 0% LLM
         'confidence': [],
-        'avg_entities': []
+        
     }
 
-    total_iterations = len(subset_sizes) * len(gt_ratios)
+    total_iterations = len(SUBSET_SIZES) * len(GT_RATIOS)
     logger.info(f"\nMixed Ratio Experiment Overview:")
-    logger.info(f"   Subset sizes to test: {subset_sizes}")
-    logger.info(f"   GT ratios to test: {gt_ratios}%")
+    logger.info(f"   Subset sizes to test: {SUBSET_SIZES}")
+    logger.info(f"   GT ratios to test: {GT_RATIOS}%")
     logger.info(f"   Total model trainings: {total_iterations}")
     logger.info(f"   Evaluation dataset: FULL test set ({len(test_data)} examples)")
-
-    # ===============================================================================
-    # Main Experiment Loop
-    # ===============================================================================
 
     logger.info(f"\nStarting Mixed Ratio Analysis...")
     logger.info("-" * 60)
 
-    for n_examples in tqdm(subset_sizes, desc="Training Mixed Ratios", position=0):
+    for n_examples in tqdm(SUBSET_SIZES, desc="Training Mixed Ratios", position=0):
         logger.info(f"\nProcessing {n_examples} examples with 5 different ratios")
 
         # Get subset for training
-        train_subset = low_n[:n_examples]
+        train_subset = low_conf_examples[:n_examples]
 
-        # ===============================================================================
-        # Generate LLM Labels ONCE (with disk caching)
-        # ===============================================================================
-
+      
+         # Generate labels (will reuse disk cache across iterations)
         logger.info(f"Generating LLM labels for {n_examples} examples (with disk caching)...")
 
-        llm_gen_results = label_generator.generate(
-            low_n_examples=train_subset,
+        llm_gen_results = llm_labeler.generate(
+            examples=low_conf_examples,
+            entity_types=entity_types,
             num_samples=n_examples,
-            entity_types=entity_types
+            verbose=True,
         )
 
         llm_labeled_data = llm_gen_results['all_labels']
 
-        # Validate LLM labels
-        logger.info("Validating LLM labels...")
-        llm_labeled_data, llm_report = validator.validate(llm_labeled_data, strict=True)
-        logger.info(f"Validation: {len(llm_labeled_data)} valid examples")
+        
+        if cache:
+            logger.info("Cache size after generation: %d", cache.size())
 
-        # Calculate metrics from generated data
-        if len(llm_labeled_data) > 0:
-            avg_entities = sum(len(ex['ner']) for ex in llm_labeled_data) / len(llm_labeled_data)
-        else:
-            avg_entities = 0.0
-            logger.error(f"No valid LLM labeled data for {n_examples} examples")
+        if not llm_labeled_data:
+            logger.warning("No labeled data produced for %d examples, skipping.", n_examples)
             continue
 
-        logger.info(f"Generated: {len(llm_labeled_data)} examples, avg entities: {avg_entities:.1f}")
+
+        logger.info(f"Generated: {len(llm_labeled_data)} examples")
 
         # ===============================================================================
         # Train 5 Models with Different Ratios
@@ -222,10 +238,13 @@ def main():
         ratio_f1_scores = []
         avg_confidence = 0.0
 
-        for gt_ratio in gt_ratios:
+        for gt_ratio in GT_RATIOS:
             logger.info(f"\nTraining GLiNER with {gt_ratio}% GT + {100-gt_ratio}% LLM labels")
 
-            # Create mixed training data
+            # Create mixed training data   
+            adapters_base = ensure_directory(settings.models_dir / "confidence_mixed_adapters")
+            results_rows: List[Dict[str, Any]] = []
+
             if gt_ratio == 0:
                 # Pure LLM labels
                 mixed_training_data = llm_labeled_data
@@ -252,21 +271,21 @@ def main():
             os.makedirs(models_dir, exist_ok=True)
 
             # Initialize model with LoRA using GLONER
-            model = GLONER.default(logger=logger)
-            model.to(device)
+            gloner = GLONER.for_training(logger=logger)
+            gloner.to(device)
 
             # Train the model
             train_lora_model(
-                model=model,
+                model=gloner.model,
                 train_data=mixed_training_data,
-                eval_data=test_data[:100],  # Small eval subset for speed
-                training_config=training_config,
+                eval_data=test_data,  # Small eval subset for speed
+                training_config=TRAINING_CONFIG,
                 adapter_save_path=adapter_path,
                 logger=logger
             )
 
             # Cleanup training model
-            del model
+            del gloner
             cleanup_memory()
 
             # ===============================================================================
@@ -275,16 +294,10 @@ def main():
 
             logger.info(f"Evaluating {gt_ratio}% GT model on FULL test set...")
 
-            # Load model with trained adapter using GLONER
-            eval_model = GLONER.load_with_adapter(adapter_path, logger=logger)
-
             # Enhanced evaluation on FULL test set
-            import torch
-            with torch.no_grad():
-                eval_results = enhanced_evaluate(
-                    eval_model, test_data, entity_types,
-                    threshold=0.5, batch_size=8, has_ground_truth=True, logger=logger
-                )
+            eval_results = evaluate_adapter(adapter_path, test_data, entity_types, device, logger)
+
+
 
             ratio_f1 = eval_results["overall_metrics"]["overall_f1_pct"]
             ratio_conf = eval_results["overall_metrics"]["overall_confidence_pct"]
@@ -294,8 +307,7 @@ def main():
             ratio_f1_scores.append(ratio_f1)
             avg_confidence += ratio_conf
 
-            # Cleanup evaluation model
-            del eval_model
+            # Cleanup
             cleanup_memory()
 
         # ===============================================================================
@@ -308,8 +320,8 @@ def main():
         results['gliner_ft_50gt_50llm_f1'].append(ratio_f1_scores[2])   # 50% GT
         results['gliner_ft_75gt_25llm_f1'].append(ratio_f1_scores[3])   # 75% GT
         results['gliner_ft_100gt_0llm_f1'].append(ratio_f1_scores[4])   # 100% GT
-        results['confidence'].append(avg_confidence / len(gt_ratios))
-        results['avg_entities'].append(avg_entities)
+        results['confidence'].append(avg_confidence / len(GT_RATIOS))
+        
 
         logger.info(f"Results stored for {n_examples} examples")
         logger.info(f"F1 Scores: 0%GT={ratio_f1_scores[0]:.1f}%, 25%GT={ratio_f1_scores[1]:.1f}%, "
@@ -414,7 +426,7 @@ def main():
         best_examples = results['no_worst_examples'][best_idx]
         logger.info(f"{label}: Best F1={best_f1:.1f}% with {best_examples} examples")
 
-    logger.info(f"Total labels cached: {len(label_generator.cache.get_all())} examples")
+    logger.info(f"Total labels cached: {len(llm_labeler.cache.get_all())} examples")
 
 
 if __name__ == "__main__":

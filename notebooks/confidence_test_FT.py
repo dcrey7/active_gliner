@@ -199,7 +199,7 @@ def main():
             train_lora_model(
                 model=model,
                 train_data=llm_labeled_data,
-                eval_data=test_data[:100],  # Small eval subset to speed up training
+                eval_data=test_data,  # Small eval subset to speed up training
                 training_config=training_config,
                 adapter_save_path=llm_adapter_path,
                 logger=logger
@@ -265,7 +265,7 @@ def main():
         train_lora_model(
             model=model,
             train_data=gt_labeled_data,
-            eval_data=test_data[:100],  # Small eval subset to speed up training
+            eval_data=test_data,  # Small eval subset to speed up training
             training_config=training_config,
             adapter_save_path=gt_adapter_path,
             logger=logger
