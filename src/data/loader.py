@@ -69,49 +69,22 @@ def load_mit_dataset(data_path: str, labels_path: str, split_name: str = "train"
     return processed_data, entity_types
 
 
-def load_json_file(file_path: str) :
+def load_json_file(file_path: str):
     """
     Load JSON file from given path
-    
+
     Args:
         file_path: Path to the JSON file
-        
+
     Returns:
         Parsed JSON data
     """
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
-    
+
     with open(file_path, 'r') as f:
         return json.load(f)
 
-
-
-def load_dataset_from_config(config_settings, split="train"):
-    """
-    Load dataset using settings object
-    
-    Args:
-        config_settings: Settings object with data paths
-        split: "train" or "test"
-        
-    Returns:
-        Tuple of (processed_data, entity_types)
-    """
-    if split == "train":
-        data_file = config_settings.train_file
-    elif split == "test":
-        data_file = config_settings.test_file
-    else:
-        raise ValueError(f"Unknown split: {split}")
-    
-    data_path = config_settings.data_path / data_file
-    labels_path = config_settings.data_path / config_settings.labels_file
-    
-    return load_mit_dataset(str(data_path), str(labels_path), split)
-
-
-# Stats functions moved to data/transforms.py to avoid duplication
 
 def save_json_file(data: Any, file_path: str):
     """

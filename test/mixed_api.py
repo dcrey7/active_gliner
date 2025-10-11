@@ -221,9 +221,18 @@ def main():
             )
 
             llm_labeled_data = llm_gen_results['all_labels']
-            actual_examples = n_examples
-            completion_status = "complete"
-            completion_pct = 100.0
+            actual_examples = len(llm_labeled_data)
+
+            # Check if we got fewer labels than requested (quota may have been hit)
+            if actual_examples < n_examples:
+                completion_status = "partial_quota"
+                completion_pct = (actual_examples / n_examples) * 100
+                logger.warning(f"Got {actual_examples}/{n_examples} labels ({completion_pct:.1f}% complete)")
+                logger.warning("Likely hit API quota - experiment will stop after this iteration")
+                experiment_interrupted = True
+            else:
+                completion_status = "complete"
+                completion_pct = 100.0
 
             logger.info(f"Successfully generated {len(llm_labeled_data)} labels")
 
@@ -366,6 +375,11 @@ def main():
         temp_df.to_csv(incremental_path, index=False)
         logger.info(f"Saved incremental results: {len(temp_df)} iterations completed")
 
+        # Also save a snapshot as "latest" in case experiment crashes
+        snapshot_path = os.path.join(results_dir, f"mixed_ratio_api_performance_{LLM_MODEL}_latest.csv")
+        temp_df.to_csv(snapshot_path, index=False)
+        logger.info(f"Saved snapshot: {snapshot_path}")
+
         if experiment_interrupted:
             logger.error("="*60)
             logger.error("EXPERIMENT INTERRUPTED")
@@ -410,6 +424,115 @@ def main():
     logger.info(f"\nEnhanced Mixed Ratio Analysis Summary:")
     logger.info(f"Completed iterations: {completed_iterations}/{planned_iterations}")
     logger.info(f"Total labels cached: {len(label_generator.cache.get_all())} examples")
+
+
+    plt.style.use('default')
+    sns.set_palette("viridis")
+    
+    fig, ax = plt.subplots(1, 1, figsize=(14, 10))
+    
+    ratio_columns = [
+        ('gliner_ft_0gt_100llm_f1', '0% GT + 100% LLM', 'red'),
+        ('gliner_ft_25gt_75llm_f1', '25% GT + 75% LLM', 'orange'), 
+        ('gliner_ft_50gt_50llm_f1', '50% GT + 50% LLM', 'blue'),
+        ('gliner_ft_75gt_25llm_f1', '75% GT + 25% LLM', 'lightgreen'),
+        ('gliner_ft_100gt_0llm_f1', '100% GT + 0% LLM', 'green')
+    ]
+    
+    for col_name, label, color in ratio_columns:
+        ax.plot(
+            final_results_df['no_worst_examples'], final_results_df[col_name],
+            marker='o', markersize=8, linewidth=3, 
+            label=label, color=color, alpha=0.8
+        )
+    
+    for i, (idx, row) in enumerate(final_results_df.iterrows()):
+        if row['completion_status'] != 'complete':
+            for col_name, label, color in ratio_columns:
+                y_val = row[col_name]
+                if y_val > 0:
+                    ax.scatter(row['no_worst_examples'], y_val, 
+                             marker='x', s=100, color=color, alpha=0.7)
+    
+    title = 'Enhanced Mixed Ratio Fine-tuning Performance: GT vs LLM Labels'
+    if completed_iterations < planned_iterations:
+        title += f'\n(Partial Results - Stopped at {final_results_df["no_worst_examples"].iloc[-1]} examples)'
+    
+    ax.set_title(title, fontsize=16, fontweight='bold', pad=20)
+    ax.set_xlabel('Number of Worst Confidence Examples (Training)', fontsize=14)
+    ax.set_ylabel('F1 Score (%) on Full Test Set', fontsize=14)
+    ax.grid(True, alpha=0.3)
+    ax.legend(fontsize=12, loc='best')
+    
+    if completed_iterations < planned_iterations:
+        ax.text(0.02, 0.98, 'Legend:\n○ Complete data\n× Partial data (API quota hit)', 
+                transform=ax.transAxes, fontsize=10, verticalalignment='top',
+                bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
+    
+    annotation_interval = 2 if completed_iterations < planned_iterations else 3
+    for i, (col_name, label, color) in enumerate(ratio_columns):
+        if i % 2 == 0:
+            for j, (x, y) in enumerate(zip(final_results_df['no_worst_examples'], 
+                                         final_results_df[col_name])):
+                if j % annotation_interval == 0 and y > 0:
+                    ax.annotate(f'{y:.1f}%', (x, y), textcoords="offset points", 
+                               xytext=(0,15), ha='center', fontsize=9, color=color)
+    
+    plt.tight_layout()
+
+    plot_filename = os.path.join(results_dir, f"{results_filename}.png")
+    plt.savefig(plot_filename, dpi=300, bbox_inches='tight')
+    logger.info(f"Plot saved to: {plot_filename}")
+    plt.show()
+
+    logger.info("\n" + "="*80)
+    logger.info("MIXED RATIO ANALYSIS SUMMARY")
+    logger.info("="*80)
+    logger.info(f"Completed iterations: {completed_iterations}/{planned_iterations}")
+
+    if completed_iterations < planned_iterations:
+        logger.warning("="*60)
+        logger.warning("EXPERIMENT INCOMPLETE")
+        logger.warning("="*60)
+        logger.warning("API quota was exceeded during execution")
+        logger.warning(f"Results available for: {list(final_results_df['no_worst_examples'])}")
+        logger.warning("To complete experiment:")
+        logger.warning("  1. Wait for quota reset (typically 24 hours)")
+        logger.warning("  2. Re-run script - will resume from disk cache")
+        logger.warning("  3. Or use partial results for preliminary analysis")
+        logger.warning("="*60)
+    else:
+        logger.info("All iterations completed successfully!")
+    
+    for col_name, label, _ in ratio_columns:
+        if not final_results_df[col_name].empty:
+            best_f1 = final_results_df[col_name].max()
+            if best_f1 > 0:
+                best_idx = final_results_df[col_name].idxmax()
+                best_examples = final_results_df.loc[best_idx, 'no_worst_examples']
+                logger.info(f"🏆 {label}: Best F1={best_f1:.1f}% with {best_examples} examples")
+            else:
+                logger.info(f"❌ {label}: No successful results")
+    
+    cache_files = list(label_generator.cache_dir.glob("*.json"))
+    total_cached_labels = 0
+    for cache_file in cache_files:
+        try:
+            with open(cache_file, 'r') as f:
+                cache_data = json.load(f)
+            total_cached_labels += len(cache_data.get('labels', []))
+        except:
+            pass
+    
+    logger.info(f"💾 Total labels in persistent cache: {total_cached_labels}")
+    logger.info(f"📁 Cache directory: {label_generator.cache_dir}")
+    
+    if completed_iterations < planned_iterations:
+        logger.info(f"\n📋 Next Steps:")
+        logger.info(f"   1. Wait for API quota reset (typically 24 hours)")
+        logger.info(f"   2. Re-run this script - it will automatically resume from cache")
+        logger.info(f"   3. Experiment will continue from where it left off")
+        logger.info(f"   4. Or analyze partial results for preliminary insights")
 
 
 if __name__ == "__main__":

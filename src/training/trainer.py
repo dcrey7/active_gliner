@@ -84,69 +84,32 @@ class SimpleTrainingMonitor(TrainerCallback):
                 self.logger.info(f"NaN validation loss detected! Stopping training.")
                 control.should_training_stop = True
                 return
-                
-            self.eval_losses.append(eval_loss)
-            self.eval_steps.append(state.global_step)
-            
-            # Get current training loss for comparison
-            current_train_loss = self.train_losses[-1] if self.train_losses else 0.0
-            
-            # Log train and validation loss
-            self.logger.info(f"Step {state.global_step}: Train Loss = {current_train_loss:.4f}, Val Loss = {eval_loss:.4f}")
-            
-            if eval_loss < self.best_loss:
-                self.best_loss = eval_loss
-                self.patience_counter = 0
-                self.logger.info(f"New best validation loss: {eval_loss:.4f}")
-            else:
-                self.patience_counter += 1
-                self.logger.info(f"Validation loss: {eval_loss:.4f} | Patience: {self.patience_counter}/{self.patience}")
-                
-            if self.patience_counter >= self.patience:
-                self.logger.info("Early stopping triggered!")
-                control.should_training_stop = True
 
-    def on_step_begin(self, args, state, control, **kwargs):
-        if state.global_step % 50 == 0:  # Every 50 steps
-            torch.cuda.empty_cache()
-            gc.collect()
-    
-    def on_evaluate(self, args, state, control, metrics=None, **kwargs):
-        if metrics is not None and 'eval_loss' in metrics:
-            eval_loss = metrics['eval_loss']
-            
-            # Check for NaN - CRITICAL FIX
-            if np.isnan(eval_loss) or np.isinf(eval_loss):
-                self.logger.info(f"🚨 NaN validation loss detected! Stopping training.")
-                control.should_training_stop = True
-                return
-                
             self.eval_losses.append(eval_loss)
             self.eval_steps.append(state.global_step)
-            
+
             # Get current training loss for comparison
             current_train_loss = self.train_losses[-1] if self.train_losses else 0.0
-            
+
             if eval_loss < self.best_loss:
                 improvement = self.best_loss - eval_loss
                 self.best_loss = eval_loss
                 self.patience_counter = 0
-                self.logger.info(f"🎯 Step {state.global_step} | NEW BEST! | "
-                               f"Val Loss: {eval_loss:.4f} (↓{improvement:.4f}) | "
+                self.logger.info(f"Step {state.global_step} | NEW BEST | "
+                               f"Val Loss: {eval_loss:.4f} (improved {improvement:.4f}) | "
                                f"Train Loss: {current_train_loss:.4f} | "
                                f"Patience: {self.patience_counter}/{self.patience}")
             else:
                 increase = eval_loss - self.best_loss
                 self.patience_counter += 1
-                patience_emoji = "⚠️" if self.patience_counter >= self.patience - 1 else "📈"
-                self.logger.info(f"{patience_emoji} Step {state.global_step} | "
-                               f"Val Loss: {eval_loss:.4f} (↑{increase:.4f}) | "
+                self.logger.info(f"Step {state.global_step} | "
+                               f"Val Loss: {eval_loss:.4f} (increased {increase:.4f}) | "
                                f"Train Loss: {current_train_loss:.4f} | "
                                f"Best: {self.best_loss:.4f} | "
                                f"Patience: {self.patience_counter}/{self.patience}")
-                
+
             if self.patience_counter >= self.patience:
-                self.logger.info("🛑 Early stopping triggered!")
+                self.logger.info("Early stopping triggered!")
                 control.should_training_stop = True
     
 def intialize_model(logger=None):

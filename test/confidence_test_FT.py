@@ -327,8 +327,8 @@ def main():
 
         # Save plot
         plot_file = results_dir / f"confidence_finetuning_performance_trend_{LLM_MODEL.replace(':', '_')}.png"
-        plt.savefig(str(plot_file))
-        logger.info(f" Plot saved to: {plot_file}")
+        plt.savefig(str(plot_file), dpi=300, bbox_inches='tight')
+        logger.info(f"Plot saved to: {plot_file}")
         plt.close()
     else:
         logger.warning("No experiments completed successfully.")

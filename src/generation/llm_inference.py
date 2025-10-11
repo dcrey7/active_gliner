@@ -157,6 +157,7 @@ class LLMInference:
             num_new_needed = available
 
         synthetic_outputs = []
+        quota_exceeded = False  # Track if hard quota hit
 
         # Generation loop with retry logic
         desc = "Labeling" if self.mode == 'training' else "Predicting"
@@ -193,6 +194,20 @@ class LLMInference:
                     break  # Success
 
                 except Exception as e:
+                    # Check if it's a hard quota error (should stop generation)
+                    error_str = str(e).lower()
+                    is_hard_quota = any(indicator in error_str for indicator in [
+                        "token_quota_exceeded", "tokens per day limit exceeded",
+                        "tokens per hour limit exceeded", "daily limit exceeded",
+                        "hourly limit exceeded", "quota exceeded"
+                    ])
+
+                    if is_hard_quota:
+                        self.logger.error(f"Hard quota limit reached at example {i+1}: {str(e)[:150]}")
+                        self.logger.error(f"Stopping generation - returning {len(synthetic_outputs)} labels from cache")
+                        quota_exceeded = True
+                        break
+
                     if verbose and attempt == max_retries:
                         self.logger.error(f"Failed example {i+1} after {max_retries+1} attempts: {str(e)[:100]}")
                     if attempt == max_retries:
@@ -202,6 +217,10 @@ class LLMInference:
                                 "text": " ".join(tokenized_text),
                                 "entities": []
                             })
+
+            # Check if we hit quota and should stop generation loop
+            if quota_exceeded:
+                break
 
         if verbose:
             self.logger.info(f"Successfully generated {len(synthetic_outputs)}/{num_new_needed}")
