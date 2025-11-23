@@ -1,0 +1,2346 @@
+[
+  {
+    "text": "show me films with drew barrymore from the 1980s",
+    "entities": [
+      {
+        "entity": "drew barrymore",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "1980s",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 400,
+      "output_tokens": 77,
+      "cost_usd": 0.0,
+      "latency_ms": 5412.469387054443,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies have mississippi in the title",
+    "entities": [
+      {
+        "entity": "title",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "mississippi",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 2191.7693614959717,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what leonard cohen songs have been used in a movie",
+    "entities": [
+      {
+        "entity": "leonard cohen",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 68,
+      "cost_usd": 0.0,
+      "latency_ms": 2392.2688961029053,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me films elvis films set in hawaii",
+    "entities": [
+      {
+        "entity": "films",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "elvis",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "films",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "hawaii",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 93,
+      "cost_usd": 0.0,
+      "latency_ms": 3175.3454208374023,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movie is references zydrate",
+    "entities": [
+      {
+        "entity": "references zydrate",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 49,
+      "cost_usd": 0.0,
+      "latency_ms": 1828.282117843628,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "list the r rated best picture oscar winners",
+    "entities": [
+      {
+        "entity": "best picture",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "oscar",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "r rated",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "best picture oscar winners",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 97,
+      "cost_usd": 0.0,
+      "latency_ms": 3306.1256408691406,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what british movies came out in 1990s about the royal family",
+    "entities": [
+      {
+        "entity": "1990s",
+        "types": [
+          "year"
+        ]
+      },
+      {
+        "entity": "royal family",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 400,
+      "output_tokens": 74,
+      "cost_usd": 0.0,
+      "latency_ms": 2590.951919555664,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "id like a documentary about doctors in a chicago hospital in the 1980s",
+    "entities": [
+      {
+        "entity": "documentary",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "doctors",
+        "types": [
+          "character"
+        ]
+      },
+      {
+        "entity": "chicago hospital",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "1980s",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 404,
+      "output_tokens": 106,
+      "cost_usd": 0.0,
+      "latency_ms": 3608.198404312134,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movie has the shortest trailer",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "trailer",
+        "types": [
+          "trailer"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 59,
+      "cost_usd": 0.0,
+      "latency_ms": 2173.919439315796,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was whitney houstons first movie",
+    "entities": [
+      {
+        "entity": "whitney houston",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 2326.9383907318115,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "will their be a movie made about world of warcraft",
+    "entities": [
+      {
+        "entity": "world of warcraft",
+        "types": [
+          "title",
+          "genre"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 70,
+      "cost_usd": 0.0,
+      "latency_ms": 2478.3666133880615,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "is any film maker planning to produce a world of warcraft movie",
+    "entities": [
+      {
+        "entity": "world of warcraft",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 394,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 2436.3296031951904,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find all films directed by the farely brothers",
+    "entities": [
+      {
+        "entity": "farely brothers",
+        "types": [
+          "director"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 50,
+      "cost_usd": 0.0,
+      "latency_ms": 1884.0084075927734,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was the last move that frank sinatra was in",
+    "entities": [
+      {
+        "entity": "frank sinatra",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "move",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 2386.6117000579834,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "who directed rocky 4",
+    "entities": [
+      {
+        "entity": "rocky 4",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 378,
+      "output_tokens": 47,
+      "cost_usd": 0.0,
+      "latency_ms": 1840.247392654419,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "is there are soundtrack for the movie roadtrip",
+    "entities": [
+      {
+        "entity": "roadtrip",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "soundtrack",
+        "types": [
+          "song"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 2287.8825664520264,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "did jimmy stewart ever direct a movie",
+    "entities": [
+      {
+        "entity": "jimmy stewart",
+        "types": [
+          "actor",
+          "title"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 68,
+      "cost_usd": 0.0,
+      "latency_ms": 2410.8972549438477,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what actor does the cameo in the spongebob movie",
+    "entities": [
+      {
+        "entity": "spongebob movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "actor",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 2456.0937881469727,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what year was the social network made",
+    "entities": [
+      {
+        "entity": "social network",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "year",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 61,
+      "cost_usd": 0.0,
+      "latency_ms": 2201.963186264038,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movie has the latest john williams soundtrack",
+    "entities": [
+      {
+        "entity": "john williams",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "soundtrack",
+        "types": [
+          "song"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 2357.506513595581,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what is the most popular martin sheen film",
+    "entities": [
+      {
+        "entity": "martin sheen",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "film",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 2233.722925186157,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "who directed cars",
+    "entities": [
+      {
+        "entity": "cars",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 374,
+      "output_tokens": 42,
+      "cost_usd": 0.0,
+      "latency_ms": 1611.616611480713,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "can you find me a steven spielberg movie",
+    "entities": [
+      {
+        "entity": "steven spielberg",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 2467.729091644287,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "look up the best british films",
+    "entities": [
+      {
+        "entity": "british",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "films",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 59,
+      "cost_usd": 0.0,
+      "latency_ms": 2160.764694213867,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "where does you talking to me come from",
+    "entities": [],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 30,
+      "cost_usd": 0.0,
+      "latency_ms": 1267.5862312316895,
+      "attempts": 1
+    },
+    "errors": [
+      "No valid entities after cleaning"
+    ]
+  },
+  {
+    "text": "what was the first movie martin scorsese directed",
+    "entities": [
+      {
+        "entity": "martin scorsese",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 2324.815273284912,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "do you have any documentaries about pollution in china",
+    "entities": [
+      {
+        "entity": "documentaries",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "pollution",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "china",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 77,
+      "cost_usd": 0.0,
+      "latency_ms": 2807.9559803009033,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movie has the most famous soundtrack",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "soundtrack",
+        "types": [
+          "song"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 61,
+      "cost_usd": 0.0,
+      "latency_ms": 2250.0076293945312,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "who has top billing for backdraft",
+    "entities": [
+      {
+        "entity": "backdraft",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 47,
+      "cost_usd": 0.0,
+      "latency_ms": 1750.4603862762451,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "movie about two groups of robbers robbing the same bank",
+    "entities": [
+      {
+        "entity": "robbers",
+        "types": [
+          "character"
+        ]
+      },
+      {
+        "entity": "bank",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 78,
+      "cost_usd": 0.0,
+      "latency_ms": 2795.7160472869873,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "whats the movie with a song by coolio",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "coolio",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 3394.010305404663,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "funniest trailer for new movie",
+    "entities": [
+      {
+        "entity": "trailer",
+        "types": [
+          "trailer"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 59,
+      "cost_usd": 0.0,
+      "latency_ms": 1370.4619407653809,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me robert deniro movies about mobsters",
+    "entities": [
+      {
+        "entity": "robert deniro",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "mobsters",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1511.3649368286133,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "when does the new hobbit movie come out",
+    "entities": [
+      {
+        "entity": "hobbit",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "new",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 77,
+      "cost_usd": 0.0,
+      "latency_ms": 1713.822364807129,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "do other people think that godfather iii was just terrible",
+    "entities": [
+      {
+        "entity": "godfather iii",
+        "types": [
+          "title",
+          "genre"
+        ]
+      },
+      {
+        "entity": "terrible",
+        "types": [
+          "review"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1571.775197982788,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "get me all biography movies where a real us president was portrayed",
+    "entities": [
+      {
+        "entity": "biography",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "us president",
+        "types": [
+          "character"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 81,
+      "cost_usd": 0.0,
+      "latency_ms": 1796.1435317993164,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies have funny wedding toasts",
+    "entities": [
+      {
+        "entity": "funny wedding toasts",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 61,
+      "cost_usd": 0.0,
+      "latency_ms": 1414.0605926513672,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find movies set in chicago",
+    "entities": [
+      {
+        "entity": "chicago",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 378,
+      "output_tokens": 59,
+      "cost_usd": 0.0,
+      "latency_ms": 1373.0027675628662,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "who directed indiana jones",
+    "entities": [
+      {
+        "entity": "indiana jones",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 378,
+      "output_tokens": 46,
+      "cost_usd": 0.0,
+      "latency_ms": 1121.1695671081543,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies did nora ephron write",
+    "entities": [
+      {
+        "entity": "nora ephron",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 1466.393232345581,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was steven spielbergs last award winning movie",
+    "entities": [
+      {
+        "entity": "steven spielberg",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1515.533447265625,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "im looking for an awful movie about teenagers lost in the woods",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "teenagers",
+        "types": [
+          "character"
+        ]
+      },
+      {
+        "entity": "woods",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 80,
+      "cost_usd": 0.0,
+      "latency_ms": 1789.754867553711,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me the lists of braddock films",
+    "entities": [
+      {
+        "entity": "braddock films",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "braddock",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 1476.4134883880615,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "which movie includes your touch by the black keys",
+    "entities": [
+      {
+        "entity": "your touch",
+        "types": [
+          "song"
+        ]
+      },
+      {
+        "entity": "the black keys",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1488.062858581543,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies is considered the worst by critics",
+    "entities": [
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "critics",
+        "types": [
+          "review"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 1437.6144409179688,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "was a beautiful mind an original score",
+    "entities": [
+      {
+        "entity": "original score",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 1446.0687637329102,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find some martin and lewis movies",
+    "entities": [
+      {
+        "entity": "martin and lewis",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "martin and lewis",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 1459.3315124511719,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me 3d animated movies",
+    "entities": [
+      {
+        "entity": "3d animated movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 49,
+      "cost_usd": 0.0,
+      "latency_ms": 1186.5146160125732,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what genre is the movie a walk to remember a part of",
+    "entities": [
+      {
+        "entity": "a walk to remember",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "a part of",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 70,
+      "cost_usd": 0.0,
+      "latency_ms": 1600.3763675689697,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me movies with the beatles on the soundtrack",
+    "entities": [
+      {
+        "entity": "the beatles",
+        "types": [
+          "song"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 51,
+      "cost_usd": 0.0,
+      "latency_ms": 1233.6664199829102,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movie uses abba songs",
+    "entities": [
+      {
+        "entity": "abba",
+        "types": [
+          "song"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 45,
+      "cost_usd": 0.0,
+      "latency_ms": 1121.8481063842773,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "list films with music by rick springfield",
+    "entities": [
+      {
+        "entity": "rick springfield",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "films",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 1454.047441482544,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me baseball movies from the 1950s",
+    "entities": [
+      {
+        "entity": "baseball",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "1950s",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1572.3509788513184,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "id like a boxing film from the 1940s",
+    "entities": [
+      {
+        "entity": "boxing film",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "1940s",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 394,
+      "output_tokens": 71,
+      "cost_usd": 0.0,
+      "latency_ms": 1614.2404079437256,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "has anthony hopkins directed any movies",
+    "entities": [
+      {
+        "entity": "anthony hopkins",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 1474.6191501617432,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "top disney movies",
+    "entities": [
+      {
+        "entity": "disney",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 374,
+      "output_tokens": 57,
+      "cost_usd": 0.0,
+      "latency_ms": 1352.3354530334473,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me a movie that features spaceships",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "spaceships",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 1442.5880908966064,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "best movies of all time",
+    "entities": [
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "all time",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 378,
+      "output_tokens": 59,
+      "cost_usd": 0.0,
+      "latency_ms": 1381.3786506652832,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me boxing movies",
+    "entities": [
+      {
+        "entity": "boxing",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 376,
+      "output_tokens": 57,
+      "cost_usd": 0.0,
+      "latency_ms": 1339.7667407989502,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what is a popular movie soundtrack from the late 1990s",
+    "entities": [
+      {
+        "entity": "1990s",
+        "types": [
+          "year"
+        ]
+      },
+      {
+        "entity": "movie soundtrack",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 398,
+      "output_tokens": 73,
+      "cost_usd": 0.0,
+      "latency_ms": 1654.4535160064697,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me the new lone ranger trailer",
+    "entities": [
+      {
+        "entity": "lone ranger",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "trailer",
+        "types": [
+          "trailer"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 61,
+      "cost_usd": 0.0,
+      "latency_ms": 1430.0143718719482,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "when did the first scream movie come out",
+    "entities": [
+      {
+        "entity": "scream",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "first",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 76,
+      "cost_usd": 0.0,
+      "latency_ms": 1706.6528797149658,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what is an mpaa rating",
+    "entities": [],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 49,
+      "cost_usd": 0.0,
+      "latency_ms": 1187.3753070831299,
+      "attempts": 1
+    },
+    "errors": [
+      "Entity 'mpa\u0430 rating' not found in original text",
+      "No valid entities after cleaning"
+    ]
+  },
+  {
+    "text": "what is the best quentin tarentino movie",
+    "entities": [
+      {
+        "entity": "quentin tarentino",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 67,
+      "cost_usd": 0.0,
+      "latency_ms": 1530.1647186279297,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "give ma the collection of van dame",
+    "entities": [
+      {
+        "entity": "van dame",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 47,
+      "cost_usd": 0.0,
+      "latency_ms": 1147.949457168579,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "jmes cameron movies list give it to",
+    "entities": [
+      {
+        "entity": "jmes cameron",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "movies list",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1516.1030292510986,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what actor starred in the rocky movie series",
+    "entities": [
+      {
+        "entity": "movie series",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 1435.3551864624023,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "any funny movie of pg 12 gave me",
+    "entities": [
+      {
+        "entity": "funny",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "pg 12",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1515.7151222229004,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what is the movie with the most ad placement",
+    "entities": [
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "ad placement",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 1453.8512229919434,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "are there any bank robbery movies out now",
+    "entities": [
+      {
+        "entity": "bank robbery",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 62,
+      "cost_usd": 0.0,
+      "latency_ms": 1434.6754550933838,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find movie with up and coming actor",
+    "entities": [
+      {
+        "entity": "actor",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 46,
+      "cost_usd": 0.0,
+      "latency_ms": 1137.8107070922852,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies has clint mansell done the soundtrack for",
+    "entities": [
+      {
+        "entity": "clint mansell",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 67,
+      "cost_usd": 0.0,
+      "latency_ms": 1531.6565036773682,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies involve police",
+    "entities": [
+      {
+        "entity": "police",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 376,
+      "output_tokens": 43,
+      "cost_usd": 0.0,
+      "latency_ms": 1069.9591636657715,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "i want to see a movie about go go dancers",
+    "entities": [
+      {
+        "entity": "go go dancers",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 51,
+      "cost_usd": 0.0,
+      "latency_ms": 1225.496768951416,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "i would like a list of alfred hitchcock movies",
+    "entities": [
+      {
+        "entity": "alfred hitchcock",
+        "types": [
+          "director",
+          "genre"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 70,
+      "cost_usd": 0.0,
+      "latency_ms": 1589.8840427398682,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was peter jacksons first film",
+    "entities": [
+      {
+        "entity": "peter jackson",
+        "types": [
+          "director",
+          "actor"
+        ]
+      },
+      {
+        "entity": "film",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1502.2547245025635,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "was there a mash movie",
+    "entities": [
+      {
+        "entity": "mash",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 378,
+      "output_tokens": 58,
+      "cost_usd": 0.0,
+      "latency_ms": 1357.513427734375,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "has insane clown posse made any movies",
+    "entities": [
+      {
+        "entity": "insane clown posse",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 1456.4392566680908,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what is the name of the documentary by rosie odonnell",
+    "entities": [
+      {
+        "entity": "rosie odonnell",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "documentary",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 394,
+      "output_tokens": 71,
+      "cost_usd": 0.0,
+      "latency_ms": 1606.2719821929932,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me all of david duchovnys movies",
+    "entities": [
+      {
+        "entity": "david duchovny",
+        "types": [
+          "actor",
+          "director"
+        ]
+      },
+      {
+        "entity": "movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1561.8863105773926,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "ghost rider 2",
+    "entities": [
+      {
+        "entity": "ghost rider 2",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 376,
+      "output_tokens": 46,
+      "cost_usd": 0.0,
+      "latency_ms": 1133.2318782806396,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "clint eastwood wrote and directed what movies",
+    "entities": [
+      {
+        "entity": "clint eastwood",
+        "types": [
+          "actor",
+          "director"
+        ]
+      },
+      {
+        "entity": "what movies",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1570.3511238098145,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "how many movies have aliens trying to take over the world by breeding with humans",
+    "entities": [
+      {
+        "entity": "aliens",
+        "types": [
+          "character"
+        ]
+      },
+      {
+        "entity": "humans",
+        "types": [
+          "character"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 398,
+      "output_tokens": 83,
+      "cost_usd": 0.0,
+      "latency_ms": 1842.097520828247,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me tim burtons newest movie",
+    "entities": [
+      {
+        "entity": "tim burton",
+        "types": [
+          "director",
+          "actor"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1485.9395027160645,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "give me a list of basketball movies about high school teams",
+    "entities": [
+      {
+        "entity": "basketball",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "high school teams",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1511.6853713989258,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me who directed the new avengers movie",
+    "entities": [
+      {
+        "entity": "avengers",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 63,
+      "cost_usd": 0.0,
+      "latency_ms": 1456.373929977417,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was the breakfast club about",
+    "entities": [],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 60,
+      "cost_usd": 0.0,
+      "latency_ms": 1395.77054977417,
+      "attempts": 1
+    },
+    "errors": [
+      "Entity 'Breakfast Club' not found in original text",
+      "Entity 'plot' not found in original text",
+      "No valid entities after cleaning"
+    ]
+  },
+  {
+    "text": "what is the cabin in the woods about",
+    "entities": [
+      {
+        "entity": "cabin in the woods",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "the cabin in the woods",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 68,
+      "cost_usd": 0.0,
+      "latency_ms": 1547.5833415985107,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me james camerons latest movie",
+    "entities": [
+      {
+        "entity": "james cameron",
+        "types": [
+          "director",
+          "actor"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1492.6981925964355,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what was the latest star trek film",
+    "entities": [
+      {
+        "entity": "star trek",
+        "types": [
+          "title",
+          "genre"
+        ]
+      },
+      {
+        "entity": "film",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 1474.6837615966797,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what are the top 10 family friendly scariest films for halloween",
+    "entities": [
+      {
+        "entity": "halloween",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "family friendly",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "scariest",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 396,
+      "output_tokens": 83,
+      "cost_usd": 0.0,
+      "latency_ms": 1858.9391708374023,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "list films with scores by danny elfman",
+    "entities": [
+      {
+        "entity": "danny elfman",
+        "types": [
+          "director"
+        ]
+      },
+      {
+        "entity": "films",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1484.4539165496826,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "how many predator movies were made",
+    "entities": [
+      {
+        "entity": "movies",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 60,
+      "cost_usd": 0.0,
+      "latency_ms": 1396.143913269043,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what are some malcolm reynolds quotes",
+    "entities": [
+      {
+        "entity": "malcolm reynolds",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "quotes",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 386,
+      "output_tokens": 66,
+      "cost_usd": 0.0,
+      "latency_ms": 1507.972002029419,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what are the top ten nc 17 films from the last ten years",
+    "entities": [
+      {
+        "entity": "nc 17",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "last ten years",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 398,
+      "output_tokens": 73,
+      "cost_usd": 0.0,
+      "latency_ms": 1647.761344909668,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "is there an adult disney film",
+    "entities": [
+      {
+        "entity": "adult",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "disney",
+        "types": [
+          "genre"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 380,
+      "output_tokens": 60,
+      "cost_usd": 0.0,
+      "latency_ms": 1396.315574645996,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "were there any female leads in the wrestler",
+    "entities": [
+      {
+        "entity": "wrestler",
+        "types": [
+          "title"
+        ]
+      },
+      {
+        "entity": "female leads",
+        "types": [
+          "character"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 64,
+      "cost_usd": 0.0,
+      "latency_ms": 1468.4278964996338,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "who directed home alone",
+    "entities": [],
+    "stats": {
+      "input_tokens": 376,
+      "output_tokens": 44,
+      "cost_usd": 0.0,
+      "latency_ms": 1084.6154689788818,
+      "attempts": 1
+    },
+    "errors": [
+      "Entity 'Home Alone' not found in original text",
+      "No valid entities after cleaning"
+    ]
+  },
+  {
+    "text": "find documentaries about the wall street financial collapse",
+    "entities": [
+      {
+        "entity": "documentaries",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "wall street financial collapse",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1495.1584339141846,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what film contains the line were going to need a bigger boat",
+    "entities": [
+      {
+        "entity": "were going to need a bigger boat",
+        "types": [
+          "plot"
+        ]
+      },
+      {
+        "entity": "film",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 71,
+      "cost_usd": 0.0,
+      "latency_ms": 1606.6370010375977,
+      "attempts": 1
+    }
+  }
+]

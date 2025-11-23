@@ -1,0 +1,9 @@
+config_name,num_target_modules,test_f1,training_successful,adapter_name,adapter_path
+ModernBert + Task,12,88.76310661594135,True,lora_modernbert_and_task,/app/results2/exp_gliner_best_lora_layers/adapters/lora_modernbert_and_task
+All Layers,18,88.60501712487272,True,lora_all_layers,/app/results2/exp_gliner_best_lora_layers/adapters/lora_all_layers
+ModernBert Only,4,88.51790020404377,True,lora_modernbert_only,/app/results2/exp_gliner_best_lora_layers/adapters/lora_modernbert_only
+Attention + Task,13,88.41423948220066,True,lora_attention_and_task,/app/results2/exp_gliner_best_lora_layers/adapters/lora_attention_and_task
+Attention Only,5,88.32994266691325,True,lora_attention_only,/app/results2/exp_gliner_best_lora_layers/adapters/lora_attention_only
+BERT + Task,14,75.76328684508104,True,lora_bert_and_task,/app/results2/exp_gliner_best_lora_layers/adapters/lora_bert_and_task
+BERT Only,6,71.02388088562311,True,lora_bert_only,/app/results2/exp_gliner_best_lora_layers/adapters/lora_bert_only
+Task Layers Only,8,67.7349159248269,True,lora_task_layers_only,/app/results2/exp_gliner_best_lora_layers/adapters/lora_task_layers_only

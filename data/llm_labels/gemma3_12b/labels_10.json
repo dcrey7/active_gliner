@@ -1,0 +1,230 @@
+[
+  {
+    "text": "what movies star bruce willis",
+    "entities": [
+      {
+        "entity": "bruce willis",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 382,
+      "output_tokens": 49,
+      "cost_usd": 0.0,
+      "latency_ms": 5098.631143569946,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me films with drew barrymore from the 1980s",
+    "entities": [
+      {
+        "entity": "drew barrymore",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "1980s",
+        "types": [
+          "year"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 400,
+      "output_tokens": 77,
+      "cost_usd": 0.0,
+      "latency_ms": 1385.805606842041,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies starred both al pacino and robert deniro",
+    "entities": [
+      {
+        "entity": "al pacino",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "robert deniro",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1241.023063659668,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me all of the movies that starred harold ramis and bill murray",
+    "entities": [
+      {
+        "entity": "harold ramis",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "bill murray",
+        "types": [
+          "actor"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 400,
+      "output_tokens": 74,
+      "cost_usd": 0.0,
+      "latency_ms": 1317.8861141204834,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "find me a movie with a quote about baseball in it",
+    "entities": [
+      {
+        "entity": "baseball",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 50,
+      "cost_usd": 0.0,
+      "latency_ms": 943.4528350830078,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what movies have mississippi in the title",
+    "entities": [
+      {
+        "entity": "mississippi",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 384,
+      "output_tokens": 48,
+      "cost_usd": 0.0,
+      "latency_ms": 899.0478515625,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me science fiction films directed by steven spielberg",
+    "entities": [
+      {
+        "entity": "science fiction",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "steven spielberg",
+        "types": [
+          "director"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 390,
+      "output_tokens": 68,
+      "cost_usd": 0.0,
+      "latency_ms": 1279.515027999878,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "do you have any thrillers directed by sofia coppola",
+    "entities": [
+      {
+        "entity": "thrillers",
+        "types": [
+          "genre"
+        ]
+      },
+      {
+        "entity": "sofia coppola",
+        "types": [
+          "director"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 69,
+      "cost_usd": 0.0,
+      "latency_ms": 1267.0352458953857,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "what leonard cohen songs have been used in a movie",
+    "entities": [
+      {
+        "entity": "leonard cohen",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "songs",
+        "types": [
+          "song"
+        ]
+      },
+      {
+        "entity": "movie",
+        "types": [
+          "title"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 392,
+      "output_tokens": 82,
+      "cost_usd": 0.0,
+      "latency_ms": 1459.2366218566895,
+      "attempts": 1
+    }
+  },
+  {
+    "text": "show me films elvis films set in hawaii",
+    "entities": [
+      {
+        "entity": "elvis",
+        "types": [
+          "actor"
+        ]
+      },
+      {
+        "entity": "hawaii",
+        "types": [
+          "plot"
+        ]
+      }
+    ],
+    "stats": {
+      "input_tokens": 388,
+      "output_tokens": 65,
+      "cost_usd": 0.0,
+      "latency_ms": 1203.1056880950928,
+      "attempts": 1
+    }
+  }
+]

@@ -1,0 +1,14 @@
+artifact_uri: file:///app/results2/exp_gliner_best_hyperparameters/mlruns/783141004336824754/3c2336a56a704efe91746f3a257fdfde/artifacts
+end_time: 1763418143124
+entry_point_name: ''
+experiment_id: '783141004336824754'
+lifecycle_stage: active
+run_id: 3c2336a56a704efe91746f3a257fdfde
+run_name: trial_004
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763417643704
+status: 3
+tags: []
+user_id: root

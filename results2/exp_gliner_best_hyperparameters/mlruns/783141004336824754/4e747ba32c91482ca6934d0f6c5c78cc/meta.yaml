@@ -1,0 +1,14 @@
+artifact_uri: file:///app/results2/exp_gliner_best_hyperparameters/mlruns/783141004336824754/4e747ba32c91482ca6934d0f6c5c78cc/artifacts
+end_time: 1763422553540
+entry_point_name: ''
+experiment_id: '783141004336824754'
+lifecycle_stage: active
+run_id: 4e747ba32c91482ca6934d0f6c5c78cc
+run_name: optuna_optimization
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763415358513
+status: 3
+tags: []
+user_id: root

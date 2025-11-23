@@ -1,0 +1,12 @@
+[project]
+name = "active-gliner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gliner",
+]
+
+[tool.uv.sources]
+gliner = { git = "https://github.com/urchade/GLiNER.git", rev = "7800fc1deca23fb9197f8c9cdd0200f672ce5213" }

@@ -1,0 +1,6 @@
+artifact_location: file:///app/results2/exp_gliner_best_hyperparameters/mlruns/783141004336824754
+creation_time: 1763415173944
+experiment_id: '783141004336824754'
+last_update_time: 1763415173944
+lifecycle_stage: active
+name: gliner_mit_movies_hyperparameter_optimization
