@@ -1,0 +1,18 @@
+============================================================
+TRAINING SUMMARY
+============================================================
+
+Total steps: 110
+Total training time: 7.75 minutes
+
+Best validation loss: 23.4332
+Final training loss: 3.1435
+Final validation loss: 26.7321
+
+Peak GPU memory: 4.08 GB
+Average GPU memory: 4.08 GB
+Peak CPU memory: 66.7%
+Average CPU memory: 65.4%
+
+Early stopping: Yes
+Stopped at step: 1100

@@ -165,7 +165,10 @@ def train_lora_model(model, train_data, eval_data, training_config, adapter_save
         # Stability settings
         fp16=False,
         bf16=False,
-        
+
+        # Disable torch.compile - GLiNER has variable-length sequences that break it
+        torch_compile=False,
+
         load_best_model_at_end=False,
         metric_for_best_model="eval_loss",
         greater_is_better=False,

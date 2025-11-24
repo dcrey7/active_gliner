@@ -5,8 +5,8 @@ DEFAULT_GLINER_MODEL = "knowledgator/modern-gliner-bi-large-v1.0"
 DEFAULT_MAX_LENGTH = 8192
 
 DEFAULT_LORA_CONFIG = {
-    'r': 64,
-    'lora_alpha': 128,
+    'r':16 ,
+    'lora_alpha': 32,
     'lora_dropout': 0.1,
     'bias': 'none',
     'task_type': TaskType.TOKEN_CLS,
@@ -28,7 +28,7 @@ DEFAULT_LORA_CONFIG = {
 DEFAULT_TRAINING_CONFIG = {
         'num_steps': 2500,
         'save_strategy':"no",
-        'train_batch_size': 12,
+        'train_batch_size': 8,
         'gradient_accumulation_steps': 1,
         'learning_rate': 0.00022105770821309302,
         'others_lr': 5.8851860296580845e-06,
