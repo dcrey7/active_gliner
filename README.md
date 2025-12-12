@@ -1,6 +1,6 @@
 # Active GLiNER
 
-Information extraction from text using GLiNER and LLM distillation. This package enables cost-effective, locally-runnable named entity recognition by distilling LLM-extracted labels into lightweight GLiNER models.
+Information extraction from text using GLiNER and LLM distillation. This package enables cost-effective, locally-runnable named entity recognition by distilling LLM-extracted labels into lightweight GLiNER models. For the full detailed report please check https://drive.google.com/file/d/1eo1z6MbX-gSsD8jMPwdCOveldRVPxqrF/view?usp=drive_link
 
 ## Overview
 
