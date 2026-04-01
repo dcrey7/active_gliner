@@ -5,8 +5,8 @@ DEFAULT_GLINER_MODEL = "knowledgator/modern-gliner-bi-large-v1.0"
 DEFAULT_MAX_LENGTH = 8192
 
 DEFAULT_LORA_CONFIG = {
-    'r':16 , # change to 64 in better gpu
-    'lora_alpha': 32, # change to 128 in better gpu
+    'r':64 , # change to 64 in better gpu
+    'lora_alpha': 128, # change to 128 in better gpu
     'lora_dropout': 0.1,
     'bias': 'none',
     'task_type': TaskType.TOKEN_CLS,

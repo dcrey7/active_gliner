@@ -1,0 +1,102 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{keraghel2024survey}
+\citation{belcak2025small}
+\citation{zaratiana2023gliner}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{zaratiana2023gliner}
+\citation{stepanov2024glinermultitask}
+\citation{zaratiana2025gliner2}
+\citation{stepanov2026gliner_bi}
+\citation{hu2021lora}
+\citation{shen2017deep}
+\citation{siddhant2018deep}
+\citation{lowell2019practical}
+\citation{zhou2024universalner}
+\citation{heng2024proggen}
+\citation{fuente2025guidex}
+\citation{kamath2025synthetic}
+\citation{akiba2019optuna}
+\citation{shen2017deep}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{GLiNER and Span-Based NER.}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parameter-Efficient Fine-Tuning.}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Active Learning for NER.}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LLM-Generated Labels for NER.}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Framework Overview}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Model Architecture}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}LoRA Configuration}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Acquisition Functions}{2}{subsection.3.4}\protected@file@percent }
+\citation{liu2019movie}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the Active GLiNER framework. Training examples are ranked by model uncertainty, then used for LoRA fine-tuning with human, LLM, or mixed labels. Evaluation uses human-annotated test data.}}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:framework}{{1}{3}{Overview of the Active GLiNER framework. Training examples are ranked by model uncertainty, then used for LoRA fine-tuning with human, LLM, or mixed labels. Evaluation uses human-annotated test data}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Synthetic Label Generation}{3}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Training Data Composition}{3}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dataset.}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Baselines.}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Evaluation.}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Implementation.}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{3}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Baseline and Threshold Analysis}{3}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Baseline performance on MIT Movies test set. LoRA fine-tuning nearly matches full fine-tuning while updating only 4\% of parameters.}}{3}{table.caption.2}\protected@file@percent }
+\newlabel{tab:baseline}{{1}{3}{Baseline performance on MIT Movies test set. LoRA fine-tuning nearly matches full fine-tuning while updating only 4\% of parameters}{table.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Threshold analysis on MIT Movies test set. GLiNER Base and Fine-Tuned (FT) models are evaluated at confidence thresholds 0.1, 0.5, and 0.9, compared against the LLM baseline (Gemma 3 12B). Fine-tuned GLiNER at threshold 0.5 achieves the best balance of precision and recall, outperforming the LLM on F\textsubscript  {1}{}.}}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:threshold}{{2}{4}{Threshold analysis on MIT Movies test set. GLiNER Base and Fine-Tuned (FT) models are evaluated at confidence thresholds 0.1, 0.5, and 0.9, compared against the LLM baseline (Gemma 3 12B). Fine-tuned GLiNER at threshold 0.5 achieves the best balance of precision and recall, outperforming the LLM on \fone {}}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}LoRA Layer Selection}{4}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Acquisition Function Comparison}{4}{subsection.5.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Test set F\textsubscript  {1}{} by acquisition function and training size. N = number of labeled sentences. LC = Least Confidence (minimum span score). Best per row in \textbf  {bold}, highlighted in \colorbox {lightgreen}{green}. LC reaches 80 F\textsubscript  {1}{} with only 200 examples and consistently leads at small to medium budgets.}}{4}{table.caption.5}\protected@file@percent }
+\newlabel{tab:active_learning}{{2}{4}{Test set \fone {} by acquisition function and training size. N = number of labeled sentences. LC = Least Confidence (minimum span score). Best per row in \textbf {bold}, highlighted in \colorbox {lightgreen}{green}. LC reaches 80 \fone {} with only 200 examples and consistently leads at small to medium budgets}{table.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces LoRA layer configuration comparison. Each bar shows the F\textsubscript  {1}{} achieved with different groups of target modules. The number of modules is annotated inside each bar. Configurations including ModernBERT layers (yellow) consistently outperform those without (green). The best configuration (ModernBERT + Task) uses only 12 modules.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:lora_layers}{{3}{5}{LoRA layer configuration comparison. Each bar shows the \fone {} achieved with different groups of target modules. The number of modules is annotated inside each bar. Configurations including ModernBERT layers (yellow) consistently outperform those without (green). The best configuration (ModernBERT + Task) uses only 12 modules}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}GLiNER vs. LLM on Hard Examples}{5}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Ground Truth vs. LLM Labels}{5}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Mixed Supervision Results}{5}{subsection.5.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Active learning strategy comparison on MIT Movies. Each line shows test set F\textsubscript  {1}{} as a function of the number of training examples selected by that strategy. All strategies are fine-tuned on ground truth labels with LoRA. The largest gains occur between 50 and 400 labeled sentences. Beyond 1{,}500 examples, strategies converge, with Least Confidence (orange) ending slightly ahead.}}{6}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:active_learning}{{4}{6}{Active learning strategy comparison on MIT Movies. Each line shows test set \fone {} as a function of the number of training examples selected by that strategy. All strategies are fine-tuned on ground truth labels with LoRA. The largest gains occur between 50 and 400 labeled sentences. Beyond 1{,}500 examples, strategies converge, with Least Confidence (orange) ending slightly ahead}{figure.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Test set F\textsubscript  {1}{} at different mixing ratios (minimum confidence ranking). Column headers show percentage of sentences with human labels; the rest use Gemma 3 12B labels. \colorbox {lightgreen}{Green} = near or at best performance. \colorbox {lightred!40}{Red} = pure synthetic labels. At 75\% GT, performance matches full supervision within 1 F\textsubscript  {1}{} point.}}{6}{table.caption.10}\protected@file@percent }
+\newlabel{tab:mixing}{{3}{6}{Test set \fone {} at different mixing ratios (minimum confidence ranking). Column headers show percentage of sentences with human labels; the rest use Gemma 3 12B labels. \colorbox {lightgreen}{Green} = near or at best performance. \colorbox {lightred!40}{Red} = pure synthetic labels. At 75\% GT, performance matches full supervision within 1 \fone {} point}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Cost Analysis}{6}{subsection.5.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Zero-shot comparison between GLiNER Base and Gemma 3 12B on the worst confidence training examples (ranked by MSE). The LLM maintains a consistent advantage on examples where GLiNER is most uncertain, motivating the use of LLM labels as supplementary supervision for these difficult cases.}}{7}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:baseline_confidence}{{5}{7}{Zero-shot comparison between GLiNER Base and Gemma 3 12B on the worst confidence training examples (ranked by MSE). The LLM maintains a consistent advantage on examples where GLiNER is most uncertain, motivating the use of LLM labels as supplementary supervision for these difficult cases}{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Estimated annual cost for 1M NER tasks. LLM costs assume 1{,}000 input + 1{,}000 output tokens per task at published API prices. GLiNER cost = two retraining cycles per year on cloud GPU (${\sim }$2 EUR each) with zero inference cost.}}{7}{table.caption.11}\protected@file@percent }
+\newlabel{tab:cost}{{4}{7}{Estimated annual cost for 1M NER tasks. LLM costs assume 1{,}000 input + 1{,}000 output tokens per task at published API prices. GLiNER cost = two retraining cycles per year on cloud GPU (${\sim }$2 EUR each) with zero inference cost}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Analysis}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why does minimum confidence work best?}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{When do synthetic labels help vs. hurt?}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Per-entity-type gains.}{7}{section.6}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{akiba2019optuna}{{1}{2019}{{Akiba et~al.}}{{Akiba, Sano, Yanase, Ohta, and Koyama}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Fine-tuning comparison: Ground truth labels (green) vs. Gemma 3 12B synthetic labels (red) on MSE-ranked worst confidence sentences, evaluated on the test set. Ground truth fine-tuning reaches 85.3\% F\textsubscript  {1}{}, while LLM labels saturate near the teacher's own performance (${\sim }$69\%). The gap confirms that synthetic labels alone cannot push the student beyond the teacher.}}{8}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:gt_vs_llm}{{6}{8}{Fine-tuning comparison: Ground truth labels (green) vs. Gemma 3 12B synthetic labels (red) on MSE-ranked worst confidence sentences, evaluated on the test set. Ground truth fine-tuning reaches 85.3\% \fone {}, while LLM labels saturate near the teacher's own performance (${\sim }$69\%). The gap confirms that synthetic labels alone cannot push the student beyond the teacher}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Single dataset.}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Simulated active learning.}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Teacher quality.}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{No variance reporting.}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Missing baselines.}{8}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Future Work.}{8}{section.8}\protected@file@percent }
+\bibcite{belcak2025small}{{2}{2025}{{Belcak et~al.}}{{}}}
+\bibcite{fuente2025guidex}{{3}{2025}{{Fuente et~al.}}{{Fuente, Sainz, Garcia-Ferrero, and Agirre}}}
+\bibcite{heng2024proggen}{{4}{2024}{{Heng et~al.}}{{}}}
+\bibcite{hu2021lora}{{5}{2021}{{Hu et~al.}}{{Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and Chen}}}
+\bibcite{kamath2025synthetic}{{6}{2025}{{Kamath and Vajjala}}{{}}}
+\bibcite{keraghel2024survey}{{7}{2024}{{Keraghel et~al.}}{{Keraghel, Morbieu, and Nadif}}}
+\bibcite{liu2019movie}{{8}{2013}{{Liu et~al.}}{{Liu, Pasupat, Cyphers, and Glass}}}
+\bibcite{lowell2019practical}{{9}{2019}{{Lowell et~al.}}{{Lowell, Lipton, and Wallace}}}
+\bibcite{shen2017deep}{{10}{2017}{{Shen et~al.}}{{Shen, Yun, Lipton, Kronrod, and Anandkumar}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mixed fine-tuning results using minimum confidence ranking. Each line represents a different ratio of ground truth (GT) to Gemma 3 12B labels. The 75\% GT / 25\% LLM curve (dark green) closely tracks the fully supervised 100\% GT curve (bright green), while the pure LLM curve (red, 0\% GT) saturates around 70\% F\textsubscript  {1}{}. This demonstrates that a modest amount of synthetic labels can supplement human annotation with minimal performance loss.}}{9}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:mixed}{{7}{9}{Mixed fine-tuning results using minimum confidence ranking. Each line represents a different ratio of ground truth (GT) to Gemma 3 12B labels. The 75\% GT / 25\% LLM curve (dark green) closely tracks the fully supervised 100\% GT curve (bright green), while the pure LLM curve (red, 0\% GT) saturates around 70\% \fone {}. This demonstrates that a modest amount of synthetic labels can supplement human annotation with minimal performance loss}{figure.caption.9}{}}
+\bibcite{siddhant2018deep}{{11}{2018}{{Siddhant and Lipton}}{{}}}
+\bibcite{stepanov2024glinermultitask}{{12}{2024}{{Stepanov and Shtopko}}{{}}}
+\bibcite{stepanov2026gliner_bi}{{13}{2026}{{Stepanov et~al.}}{{Stepanov, Shtopko, Vodianytskyi, and Lukashov}}}
+\bibcite{zaratiana2023gliner}{{14}{2023}{{Zaratiana et~al.}}{{Zaratiana, Tomeh, Holat, and Charnois}}}
+\bibcite{zaratiana2025gliner2}{{15}{2025}{{Zaratiana et~al.}}{{Zaratiana, Pasternak, Boyd, Hurn-Maloney, and Lewis}}}
+\bibcite{zhou2024universalner}{{16}{2024}{{Zhou et~al.}}{{Zhou, Zhang, Gu, Chen, and Poon}}}
+\gdef \@abspage@last{10}

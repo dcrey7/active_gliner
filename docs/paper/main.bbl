@@ -1,0 +1,109 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Akiba et~al.(2019)Akiba, Sano, Yanase, Ohta, and
+  Koyama]{akiba2019optuna}
+Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama.
+\newblock Optuna: A next-generation hyperparameter optimization framework,
+  2019.
+
+\bibitem[Belcak et~al.(2025)]{belcak2025small}
+Peter Belcak et~al.
+\newblock Small language models are the future of agentic {AI}.
+\newblock \emph{arXiv preprint arXiv:2506.02153}, 2025.
+
+\bibitem[Fuente et~al.(2025)Fuente, Sainz, Garcia-Ferrero, and
+  Agirre]{fuente2025guidex}
+Niels David de~la Fuente, Oscar Sainz, Iker Garcia-Ferrero, and Eneko Agirre.
+\newblock {GuideX}: Guided synthetic data generation for zero-shot information
+  extraction.
+\newblock \emph{arXiv preprint arXiv:2506.00649}, 2025.
+
+\bibitem[Heng et~al.(2024)]{heng2024proggen}
+Yuzhao Heng et~al.
+\newblock {ProgGen}: Generating named entity recognition datasets step-by-step
+  with self-reflexive large language models.
+\newblock \emph{arXiv preprint arXiv:2403.11103}, 2024.
+
+\bibitem[Hu et~al.(2021)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2021lora}
+Edward~J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shanen
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock \emph{arXiv preprint arXiv:2106.09685}, 2021.
+
+\bibitem[Kamath and Vajjala(2025)]{kamath2025synthetic}
+Gaurav Kamath and Sowmya Vajjala.
+\newblock Does synthetic data help named entity recognition for low-resource
+  languages?
+\newblock \emph{arXiv preprint arXiv:2505.16814}, 2025.
+
+\bibitem[Keraghel et~al.(2024)Keraghel, Morbieu, and Nadif]{keraghel2024survey}
+Imed Keraghel, Stanislas Morbieu, and Mohamed Nadif.
+\newblock Recent advances in named entity recognition: A comprehensive survey
+  and comparative study.
+\newblock \emph{arXiv preprint arXiv:2401.10825}, 2024.
+
+\bibitem[Liu et~al.(2013)Liu, Pasupat, Cyphers, and Glass]{liu2019movie}
+Jingjing Liu, Panupong Pasupat, Scott Cyphers, and Jim Glass.
+\newblock {MIT} movie corpus.
+\newblock MIT CSAIL, 2013.
+
+\bibitem[Lowell et~al.(2019)Lowell, Lipton, and Wallace]{lowell2019practical}
+David Lowell, Zachary~C Lipton, and Byron~C Wallace.
+\newblock Practical obstacles to deploying active learning.
+\newblock \emph{Proceedings of EMNLP}, 2019.
+
+\bibitem[Shen et~al.(2017)Shen, Yun, Lipton, Kronrod, and
+  Anandkumar]{shen2017deep}
+Yanyao Shen, Hyokun Yun, Zachary~C Lipton, Yakov Kronrod, and Animashree
+  Anandkumar.
+\newblock Deep active learning for named entity recognition.
+\newblock In \emph{Proceedings of the 2nd Workshop on Representation Learning
+  for NLP}, pages 252--256, 2017.
+
+\bibitem[Siddhant and Lipton(2018)]{siddhant2018deep}
+Aditya Siddhant and Zachary~C Lipton.
+\newblock Deep {B}ayesian active learning for natural language processing:
+  Results of a large-scale empirical study.
+\newblock \emph{arXiv preprint arXiv:1808.05697}, 2018.
+
+\bibitem[Stepanov and Shtopko(2024)]{stepanov2024glinermultitask}
+Ihor Stepanov and Mykhailo Shtopko.
+\newblock {GLiNER} multi-task: Generalist lightweight model for various
+  information extraction tasks.
+\newblock \emph{arXiv preprint arXiv:2406.12925}, 2024.
+
+\bibitem[Stepanov et~al.(2026)Stepanov, Shtopko, Vodianytskyi, and
+  Lukashov]{stepanov2026gliner_bi}
+Ihor Stepanov, Mykhailo Shtopko, Dmytro Vodianytskyi, and Oleksandr Lukashov.
+\newblock The million-label {NER}: Breaking scale barriers with {GLiNER}
+  bi-encoder.
+\newblock \emph{arXiv preprint arXiv:2602.18487}, 2026.
+
+\bibitem[Zaratiana et~al.(2023)Zaratiana, Tomeh, Holat, and
+  Charnois]{zaratiana2023gliner}
+Urchade Zaratiana, Nadi Tomeh, Pierre Holat, and Thierry Charnois.
+\newblock {GLiNER}: Generalist model for named entity recognition using
+  bidirectional transformer.
+\newblock \emph{arXiv preprint arXiv:2311.08526}, 2023.
+
+\bibitem[Zaratiana et~al.(2025)Zaratiana, Pasternak, Boyd, Hurn-Maloney, and
+  Lewis]{zaratiana2025gliner2}
+Urchade Zaratiana, G~Pasternak, O~Boyd, G~Hurn-Maloney, and A~Lewis.
+\newblock {GLiNER2}: An efficient multi-task information extraction system with
+  schema-driven interface.
+\newblock \emph{arXiv preprint arXiv:2507.18546}, 2025.
+
+\bibitem[Zhou et~al.(2024)Zhou, Zhang, Gu, Chen, and
+  Poon]{zhou2024universalner}
+Wenxuan Zhou, Sheng Zhang, Yu~Gu, Muhao Chen, and Hoifung Poon.
+\newblock {UniversalNER}: Targeted distillation from large language models for
+  open named entity recognition.
+\newblock \emph{arXiv preprint arXiv:2308.03279}, 2024.
+
+\end{thebibliography}
