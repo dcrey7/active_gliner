@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.4.1)  1 APR 2026 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.4.1)  1 APR 2026 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,58 +686,68 @@ Package multicol Warning: I moved some lines to the next page.
 
 
 [2]
-<figures/threshold_f1.png, id=172, 722.7pt x 433.62pt>
+<figures/framework.jpg, id=169, 1371.1225pt x 733.74126pt>
+File: figures/framework.jpg Graphic file (type jpg)
+<use figures/framework.jpg>
+Package pdftex.def Info: figures/framework.jpg  used on input line 163.
+(pdftex.def)             Requested size: 402.98041pt x 215.64568pt.
+ [3 <./figures/framework.jpg>]
+<figures/threshold_f1.png, id=180, 722.7pt x 433.62pt>
 File: figures/threshold_f1.png Graphic file (type png)
 <use figures/threshold_f1.png>
-Package pdftex.def Info: figures/threshold_f1.png  used on input line 242.
+Package pdftex.def Info: figures/threshold_f1.png  used on input line 222.
 (pdftex.def)             Requested size: 157.26283pt x 94.3579pt.
-<figures/threshold_precision.png, id=174, 722.7pt x 433.62pt>
+<figures/threshold_precision.png, id=182, 722.7pt x 433.62pt>
 File: figures/threshold_precision.png Graphic file (type png)
 <use figures/threshold_precision.png>
-Package pdftex.def Info: figures/threshold_precision.png  used on input line 24
+Package pdftex.def Info: figures/threshold_precision.png  used on input line 22
 7.
 (pdftex.def)             Requested size: 157.26283pt x 94.3579pt.
-<figures/threshold_recall.png, id=175, 722.7pt x 433.62pt>
+<figures/threshold_recall.png, id=183, 722.7pt x 433.62pt>
 File: figures/threshold_recall.png Graphic file (type png)
 <use figures/threshold_recall.png>
-Package pdftex.def Info: figures/threshold_recall.png  used on input line 252.
+Package pdftex.def Info: figures/threshold_recall.png  used on input line 232.
 (pdftex.def)             Requested size: 157.26283pt x 94.3579pt.
-
-
-[3]
-<figures/lora_layers.png, id=187, 1004.553pt x 572.8602pt>
+<figures/lora_layers.png, id=186, 1004.553pt x 572.8602pt>
 File: figures/lora_layers.png Graphic file (type png)
 <use figures/lora_layers.png>
-Package pdftex.def Info: figures/lora_layers.png  used on input line 272.
+Package pdftex.def Info: figures/lora_layers.png  used on input line 252.
 (pdftex.def)             Requested size: 417.72285pt x 238.2133pt.
-<figures/active_learning.png, id=190, 1003.8303pt x 573.1011pt>
-File: figures/active_learning.png Graphic file (type png)
-<use figures/active_learning.png>
-Package pdftex.def Info: figures/active_learning.png  used on input line 312.
-(pdftex.def)             Requested size: 383.3188pt x 218.8388pt.
 
 
 [4 <./figures/threshold_f1.png> <./figures/threshold_precision.png> <./figures/
 threshold_recall.png>]
-<figures/baseline_confidence.png, id=203, 856.6404pt x 573.1011pt>
-File: figures/baseline_confidence.png Graphic file (type png)
-<use figures/baseline_confidence.png>
-Package pdftex.def Info: figures/baseline_confidence.png  used on input line 33
-0.
-(pdftex.def)             Requested size: 368.57634pt x 246.57733pt.
-<figures/gt_vs_llm.png, id=205, 934.2102pt x 571.6557pt>
-File: figures/gt_vs_llm.png Graphic file (type png)
-<use figures/gt_vs_llm.png>
-Package pdftex.def Info: figures/gt_vs_llm.png  used on input line 346.
-(pdftex.def)             Requested size: 368.57634pt x 225.53548pt.
-<figures/mixed_ft_min.png, id=208, 859.7721pt x 573.1011pt>
-File: figures/mixed_ft_min.png Graphic file (type png)
-<use figures/mixed_ft_min.png>
-Package pdftex.def Info: figures/mixed_ft_min.png  used on input line 362.
-(pdftex.def)             Requested size: 383.3188pt x 255.51453pt.
+<figures/active_learning.png, id=201, 1003.8303pt x 573.1011pt>
+File: figures/active_learning.png Graphic file (type png)
+<use figures/active_learning.png>
+Package pdftex.def Info: figures/active_learning.png  used on input line 292.
+(pdftex.def)             Requested size: 383.3188pt x 218.8388pt.
 
 
 [5 <./figures/lora_layers.png>]
+<figures/baseline_confidence.png, id=209, 856.6404pt x 573.1011pt>
+File: figures/baseline_confidence.png Graphic file (type png)
+<use figures/baseline_confidence.png>
+Package pdftex.def Info: figures/baseline_confidence.png  used on input line 31
+0.
+(pdftex.def)             Requested size: 368.57634pt x 246.57733pt.
+<figures/gt_vs_llm.png, id=211, 934.2102pt x 571.6557pt>
+File: figures/gt_vs_llm.png Graphic file (type png)
+<use figures/gt_vs_llm.png>
+Package pdftex.def Info: figures/gt_vs_llm.png  used on input line 326.
+(pdftex.def)             Requested size: 368.57634pt x 225.53548pt.
+<figures/mixed_ft_min.png, id=214, 859.7721pt x 573.1011pt>
+File: figures/mixed_ft_min.png Graphic file (type png)
+<use figures/mixed_ft_min.png>
+Package pdftex.def Info: figures/mixed_ft_min.png  used on input line 342.
+(pdftex.def)             Requested size: 383.3188pt x 255.51453pt.
+
+Overfull \vbox (4.11328pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (8.11328pt too high) has occurred while \output is active []
+
+
 
 [6 <./figures/active_learning.png>] [7 <./figures/baseline_confidence.png>]
 (./main.bbl
@@ -755,26 +765,25 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BAA082CFE361A678518448D5C5800E5E;3124.
  ) 
 Here is how much of TeX's memory you used:
- 16461 strings out of 475178
- 258756 string characters out of 5766540
- 709144 words of memory out of 5000000
- 38864 multiletter control sequences out of 15000+600000
- 628265 words of font info for 304 fonts, out of 8000000 for 9000
+ 16428 strings out of 475178
+ 258228 string characters out of 5766540
+ 706394 words of memory out of 5000000
+ 38838 multiletter control sequences out of 15000+600000
+ 623959 words of font info for 289 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,20n,79p,1320b,762s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 1897522 bytes).
+ 75i,13n,79p,1320b,762s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 1932557 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
+ 302 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
  64 named destinations out of 1000 (max. 500000)
- 69329 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67286 words of extra memory for PDF output out of 74296 (max. 10000000)
 

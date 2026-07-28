@@ -160,28 +160,8 @@ For mixing experiments, training sets of size $N$ are drawn from the uncertainty
 % ============================================================
 \begin{figure*}[t]
     \centering
-    \fcolorbox{headerblue}{white}{%
-    \begin{minipage}{0.95\textwidth}
-    \vspace{8pt}
-    \centering
-    {\large\bfseries Active GLiNER Framework}\\[10pt]
-    %
-    % Row 1: Main pipeline boxes
-    \resizebox{0.93\textwidth}{!}{%
-    \begin{tabular}{ccccccccc}
-    \fcolorbox{headerblue}{lightblue!50}{\parbox{2.0cm}{\centering\small\textbf{Input Data}\\[2pt]\scriptsize MIT Movies\\9,774 sentences}}
-    & {\Large$\boldsymbol{\rightarrow}$} &
-    \fcolorbox{headerblue}{lightyellow}{\parbox{2.2cm}{\centering\small\textbf{Zero-Shot\\Evaluation}\\[2pt]\scriptsize GLiNER Base\\+ LLM Baseline}}
-    & {\Large$\boldsymbol{\rightarrow}$} &
-    \fcolorbox{headerblue}{lightyellow}{\parbox{2.2cm}{\centering\small\textbf{Uncertainty\\Ranking}\\[2pt]\scriptsize LC / MNLP\\MSE / Random}}
-    & {\Large$\boldsymbol{\rightarrow}$} &
-    \fcolorbox{darkred}{lightred}{\parbox{2.2cm}{\centering\small\textbf{LoRA\\Fine-Tuning}\\[2pt]\scriptsize GT / LLM\\Mixed Labels}}
-    & {\Large$\boldsymbol{\rightarrow}$} &
-    \fcolorbox{darkgreen}{lightgreen}{\parbox{2.0cm}{\centering\small\textbf{Evaluation}\\[2pt]\scriptsize Span-level\\P / R / \fone{}}}
-    \end{tabular}}
-    \vspace{8pt}
-    \end{minipage}}
-    \caption{Overview of the Active GLiNER framework. Training examples are ranked by model uncertainty, then used for LoRA fine-tuning with human, LLM, or mixed labels. Evaluation uses human-annotated test data.}
+    \includegraphics[width=0.82\textwidth]{figures/framework.jpg}
+    \caption{Overview of the Active GLiNER framework. Data is first evaluated in zero-shot mode, then training examples are ranked by uncertainty using active learning strategies (LC, MNLP, MSE). The top-ranked examples are used for LoRA fine-tuning (Fit) with ground truth, LLM, or mixed labels. The fine-tuned model produces predictions (Predict) which are evaluated on the test set. The feedback loop from Predict back to Ranking enables iterative refinement.}
     \label{fig:framework}
 \end{figure*}
 

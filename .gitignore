@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local-only docs — keep off the public repo (only the official thesis PDF is published)
+docs/presentation_slides.md
+docs/*.docx
+docs/master thesis final2.txt
+Presentation*.pdf
+abhishit.jpg
