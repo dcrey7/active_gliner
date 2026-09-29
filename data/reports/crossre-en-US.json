@@ -1,0 +1,77 @@
+{
+  "dataset": "crossre",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 2519,
+    "dev": 300,
+    "test": 2446
+  },
+  "label_counts": {
+    "pool": {
+      "artifact": 694,
+      "cause-effect": 35,
+      "compare": 114,
+      "general-affiliation": 1049,
+      "named": 657,
+      "opposite": 202,
+      "origin": 396,
+      "part-of": 922,
+      "physical": 1158,
+      "related-to": 411,
+      "role": 2016,
+      "social": 96,
+      "temporal": 577,
+      "topic": 134,
+      "type-of": 339,
+      "usage": 164,
+      "win-defeat": 472
+    },
+    "dev": {
+      "artifact": 79,
+      "cause-effect": 6,
+      "compare": 19,
+      "general-affiliation": 75,
+      "named": 85,
+      "opposite": 32,
+      "origin": 48,
+      "part-of": 104,
+      "physical": 167,
+      "related-to": 76,
+      "role": 278,
+      "social": 3,
+      "temporal": 62,
+      "topic": 9,
+      "type-of": 43,
+      "usage": 12,
+      "win-defeat": 59
+    },
+    "test": {
+      "artifact": 635,
+      "cause-effect": 86,
+      "compare": 82,
+      "general-affiliation": 1240,
+      "named": 558,
+      "opposite": 128,
+      "origin": 304,
+      "part-of": 721,
+      "physical": 1455,
+      "related-to": 415,
+      "role": 2006,
+      "social": 105,
+      "temporal": 408,
+      "topic": 170,
+      "type-of": 336,
+      "usage": 200,
+      "win-defeat": 319
+    }
+  },
+  "empty_gold": {
+    "pool": 621,
+    "dev": 76,
+    "test": 620
+  },
+  "split_hash": "f388a41ad7f3169dbbf2dc6b1cef1e8748042d28f6535f5ad743e17599edda1b",
+  "misaligned_dev_rate": 0.0,
+  "repeated_argument_rate": 0.06535600425079703,
+  "relation_free_rate": 0.2501424501424501
+}

@@ -1,0 +1,4286 @@
+{
+  "dataset": "hallmarks",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "hallmarks:en-US:22851016_0",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_1",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_2",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_3",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_4",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_5",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22851016_6",
+      "doc_id": "22851016",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23271730_0",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_1",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_2",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_3",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_4",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_5",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_6",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_7",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_8",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_9",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_10",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_11",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23271730_12",
+      "doc_id": "23271730",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1524003_0",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_1",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_2",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_3",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_4",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_5",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1524003_6",
+      "doc_id": "1524003",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22899815_0",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_1",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_2",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_3",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_4",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_5",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_6",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_7",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_8",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_9",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22899815_10",
+      "doc_id": "22899815",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1423313_0",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_1",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_2",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_3",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_4",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_5",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1423313_6",
+      "doc_id": "1423313",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_0",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_1",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_2",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_3",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_4",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_5",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_6",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_7",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_8",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12502710_9",
+      "doc_id": "12502710",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22197802_0",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_1",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_2",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_3",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_4",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_5",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_6",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_7",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_8",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_9",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22197802_10",
+      "doc_id": "22197802",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22652558_0",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_1",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_2",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_3",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_4",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_5",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22652558_6",
+      "doc_id": "22652558",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22421439_0",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_1",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_2",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_3",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_4",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_5",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_6",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22421439_7",
+      "doc_id": "22421439",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:24280190_0",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_1",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_2",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_3",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_4",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_5",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_6",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_7",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_8",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_9",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_10",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_11",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:24280190_12",
+      "doc_id": "24280190",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1423284_0",
+      "doc_id": "1423284",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:1423284_1",
+      "doc_id": "1423284",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:1423284_2",
+      "doc_id": "1423284",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22814258_0",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_1",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_2",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_3",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_4",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_5",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_6",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_7",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_8",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_9",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_10",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22814258_11",
+      "doc_id": "22814258",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20583210_0",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_1",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_2",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_3",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_4",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_5",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_6",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_7",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_8",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_9",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_10",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_11",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20583210_12",
+      "doc_id": "20583210",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_0",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_1",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_2",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_3",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_4",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_5",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_6",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_7",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22275356_8",
+      "doc_id": "22275356",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20809980_0",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_1",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_2",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_3",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_4",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_5",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_6",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_7",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_8",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_9",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_10",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_11",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20809980_12",
+      "doc_id": "20809980",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_0",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_1",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_2",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_3",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_4",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_5",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_6",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_7",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_8",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_9",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_10",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_11",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_12",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_13",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22526680_14",
+      "doc_id": "22526680",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20406967_0",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_1",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_2",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_3",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_4",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_5",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_6",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_7",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_8",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_9",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20406967_10",
+      "doc_id": "20406967",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22969901_0",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_1",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_2",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_3",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_4",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_5",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_6",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_7",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_8",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_9",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22969901_10",
+      "doc_id": "22969901",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:21606077_0",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_1",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_2",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_3",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_4",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_5",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_6",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_7",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_8",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_9",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21606077_10",
+      "doc_id": "21606077",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22941331_0",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_1",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_2",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_3",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_4",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_5",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_6",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_7",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_8",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22941331_9",
+      "doc_id": "22941331",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12625783_0",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_1",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_2",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_3",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_4",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_5",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_6",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12625783_7",
+      "doc_id": "12625783",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22404783_0",
+      "doc_id": "22404783",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22404783_1",
+      "doc_id": "22404783",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22404783_2",
+      "doc_id": "22404783",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22404783_3",
+      "doc_id": "22404783",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22226043_0",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_1",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_2",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_3",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_4",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_5",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_6",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22226043_7",
+      "doc_id": "22226043",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22715397_0",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_1",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_2",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_3",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_4",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_5",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22715397_6",
+      "doc_id": "22715397",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_0",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_1",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_2",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_3",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_4",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_5",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_6",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_7",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_8",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_9",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22270933_10",
+      "doc_id": "22270933",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20357441_0",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_1",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_2",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_3",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_4",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_5",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_6",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_7",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20357441_8",
+      "doc_id": "20357441",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23816712_0",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_1",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_2",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_3",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_4",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_5",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_6",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23816712_7",
+      "doc_id": "23816712",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23274857_0",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_1",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_2",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_3",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_4",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_5",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_6",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_7",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_8",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_9",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23274857_10",
+      "doc_id": "23274857",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1306527_0",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_1",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_2",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_3",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_4",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_5",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1306527_6",
+      "doc_id": "1306527",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20686220_0",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_1",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_2",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_3",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_4",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_5",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_6",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_7",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20686220_8",
+      "doc_id": "20686220",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22846113_0",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_1",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_2",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_3",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_4",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_5",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_6",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_7",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22846113_8",
+      "doc_id": "22846113",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:11914642_0",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11914642_1",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11914642_2",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11914642_3",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11914642_4",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11914642_5",
+      "doc_id": "11914642",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22858906_0",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_1",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_2",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_3",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_4",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_5",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_6",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22858906_7",
+      "doc_id": "22858906",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22876288_0",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_1",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_2",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_3",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_4",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_5",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_6",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_7",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876288_8",
+      "doc_id": "22876288",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22205389_0",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_1",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_2",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_3",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_4",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_5",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22205389_6",
+      "doc_id": "22205389",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20360922_0",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_1",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_2",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_3",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_4",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_5",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20360922_6",
+      "doc_id": "20360922",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20881612_0",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_1",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_2",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_3",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_4",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_5",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_6",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_7",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_8",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20881612_9",
+      "doc_id": "20881612",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20414008_0",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_1",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_2",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_3",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_4",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_5",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20414008_6",
+      "doc_id": "20414008",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:15515527_0",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_1",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_2",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_3",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_4",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_5",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_6",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_7",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_8",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_9",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_10",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:15515527_11",
+      "doc_id": "15515527",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12531010_0",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_1",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_2",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_3",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_4",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_5",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_6",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_7",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_8",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531010_9",
+      "doc_id": "12531010",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_0",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_1",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_2",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_3",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_4",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_5",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_6",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_7",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22719059_8",
+      "doc_id": "22719059",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_0",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_1",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_2",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_3",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_4",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_5",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_6",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_7",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_8",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22768919_9",
+      "doc_id": "22768919",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23249808_0",
+      "doc_id": "23249808",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23249808_1",
+      "doc_id": "23249808",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23249808_2",
+      "doc_id": "23249808",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23249808_3",
+      "doc_id": "23249808",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23249808_4",
+      "doc_id": "23249808",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22327365_0",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22327365_1",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22327365_2",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22327365_3",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22327365_4",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22327365_5",
+      "doc_id": "22327365",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1451349_0",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_1",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_2",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_3",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_4",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_5",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_6",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_7",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_8",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_9",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:1451349_10",
+      "doc_id": "1451349",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_0",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_1",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_2",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_3",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_4",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12531021_5",
+      "doc_id": "12531021",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23196876_0",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_1",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_2",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_3",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_4",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_5",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_6",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_7",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_8",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23196876_9",
+      "doc_id": "23196876",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12368953_0",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_1",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_2",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_3",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_4",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_5",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_6",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_7",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_8",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_9",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_10",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12368953_11",
+      "doc_id": "12368953",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22933598_0",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_1",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_2",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_3",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_4",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_5",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_6",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_7",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_8",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_9",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_10",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_11",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_12",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22933598_13",
+      "doc_id": "22933598",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_0",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_1",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_2",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_3",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_4",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_5",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_6",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_7",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_8",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22407299_9",
+      "doc_id": "22407299",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:11970855_0",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_1",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_2",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_3",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_4",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_5",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_6",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_7",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_8",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:11970855_9",
+      "doc_id": "11970855",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_0",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_1",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_2",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_3",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_4",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_5",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_6",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20720310_7",
+      "doc_id": "20720310",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22272768_0",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_1",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_2",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_3",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_4",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_5",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_6",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_7",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_8",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_9",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_10",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22272768_11",
+      "doc_id": "22272768",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:1311633_0",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_1",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_2",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_3",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_4",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_5",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_6",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:1311633_7",
+      "doc_id": "1311633",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22377215_0",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_1",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_2",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_3",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_4",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_5",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_6",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_7",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_8",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22377215_9",
+      "doc_id": "22377215",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12499255_0",
+      "doc_id": "12499255",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12499255_1",
+      "doc_id": "12499255",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12499255_2",
+      "doc_id": "12499255",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12499255_3",
+      "doc_id": "12499255",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12499255_4",
+      "doc_id": "12499255",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:20852630_0",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_1",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_2",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_3",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_4",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_5",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_6",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:20852630_7",
+      "doc_id": "20852630",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23092936_0",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_1",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_2",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_3",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_4",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_5",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_6",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_7",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_8",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_9",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_10",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23092936_11",
+      "doc_id": "23092936",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22876840_0",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_1",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_2",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_3",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_4",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_5",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_6",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_7",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_8",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_9",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_10",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_11",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_12",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_13",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_14",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_15",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22876840_16",
+      "doc_id": "22876840",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22575613_0",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_1",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_2",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_3",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_4",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_5",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_6",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_7",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_8",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_9",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22575613_10",
+      "doc_id": "22575613",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_0",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_1",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_2",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_3",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_4",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_5",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23145312_6",
+      "doc_id": "23145312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_0",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_1",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_2",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_3",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_4",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_5",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_6",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_7",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22681312_8",
+      "doc_id": "22681312",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12507935_0",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_1",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_2",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_3",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_4",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_5",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_6",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_7",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12507935_8",
+      "doc_id": "12507935",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22677490_0",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_1",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_2",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_3",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_4",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_5",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22677490_6",
+      "doc_id": "22677490",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:22788839_0",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_1",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_2",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_3",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_4",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_5",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_6",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22788839_7",
+      "doc_id": "22788839",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:23070273_0",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_1",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_2",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_3",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_4",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_5",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_6",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_7",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_8",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_9",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_10",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_11",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23070273_12",
+      "doc_id": "23070273",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_0",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_1",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_2",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_3",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_4",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_5",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_6",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_7",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_8",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_9",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_10",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_11",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_12",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_13",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12647634_14",
+      "doc_id": "12647634",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_0",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_1",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_2",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_3",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_4",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_5",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_6",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_7",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:21338203_8",
+      "doc_id": "21338203",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_0",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_1",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_2",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_3",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_4",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20122407_5",
+      "doc_id": "20122407",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_0",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_1",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_2",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_3",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_4",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:20965410_5",
+      "doc_id": "20965410",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12643444_0",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_1",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_2",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_3",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_4",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_5",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_6",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_7",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12643444_8",
+      "doc_id": "12643444",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:12084030_0",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_1",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_2",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_3",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_4",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_5",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_6",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_7",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_8",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12084030_9",
+      "doc_id": "12084030",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:23039130_0",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_1",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_2",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_3",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_4",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_5",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_6",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_7",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_8",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_9",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_10",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_11",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23039130_12",
+      "doc_id": "23039130",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_0",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_1",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_2",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_3",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_4",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_5",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_6",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_7",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_8",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_9",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:23251575_10",
+      "doc_id": "23251575",
+      "stratum": 1,
+      "inclusion_prob": 0.13917525773195877
+    },
+    {
+      "id": "hallmarks:en-US:22968518_0",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_1",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_2",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_3",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_4",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_5",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_6",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_7",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_8",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_9",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_10",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:22968518_11",
+      "doc_id": "22968518",
+      "stratum": 0,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "hallmarks:en-US:12498392_0",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12498392_1",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12498392_2",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12498392_3",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12498392_4",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    },
+    {
+      "id": "hallmarks:en-US:12498392_5",
+      "doc_id": "12498392",
+      "stratum": 2,
+      "inclusion_prob": 0.16883116883116883
+    }
+  ]
+}

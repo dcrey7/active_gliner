@@ -1,0 +1,11 @@
+name: gemma-4-12b
+base_url: http://127.0.0.1:8020/v1
+model: gemma-4-12b-qat
+workers: 8
+pins:
+  model_file: gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+  model_sha256: 90fd44e29e0d7cffeb0fd00dc73cfdab9ed0b0e95306ecf7821ea634c940c370
+  drafter_sha256_until_2026_09_25: fcb35dea42c71333db904cee11baac525c9ef872818ee3753f6cb156f3c6f4f6
+  server: "llama.cpp commit 611dc03 (build 201), CUDA, --parallel 8, -c 32768, no speculative drafter (from 25 Sep 14:55; earlier labels used the MTP drafter, same greedy outputs)"
+  quantisation: "UD-Q4_K_XL (QAT)"
+  launch: scripts/serve_teacher_gemma.sh

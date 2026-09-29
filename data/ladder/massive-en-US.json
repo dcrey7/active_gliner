@@ -1,0 +1,6008 @@
+{
+  "dataset": "massive",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "massive:en-US:0",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:19",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:46",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:47",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:86",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:124",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:132",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:151",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:171",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:174",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:177",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:216",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:219",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:220",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:258",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:296",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:310",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:315",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:319",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:322",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:333",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:334",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:393",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:437",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:473",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:491",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:494",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:506",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:508",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:512",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:564",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:614",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:631",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:665",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:680",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:712",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:730",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:738",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:751",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:764",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:767",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:779",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:782",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:783",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:790",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:861",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:870",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:936",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:939",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:951",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:974",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:997",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1007",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1014",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1030",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1047",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1084",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1093",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1098",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1108",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1115",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1121",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1144",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1205",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1247",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1249",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1256",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1266",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1294",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1301",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1308",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1336",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1352",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1360",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1374",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1400",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1425",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1428",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1440",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1467",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1483",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1509",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1510",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1513",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1547",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1575",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1579",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1589",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1607",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1622",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1635",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1655",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1671",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1675",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1677",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1684",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1692",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1715",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1719",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1741",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1744",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1759",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1774",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1777",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1784",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1796",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1808",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1811",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:1812",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:1993",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2085",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2093",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2094",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2108",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2128",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2134",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2156",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2163",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2201",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2206",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2207",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2220",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2225",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2230",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2258",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2263",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2309",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2311",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2330",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2334",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2338",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2350",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2355",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2365",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2384",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2387",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2408",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2412",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2414",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2498",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2527",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2531",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2551",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2564",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2566",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2594",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2605",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2615",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2639",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2678",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2679",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2684",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2709",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2724",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2773",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2775",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2781",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2795",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2796",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2798",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2801",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2816",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2840",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2850",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2887",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2917",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:2965",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:2983",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3020",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3030",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3034",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3037",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3039",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3050",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3060",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3080",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3096",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3098",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3101",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3114",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3117",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3118",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3124",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3174",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3205",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3207",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3213",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3228",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3253",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3264",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3276",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3298",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3320",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3329",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3337",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3349",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3364",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3406",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3407",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3413",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3435",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3441",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3460",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3513",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3516",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3539",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3542",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3554",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3566",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3581",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3606",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3671",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3683",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3686",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3695",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3717",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3741",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3750",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3775",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3780",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3785",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3809",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3819",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3829",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3835",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3859",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3894",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3907",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3915",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:3980",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:3993",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4017",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4023",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4024",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4084",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4121",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4132",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4137",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4154",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4166",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4174",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4177",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4183",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4186",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4187",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4216",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4217",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4227",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4241",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4249",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4254",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4272",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4273",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4299",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4309",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4312",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4319",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4336",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4346",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4347",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4355",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4361",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4362",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4383",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4400",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4412",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4449",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4461",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4486",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4492",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4496",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4524",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4554",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4589",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4601",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4606",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4614",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4620",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4638",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4654",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4662",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4671",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4680",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4692",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4702",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4798",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4826",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4831",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4833",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4837",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4838",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4854",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4871",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4874",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4887",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4896",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4917",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4934",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4951",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4960",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:4968",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:4992",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5006",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5014",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5026",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5037",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5038",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5040",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5128",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5134",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5149",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5152",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5158",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5176",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5196",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5198",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5199",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5201",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5243",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5278",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5279",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5286",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5297",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5324",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5339",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5349",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5406",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5413",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5465",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5468",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5481",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5501",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5525",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5544",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5552",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5554",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5568",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5570",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5574",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5577",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5579",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5584",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5593",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5614",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5619",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5627",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5635",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5640",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5678",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5697",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5707",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5813",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5820",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5840",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5856",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5912",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5930",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5952",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5953",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5955",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:5966",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:5988",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6014",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6015",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6023",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6024",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6059",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6061",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6074",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6077",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6083",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6101",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6112",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6118",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6151",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6220",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6282",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6304",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6325",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6352",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6370",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6372",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6378",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6388",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6402",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6405",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6410",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6411",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6417",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6426",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6432",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6433",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6446",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6469",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6506",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6517",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6533",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6539",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6562",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6593",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6594",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6596",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6615",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6618",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6621",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6645",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6646",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6694",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6708",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6726",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6732",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6737",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6755",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6764",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6785",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6798",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6856",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6878",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6892",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6897",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:6909",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6937",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6964",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6980",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:6997",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7000",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7004",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7025",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7046",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7080",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7111",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7140",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7152",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7161",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7181",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7194",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7219",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7258",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7293",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7295",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7316",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7319",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7353",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7397",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7449",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7450",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7455",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7467",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7502",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7520",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7531",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7539",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7542",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7549",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7563",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7569",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7583",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7609",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7613",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7654",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7655",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7666",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7690",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7693",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7718",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7726",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7762",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7817",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7851",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7879",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7891",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7916",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7953",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:7971",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:7993",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8029",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8035",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8037",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8042",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8044",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8100",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8116",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8126",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8129",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8140",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8150",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8182",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8188",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8204",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8245",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8248",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8251",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8260",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8261",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8276",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8280",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8290",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8294",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8308",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8388",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8413",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8460",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8494",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8520",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8535",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8541",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8553",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8562",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8568",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8635",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8640",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8642",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8653",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8667",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8679",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8732",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8766",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8856",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8857",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8868",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8882",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8900",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8904",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8906",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8916",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8948",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8949",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8960",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:8985",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:8990",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9019",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9030",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9059",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9062",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9074",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9095",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9114",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9121",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9124",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9138",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9149",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9155",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9197",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9198",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9202",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9204",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9225",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9233",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9263",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9269",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9301",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9303",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9305",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9327",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9330",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9341",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9353",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9363",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9364",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9394",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9402",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9406",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9438",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9507",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9520",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9528",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9541",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9554",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9565",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9569",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9577",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9594",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9601",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9617",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9691",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9694",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9707",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9720",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9746",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9827",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9844",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9856",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9857",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9895",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9902",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9912",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9918",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9924",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9930",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9942",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9955",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:9964",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9976",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:9994",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10016",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10019",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10023",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10031",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10045",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10048",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10049",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10053",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10055",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10100",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10164",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10177",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10182",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10197",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10213",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10220",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10226",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10260",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10288",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10292",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10296",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10339",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10346",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10403",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10406",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10430",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10444",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10462",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10493",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10523",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10565",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10570",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10577",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10588",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10608",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10636",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10645",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10667",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10678",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10687",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10696",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10699",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10712",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10731",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10738",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10743",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10759",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10770",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10786",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10790",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10792",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10805",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10812",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10825",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10827",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10828",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10858",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10868",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10887",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10893",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10895",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10936",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10940",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10956",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10960",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:10979",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:10981",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11023",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11024",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11053",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11081",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11098",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11107",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11125",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11133",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11154",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11157",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11164",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11172",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11174",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11177",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11204",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11259",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11270",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11272",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11273",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11279",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11296",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11303",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11306",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11328",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11341",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11368",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11376",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11384",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11426",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11437",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11438",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11453",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11455",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11459",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11460",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11502",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11505",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11529",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11539",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11585",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11600",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11607",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11616",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11633",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11650",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11665",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11678",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11681",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11706",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11720",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11778",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11798",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11825",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11839",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11841",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11844",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11862",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11871",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11916",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:11920",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11922",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:11987",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12212",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12245",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12251",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12254",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12263",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12264",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12294",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12310",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12340",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12366",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12367",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12413",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12419",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12468",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12473",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12526",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12532",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12536",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12548",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12689",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12693",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12707",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12710",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12722",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12745",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12813",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12814",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12835",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12838",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12839",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12883",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12957",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:12961",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:12987",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13023",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13031",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13064",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13067",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13069",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13077",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13099",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13101",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13124",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13135",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13140",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13166",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13175",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13178",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13181",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13186",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13199",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13206",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13221",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13223",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13303",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13310",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13346",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13348",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13363",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13370",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13372",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13383",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13439",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13457",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13459",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13487",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13491",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13546",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13580",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13592",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13618",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13694",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13717",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13738",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13758",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13761",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13762",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13774",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13777",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13780",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13796",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13798",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13823",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13854",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13855",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13869",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13888",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13926",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13927",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:13934",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13966",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13974",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:13986",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14025",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14063",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14096",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14101",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14116",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14138",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14147",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14150",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14154",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14163",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14169",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14170",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14179",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14190",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14223",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14243",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14246",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14268",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14272",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14304",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14308",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14316",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14317",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14330",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14339",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14348",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14354",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14368",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14406",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14417",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14429",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14440",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14442",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14449",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14453",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14461",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14465",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14539",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14544",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14564",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14567",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14597",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14599",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14601",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14620",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14622",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14668",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14673",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14701",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14742",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14757",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14761",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14770",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14787",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14791",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14820",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14877",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14889",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14891",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14926",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14933",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:14973",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:14995",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15039",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15109",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15137",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15166",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15177",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15181",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15186",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15197",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15199",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15214",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15231",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15249",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15280",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15311",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15318",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15348",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15350",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15358",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15402",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15445",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15464",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15511",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15513",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15548",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15554",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15557",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15598",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15610",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15618",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15634",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15635",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15656",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15721",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15756",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15765",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15825",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15829",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15857",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15880",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15911",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:15933",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15946",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15948",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15950",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15966",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15968",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:15994",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16028",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16029",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16061",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16072",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16082",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16089",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16103",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16151",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16165",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16166",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16222",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16225",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16229",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16248",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16271",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16273",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16317",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16318",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16320",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16354",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16357",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16375",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16377",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16385",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16398",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16430",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16437",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16438",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16455",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16519",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16523",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16529",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16560",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16563",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16591",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16593",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16613",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16624",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16630",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16669",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16672",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16698",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16733",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16754",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16781",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16791",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16801",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16846",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16851",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16859",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16873",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16890",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16907",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16947",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16974",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:16983",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:16987",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17015",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:17020",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:17042",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17087",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17108",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17138",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:17142",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17143",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:17147",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.33602150537634407
+    },
+    {
+      "id": "massive:en-US:17151",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    },
+    {
+      "id": "massive:en-US:17170",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.3364737550471063
+    }
+  ]
+}

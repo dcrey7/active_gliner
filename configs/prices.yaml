@@ -1,0 +1,33 @@
+# Estimates, not actual money spent. Account prices must be checked before O6.
+currency: USD
+date: '2026-09-25'
+gpu:
+  model: RTX 3090
+  usd_per_hour: 0.22
+  source: 'vast.ai median, 25 Sep 2026, estimated'
+# Simulated human rate for ground-truth labels (design 3f). Not a quote for these datasets.
+human:
+  usd_per_sentence: 0.50
+  source: 'Kasner et al. 2026 (arXiv 2504.08697), crowdsourced span annotation about 500 USD per 1k outputs at 9 GBP/h'
+teachers:
+  gemma-4-12b:
+    provider: local
+    prompt_usd_per_million: 0.0
+    completion_usd_per_million: 0.0
+  # Gemma 4 E4B replaced the non-existent Qwen 3.8 2B (design section 16).
+  gemma-4-e4b:
+    provider: local
+    prompt_usd_per_million: 0.0
+    completion_usd_per_million: 0.0
+  qwen-3.8-27b:
+    provider: Cerebras
+    prompt_usd_per_million: 0.99
+    completion_usd_per_million: 1.49
+    status: TO CHECK at O6
+    source: https://www.cerebras.ai/pricing
+  gpt-oss-120b:
+    provider: Cerebras
+    prompt_usd_per_million: 0.35
+    completion_usd_per_million: 0.75
+    status: TO CHECK at O6
+    source: https://www.cerebras.ai/pricing

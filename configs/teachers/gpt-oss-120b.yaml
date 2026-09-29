@@ -1,0 +1,17 @@
+name: gpt-oss-120b
+base_url: https://api.cerebras.ai/v1
+model: gpt-oss-120b # TO VERIFY in the Cerebras account
+api_key_env: CEREBRAS_API_KEY
+workers: 4
+rpm_limit: 30
+# TO CHECK in the Cerebras account at O6 before labelling
+price_in_per_m: 0.0
+price_out_per_m: 0.0
+thinking: false
+json_schema: true
+send_template_kwargs: false
+extra_body:
+  reasoning_effort: low
+pins:
+  provider: cerebras
+  precision: "hosted, TO VERIFY"

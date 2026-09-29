@@ -1,0 +1,4592 @@
+{
+  "dataset": "bc5cdr",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "bc5cdr:en-US:test-17",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-18",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-19",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-20",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-21",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-22",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-23",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-24",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-25",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-26",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-27",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-28",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-29",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-30",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-31",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-32",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-33",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-34",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-35",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-36",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-37",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-38",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-39",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-40",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-41",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-42",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-43",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-44",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-45",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-46",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-47",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-48",
+      "doc_id": "23433219",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-57",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-58",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-59",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-60",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-61",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-62",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-63",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-64",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-65",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-66",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-67",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-68",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-69",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-70",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-71",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-72",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-73",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-74",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-75",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-76",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-77",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-78",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-79",
+      "doc_id": "23666265",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-80",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-81",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-82",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-83",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-84",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-85",
+      "doc_id": "23846525",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-261",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-262",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-263",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-264",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-265",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-266",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-267",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-268",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-269",
+      "doc_id": "24114426",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-355",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-356",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-357",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-358",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-359",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-360",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-361",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-362",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-363",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-364",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-365",
+      "doc_id": "24234943",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-499",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-500",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-501",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-502",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-503",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-504",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-505",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-506",
+      "doc_id": "24451297",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-567",
+      "doc_id": "24554916",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-568",
+      "doc_id": "24554916",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-569",
+      "doc_id": "24554916",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-570",
+      "doc_id": "24554916",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-578",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-579",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-580",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-581",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-582",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-583",
+      "doc_id": "24582773",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-652",
+      "doc_id": "24658375",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-653",
+      "doc_id": "24658375",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-654",
+      "doc_id": "24658375",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-655",
+      "doc_id": "24658375",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-829",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-830",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-831",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-832",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-833",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-834",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-835",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-836",
+      "doc_id": "24753331",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-930",
+      "doc_id": "24897009",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-931",
+      "doc_id": "24897009",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-932",
+      "doc_id": "24897009",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-933",
+      "doc_id": "24897009",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-998",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-999",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1000",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1001",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1002",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1003",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1004",
+      "doc_id": "24928523",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1094",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1095",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1096",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1097",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1098",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1099",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1100",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1101",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1102",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1103",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1104",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1105",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1106",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1107",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1108",
+      "doc_id": "25054547",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1119",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1120",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1121",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1122",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1123",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1124",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1125",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1126",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1127",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1128",
+      "doc_id": "25080425",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1160",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1161",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1162",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1163",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1164",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1165",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1166",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1167",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1168",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1169",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1170",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1171",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1172",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1173",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1174",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1175",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1176",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1177",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1178",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1179",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1180",
+      "doc_id": "25907210",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1284",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1285",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1286",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1287",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1288",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1289",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1290",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1291",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1292",
+      "doc_id": "2983630",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1293",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1294",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1295",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1296",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1297",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1298",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1299",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1300",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1301",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1302",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1303",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1304",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1305",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1306",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1307",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1308",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1309",
+      "doc_id": "3711722",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-1523",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1524",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1525",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1526",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1527",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1528",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1529",
+      "doc_id": "146391",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1707",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1708",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1709",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1710",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1711",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1712",
+      "doc_id": "1359137",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1713",
+      "doc_id": "1360900",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1714",
+      "doc_id": "1360900",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1715",
+      "doc_id": "1360900",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1716",
+      "doc_id": "1360900",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1740",
+      "doc_id": "1420650",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1741",
+      "doc_id": "1420650",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1742",
+      "doc_id": "1420650",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1743",
+      "doc_id": "1420650",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1744",
+      "doc_id": "1420650",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-1756",
+      "doc_id": "1424076",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1757",
+      "doc_id": "1424076",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1758",
+      "doc_id": "1424076",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1759",
+      "doc_id": "1424076",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1760",
+      "doc_id": "1424076",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1811",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1812",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1813",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1814",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1815",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1816",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1817",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1818",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1819",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1820",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1821",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1822",
+      "doc_id": "1735570",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-1923",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1924",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1925",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1926",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1927",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1928",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-1929",
+      "doc_id": "2131034",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2043",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2044",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2045",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2046",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2047",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2048",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2049",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2050",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2051",
+      "doc_id": "2453942",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2079",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2080",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2081",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2082",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2083",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2084",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2085",
+      "doc_id": "2650911",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2086",
+      "doc_id": "2710809",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2087",
+      "doc_id": "2710809",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2088",
+      "doc_id": "2710809",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2089",
+      "doc_id": "2710809",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2171",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2172",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2173",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2174",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2175",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2176",
+      "doc_id": "2931989",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2231",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2232",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2233",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2234",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2235",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2236",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2237",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2238",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2239",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2240",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2241",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2242",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2243",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2244",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2245",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2246",
+      "doc_id": "3125850",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2258",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2259",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2260",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2261",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2262",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2263",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2264",
+      "doc_id": "3191389",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2319",
+      "doc_id": "3409843",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2320",
+      "doc_id": "3409843",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2321",
+      "doc_id": "3409843",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2322",
+      "doc_id": "3409843",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2331",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2332",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2333",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2334",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2335",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2336",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2337",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2338",
+      "doc_id": "3439580",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2407",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2408",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2409",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2410",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2411",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2412",
+      "doc_id": "3812624",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2529",
+      "doc_id": "4082466",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2530",
+      "doc_id": "4082466",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2531",
+      "doc_id": "4082466",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2532",
+      "doc_id": "4082466",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2533",
+      "doc_id": "4082466",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2546",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2547",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2548",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2549",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2550",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2551",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2552",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2553",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2554",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2555",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2556",
+      "doc_id": "6106951",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2593",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2594",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2595",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2596",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2597",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2598",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2599",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2600",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2601",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2602",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2603",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2604",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2605",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2606",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2607",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2608",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2609",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2610",
+      "doc_id": "6310832",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2632",
+      "doc_id": "6453500",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2633",
+      "doc_id": "6453500",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2701",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2702",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2703",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2704",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2705",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2706",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2707",
+      "doc_id": "6631522",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2719",
+      "doc_id": "6695685",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2720",
+      "doc_id": "6695685",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2721",
+      "doc_id": "6695685",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2722",
+      "doc_id": "6695685",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2723",
+      "doc_id": "6695685",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2724",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2725",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2726",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2727",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2728",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2729",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2730",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2731",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2732",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2733",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2734",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2735",
+      "doc_id": "6806735",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2738",
+      "doc_id": "6893265",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2739",
+      "doc_id": "6893265",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2740",
+      "doc_id": "6893265",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2741",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2742",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2743",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2744",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2745",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2746",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2747",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2748",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2749",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2750",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2751",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2752",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2753",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2754",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2755",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2756",
+      "doc_id": "6985297",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-2821",
+      "doc_id": "7369302",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2822",
+      "doc_id": "7369302",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2823",
+      "doc_id": "7369302",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2824",
+      "doc_id": "7369302",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2833",
+      "doc_id": "7411769",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2834",
+      "doc_id": "7411769",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2835",
+      "doc_id": "7411769",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2836",
+      "doc_id": "7411769",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2866",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2867",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2868",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2869",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2870",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2871",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2872",
+      "doc_id": "7644931",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2886",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2887",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2888",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2889",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2890",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2891",
+      "doc_id": "7727612",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-2911",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2912",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2913",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2914",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2915",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2916",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2917",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2918",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2919",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2920",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2921",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2922",
+      "doc_id": "7949506",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-2943",
+      "doc_id": "8096565",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-2944",
+      "doc_id": "8096565",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-2945",
+      "doc_id": "8096565",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-2946",
+      "doc_id": "8096565",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-3047",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3048",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3049",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3050",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3051",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3052",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3053",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3054",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3055",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3056",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3057",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3058",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3059",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3060",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3061",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3062",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3063",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3064",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3065",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3066",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3067",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3068",
+      "doc_id": "8603459",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3091",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3092",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3093",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3094",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3095",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3096",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3097",
+      "doc_id": "8667442",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3098",
+      "doc_id": "8748050",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3099",
+      "doc_id": "8748050",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3100",
+      "doc_id": "8748050",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3334",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3335",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3336",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3337",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3338",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3339",
+      "doc_id": "9428298",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3384",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3385",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3386",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3387",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3388",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3389",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3390",
+      "doc_id": "9831002",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3662",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3663",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3664",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3665",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3666",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3667",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3668",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3669",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3670",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3671",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3672",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3673",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3674",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3675",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3676",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3677",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3678",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3679",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3680",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3681",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3682",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3683",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3684",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3685",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3686",
+      "doc_id": "11176729",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-3702",
+      "doc_id": "11299446",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-3703",
+      "doc_id": "11299446",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-3704",
+      "doc_id": "11299446",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-3769",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3770",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3771",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3772",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3773",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3774",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3775",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3776",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3777",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3778",
+      "doc_id": "11474137",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3873",
+      "doc_id": "11988250",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3874",
+      "doc_id": "11988250",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3875",
+      "doc_id": "11988250",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3876",
+      "doc_id": "11988250",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3877",
+      "doc_id": "11988250",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-3890",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3891",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3892",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3893",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3894",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3895",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3896",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3897",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3898",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3899",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-3900",
+      "doc_id": "12059909",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4134",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4135",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4136",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4137",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4138",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4139",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4140",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4141",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4142",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4143",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4144",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4145",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4146",
+      "doc_id": "12865514",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4209",
+      "doc_id": "15018178",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4210",
+      "doc_id": "15018178",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4211",
+      "doc_id": "15018178",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4212",
+      "doc_id": "15018178",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4229",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4230",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4231",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4232",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4233",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4234",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4235",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4236",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4237",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4238",
+      "doc_id": "15096374",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-4325",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4326",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4327",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4328",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4329",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4330",
+      "doc_id": "15609701",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4601",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4602",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4603",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4604",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4605",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4606",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4607",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4608",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4609",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4610",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4611",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4612",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4613",
+      "doc_id": "16369751",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4671",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4672",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4673",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4674",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4675",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4676",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4677",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4678",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4679",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4680",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4681",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4682",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4683",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4684",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4685",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4686",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4687",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4688",
+      "doc_id": "16801510",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-4752",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4753",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4754",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4755",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4756",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4757",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4758",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4759",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4760",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4761",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4762",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4763",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4764",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4765",
+      "doc_id": "16920333",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4938",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4939",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4940",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4941",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4942",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4943",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4944",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4945",
+      "doc_id": "17346443",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-4946",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4947",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4948",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4949",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4950",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4951",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4952",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-4953",
+      "doc_id": "17351238",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5261",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5262",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5263",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5264",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5265",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5266",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5267",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5268",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5269",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5270",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5271",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5272",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5273",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5274",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5275",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5276",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5277",
+      "doc_id": "18987260",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5412",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5413",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5414",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5415",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5416",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5417",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5418",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5419",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5420",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5421",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5422",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5423",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5424",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5425",
+      "doc_id": "19392810",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5442",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5443",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5444",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5445",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5446",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5447",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5448",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5449",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5450",
+      "doc_id": "19515070",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5451",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5452",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5453",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5454",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5455",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5456",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5457",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5458",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5459",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5460",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5461",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5462",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5463",
+      "doc_id": "19531695",
+      "stratum": 2,
+      "inclusion_prob": 0.32727272727272727
+    },
+    {
+      "id": "bc5cdr:en-US:test-5464",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5465",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5466",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5467",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5468",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5469",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5470",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5471",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5472",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5473",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5474",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5475",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5476",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5477",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5478",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5479",
+      "doc_id": "19549709",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5510",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5511",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5512",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5513",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5514",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5515",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5516",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5517",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5518",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5519",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5520",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5521",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5522",
+      "doc_id": "19728177",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5655",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5656",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5657",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5658",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5659",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5660",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5661",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5662",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5663",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5664",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5665",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5666",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5667",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5668",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5669",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5670",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5671",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5672",
+      "doc_id": "20169779",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5673",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5674",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5675",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5676",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5677",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5678",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5679",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5680",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5681",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5682",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5683",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5684",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5685",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5686",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5687",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5688",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5689",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5690",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5691",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5692",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5693",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5694",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5695",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5696",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5697",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5698",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5699",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5700",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5701",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5702",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5703",
+      "doc_id": "20192893",
+      "stratum": 0,
+      "inclusion_prob": 0.18571428571428572
+    },
+    {
+      "id": "bc5cdr:en-US:test-5815",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5816",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5817",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5818",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5819",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5820",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5821",
+      "doc_id": "20927253",
+      "stratum": 3,
+      "inclusion_prob": 1.0
+    },
+    {
+      "id": "bc5cdr:en-US:test-5855",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5856",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5857",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5858",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5859",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5860",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5861",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5862",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5863",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    },
+    {
+      "id": "bc5cdr:en-US:test-5864",
+      "doc_id": "24055495",
+      "stratum": 1,
+      "inclusion_prob": 0.07006369426751592
+    }
+  ]
+}
