@@ -35,12 +35,17 @@ module-name = "active_gliner"
 module-root = "src"
 
 [dependency-groups]
-dev = ["pytest", "ruff"]
+dev = [
+    "ipykernel>=7.3.0",
+    "nbclient>=0.11.0",
+    "pytest",
+    "ruff",
+]
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["src2", "test", "main.py", "notebooks", "results2", "data", "models"]
+extend-exclude = ["notebooks", "data"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

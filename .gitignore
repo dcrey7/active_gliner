@@ -28,3 +28,7 @@ runs/
 
 # Old run folders moved aside when a run starts again
 runs-archives/
+# Scratch reruns that check old runs reproduce under new code
+runs-verify/
+# Files and runs the quickstart notebook writes
+notebooks/demo/

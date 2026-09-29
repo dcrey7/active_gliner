@@ -35,6 +35,14 @@ class RunTrainer(ExtractorTrainer):
             torch.manual_seed(self.lora_seed)
             super()._setup_lora()
 
+    def _record_failed_batch(self, batch, *, data_loader_step: int, error: BaseException):
+        # gliner2 skips a batch after out-of-memory and trains on, so the run silently
+        # sees less data (found 29 Sep 2026 in 5 finished runs). Fail instead: the matrix
+        # child reruns the whole run in a fresh process.
+        if isinstance(error, torch.cuda.OutOfMemoryError):
+            raise error
+        super()._record_failed_batch(batch, data_loader_step=data_loader_step, error=error)
+
     def _check_early_stopping(self, metrics, prev_best=None):
         self.stopped_early = super()._check_early_stopping(metrics, prev_best)
         return self.stopped_early
@@ -140,7 +148,8 @@ def train(
 
     config = TrainingConfig(
         output_dir=str(run_dir / "trainer"),
-        use_lora=True,
+        use_lora=cfg.finetune == "lora",
+        encoder_lr=cfg.encoder_lr,
         max_steps=cfg.max_steps,
         batch_size=cfg.batch_size,
         eval_batch_size=cfg.batch_size,

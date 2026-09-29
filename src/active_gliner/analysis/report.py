@@ -139,6 +139,10 @@ def analyse(runs="runs", out="paper") -> dict:
     figure_dir = out / "figures"
     skipped = []
     df = aggregate.collect(runs)
+    # Training variants (LoRA layers, full fine-tune) share selector, N and seed with main
+    # runs; keep them out of every main-run table and contrast.
+    variants = df[df.variant.notna()] if "variant" in df else df.iloc[0:0]
+    df = df[df.variant.isna()] if "variant" in df else df
     primary = stats.primary_report(df, runs)
     tables, bins = _teacher_tables(df, skipped)
     tables["ladder"] = {}
@@ -214,6 +218,9 @@ def analyse(runs="runs", out="paper") -> dict:
                 macros[name + "P"] = format_p(entry["p_holm"], entry["interval"].get("n_boot"))
     macros.update(main_tables.cell_macros(df))
     macros.update(main_tables.mixing_macros(df))
+    macros.update(main_tables.selector_macros(df))
+    macros.update(main_tables.threshold_macros(df))
+    macros.update(main_tables.variant_macros(variants))
     macros.update(main_tables.teacher_macros(tables.get("scores", {}), tables.get("bins", {})))
     macros.update(main_tables.ladder_macros(tables["ladder"]))
     macros.update(deployment.macros(points))

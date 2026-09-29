@@ -1,5 +1,6 @@
 """Thesis confidence scores and seeded pool selection."""
 
+import math
 import random
 from collections.abc import Iterable
 
@@ -18,6 +19,34 @@ def score_mse(confs: Iterable[float]) -> float:
     return sum((1.0 - c) ** 2 for c in values) / len(values) if values else 1.0
 
 
+def score_mnlp(confs: Iterable[float]) -> float:
+    values = list(confs)
+    if not values:
+        return math.inf
+    return -sum(math.log(max(c, 1e-10)) for c in values) / len(values)
+
+
+# Thesis selectors (src2 selection/strategy.py): lower key = less sure, picked first.
+THESIS_KEYS = {
+    "avg": score_avg,
+    "mse": lambda confs: -score_mse(confs),
+    "mnlp": lambda confs: -score_mnlp(confs),
+}
+
+
+def item_confidences(pred: dict) -> list[float]:
+    """Confidences of the predicted items: spans, relations or classification labels."""
+    if "spans" in pred:
+        return [s["confidence"] for s in pred["spans"]]
+    if "relations" in pred:
+        return [r["probability"] for r in pred["relations"]]
+    return [pred["probabilities"][label] for label in pred["labels"]]
+
+
+def thesis_keys(strategy: str, items: list[list[float]]) -> list[float]:
+    return [THESIS_KEYS[strategy](confs) for confs in items]
+
+
 def select(ids: list[str], confidences: list[float], n: int, strategy: str, seed: int) -> list[str]:
     """Select by ascending confidence with seeded ties, or sample randomly."""
     if len(ids) != len(confidences):
@@ -27,7 +56,8 @@ def select(ids: list[str], confidences: list[float], n: int, strategy: str, seed
     rng = random.Random(seed)
     if strategy == "random":
         return rng.sample(ids, n)
-    if strategy != "min":
+    # Thesis selectors arrive as keys where lower means less sure, like min.
+    if strategy != "min" and strategy not in THESIS_KEYS:
         raise ValueError(f"Unknown strategy: {strategy}")
     ranked = list(zip(ids, confidences, strict=True))
     rng.shuffle(ranked)

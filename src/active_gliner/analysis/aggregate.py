@@ -18,7 +18,7 @@ TASKS = dict(
 COLUMNS = (
     "name block dataset locale task labels selector n seed gt_fraction gt_assignment "
     "no_prediction dev_f1 f1 macro_f1 wall_time_s train_time_s teacher_prompt_tokens "
-    "teacher_completion_tokens teacher_latency_s run_dir"
+    "teacher_completion_tokens teacher_latency_s run_dir variant"
 ).split()
 
 
@@ -57,6 +57,11 @@ def collect(runs_root="runs") -> pd.DataFrame:
         )
         for key in ("wall_time_s", "train_time_s"):
             row[key] = metrics.get(key)
+        # Thesis E6: how much dev F1 moves across the candidate thresholds (points).
+        sweep = metrics.get("eval_threshold_dev_scores") or {}
+        row["dev_threshold_spread"] = (
+            100 * (max(sweep.values()) - min(sweep.values())) if sweep else None
+        )
         for field, source in (
             ("prompt_tokens", "prompt_tokens"),
             ("completion_tokens", "completion_tokens"),

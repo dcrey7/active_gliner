@@ -21,6 +21,13 @@ check: lint fmt-check test
 run-smoke:
     HF_HUB_OFFLINE=1 uv run pytest -q tests/test_run_smoke.py
 
+# Rebuild the quickstart notebook from its builder and run it; needs a GPU and a teacher.
+notebook:
+    uv run python notebooks/build_quickstart.py
+    rm -rf notebooks/demo
+    cd notebooks && uv run jupyter execute --inplace quickstart.ipynb
+    uv run python notebooks/build_quickstart.py --drop-stderr
+
 # Keep the busy GPU and live teacher servers out of verification.
 check-cpu: lint fmt-check
     CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 uv run pytest -q -m 'not model and not teacher'

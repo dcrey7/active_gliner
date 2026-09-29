@@ -1,0 +1,18 @@
+# Older code fingerprints whose finished runs still count as current.
+# A fingerprint enters this list only after a check that the current code reproduces
+# its runs. The matrix reads entries with checked: true (matrix.equivalent_codes).
+# Evidence: docs/updates/2026-09-29-1157-thesis-replication-start.md
+
+- code: 74a9108a7f33d43be0c497f4e3465625d1fcae540bf14cfbb41988696a93a473
+  replaced_by: thesis selectors (avg, mse, mnlp), training variants, fail on out-of-memory
+  checked: true
+  date: 2026-09-29
+  check: >
+    One min-N100-seed1 ground-truth run per task rerun with the new code on the same
+    machine. Selection identical for NER, classification, slots and CrossRE. Pool scores
+    byte-identical for CrossRE; elsewhere they differ only by rounding (at most 30 of about
+    12,000 sentences, largest gap 0.00013, no sentence gains or loses a prediction).
+    NER training loss identical at every step, test F1 identical to every digit.
+    Classification, slots and CrossRE F1 vary run to run: the unchanged old code, rerun
+    the same day, also missed its stored classification score (0.3718 stored, 0.3936
+    old code, 0.3464 new code).
