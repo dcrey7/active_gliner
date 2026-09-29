@@ -1,0 +1,60 @@
+{
+  "dataset": "mit_movie",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 8797,
+    "dev": 978,
+    "test": 2443
+  },
+  "label_counts": {
+    "pool": {
+      "ACTOR": 2913,
+      "CHARACTER": 349,
+      "DIRECTOR": 1556,
+      "GENRE": 3942,
+      "PLOT": 1718,
+      "RATING": 1815,
+      "RATINGS_AVERAGE": 1694,
+      "REVIEW": 199,
+      "SONG": 218,
+      "TITLE": 2146,
+      "TRAILER": 105,
+      "YEAR": 2583
+    },
+    "dev": {
+      "ACTOR": 321,
+      "CHARACTER": 36,
+      "DIRECTOR": 170,
+      "GENRE": 437,
+      "PLOT": 209,
+      "RATING": 194,
+      "RATINGS_AVERAGE": 184,
+      "REVIEW": 19,
+      "SONG": 26,
+      "TITLE": 240,
+      "TRAILER": 8,
+      "YEAR": 279
+    },
+    "test": {
+      "ACTOR": 826,
+      "CHARACTER": 91,
+      "DIRECTOR": 447,
+      "GENRE": 1127,
+      "PLOT": 484,
+      "RATING": 502,
+      "RATINGS_AVERAGE": 461,
+      "REVIEW": 48,
+      "SONG": 52,
+      "TITLE": 568,
+      "TRAILER": 30,
+      "YEAR": 723
+    }
+  },
+  "empty_gold": {
+    "pool": 49,
+    "dev": 6,
+    "test": 11
+  },
+  "split_hash": "54fdffedea6413685dc7f4f3267695c9536b87bcf78941c29ecb5924a057adcd",
+  "misaligned_dev_rate": 0.0
+}

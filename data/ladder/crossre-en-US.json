@@ -1,0 +1,6008 @@
+{
+  "dataset": "crossre",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "crossre:en-US:ai-test-1",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-2",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-3",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-6",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-8",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-12",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-13",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-14",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-19",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-20",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-23",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-28",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-30",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-36",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-41",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-43",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-44",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-48",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-49",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-51",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-53",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-59",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-68",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-69",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-70",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-74",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-75",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-76",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-80",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-81",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-89",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-90",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-91",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-93",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-95",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-97",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-99",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-104",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-106",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-112",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-118",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-120",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-122",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-125",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-127",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-128",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-130",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-131",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-132",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-133",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-134",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-135",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-137",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-138",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-142",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-144",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-151",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-153",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-154",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-160",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-162",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-163",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-164",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-167",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-168",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-170",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-172",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-173",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-174",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-179",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-181",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-183",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-185",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-186",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-189",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-191",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-192",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-193",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-195",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-196",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-200",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-202",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-204",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-206",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-208",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-209",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-210",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-211",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-212",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-213",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-216",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-220",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-222",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-223",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-225",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-226",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-227",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-235",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-239",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-241",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-244",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-245",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-251",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-253",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-254",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-257",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-264",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-265",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-268",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-272",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-273",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-275",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-276",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-277",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-280",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-282",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-283",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-285",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-286",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-288",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-291",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-295",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-296",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-299",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-301",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-303",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-306",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-307",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-309",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-317",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-319",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-322",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-324",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-328",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-329",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-331",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-333",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-335",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-336",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-338",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-339",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-340",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-343",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-344",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-345",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-348",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-352",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-353",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-354",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-355",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-357",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-359",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-360",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-362",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-374",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-380",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-381",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-382",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-383",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-386",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-387",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-388",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-392",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-393",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-395",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-396",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-397",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-398",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-399",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-401",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-402",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-403",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-404",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-407",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-411",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-416",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-420",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-422",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-423",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-424",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-428",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:ai-test-429",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:ai-test-431",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-1",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-10",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-13",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-14",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-17",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-18",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-23",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-28",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-34",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-37",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-39",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-42",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-43",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-45",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-46",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-47",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-49",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-50",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-53",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-55",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-56",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-57",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-58",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-61",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-63",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-65",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-66",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-69",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-70",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-73",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-75",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-77",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-81",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-82",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-84",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-88",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-89",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-91",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-92",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-94",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-95",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-96",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-99",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-101",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-104",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-107",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-109",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-114",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-115",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-116",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-118",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-122",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-123",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-124",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-128",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-129",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-130",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-135",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-136",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-138",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-141",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-142",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-148",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-151",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-153",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-154",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-155",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-158",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-160",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-161",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-162",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-163",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-164",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-165",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-166",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-169",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-171",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-172",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-173",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-175",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-178",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-183",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-185",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-188",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-189",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-195",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-196",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-198",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-199",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-202",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-205",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-207",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-210",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-218",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-222",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-223",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-224",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-226",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-232",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-233",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-236",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-237",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-238",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-239",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-241",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-245",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-247",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-248",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-250",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-251",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-252",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-256",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-257",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-258",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-259",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-260",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-268",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-270",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-271",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-273",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-276",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-277",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-278",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-279",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-280",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-281",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-284",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-285",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-286",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-287",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-292",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-293",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-298",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-299",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-300",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-301",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-307",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-310",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-311",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-316",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-321",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-323",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-326",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-327",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-329",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-331",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-332",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-334",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-336",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-342",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-344",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-348",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-349",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-351",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-352",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-355",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-358",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-362",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-363",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-364",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-365",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-367",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-369",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-370",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-373",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-374",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-376",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-379",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-380",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-382",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-383",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-386",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-395",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-396",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-397",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-398",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-401",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-403",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-405",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-411",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:literature-test-415",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:literature-test-416",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-1",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-5",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-6",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-7",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-9",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-12",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-17",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-18",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-19",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-22",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-23",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-24",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-28",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-29",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-31",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-37",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-39",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-40",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-41",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-45",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-49",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-50",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-51",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-52",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-55",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-56",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-57",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-59",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-67",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-69",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-73",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-74",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-76",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-82",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-83",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-84",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-89",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-91",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-93",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-94",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-95",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-99",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-101",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-103",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-112",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-114",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-115",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-117",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-118",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-119",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-120",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-121",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-122",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-125",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-128",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-130",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-131",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-133",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-137",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-141",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-144",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-149",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-152",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-153",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-163",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-165",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-166",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-168",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-169",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-170",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-173",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-174",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-176",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-177",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-182",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-185",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-188",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-189",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-191",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-195",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-196",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-197",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-199",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-201",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-205",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-207",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-213",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-223",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-224",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-226",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-230",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-231",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-233",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-235",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-238",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-239",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-243",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-244",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-246",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-248",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-254",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-259",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-260",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-265",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-270",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-278",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-282",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-283",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-284",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-287",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-289",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-290",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-291",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-296",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-302",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-308",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-309",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-313",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-321",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-323",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-332",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-333",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-337",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-339",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-340",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-344",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-345",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-346",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-348",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-352",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-355",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-357",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-358",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-360",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-364",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-367",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-368",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-370",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-372",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-375",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-379",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-381",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-384",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-385",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-389",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-390",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-391",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-393",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-394",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-395",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:music-test-396",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:music-test-397",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-3",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-4",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-5",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-6",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-9",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-12",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-15",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-18",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-19",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-21",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-23",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-24",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-26",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-29",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-30",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-32",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-33",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-34",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-38",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-47",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-53",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-56",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-59",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-64",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-65",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-66",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-67",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-71",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-72",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-75",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-76",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-79",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-81",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-84",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-85",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-86",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-87",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-90",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-92",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-98",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-103",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-106",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-107",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-109",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-110",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-113",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-116",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-122",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-124",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-127",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-133",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-134",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-136",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-137",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-144",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-145",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-147",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-153",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-156",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-158",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-162",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-164",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-165",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-167",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-168",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-171",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-174",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-178",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-181",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-182",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-183",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-185",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-186",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-189",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-192",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-193",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-194",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-197",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-200",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-201",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-202",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-203",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-205",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-210",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-211",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-212",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-213",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-215",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-216",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-218",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-219",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-221",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-226",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-227",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-228",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-229",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-232",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-233",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-236",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-239",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-240",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-243",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-246",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-249",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-251",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-254",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-257",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-258",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-262",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-263",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-265",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-268",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-270",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-271",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-275",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-278",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-283",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-285",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-288",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-289",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-290",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-291",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-293",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-295",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-298",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-299",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-300",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-301",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-306",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-307",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-309",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-312",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-316",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-319",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-320",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-321",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-322",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-326",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-332",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-335",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-337",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-340",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-341",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-344",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-346",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-354",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-356",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-360",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-362",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-363",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-365",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-366",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-367",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-369",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-373",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-374",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-377",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-383",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-385",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-387",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-390",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-393",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:news-test-396",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-398",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:news-test-399",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-7",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-12",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-13",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-14",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-16",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-18",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-19",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-23",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-24",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-25",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-29",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-36",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-38",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-40",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-45",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-48",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-49",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-51",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-54",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-60",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-68",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-70",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-78",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-83",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-84",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-85",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-86",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-93",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-95",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-101",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-103",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-104",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-107",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-108",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-110",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-112",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-113",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-114",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-116",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-118",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-120",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-121",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-126",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-130",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-131",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-134",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-139",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-140",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-146",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-148",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-152",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-156",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-157",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-158",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-159",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-161",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-162",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-170",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-173",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-175",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-176",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-177",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-178",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-180",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-181",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-182",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-183",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-185",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-190",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-194",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-198",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-204",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-205",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-216",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-221",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-228",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-231",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-242",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-248",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-249",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-254",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-255",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-258",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-259",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-260",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-262",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-265",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-266",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-267",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-269",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-270",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-275",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-276",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-278",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-280",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-281",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-287",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-288",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-295",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-302",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-310",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-315",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-317",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-319",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-320",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-321",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-322",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-325",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-326",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-327",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-330",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-333",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-334",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-337",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-341",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-342",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-343",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-344",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-347",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-348",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-354",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-356",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-361",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-362",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-363",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-364",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-368",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-373",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-374",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-376",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-377",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-378",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-379",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-382",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-385",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-386",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-387",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-388",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-389",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-391",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:politics-test-392",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-393",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:politics-test-398",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-6",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-7",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-15",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-17",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-19",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-20",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-22",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-25",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-27",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-31",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-32",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-34",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-35",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-36",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-39",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-41",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-42",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-45",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-46",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-47",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-50",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-51",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-53",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-54",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-56",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-58",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-60",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-61",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-66",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-68",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-69",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-73",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-76",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-77",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-78",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-79",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-80",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-88",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-89",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-90",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-93",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-94",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-95",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-96",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-97",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-103",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-110",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-114",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-117",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-118",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-122",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-123",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-125",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-126",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-129",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-130",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-132",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-135",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-138",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-139",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-140",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-143",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-146",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-148",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-149",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-150",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-151",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-153",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-157",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-158",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-165",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-172",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-173",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-174",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-176",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-177",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-180",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-182",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-192",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-196",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-197",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-200",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-201",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-202",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-204",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-206",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-207",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-210",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-212",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-213",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-214",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-215",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-216",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-218",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-219",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-220",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-223",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-225",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-228",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-229",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-232",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-233",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-234",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-237",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-238",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-239",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-243",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-245",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-246",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-247",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-253",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-254",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-255",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-256",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-259",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-260",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-261",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-262",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-263",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-267",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-268",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-273",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-277",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-279",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-280",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-282",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-283",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-284",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-286",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-287",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-289",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-292",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-295",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-296",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-297",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-299",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-301",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-305",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-308",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-309",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-312",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-314",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-316",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-317",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-318",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-324",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-331",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-332",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-334",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-336",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-340",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-341",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-345",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-347",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-350",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-352",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-353",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-354",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-355",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-360",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-361",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-363",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-365",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-367",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-368",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-369",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-375",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-376",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-383",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-384",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-386",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-388",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "crossre:en-US:science-test-390",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.4084967320261438
+    },
+    {
+      "id": "crossre:en-US:science-test-397",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.40916530278232405
+    }
+  ]
+}

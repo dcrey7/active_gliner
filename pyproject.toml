@@ -1,19 +1,53 @@
 [project]
 name = "active-gliner"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0.dev0"
+description = "Active learning and LLM label distillation for GLiNER"
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
 requires-python = ">=3.11"
 dependencies = [
-    "gliner",
-    "matplotlib>=3.10.7",
-    "pandas>=2.3.3",
-    "peft>=0.18.0",
-    "scikit-learn>=1.7.2",
-    "scikit-multilearn>=0.2.0",
-    "setuptools>=80.9.0",
-    "torch<2.5",
+    "gliner2[train]==2.0.0",
+    "datasets",
+    "pandas",
+    "matplotlib",
+    "pydantic>=2",
+    "protobuf",
+    "psutil==7.2.2",
+    "pyyaml==6.0.3",
+    "httpx==0.28.1",
+    "optuna==4.5.0",
+    "scikit-learn==1.7.2",
+    "deepsig==1.2.8",
+    "python-dotenv==1.2.3",
+    "threadpoolctl==3.7.0",
 ]
 
-[tool.uv.sources]
-gliner = { git = "https://github.com/urchade/GLiNER.git", rev = "7800fc1deca23fb9197f8c9cdd0200f672ce5213" }
+[project.scripts]
+active-gliner = "active_gliner.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "active_gliner"
+module-root = "src"
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["src2", "test", "main.py", "notebooks", "results2", "data", "models"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+exclude = ["*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: loads the real student model (slow)", "teacher: calls a live teacher server"]

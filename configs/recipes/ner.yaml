@@ -1,0 +1,9 @@
+augmentation: false
+batch_size: 8
+lora_alpha: 64
+lora_dropout: 0.0
+lora_r: 32
+lora_targets:
+- encoder
+- all_task_heads
+task_lr: 0.00030971254911697343

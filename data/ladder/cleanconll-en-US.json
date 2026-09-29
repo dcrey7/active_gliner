@@ -1,0 +1,4514 @@
+{
+  "dataset": "cleanconll",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "cleanconll:en-US:test-22",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-23",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-24",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-25",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-26",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-27",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-28",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-29",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-30",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-31",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-32",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-33",
+      "doc_id": "test-1",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-48",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-49",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-50",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-51",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-52",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-53",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-54",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-55",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-56",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-57",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-58",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-59",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-60",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-61",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-62",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-63",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-64",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-65",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-66",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-67",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-68",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-69",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-70",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-71",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-72",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-73",
+      "doc_id": "test-3",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-318",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-319",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-320",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-321",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-322",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-323",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-324",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-325",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-326",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-327",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-328",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-329",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-330",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-331",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-332",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-333",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-334",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-335",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-336",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-337",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-338",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-339",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-340",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-341",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-342",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-343",
+      "doc_id": "test-21",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-426",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-427",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-428",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-429",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-430",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-431",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-432",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-433",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-434",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-435",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-436",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-437",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-438",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-439",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-440",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-441",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-442",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-443",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-444",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-445",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-446",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-447",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-448",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-449",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-450",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-451",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-452",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-453",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-454",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-455",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-456",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-457",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-458",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-459",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-460",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-461",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-462",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-463",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-464",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-465",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-466",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-467",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-468",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-469",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-470",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-471",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-472",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-473",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-474",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-475",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-476",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-477",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-478",
+      "doc_id": "test-26",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-623",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-624",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-625",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-626",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-627",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-628",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-629",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-630",
+      "doc_id": "test-33",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-656",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-657",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-658",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-659",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-660",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-661",
+      "doc_id": "test-35",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-797",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-798",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-799",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-800",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-801",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-802",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-803",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-804",
+      "doc_id": "test-44",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-986",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-987",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-988",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-989",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-990",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-991",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-992",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-993",
+      "doc_id": "test-59",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1027",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1028",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1029",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1030",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1031",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1032",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1033",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1034",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1035",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1036",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1037",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1038",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1039",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1040",
+      "doc_id": "test-62",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1065",
+      "doc_id": "test-66",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1066",
+      "doc_id": "test-66",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1067",
+      "doc_id": "test-66",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1068",
+      "doc_id": "test-66",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1104",
+      "doc_id": "test-70",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1105",
+      "doc_id": "test-70",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1106",
+      "doc_id": "test-70",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1107",
+      "doc_id": "test-70",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1108",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1109",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1110",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1111",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1112",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1113",
+      "doc_id": "test-71",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1123",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1124",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1125",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1126",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1127",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1128",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1129",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1130",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1131",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1132",
+      "doc_id": "test-73",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1203",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1204",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1205",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1206",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1207",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1208",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1209",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1210",
+      "doc_id": "test-79",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1211",
+      "doc_id": "test-80",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1212",
+      "doc_id": "test-80",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1213",
+      "doc_id": "test-80",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1214",
+      "doc_id": "test-80",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1272",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1273",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1274",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1275",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1276",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1277",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1278",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1279",
+      "doc_id": "test-86",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1343",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1344",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1345",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1346",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1347",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1348",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1349",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1350",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1351",
+      "doc_id": "test-92",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1352",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1353",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1354",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1355",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1356",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1357",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1358",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1359",
+      "doc_id": "test-93",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1414",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1415",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1416",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1417",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1418",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1419",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1420",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1421",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1422",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1423",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1424",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1425",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1426",
+      "doc_id": "test-97",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1443",
+      "doc_id": "test-99",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1444",
+      "doc_id": "test-99",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1445",
+      "doc_id": "test-99",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1446",
+      "doc_id": "test-99",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1447",
+      "doc_id": "test-99",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1476",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1477",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1478",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1479",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1480",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1481",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1482",
+      "doc_id": "test-102",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1572",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1573",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1574",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1575",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1576",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1577",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1578",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1579",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1580",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1581",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1582",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1583",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1584",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1585",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1586",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1587",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1588",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1589",
+      "doc_id": "test-108",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1646",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1647",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1648",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1649",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1650",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1651",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1652",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1653",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1654",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1655",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1656",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1657",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1658",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1659",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1660",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1661",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1662",
+      "doc_id": "test-112",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1667",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1668",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1669",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1670",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1671",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1672",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1673",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1674",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1675",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1676",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1677",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1678",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1679",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1680",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1681",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1682",
+      "doc_id": "test-114",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1683",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1684",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1685",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1686",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1687",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1688",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1689",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1690",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1691",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1692",
+      "doc_id": "test-115",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1856",
+      "doc_id": "test-129",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1857",
+      "doc_id": "test-129",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1858",
+      "doc_id": "test-129",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1859",
+      "doc_id": "test-129",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1860",
+      "doc_id": "test-129",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-1967",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1968",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1969",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1970",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1971",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1972",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1973",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1974",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1975",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1976",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1977",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1978",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1979",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1980",
+      "doc_id": "test-141",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-1990",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1991",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1992",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1993",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1994",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1995",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1996",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1997",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1998",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-1999",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2000",
+      "doc_id": "test-143",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2052",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2053",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2054",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2055",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2056",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2057",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2058",
+      "doc_id": "test-148",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2122",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2123",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2124",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2125",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2126",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2127",
+      "doc_id": "test-153",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2128",
+      "doc_id": "test-154",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2129",
+      "doc_id": "test-154",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2130",
+      "doc_id": "test-154",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2131",
+      "doc_id": "test-154",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2142",
+      "doc_id": "test-156",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2143",
+      "doc_id": "test-156",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2151",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2152",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2153",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2154",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2155",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2156",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2157",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2158",
+      "doc_id": "test-158",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2165",
+      "doc_id": "test-160",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2166",
+      "doc_id": "test-160",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2167",
+      "doc_id": "test-160",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2168",
+      "doc_id": "test-160",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2218",
+      "doc_id": "test-166",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2219",
+      "doc_id": "test-166",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2220",
+      "doc_id": "test-166",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2221",
+      "doc_id": "test-166",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2265",
+      "doc_id": "test-171",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2266",
+      "doc_id": "test-171",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2267",
+      "doc_id": "test-171",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2268",
+      "doc_id": "test-171",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2269",
+      "doc_id": "test-171",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2270",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2271",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2272",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2273",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2274",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2275",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2276",
+      "doc_id": "test-172",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2277",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2278",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2279",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2280",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2281",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2282",
+      "doc_id": "test-173",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2289",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2290",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2291",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2292",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2293",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2294",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2295",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2296",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2297",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2298",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2299",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2300",
+      "doc_id": "test-175",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2691",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2692",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2693",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2694",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2695",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2696",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2697",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2698",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2699",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2700",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2701",
+      "doc_id": "test-196",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2749",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2750",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2751",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2752",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2753",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2754",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2755",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2756",
+      "doc_id": "test-198",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2769",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2770",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2771",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2772",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2773",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2774",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2775",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2776",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2777",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2778",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2779",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2780",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2781",
+      "doc_id": "test-200",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2820",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2821",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2822",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2823",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2824",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2825",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2826",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2827",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2828",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2829",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2830",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2831",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2832",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2833",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2834",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2835",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2836",
+      "doc_id": "test-203",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2837",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2838",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2839",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2840",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2841",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2842",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2843",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2844",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2845",
+      "doc_id": "test-204",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-2846",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2847",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2848",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2849",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2850",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2851",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2852",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2853",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2854",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2855",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2856",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2857",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2858",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2859",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2860",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2861",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2862",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2863",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2864",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2865",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2866",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2867",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2868",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2869",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2870",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2871",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2872",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2873",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2874",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2875",
+      "doc_id": "test-205",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-2925",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2926",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2927",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2928",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2929",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2930",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2931",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2932",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2933",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2934",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2935",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2936",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2937",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2938",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2939",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2940",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2941",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2942",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2943",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2944",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2945",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2946",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2947",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2948",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2949",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2950",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2951",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2952",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2953",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2954",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2955",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2956",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2957",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2958",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2959",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2960",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2961",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2962",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2963",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2964",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2965",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2966",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2967",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2968",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2969",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2970",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2971",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2972",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2973",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2974",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2975",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2976",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2977",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2978",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2979",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2980",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2981",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2982",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2983",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2984",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2985",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2986",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2987",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2988",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2989",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2990",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2991",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2992",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2993",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2994",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2995",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2996",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2997",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2998",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-2999",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3000",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3001",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3002",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3003",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3004",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3005",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3006",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3007",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3008",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3009",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3010",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3011",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3012",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3013",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3014",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3015",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3016",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3017",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3018",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3019",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3020",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3021",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3022",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3023",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3024",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3025",
+      "doc_id": "test-207",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3033",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3034",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3035",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3036",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3037",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3038",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3039",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3040",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3041",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3042",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3043",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3044",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3045",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3046",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3047",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3048",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3049",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3050",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3051",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3052",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3053",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3054",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3055",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3056",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3057",
+      "doc_id": "test-209",
+      "stratum": 0,
+      "inclusion_prob": 0.41025641025641024
+    },
+    {
+      "id": "cleanconll:en-US:test-3058",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3059",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3060",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3061",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3062",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3063",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3064",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3065",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3066",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3067",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3068",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3069",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3070",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3071",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3072",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3073",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3074",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3075",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3076",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3077",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3078",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3079",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3080",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3081",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3082",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3083",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3084",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3085",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3086",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3087",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3088",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3089",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3090",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3091",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3092",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3093",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3094",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3095",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3096",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3097",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3098",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3099",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3100",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3101",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3102",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3103",
+      "doc_id": "test-210",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3120",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3121",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3122",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3123",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3124",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3125",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3126",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3127",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3128",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3129",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3130",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3131",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3132",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3133",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3134",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3135",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3136",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3137",
+      "doc_id": "test-213",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3165",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3166",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3167",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3168",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3169",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3170",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3171",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3172",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3173",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3174",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3175",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3176",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3177",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3178",
+      "doc_id": "test-217",
+      "stratum": 1,
+      "inclusion_prob": 0.10843373493975904
+    },
+    {
+      "id": "cleanconll:en-US:test-3228",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3229",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3230",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3231",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3232",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3233",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3234",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3235",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3236",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3237",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3238",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3239",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3240",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3241",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3242",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3243",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3244",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3245",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3246",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3247",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3248",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3249",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3250",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3251",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3252",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3253",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3254",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3255",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3256",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3257",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3258",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3259",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3260",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3261",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3262",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3263",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3264",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3265",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3266",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3267",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3268",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3269",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3270",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3271",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3272",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3273",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3274",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3275",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3276",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3277",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3278",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3279",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3280",
+      "doc_id": "test-220",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3362",
+      "doc_id": "test-225",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3363",
+      "doc_id": "test-225",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    },
+    {
+      "id": "cleanconll:en-US:test-3364",
+      "doc_id": "test-225",
+      "stratum": 2,
+      "inclusion_prob": 0.6923076923076923
+    }
+  ]
+}

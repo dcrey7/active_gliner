@@ -1,0 +1,54 @@
+{
+  "dataset": "hallmarks",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 12119,
+    "dev": 1798,
+    "test": 3547
+  },
+  "label_counts": {
+    "pool": {
+      "activating invasion and metastasis": 448,
+      "avoiding immune destruction": 185,
+      "cellular energetics": 136,
+      "enabling replicative immortality": 219,
+      "evading growth suppressors": 268,
+      "genomic instability and mutation": 523,
+      "inducing angiogenesis": 238,
+      "resisting cell death": 602,
+      "sustaining proliferative signaling": 674,
+      "tumor promoting inflammation": 375
+    },
+    "dev": {
+      "activating invasion and metastasis": 64,
+      "avoiding immune destruction": 20,
+      "cellular energetics": 44,
+      "enabling replicative immortality": 11,
+      "evading growth suppressors": 23,
+      "genomic instability and mutation": 103,
+      "inducing angiogenesis": 60,
+      "resisting cell death": 72,
+      "sustaining proliferative signaling": 85,
+      "tumor promoting inflammation": 45
+    },
+    "test": {
+      "activating invasion and metastasis": 155,
+      "avoiding immune destruction": 21,
+      "cellular energetics": 33,
+      "enabling replicative immortality": 65,
+      "evading growth suppressors": 75,
+      "genomic instability and mutation": 142,
+      "inducing angiogenesis": 60,
+      "resisting cell death": 158,
+      "sustaining proliferative signaling": 234,
+      "tumor promoting inflammation": 98
+    }
+  },
+  "empty_gold": {
+    "pool": 9034,
+    "dev": 1337,
+    "test": 2650
+  },
+  "split_hash": "1cc6e0218f5fa80c9ea022fa5789976a01648aac89fdd538c0a3f620c693dbb1",
+  "misaligned_dev_rate": 0.0
+}

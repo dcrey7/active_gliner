@@ -1,0 +1,30 @@
+{
+  "dataset": "bc5cdr",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 5228,
+    "dev": 5330,
+    "test": 5865
+  },
+  "label_counts": {
+    "pool": {
+      "Chemical": 5203,
+      "Disease": 4182
+    },
+    "dev": {
+      "Chemical": 5347,
+      "Disease": 4244
+    },
+    "test": {
+      "Chemical": 5385,
+      "Disease": 4424
+    }
+  },
+  "empty_gold": {
+    "pool": 1313,
+    "dev": 1441,
+    "test": 1725
+  },
+  "split_hash": "454741c9b5d3116b9f416c88daa93ac3d404d4687946a8baf493ba85a4b1840f",
+  "misaligned_dev_rate": 0.0
+}

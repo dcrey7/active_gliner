@@ -1,0 +1,36 @@
+{
+  "dataset": "cleanconll",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 13957,
+    "dev": 3233,
+    "test": 3427
+  },
+  "label_counts": {
+    "pool": {
+      "LOC": 6455,
+      "MISC": 3624,
+      "ORG": 6960,
+      "PER": 6527
+    },
+    "dev": {
+      "LOC": 1531,
+      "MISC": 983,
+      "ORG": 1623,
+      "PER": 1829
+    },
+    "test": {
+      "LOC": 1413,
+      "MISC": 812,
+      "ORG": 1909,
+      "PER": 1591
+    }
+  },
+  "empty_gold": {
+    "pool": 2898,
+    "dev": 639,
+    "test": 667
+  },
+  "split_hash": "aa1538287823095a2f5a0ed23681cdaff3491f1c4e76d97e7408c3a4aba2a4c2",
+  "misaligned_dev_rate": 0.0
+}

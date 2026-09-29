@@ -15,3 +15,16 @@ docs/*.docx
 docs/master thesis final2.txt
 Presentation*.pdf
 abhishit.jpg
+
+# Rebuildable dataset cache
+data/processed/
+labels/
+runs/
+
+# Secrets (API keys). Never commit.
+.env
+.env.*
+!.env.example
+
+# Old run folders moved aside when a run starts again
+runs-archives/

@@ -1,0 +1,106 @@
+cleanconll:
+  PER: Names or aliases of individual people, animals, or fictional characters.
+  LOC: Names of geographical areas, natural features, routes, buildings, or places, interpreted in context.
+  ORG: Names of organizations, institutions, companies, publications, brands, teams, or other organized groups.
+  MISC: Other named entities, including nationalities, languages, affiliations, events, works, ideologies, and expressions derived from names.
+bc5cdr:
+  Chemical: Named chemicals or drugs with identifiable composition, including structurally defined classes, abbreviations, and specified small biochemical substances.
+  Disease: Disease or disorder mentions, including signs, symptoms, toxicity, and corresponding abbreviations or adjectival forms.
+mit_movie:
+  ACTOR: Name of a performer appearing in a movie.
+  CHARACTER: Name of a character portrayed in a movie.
+  DIRECTOR: Name of a person who directs a movie.
+  GENRE: Category describing a movie's genre or style.
+  PLOT: Description of a movie's story, subject, events, setting, or character situation.
+  RATING: Content or age suitability classification assigned to a movie.
+  RATINGS_AVERAGE: Numerical score or qualitative aggregate assessment of a movie's quality or popularity.
+  REVIEW: Reference to a movie review, critical assessment, or viewer opinion.
+  SONG: Title of a song associated with a movie.
+  TITLE: Title of a movie.
+  TRAILER: Reference to a movie trailer, preview, or promotional clip.
+  YEAR: Year, decade, or relative period associated with a movie's release.
+crossre:
+  artifact: The head is a concrete product or work created by the tail.
+  cause-effect: The head causes or produces the tail as an effect.
+  compare: The text compares the two entities; order them by appearance.
+  general-affiliation: The head has the religion, ethnicity, nationality affiliation, or genre represented by the tail.
+  named: The head names or abbreviates the tail; equivalent coreferential mentions follow text order.
+  opposite: The entities oppose each other physically or conceptually; order them by appearance.
+  origin: The head is an abstract concept, invention, or designation originating from the tail.
+  part-of: The head forms a component, constituent, or part of the tail.
+  physical: The tail specifies the head's location, proximity, destination, residence, or geographical origin.
+  related-to: An explicit relation connects the entities but fits no other type; exclusive, with mentions in text order.
+  role: The head holds an active professional, organizational, civic, or participation role relative to the tail.
+  social: The entities have a personal or family relationship rather than a business role; order them by appearance.
+  temporal: The head occurs or exists during the event represented by the tail.
+  topic: The head concerns or focuses on the tail.
+  type-of: The tail states the head's general category, property, or characteristic.
+  usage: The head uses the tail to perform its function or accomplish a purpose.
+  win-defeat: The head wins the tail award; competing parties follow text order, whether victory or defeat.
+hallmarks:
+  activating invasion and metastasis: Cancer cells invade surrounding tissue or spread from their original site to distant body locations.
+  avoiding immune destruction: Cancer cells escape recognition or elimination by the immune system.
+  cellular energetics: Cancer cells alter energy metabolism to support growth, including glucose fermentation despite available oxygen.
+  enabling replicative immortality: Cancer cells bypass normal limits on repeated division and maintain indefinite proliferative capacity.
+  evading growth suppressors: Cancer cells disable or bypass mechanisms that normally restrain growth and division.
+  genomic instability and mutation: Genetic mutations and chromosome abnormalities accumulate through unstable genome maintenance.
+  inducing angiogenesis: Tumors stimulate new blood vessel formation to obtain oxygen and nutrients.
+  resisting cell death: Cancer cells evade programmed cell death that would normally eliminate damaged or abnormal cells.
+  sustaining proliferative signaling: Cancer cells maintain growth and division signals without normal dependence on external stimulation.
+  tumor promoting inflammation: Inflammatory processes create conditions that support tumor growth, survival, or spread.
+massive:
+  alarm_type: Purpose or kind of alarm.
+  app_name: Name of a software application.
+  artist_name: Name of a musical performer or group.
+  audiobook_author: Name of an audiobook's author.
+  audiobook_name: Title of an audiobook.
+  business_name: Name of a company, shop, restaurant, or other business.
+  business_type: Category of business or commercial establishment.
+  change_amount: Amount, degree, or target level of a requested adjustment.
+  coffee_type: Kind or preparation of coffee.
+  color_type: Color requested or mentioned.
+  cooking_type: Cooking method or preparation technique.
+  currency_name: Name or designation of a currency.
+  date: Calendar date, day, or period, including relative calendar expressions.
+  definition_word: Word or expression whose meaning is requested.
+  device_type: Device or appliance being referenced or controlled.
+  drink_type: Kind of beverage.
+  email_address: An actual email address.
+  email_folder: Name or category of an email folder.
+  event_name: Name or description of an event, appointment, or scheduled activity.
+  food_type: Food, dish, or cuisine.
+  game_name: Name of a specific game.
+  game_type: Category or kind of game.
+  general_frequency: How often an action or event repeats.
+  house_place: Room or area of a home.
+  ingredient: Substance or food item used to prepare a dish.
+  joke_type: Subject, style, or category of joke.
+  list_name: Name or purpose of a list.
+  meal_type: Category of meal or eating occasion.
+  media_type: Media form, service, source, or social platform.
+  movie_name: Title of a movie.
+  movie_type: Genre or category of movie.
+  music_album: Title of a music album.
+  music_descriptor: Music preference or descriptive attribute other than an explicit genre, artist, album, or song title.
+  music_genre: Genre or recognized style of music.
+  news_topic: Subject of requested news.
+  order_type: Order fulfillment method or service type.
+  person: Name of an individual.
+  personal_info: Personal or contact information field being requested or managed.
+  place_name: Geographical place, destination, landmark, or relative location.
+  player_setting: Playback operation, mode, or setting.
+  playlist_name: Name of a playlist.
+  podcast_descriptor: Descriptive attribute or episode selection for a podcast.
+  podcast_name: Title of a podcast.
+  radio_name: Name or identifying description of a radio station.
+  relation: Family, social, or professional relationship identifying a person.
+  song_name: Title of a song.
+  sport_type: Name or category of sport.
+  time: Clock time, duration, or relative time interval.
+  time_zone: Named time zone or time standard.
+  timeofday: Named part of the day.
+  transport_agency: Name of a transport operator or service provider.
+  transport_descriptor: Descriptive attribute or requirement for transportation.
+  transport_name: Name or identifier of a particular transport service or vehicle.
+  transport_type: Mode or category of transportation.
+  weather_descriptor: Weather condition or weather attribute.

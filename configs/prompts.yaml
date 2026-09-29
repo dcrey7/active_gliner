@@ -1,0 +1,8 @@
+# Frozen by the prompt gate (design section 15), 25 Sep 2026, Gemma 4 12B, first 200 dev sentences.
+# massive fr-FR inherits the en-US choice. Results: runs/teacher_eval/gemma-4-12b-v1.jsonl and -v2.jsonl.
+cleanconll: v2
+bc5cdr: v2
+mit_movie: v2
+crossre: v2
+hallmarks: v1  # gate 25 Sep: v1 0.4530 > v2 0.4393 dev micro-F1 (200 dev)
+massive: v2

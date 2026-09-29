@@ -1,0 +1,6008 @@
+{
+  "dataset": "mit_movie",
+  "locale": "en-US",
+  "seed": 20260925,
+  "target": 1000,
+  "rows": [
+    {
+      "id": "mit_movie:en-US:test-0",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-3",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-10",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-13",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-18",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-19",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-20",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-21",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-26",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-27",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-30",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-31",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-34",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-37",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-41",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-43",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-48",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-49",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-56",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-58",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-59",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-63",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-64",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-65",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-66",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-68",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-73",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-75",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-80",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-81",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-87",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-92",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-96",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-97",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-100",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-102",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-104",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-105",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-110",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-111",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-113",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-114",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-118",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-124",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-128",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-132",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-134",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-139",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-142",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-144",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-145",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-146",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-147",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-148",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-149",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-150",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-151",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-153",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-154",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-156",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-158",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-161",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-162",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-164",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-165",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-167",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-168",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-170",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-171",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-173",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-177",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-180",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-182",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-185",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-188",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-190",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-191",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-192",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-194",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-195",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-196",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-197",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-198",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-199",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-200",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-201",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-202",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-203",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-206",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-207",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-217",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-218",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-226",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-231",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-235",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-242",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-243",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-244",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-246",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-249",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-251",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-252",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-255",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-258",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-260",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-262",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-266",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-267",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-270",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-272",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-273",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-274",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-276",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-278",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-281",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-282",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-283",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-285",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-286",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-287",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-291",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-294",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-295",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-296",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-297",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-299",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-301",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-303",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-307",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-308",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-310",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-313",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-316",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-322",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-323",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-324",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-326",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-331",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-333",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-336",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-337",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-339",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-347",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-349",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-352",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-360",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-361",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-364",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-368",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-370",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-375",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-379",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-380",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-384",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-387",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-388",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-390",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-393",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-394",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-397",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-398",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-399",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-401",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-403",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-404",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-405",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-406",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-408",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-409",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-410",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-413",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-416",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-418",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-420",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-423",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-427",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-428",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-430",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-431",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-433",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-434",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-438",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-439",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-440",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-444",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-445",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-446",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-448",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-449",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-450",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-451",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-452",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-454",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-455",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-457",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-461",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-467",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-469",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-470",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-471",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-473",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-474",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-478",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-479",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-480",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-481",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-482",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-483",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-485",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-487",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-490",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-491",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-494",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-496",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-497",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-499",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-501",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-505",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-507",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-508",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-521",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-522",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-524",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-527",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-538",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-539",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-540",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-542",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-543",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-547",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-548",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-549",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-550",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-552",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-554",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-558",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-561",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-563",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-565",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-566",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-569",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-570",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-571",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-576",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-581",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-582",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-583",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-585",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-586",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-587",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-589",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-590",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-592",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-594",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-595",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-596",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-597",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-598",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-599",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-600",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-601",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-603",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-604",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-605",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-608",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-612",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-615",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-617",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-620",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-621",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-622",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-623",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-624",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-625",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-626",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-633",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-636",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-637",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-638",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-642",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-645",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-647",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-648",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-651",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-655",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-656",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-657",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-660",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-661",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-662",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-672",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-675",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-677",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-678",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-682",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-684",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-688",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-691",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-693",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-694",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-696",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-697",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-700",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-706",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-708",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-710",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-711",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-713",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-717",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-718",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-719",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-721",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-722",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-725",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-726",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-729",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-730",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-732",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-734",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-739",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-740",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-742",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-743",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-744",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-745",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-746",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-748",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-751",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-752",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-754",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-755",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-756",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-761",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-764",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-765",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-766",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-767",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-770",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-773",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-778",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-782",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-783",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-786",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-787",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-789",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-791",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-793",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-795",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-799",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-802",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-806",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-808",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-809",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-817",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-819",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-822",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-823",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-825",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-826",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-827",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-828",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-829",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-833",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-836",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-839",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-846",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-852",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-853",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-854",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-855",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-856",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-857",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-860",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-861",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-865",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-869",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-870",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-873",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-875",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-878",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-879",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-880",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-881",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-887",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-888",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-893",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-897",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-901",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-908",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-910",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-911",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-913",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-918",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-919",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-921",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-923",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-924",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-929",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-930",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-935",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-946",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-949",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-951",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-952",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-956",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-959",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-960",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-961",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-968",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-969",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-971",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-979",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-981",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-985",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-988",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-990",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-994",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-995",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-996",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-997",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-998",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1000",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1002",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1014",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1015",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1017",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1019",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1021",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1023",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1025",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1027",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1028",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1031",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1032",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1033",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1035",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1040",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1043",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1044",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1045",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1048",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1050",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1052",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1055",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1056",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1057",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1058",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1060",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1061",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1062",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1064",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1067",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1069",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1070",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1072",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1076",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1077",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1080",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1085",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1088",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1092",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1094",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1101",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1103",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1104",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1111",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1114",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1116",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1127",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1130",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1135",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1136",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1137",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1140",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1141",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1142",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1143",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1145",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1151",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1152",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1153",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1157",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1162",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1163",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1168",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1169",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1170",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1171",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1175",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1176",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1178",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1181",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1182",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1184",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1185",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1188",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1190",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1195",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1196",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1197",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1205",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1206",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1208",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1211",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1217",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1218",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1219",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1223",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1224",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1225",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1234",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1236",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1239",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1241",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1243",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1247",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1250",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1256",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1257",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1258",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1259",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1260",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1262",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1263",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1271",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1272",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1278",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1280",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1283",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1287",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1293",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1298",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1300",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1302",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1303",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1314",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1315",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1316",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1317",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1324",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1327",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1329",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1330",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1333",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1334",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1339",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1340",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1341",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1342",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1343",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1344",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1348",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1349",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1353",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1356",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1362",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1365",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1367",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1371",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1372",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1373",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1378",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1379",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1382",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1390",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1391",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1392",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1395",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1397",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1399",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1400",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1401",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1407",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1408",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1410",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1411",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1412",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1413",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1414",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1417",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1419",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1420",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1422",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1429",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1430",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1433",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1435",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1436",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1437",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1438",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1440",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1441",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1442",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1444",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1445",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1447",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1448",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1450",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1451",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1452",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1456",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1460",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1461",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1464",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1466",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1469",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1475",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1476",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1478",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1480",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1481",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1482",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1484",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1486",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1487",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1488",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1489",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1492",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1493",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1498",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1500",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1502",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1504",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1506",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1507",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1508",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1509",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1510",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1512",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1514",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1515",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1518",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1521",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1524",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1525",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1526",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1528",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1529",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1530",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1532",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1534",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1536",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1537",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1538",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1541",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1542",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1543",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1549",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1557",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1558",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1559",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1560",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1562",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1567",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1568",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1569",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1572",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1573",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1574",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1577",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1580",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1584",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1585",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1588",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1602",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1606",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1609",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1610",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1611",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1612",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1613",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1617",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1618",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1619",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1621",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1623",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1626",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1628",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1631",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1632",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1636",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1639",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1642",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1645",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1647",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1648",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1652",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1653",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1658",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1660",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1661",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1668",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1676",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1681",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1682",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1686",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1687",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1688",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1699",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1701",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1706",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1707",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1709",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1710",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1711",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1713",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1718",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1719",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1723",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1725",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1727",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1728",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1730",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1733",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1736",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1740",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1742",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1744",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1745",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1746",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1748",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1752",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1760",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1761",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1762",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1763",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1771",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1772",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1773",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1778",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1779",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1781",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1789",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1792",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1795",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1797",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1798",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1804",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1815",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1819",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1820",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1822",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1825",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1826",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1832",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1833",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1836",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1838",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1839",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1846",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1847",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1849",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1851",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1854",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1858",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1865",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1870",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1871",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1872",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1875",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1877",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1879",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1880",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1881",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1883",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1886",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1895",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1897",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1899",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1900",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1901",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1902",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1903",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1905",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1907",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1909",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1911",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1912",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1914",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1915",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1917",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1919",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1920",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1925",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1932",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1934",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1939",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1942",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1943",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1945",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1946",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1947",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1948",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1952",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1955",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1961",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1967",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1968",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1975",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1976",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1978",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1980",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1981",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1982",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1983",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1987",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1991",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-1995",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1996",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-1997",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2001",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2002",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2003",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2004",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2006",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2008",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2010",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2011",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2014",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2015",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2017",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2018",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2021",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2024",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2025",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2026",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2028",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2029",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2031",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2032",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2033",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2034",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2035",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2036",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2037",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2041",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2044",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2049",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2050",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2051",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2052",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2054",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2056",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2069",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2071",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2076",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2077",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2078",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2079",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2080",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2081",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2082",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2086",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2087",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2091",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2096",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2097",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2104",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2109",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2113",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2115",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2121",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2125",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2129",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2134",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2138",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2141",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2143",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2146",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2149",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2153",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2156",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2157",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2162",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2165",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2168",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2170",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2173",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2174",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2175",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2179",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2180",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2189",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2190",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2191",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2193",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2194",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2195",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2200",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2203",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2204",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2205",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2207",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2208",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2209",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2211",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2212",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2214",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2215",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2216",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2217",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2218",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2220",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2224",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2228",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2232",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2234",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2235",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2238",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2243",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2245",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2246",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2247",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2248",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2249",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2255",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2258",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2259",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2260",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2261",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2263",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2265",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2266",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2267",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2268",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2278",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2282",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2287",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2288",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2289",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2291",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2294",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2295",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2296",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2297",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2300",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2302",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2303",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2305",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2307",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2308",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2310",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2313",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2314",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2315",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2316",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2318",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2319",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2320",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2322",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2323",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2324",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2326",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2329",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2330",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2333",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2336",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2342",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2350",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2351",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2352",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2354",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2356",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2362",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2364",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2366",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2369",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2372",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2374",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2377",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2379",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2382",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2384",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2385",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2387",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2388",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2389",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2390",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2391",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2393",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2394",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2397",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2401",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2402",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2406",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2407",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2408",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2413",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2415",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2416",
+      "doc_id": null,
+      "stratum": 0,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2417",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2418",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2427",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2429",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2430",
+      "doc_id": null,
+      "stratum": 1,
+      "inclusion_prob": 0.4098360655737705
+    },
+    {
+      "id": "mit_movie:en-US:test-2432",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2434",
+      "doc_id": null,
+      "stratum": 2,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2436",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    },
+    {
+      "id": "mit_movie:en-US:test-2437",
+      "doc_id": null,
+      "stratum": 3,
+      "inclusion_prob": 0.40916530278232405
+    }
+  ]
+}
