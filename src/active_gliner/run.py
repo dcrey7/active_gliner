@@ -31,7 +31,8 @@ class RunConfig(BaseModel):
     recipe_file: str | None = None
     recipe_hash: str | None = None
     locale: str = "en-US"
-    selector: Literal["min", "random", "diversity", "all"] = "min"
+    # avg, mse and mnlp are the thesis selectors (selection.THESIS_KEYS).
+    selector: Literal["min", "random", "diversity", "all", "avg", "mse", "mnlp"] = "min"
     n: int = Field(gt=0)
     seed: int = Field(ge=0)
     labels_source: str = "ground_truth"
@@ -44,6 +45,12 @@ class RunConfig(BaseModel):
     lora_alpha: float = Field(default=16.0, gt=0)
     lora_dropout: float = Field(default=0.0, ge=0, lt=1)
     lora_targets: list[str] = Field(default_factory=lambda: ["encoder", "all_task_heads"])
+    # "full" trains every weight (thesis E2); encoder_lr applies only then.
+    finetune: Literal["lora", "full"] = "lora"
+    encoder_lr: float = Field(default=1e-5, gt=0)
+    # Names a training variant in the folder (for example "heads-only"), so it cannot
+    # overwrite the main run with the same selector, N and seed.
+    variant: str | None = Field(default=None, pattern=r"^[a-z0-9-]+$")
     augmentation: bool = True
     # Research runs use the dev-selected value from the frozen recipe.
     relation_head: Literal["classifier", "native", "marker"] = "classifier"
@@ -85,6 +92,8 @@ def folder_name(cfg: RunConfig) -> str:
         name += f"-gt{cfg.gt_fraction * 100:g}{cfg.gt_assignment}"
     if cfg.no_prediction == "last":
         name += "-nopredlast"
+    if cfg.variant:
+        name += f"-{cfg.variant}"
     return name
 
 
@@ -265,8 +274,9 @@ def score_pool(
     student, cfg, seeds, run_dir, task, labels, pool_records
 ) -> tuple[list[str], list[float]]:
     artifact = protocol.pool_score_path(cfg, labels, pool_records)
+    items_artifact = protocol.pool_items_path(artifact)
     with protocol.artifact_lock(artifact):
-        if not artifact.exists():
+        if not artifact.exists() or not items_artifact.exists():
             with protocol.inference_precision():
                 predictions = task.predict(
                     student,
@@ -276,6 +286,8 @@ def score_pool(
                     batch_size=32,
                     slot_mode=cfg.slot_mode,
                 )
+        # Never rewrite an existing score file: its hash identifies the run protocol.
+        if not artifact.exists():
             scores = [
                 {
                     "id": p["id"],
@@ -288,6 +300,11 @@ def score_pool(
             temporary = artifact.with_suffix(".tmp")
             write_jsonl(temporary, scores)
             temporary.replace(artifact)
+        if not items_artifact.exists():
+            items = [{"id": p["id"], "items": selection.item_confidences(p)} for p in predictions]
+            temporary = items_artifact.with_suffix(".tmp")
+            write_jsonl(temporary, items)
+            temporary.replace(items_artifact)
         scores = [json.loads(line) for line in artifact.read_text().splitlines()]
     if [p["id"] for p in scores] != [r.id for r in pool_records]:
         raise ValueError("Pool score artifact IDs do not match the frozen pool")
@@ -305,6 +322,12 @@ def score_pool(
     elif cfg.selector == "diversity":
         embeddings = pool_embeddings(student, cfg, pool_records)
         selected_ids = selection.select_diverse(ids, embeddings, cfg.n, seeds["selection"])
+    elif cfg.selector in selection.THESIS_KEYS:
+        rows = [json.loads(line) for line in items_artifact.read_text().splitlines()]
+        if [row["id"] for row in rows] != ids:
+            raise ValueError("Pool item artifact IDs do not match the frozen pool")
+        keys = selection.thesis_keys(cfg.selector, [row["items"] for row in rows])
+        selected_ids = selection.select(ids, keys, cfg.n, cfg.selector, seeds["selection"])
     else:
         selected_ids = selection.select(ids, confidences, cfg.n, cfg.selector, seeds["selection"])
     selection_hash = protocol.assert_selection(cfg, score_hash, selected_ids)
@@ -365,7 +388,13 @@ def dev_threshold(student, task, records, labels, cfg):
 def finish_run(
     cfg, seeds, run_dir, task, labels, training, evaluation, n_selected, started, metric_labels=None
 ) -> Path:
-    student = model.load_adapter(model.load_student(device="cuda"), run_dir / "adapter/best")
+    if cfg.finetune == "full":
+        # A full fine-tune saves the whole model, not an adapter.
+        student = model.AutoExtractor.from_pretrained(
+            str(run_dir / "adapter/best"), map_location="cuda"
+        )
+    else:
+        student = model.load_adapter(model.load_student(device="cuda"), run_dir / "adapter/best")
     student.eval()
     (run_dir / "predictions").mkdir()
     (run_dir / "plots").mkdir()

@@ -52,6 +52,16 @@ def recipe(dataset: str, *, required: bool = False) -> dict:
     return {**values, "recipe_file": str(path), "recipe_hash": hashlib.sha256(raw).hexdigest()}
 
 
+# Training variants of the thesis replication; they override the frozen recipe.
+VARIANTS = {
+    "encoder-only": {"lora_targets": ["encoder"]},
+    "heads-only": {"lora_targets": ["all_task_heads"]},
+    "full-finetune": {"finetune": "full"},
+}
+MAIN_BUDGET = {"crossre": 200}
+EQUIVALENCE_FILE = REPO_ROOT / "configs/protocol_equivalence.yaml"
+
+
 def build() -> list[RunConfig]:
     runs = []
     ner = ["cleanconll", "bc5cdr", "mit_movie"]
@@ -70,20 +80,20 @@ def build() -> list[RunConfig]:
         for dataset, selector, source, n, seed in product(
             datasets, selectors, sources, budgets, seeds
         ):
-            runs.append(
-                RunConfig(
-                    dataset=dataset,
-                    selector=selector,
-                    labels_source=source,
-                    n=n,
-                    seed=seed,
-                    block=block,
-                    # Same seed, same scores: arm gaps never come from GPU rounding.
-                    exact_numerics=True,
-                    **recipe(dataset),
-                    **extra,
-                )
+            values = dict(
+                dataset=dataset,
+                selector=selector,
+                labels_source=source,
+                n=n,
+                seed=seed,
+                block=block,
+                # Same seed, same scores: arm gaps never come from GPU rounding.
+                exact_numerics=True,
             )
+            values.update(recipe(dataset))
+            values.update(extra)
+            values.update(VARIANTS.get(extra.get("variant"), {}))
+            runs.append(RunConfig(**values))
 
     add("ner_core", ner, selectors=("min", "random", "diversity"))
     add("ner_primary_extra_seeds", ner, budgets=(400,), seeds=(4, 5))
@@ -134,7 +144,84 @@ def build() -> list[RunConfig]:
             gt_assignment="random",
         )
     add("french", ["massive"], budgets=(400,), locale="fr-FR")
+    add_thesis_replication(add)
     return runs
+
+
+def add_thesis_replication(add) -> None:
+    """Thesis experiments on every dataset (docs/research/2026-09-29-1047-*)."""
+    english = ["cleanconll", "bc5cdr", "mit_movie", "crossre", "hallmarks", "massive"]
+    places = [(dataset, "en-US") for dataset in english] + [("massive", "fr-FR")]
+    for dataset, locale in places:
+        main = MAIN_BUDGET.get(dataset, 400)
+        # E7: thesis selectors.
+        add(
+            "thesis_selectors",
+            [dataset],
+            selectors=("avg", "mse", "mnlp"),
+            sources=("ground_truth",),
+            budgets=(100, main),
+            locale=locale,
+        )
+        add(
+            "thesis_selectors",
+            [dataset],
+            selectors=("avg", "mse", "mnlp"),
+            sources=("gemma-4-12b",),
+            budgets=(main,),
+            locale=locale,
+        )
+        # E7: more budgets for min and random.
+        extra = (50, 400, 1000) if dataset == "crossre" else (50, 200, 1000)
+        add(
+            "thesis_budgets",
+            [dataset],
+            sources=("ground_truth",),
+            budgets=extra,
+            locale=locale,
+        )
+        # E10: mixing grid, except cells that already exist.
+        for fraction in (0.25, 0.5, 0.75):
+            done = dataset == "mit_movie" or (
+                fraction == 0.25 and dataset in {"cleanconll", "bc5cdr"}
+            )
+            if done:
+                continue
+            add(
+                "thesis_mixing",
+                [dataset],
+                selectors=("min",),
+                sources=("gemma-4-12b",),
+                budgets=(main,),
+                gt_fraction=fraction,
+                gt_assignment="random",
+                locale=locale,
+            )
+        # CrossRE's frozen recipe fixes its LoRA targets and relation head.
+        if dataset == "crossre":
+            continue
+        # E4: LoRA layer groups.
+        for variant in ("encoder-only", "heads-only"):
+            add(
+                "thesis_lora_layers",
+                [dataset],
+                selectors=("random",),
+                sources=("ground_truth",),
+                budgets=(main,),
+                variant=variant,
+                locale=locale,
+            )
+        # E2: full fine-tune on the whole pool.
+        add(
+            "thesis_full_finetune",
+            [dataset],
+            selectors=("all",),
+            sources=("ground_truth",),
+            budgets=(1,),
+            seeds=(1,),
+            variant="full-finetune",
+            locale=locale,
+        )
 
 
 def run_dir(cfg: RunConfig, out_root="runs") -> Path:
@@ -152,7 +239,16 @@ def resolve(cfg: RunConfig, out_root="runs", *, required: bool = False) -> RunCo
     stays an int and changes the protocol fingerprint of an identical run.
     """
     values = {**cfg.model_dump(), **recipe(cfg.dataset, required=required)}
+    values.update(VARIANTS.get(cfg.variant, {}))
     return RunConfig.model_validate({**values, "out_root": str(out_root)})
+
+
+def equivalent_codes() -> list[str]:
+    """Older code fingerprints whose runs were checked to reproduce under the current code."""
+    if not EQUIVALENCE_FILE.exists():
+        return []
+    entries = yaml.safe_load(EQUIVALENCE_FILE.read_text()) or []
+    return [entry["code"] for entry in entries if entry.get("checked") is True]
 
 
 def run_status(cfg: RunConfig, out_root="runs") -> str:
@@ -167,10 +263,15 @@ def run_status(cfg: RunConfig, out_root="runs") -> str:
         return "stale"
     resolved = resolve(cfg, out_root)
     try:
-        current = protocol.current_protocol(resolved)
+        if stored == protocol.current_protocol(resolved):
+            return "done"
+        # A run made by checked older code still counts (configs/protocol_equivalence.yaml).
+        for code in equivalent_codes():
+            if stored == protocol.current_protocol(resolved, code):
+                return "done"
     except FileNotFoundError:
         return "stale"
-    return "done" if stored == current else "stale"
+    return "stale"
 
 
 def pending(runs: list[RunConfig], out_root="runs") -> list[RunConfig]:

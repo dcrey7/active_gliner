@@ -155,3 +155,16 @@ def test_main_does_not_retry_other_errors(monkeypatch):
 def test_the_gate_is_not_part_of_the_protocol():
     # Scheduling must not make finished runs stale.
     assert not protocol.is_protocol_source("matrix_run.py")
+
+
+def test_out_of_memory_in_a_step_fails_the_run():
+    # gliner2 would skip the batch and train on; the run must fail and be retried instead.
+    import pytest
+    import torch
+
+    from active_gliner.train import RunTrainer
+
+    error = torch.cuda.OutOfMemoryError("CUDA out of memory")
+    with pytest.raises(torch.cuda.OutOfMemoryError):
+        RunTrainer._record_failed_batch(object(), None, data_loader_step=3, error=error)
+    assert matrix_run.is_retryable_gpu_error(error)

@@ -10,17 +10,35 @@ import pytest
 
 from active_gliner import matrix, mixing, selection
 
+THESIS_BLOCKS = {
+    "thesis_selectors": 189,
+    "thesis_budgets": 126,
+    "thesis_mixing": 48,
+    "thesis_lora_layers": 36,
+    "thesis_full_finetune": 6,
+}
 
-def test_matrix_has_309_unique_runs():
+
+def test_matrix_has_unique_runs():
     runs = matrix.build()
-    assert len(runs) == 309
+    assert len(runs) == 309 + sum(THESIS_BLOCKS.values())
     names = [matrix.run_name(r) for r in runs]
-    assert len(set(names)) == 309
+    assert len(set(names)) == len(runs)  # no replication run reuses a main folder
+
+
+def test_thesis_variants_override_the_recipe():
+    runs = [r for r in matrix.build() if r.variant]
+    heads = next(r for r in runs if r.variant == "heads-only" and r.dataset == "cleanconll")
+    assert heads.lora_targets == ["all_task_heads"]
+    assert matrix.resolve(heads).lora_targets == ["all_task_heads"]
+    full = next(r for r in runs if r.variant == "full-finetune")
+    assert full.finetune == "full" and full.selector == "all"
+    assert all(r.dataset != "crossre" for r in runs)
 
 
 def test_matrix_blocks_match_the_design():
     blocks = Counter(r.block for r in matrix.build())
-    assert blocks == {
+    assert blocks == THESIS_BLOCKS | {
         "ner_core": 108,
         "ner_primary_extra_seeds": 24,
         "ner_routing": 18,

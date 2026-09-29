@@ -116,6 +116,66 @@ def mixing_macros(df) -> dict:
     return macros
 
 
+VARIANT_NAMES = {
+    "encoder-only": "EncoderOnly",
+    "heads-only": "HeadsOnly",
+    "full-finetune": "FullFinetune",
+}
+THESIS_SELECTORS = {"avg": "Avg", "mse": "Mse", "mnlp": "Mnlp"}
+
+
+def variant_macros(variants) -> dict:
+    """Mean F1 of the thesis training variants per dataset (LoRA layers, full fine-tune)."""
+    macros = {}
+    for (dataset, locale, variant), group in variants.groupby(["dataset", "locale", "variant"]):
+        if (dataset, locale) in DATASETS and variant in VARIANT_NAMES:
+            macros[DATASETS[(dataset, locale)][1] + VARIANT_NAMES[variant]] = group.f1.mean()
+    return macros
+
+
+def selector_macros(df) -> dict:
+    """Mean F1 of the thesis selectors at the main budget: dataset + labels + selector."""
+    macros = {}
+    rows = df[df.selector.isin(THESIS_SELECTORS)]
+    if "gt_fraction" in rows:
+        rows = rows[rows.gt_fraction.isna()]
+    for (dataset, locale, labels, selector, n), group in rows.groupby(
+        ["dataset", "locale", "labels", "selector", "n"]
+    ):
+        if (dataset, locale) not in DATASETS or labels not in LABELS:
+            continue
+        if n != MAIN_BUDGET.get(dataset, DEFAULT_BUDGET):
+            continue
+        name = DATASETS[(dataset, locale)][1] + LABELS[labels][1] + THESIS_SELECTORS[selector]
+        macros[name] = group.f1.mean()
+    return macros
+
+
+def threshold_macros(df) -> dict:
+    """Thesis E6: spread of dev F1 over thresholds 0.3 to 0.7, zero-shot against trained.
+
+    Trained = ground truth, random, main budget, mean over seeds. Dev only, descriptive.
+    """
+    if "dev_threshold_spread" not in df:
+        return {}
+    macros = {}
+    for (dataset, locale), group in df.groupby(["dataset", "locale"]):
+        if (dataset, locale) not in DATASETS:
+            continue
+        name = DATASETS[(dataset, locale)][1]
+        zero = group[group.get("zero_shot_name", pd.Series(dtype=str)) == ZERO_SHOT_STUDENT]
+        zero = zero.dev_threshold_spread.dropna()
+        if len(zero):
+            macros[name + "ZeroShotSpread"] = zero.mean()
+        budget = MAIN_BUDGET.get(dataset, DEFAULT_BUDGET)
+        tuned = group[
+            (group.labels == "ground_truth") & (group.selector == "random") & (group.n == budget)
+        ].dev_threshold_spread.dropna()
+        if len(tuned):
+            macros[name + "TrainedSpread"] = tuned.mean()
+    return macros
+
+
 def teacher_macros(scores: dict, bins: dict) -> dict:
     """Main-teacher test F1, and its F1 in the least and most confident student bins."""
     macros = {}

@@ -27,10 +27,11 @@ The design lives in `docs/research/2026-09-25-1113-full-merge-design.md`. The ob
 | `tests/` | pytest tests for `src/` | active |
 | `configs/` | one config file per paper run type | active |
 | `docs/` | wiki, research, updates | active |
-| `src2/`, `test/`, `main.py`, `requirements.txt` | thesis code (git tag `thesis-v1`) | read-only; port parts, never edit |
-| `results2/`, `data/` | thesis results and data | read-only |
+| `data/` | frozen split ids, ladder samples, dataset reports | frozen; written once by the code |
+| `paper/` | the paper, `numbers.tex`, tables and figures from `active-gliner analyse` | generated, except `main.tex` |
+| `notebooks/` | the quickstart notebook | active |
 
-The thesis code uses old `gliner` and `torch<2.5`. It does not run in the new environment. To run it, check out the `thesis-v1` tag.
+The thesis code, results and data live only at the git tag `thesis-v1`. They use old `gliner` and `torch<2.5` and do not run in the new environment. To run them, check out that tag.
 
 ## 4. Toolchain
 
@@ -75,3 +76,4 @@ Put every long command in the `justfile`. Never run `sudo`.
 ## Changelog
 
 - 2026-09-25 11:55 CEST - Created for O1.
+- 2026-09-29 11:01 CEST - Thesis code, results and data removed from the tree; they stay at tag `thesis-v1`.

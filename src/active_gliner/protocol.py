@@ -86,7 +86,8 @@ def artifact_lock(path: Path):
             fcntl.flock(stream, fcntl.LOCK_UN)
 
 
-def pool_score_path(cfg, labels, records) -> Path:
+def pool_score_path(cfg, labels, records, code: str | None = None) -> Path:
+    """`code` rebuilds the path an older, checked code version used (see matrix.py)."""
     from active_gliner.model import STUDENT_SHA
 
     key = digest(
@@ -95,7 +96,7 @@ def pool_score_path(cfg, labels, records) -> Path:
             "locale": cfg.locale,
             "threshold": cfg.acq_threshold,
             "student": STUDENT_SHA,
-            "code": code_fingerprint(),
+            "code": code or code_fingerprint(),
             "labels": labels,
             "slot_mode": cfg.slot_mode,
             "relation_head": cfg.relation_head,
@@ -103,6 +104,14 @@ def pool_score_path(cfg, labels, records) -> Path:
         }
     )
     return Path(cfg.out_root) / "pool_scores" / f"{cfg.dataset}-{cfg.locale}-{key}.jsonl"
+
+
+def pool_items_path(score_path: Path) -> Path:
+    """Per-sentence item confidences for the thesis selectors, next to the pool scores.
+
+    A separate file keeps the pool score file, and so old selections, unchanged.
+    """
+    return score_path.with_name(score_path.stem + "-items.jsonl")
 
 
 def embedding_path(cfg, records) -> Path:
@@ -125,10 +134,18 @@ def embedding_path(cfg, records) -> Path:
     return Path(cfg.out_root) / "pool_scores" / f"embeddings-{cfg.dataset}-{cfg.locale}-{key}.npy"
 
 
-def protocol_fingerprint(cfg, pool_score_hash: str, prompt_hash: str) -> str:
+# Config fields added after the first runs, with their defaults. A field at its default
+# stays out of the fingerprint, so older configs hash as before.
+LATE_FIELDS = {"finetune": "lora", "encoder_lr": 1e-5, "variant": None}
+
+
+def protocol_fingerprint(cfg, pool_score_hash: str, prompt_hash: str, code=None) -> str:
     from active_gliner.model import STUDENT_SHA
 
     config = cfg.model_dump(exclude={"out_root", "block", "recipe_file"})
+    for field, default in LATE_FIELDS.items():
+        if config.get(field) == default:
+            config.pop(field)
     recipe_hash = file_hash(Path(cfg.recipe_file)) if cfg.recipe_file else None
     return digest(
         {
@@ -137,26 +154,26 @@ def protocol_fingerprint(cfg, pool_score_hash: str, prompt_hash: str) -> str:
             "prompt": prompt_hash,
             "student": STUDENT_SHA,
             "pool_scores": pool_score_hash,
-            "code": code_fingerprint(),
+            "code": code or code_fingerprint(),
         }
     )
 
 
-def current_protocol(cfg) -> str | None:
+def current_protocol(cfg, code: str | None = None) -> str | None:
     from active_gliner import data, tasks
     from active_gliner.teachers import prompts
 
     splits = data.load(cfg.dataset, cfg.locale)
     labels = tasks.labels(cfg.dataset, splits)
     records = splits["pool"][: cfg.pool_limit]
-    path = pool_score_path(cfg, labels, records)
+    path = pool_score_path(cfg, labels, records, code)
     if not path.exists():
         return None
     version = prompts.version_for(cfg.dataset)
     prompt_hash = prompts.prompt_hash(
         records[0].task, labels, prompts.prompt_for(cfg.dataset, version)
     )
-    return protocol_fingerprint(cfg, file_hash(path), prompt_hash)
+    return protocol_fingerprint(cfg, file_hash(path), prompt_hash, code)
 
 
 def assert_selection(cfg, score_hash: str, selected_ids: list[str]) -> str:

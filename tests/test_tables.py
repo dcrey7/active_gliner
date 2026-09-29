@@ -1,6 +1,7 @@
 """The main results table and cell macros come from runs, never typed by hand (rule 10)."""
 
 import pandas as pd
+import pytest
 
 from active_gliner.analysis import numbers, tables
 
@@ -81,6 +82,52 @@ def test_mixing_macros_split_by_fraction_and_assignment():
         "CleanCoNLLMixTwentyFive": 71.0,
         "CleanCoNLLMixTwentyFiveRouted": 60.0,
         "CleanCoNLLMixFifty": 80.0,
+    }
+
+
+def test_threshold_spread_macros():
+    df = pd.DataFrame(
+        [
+            _row("ground_truth", "random", 400, 1, 80.0, dev_threshold_spread=0.2),
+            _row("ground_truth", "random", 400, 2, 81.0, dev_threshold_spread=0.4),
+            _row(
+                "none",
+                "zero_shot",
+                None,
+                None,
+                55.0,
+                zero_shot_name="gliner2.5-multi-v1",
+                dev_threshold_spread=9.0,
+            ),
+        ]
+    )
+    macros = tables.threshold_macros(df)
+    assert macros["CleanCoNLLZeroShotSpread"] == 9.0
+    assert macros["CleanCoNLLTrainedSpread"] == pytest.approx(0.3)
+
+
+def test_selector_and_variant_macros():
+    df = pd.DataFrame(
+        [
+            _row("ground_truth", "mnlp", 400, 1, 70.0),
+            _row("ground_truth", "mnlp", 400, 2, 74.0),
+            _row("ground_truth", "mnlp", 100, 1, 10.0),  # not the main budget
+            _row("gemma-4-12b", "mse", 400, 1, 60.0),
+        ]
+    )
+    assert tables.selector_macros(df) == {
+        "CleanCoNLLGroundTruthMnlp": 72.0,
+        "CleanCoNLLGemmaMse": 60.0,
+    }
+    variants = pd.DataFrame(
+        [
+            _row("ground_truth", "random", 400, 1, 80.0, variant="heads-only"),
+            _row("ground_truth", "all", 13957, 1, 90.0, variant="full-finetune"),
+        ]
+    )
+    assert tables.variant_macros(variants) == {
+        "CleanCoNLLHeadsOnly": 80.0,
+        "CleanCoNLLFullFinetune": 90.0,
     }
 
 
