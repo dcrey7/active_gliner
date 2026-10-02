@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from . import aggregate, cost, deployment, figures, ladder, numbers, stats, teacher
+from . import aggregate, cost, deployment, figures, ladder, numbers, selector_audit, stats, teacher
 from . import tables as main_tables
 
 
@@ -139,6 +139,7 @@ def analyse(runs="runs", out="paper") -> dict:
     figure_dir = out / "figures"
     skipped = []
     df = aggregate.collect(runs)
+    finished_runs = len(df)
     # Training variants (LoRA layers, full fine-tune) share selector, N and seed with main
     # runs; keep them out of every main-run table and contrast.
     variants = df[df.variant.notna()] if "variant" in df else df.iloc[0:0]
@@ -196,7 +197,7 @@ def analyse(runs="runs", out="paper") -> dict:
         )
     )
     (out / "results.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
-    macros = {"FinishedRuns": len(df)}
+    macros = {"FinishedRuns": finished_runs}
     names = {
         "ner": "NER",
         "relations": "Relations",
@@ -218,7 +219,9 @@ def analyse(runs="runs", out="paper") -> dict:
                 macros[name + "P"] = format_p(entry["p_holm"], entry["interval"].get("n_boot"))
     macros.update(main_tables.cell_macros(df))
     macros.update(main_tables.mixing_macros(df))
-    macros.update(main_tables.selector_macros(df))
+    selector_means = main_tables.selector_macros(df)
+    macros.update(selector_means)
+    macros.update(selector_audit.thesis_selector_macros(df, selector_means))
     macros.update(main_tables.threshold_macros(df))
     macros.update(main_tables.variant_macros(variants))
     macros.update(main_tables.teacher_macros(tables.get("scores", {}), tables.get("bins", {})))
