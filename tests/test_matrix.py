@@ -17,17 +17,20 @@ THESIS_BLOCKS = {
     "thesis_lora_layers": 36,
     "thesis_full_finetune": 6,
 }
+# Thesis Fig 4.6.1 on every dataset and the minimum-human-labels curve
+# (docs/research/2026-10-02-1207-*); cells other blocks run are reused.
+CURVE_BLOCKS = {"mixing_curve": 570, "minimum_human_labels": 147, "two_step": 147}
 
 
 def test_matrix_has_unique_runs():
     runs = matrix.build()
-    assert len(runs) == 309 + sum(THESIS_BLOCKS.values())
+    assert len(runs) == 309 + sum(THESIS_BLOCKS.values()) + sum(CURVE_BLOCKS.values())
     names = [matrix.run_name(r) for r in runs]
     assert len(set(names)) == len(runs)  # no replication run reuses a main folder
 
 
 def test_thesis_variants_override_the_recipe():
-    runs = [r for r in matrix.build() if r.variant]
+    runs = [r for r in matrix.build() if r.variant in matrix.VARIANTS]
     heads = next(r for r in runs if r.variant == "heads-only" and r.dataset == "cleanconll")
     assert heads.lora_targets == ["all_task_heads"]
     assert matrix.resolve(heads).lora_targets == ["all_task_heads"]
@@ -38,7 +41,7 @@ def test_thesis_variants_override_the_recipe():
 
 def test_matrix_blocks_match_the_design():
     blocks = Counter(r.block for r in matrix.build())
-    assert blocks == THESIS_BLOCKS | {
+    assert blocks == THESIS_BLOCKS | CURVE_BLOCKS | {
         "ner_core": 108,
         "ner_primary_extra_seeds": 24,
         "ner_routing": 18,
@@ -51,6 +54,54 @@ def test_matrix_blocks_match_the_design():
         "mixing": 6,
         "french": 12,
     }
+
+
+def test_select_filters_by_locale():
+    runs = matrix.build()
+    french = matrix.select(runs, datasets=["massive"], locales=["fr-FR"])
+    assert french and {r.locale for r in french} == {"fr-FR"}
+    both = matrix.select(runs, datasets=["massive"])
+    assert {r.locale for r in both} == {"en-US", "fr-FR"}
+
+
+def test_curve_runs_reuse_existing_cells_and_see_the_whole_pool():
+    runs = matrix.build()
+    curve = [r for r in runs if r.block == "mixing_curve"]
+    # 400 random and min-empty-last ground truth on CleanCoNLL exist in other blocks.
+    assert not any(
+        r.dataset == "cleanconll" and r.labels_source == "ground_truth" and r.n == 400
+        for r in curve
+    )
+    ranked = [r for r in curve if r.selector == "min"]
+    assert ranked and all(r.no_prediction == "last" for r in ranked)
+    whole = [r for r in curve if r.selector == "all" and r.dataset == "cleanconll"]
+    assert whole and all(r.variant == "long" for r in whole)
+    # Two passes over 13,957 sentences at batch 8.
+    assert {r.max_steps for r in whole} == {3490}
+    minimum = [r for r in runs if r.block == "minimum_human_labels" and r.dataset == "crossre"]
+    # CrossRE's pool holds 2,519 sentences, so H = 2,500 is the last count below it.
+    counts = sorted(round(r.gt_fraction * 2519) for r in minimum if r.seed == 1)
+    assert counts == [25, 50, 100, 200, 400, 1000, 2500]
+    assert {r.gt_assignment for r in minimum} == {"nested"}
+
+
+def test_two_step_runs_pair_with_the_minimum_curve():
+    from active_gliner.run import warm_start_dir
+
+    runs = matrix.build()
+    minimum = {
+        (r.dataset, r.locale, r.seed, r.gt_fraction)
+        for r in runs
+        if r.block == "minimum_human_labels"
+    }
+    two_step = [r for r in runs if r.block == "two_step"]
+    assert {(r.dataset, r.locale, r.seed, r.gt_fraction) for r in two_step} == minimum
+    assert {r.variant for r in two_step} == {"two-step"}
+    # Step 2 uses the frozen recipe, not the long whole-pool step count.
+    clean = next(r for r in two_step if r.dataset == "cleanconll")
+    assert clean.max_steps == matrix.recipe("cleanconll").get("max_steps", 1000)
+    assert warm_start_dir(clean).name == f"all-seed{clean.seed}-long"
+    assert warm_start_dir(clean).parent.name == "gemma-4-12b"
 
 
 def test_primary_cells_have_five_seeds():

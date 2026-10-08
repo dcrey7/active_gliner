@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import math
 import time
 import traceback
 from itertools import product
@@ -145,6 +146,17 @@ def build() -> list[RunConfig]:
         )
     add("french", ["massive"], budgets=(400,), locale="fr-FR")
     add_thesis_replication(add)
+    taken = {run_name(cfg) for cfg in runs}
+
+    def add_new(*args, **kwargs):
+        # The curves reuse every cell another block already runs.
+        start = len(runs)
+        add(*args, **kwargs)
+        fresh = [cfg for cfg in runs[start:] if run_name(cfg) not in taken]
+        runs[start:] = fresh
+        taken.update(run_name(cfg) for cfg in fresh)
+
+    add_mixing_curves(add_new)
     return runs
 
 
@@ -224,6 +236,108 @@ def add_thesis_replication(add) -> None:
         )
 
 
+CURVE_BUDGETS = (100, 400, 1000, 2500)
+CURVE_SHARES = (0.25, 0.5, 0.75)
+MINIMUM_HUMAN_LABELS = (25, 50, 100, 200, 400, 1000, 2500)
+
+
+def pool_size(dataset: str, locale: str) -> int:
+    splits = json.loads((REPO_ROOT / "data/splits" / f"{dataset}-{locale}.json").read_text())
+    return len(splits["pool"])
+
+
+def long_steps(dataset: str, locale: str) -> int:
+    """Steps for whole-pool curve runs: at least two passes over the pool.
+
+    The default 1000 steps cover under one pass of a large pool, which would flatten
+    the right end of the curve for a reason that has nothing to do with the labels.
+    """
+    batch = recipe(dataset).get("batch_size", RunConfig.model_fields["batch_size"].default)
+    return max(1000, math.ceil(2 * pool_size(dataset, locale) / batch))
+
+
+def add_mixing_curves(add) -> None:
+    """Thesis Fig 4.6.1 on every dataset, plus the minimum-human-labels curve.
+
+    Design: docs/research/2026-10-02-1207-minimum-human-labels-design.md. The curves
+    select by student confidence, as the thesis did, with no-prediction sentences
+    last: the pool keeps sentences without entities (rule 4), and min would otherwise
+    spend small budgets on them. Random selection gives the comparison lines for 0%
+    and 100% human labels. The same N sentences serve every human share.
+    """
+    english = ["cleanconll", "bc5cdr", "mit_movie", "crossre", "hallmarks", "massive"]
+    places = [(dataset, "en-US") for dataset in english] + [("massive", "fr-FR")]
+    teacher = "gemma-4-12b"
+    for dataset, locale in places:
+        pool = pool_size(dataset, locale)
+        budgets = tuple(n for n in CURVE_BUDGETS if n < 0.9 * pool)
+        ranked = dict(selectors=("min",), no_prediction="last", budgets=budgets, locale=locale)
+        # Curve 1: human share r at budget N; 0% = teacher only, 100% = human only.
+        add("mixing_curve", [dataset], sources=("ground_truth", teacher), **ranked)
+        for share in CURVE_SHARES:
+            add(
+                "mixing_curve",
+                [dataset],
+                sources=(teacher,),
+                gt_fraction=share,
+                gt_assignment="random",
+                **ranked,
+            )
+        add(
+            "mixing_curve",
+            [dataset],
+            selectors=("random",),
+            sources=("ground_truth", teacher),
+            budgets=budgets,
+            locale=locale,
+        )
+        # The whole pool, with enough steps to see it.
+        whole = dict(
+            selectors=("all",),
+            budgets=(1,),
+            locale=locale,
+            variant="long",
+            max_steps=long_steps(dataset, locale),
+        )
+        add("mixing_curve", [dataset], sources=("ground_truth", teacher), **whole)
+        for share in CURVE_SHARES:
+            add(
+                "mixing_curve",
+                [dataset],
+                sources=(teacher,),
+                gt_fraction=share,
+                gt_assignment="random",
+                **whole,
+            )
+        # Curve 2: teacher labels on the whole pool, H of them replaced by human labels.
+        # Nested: a larger human set extends the smaller one for the same seed.
+        for human in MINIMUM_HUMAN_LABELS:
+            if human >= pool:
+                continue
+            add(
+                "minimum_human_labels",
+                [dataset],
+                sources=(teacher,),
+                gt_fraction=human / pool,
+                gt_assignment="nested",
+                **whole,
+            )
+            # Two-step: start from the teacher-only whole-pool student of the same seed,
+            # then train on the same H human sentences only. Step 2 uses the frozen
+            # recipe, like the human-only runs it is compared with.
+            add(
+                "two_step",
+                [dataset],
+                selectors=("all",),
+                sources=(teacher,),
+                budgets=(1,),
+                gt_fraction=human / pool,
+                gt_assignment="nested",
+                variant="two-step",
+                locale=locale,
+            )
+
+
 def run_dir(cfg: RunConfig, out_root="runs") -> Path:
     return experiment_dir(cfg, out_root)
 
@@ -280,7 +394,7 @@ def pending(runs: list[RunConfig], out_root="runs") -> list[RunConfig]:
 
 
 def select(
-    runs: list[RunConfig], blocks=None, datasets=None, labels_sources=None
+    runs: list[RunConfig], blocks=None, datasets=None, labels_sources=None, locales=None
 ) -> list[RunConfig]:
     return [
         cfg
@@ -288,6 +402,7 @@ def select(
         if (blocks is None or cfg.block in blocks)
         and (datasets is None or cfg.dataset in datasets)
         and (labels_sources is None or cfg.labels_source in labels_sources)
+        and (locales is None or cfg.locale in locales)
     ]
 
 

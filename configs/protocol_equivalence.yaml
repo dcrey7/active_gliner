@@ -16,3 +16,26 @@
     Classification, slots and CrossRE F1 vary run to run: the unchanged old code, rerun
     the same day, also missed its stored classification score (0.3718 stored, 0.3936
     old code, 0.3464 new code).
+
+- code: 60ea99d9c6199c49263a84cb992ae940fd0608e982e6cb74edf938cb9848a2f2
+  replaced_by: nested gold assignment for the minimum-human-labels curve
+  checked: true
+  date: 2026-10-02
+  check: >
+    The change adds the "nested" gold assignment and leaves "random" and "routed"
+    unchanged (tests/test_mixing.py). Two finished runs rerun with the new code on the
+    same machine: ner/mit_movie ground_truth avg-N100-seed1 and ner/bc5cdr gemma-4-12b
+    min-N400-seed1-gt50random. Both give the same selection, the same gold ids and the
+    same test F1 to every digit (0.6955269725475139 and 0.7145110410094637).
+
+- code: 5bc3eeadf1de8ae2419ff7c3d15e8d1c3f8d953e2612c78ef209ae1edaee2972
+  replaced_by: two-step training (teacher-only whole-pool student, then human labels only)
+  checked: true
+  date: 2026-10-06
+  check: >
+    The change adds run.warm_start_dir and a branch taken only when variant is
+    "two-step", which no earlier run uses; every other run takes the same path as
+    before (the teacher branch became "elif teacher", with the same body). No config
+    field was added, so earlier run configs dump the same. tests/test_matrix.py checks
+    the new block. A digit-exact rerun of one finished run follows when a GPU lane is
+    free and is recorded here.

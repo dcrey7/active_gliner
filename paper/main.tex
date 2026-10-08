@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-Small extraction models such as GLiNER can be trained on labels produced by a large language model (LLM), which makes annotation cheap but noisy. We ask a simple question: when the LLM can label only a few hundred examples, should the small model choose which ones? We study one round of uncertainty-based selection with a GLiNER2.5 student and LLM teachers on four extraction tasks and six datasets: named entity recognition (CleanCoNLL, BC5CDR, MIT Movie), relation prediction (CrossRE), multi-label classification (Hallmarks of Cancer) and slot extraction to JSON (MASSIVE, English and French). Our pre-registered primary contrast is the interaction between selection and label source: whether choosing the student's least confident examples helps less when an LLM, rather than ground truth, provides the labels. The answer depends on the task. For NER, min selection loses to random under both label sources (min minus random is \res{PracticalNER} F1 points with LLM labels), mostly because it picks sentences where the student predicts nothing; ranking those last reverses the loss on CleanCoNLL. For relations, min helps with ground truth, and LLM label errors remove most of that gain. LLM errors concentrate where the student is unsure only for NER. For NER, a student trained on 400 LLM-labelled sentences comes close to its teacher (\res{DeployStudentGemmaRandom} against \res{DeployTeacher} F1) at \res{DeploySpeedup} times the speed, and on some datasets students beat their teacher. Replicating an earlier thesis on all datasets, we find that its three uncertainty scores (mean confidence, MSE, MNLP) select identical sentences, because every pool holds more empty-prediction sentences than the budget, and that half ground truth matches full ground truth only on MIT Movie.
+Small extraction models such as GLiNER can be trained on labels produced by a large language model (LLM), which makes annotation cheap but noisy. We ask a simple question: when the LLM can label only a few hundred examples, should the small model choose which ones? We study one round of uncertainty-based selection with a GLiNER2.5 student and LLM teachers on four extraction tasks and six datasets: named entity recognition (CleanCoNLL, BC5CDR, MIT Movie), relation prediction (CrossRE), multi-label classification (Hallmarks of Cancer) and slot extraction to JSON (MASSIVE, English and French). Our pre-registered primary contrast is the interaction between selection and label source: whether choosing the student's least confident examples helps less when an LLM, rather than ground truth, provides the labels. The answer depends on the task. For NER, min selection loses to random under both label sources (min minus random is \res{PracticalNER} F1 points with LLM labels), mostly because it picks sentences where the student predicts nothing; ranking those last reverses the loss on CleanCoNLL. For relations, min helps with ground truth, and LLM label errors remove most of that gain. LLM errors concentrate where the student is unsure only for NER. For NER, a student trained on 400 LLM-labelled sentences comes close to its teacher (\res{DeployStudentGemmaRandom} against \res{DeployTeacher} F1) at \res{DeploySpeedup} times the speed, and on some datasets students beat their teacher. We also trace the thesis mixing curves on every dataset: the student ranks the pool once, takes its least confident sentences, and a share of them gets human labels while the rest keeps LLM labels. From 1{,}000 ranked sentences, a human share of a quarter or less beats the LLM teacher on six of seven datasets, and LLM labels alone suffice on MIT Movie and MASSIVE; Hallmarks needs three quarters. The student beats the LLM because LLM labels are free, not because they add accuracy: the same human labels alone do as well, and LLM labels on the whole rest of the pool pull the student back toward its teacher. Replicating the thesis, we also find that its three uncertainty scores (mean confidence, MSE, MNLP) select identical sentences, because every pool holds more empty-prediction sentences than the budget.
 We release the code as a command-line tool, together with all teacher labels, adapters and run logs.
 \end{abstract}
 
@@ -36,11 +36,12 @@ Information extraction models that run on a CPU in milliseconds are attractive f
 
 If an LLM labels the data, the next question is which data it should label. Active learning answers this for human annotators: pick the examples the current model is least sure about. Yet active learning often fails to beat random selection \citep{fragility2024,chemal2026,partingillusions2019}, and LLM labels change the picture. The examples a student finds hardest may also be the examples an LLM gets wrong, so uncertainty could select exactly the noisiest labels. \citet{humansloop2026} even find that labelling the whole pool with an LLM beats active learning.
 
-We test this directly. Our question is: \emph{when does student uncertainty improve one-round LLM annotation, and when does teacher error erase that benefit?} We make four contributions.
+We test this directly. Our question is: \emph{when does student uncertainty improve one-round LLM annotation, and when does teacher error erase that benefit?} We make five contributions.
 
 \begin{enumerate}
 \item A pre-registered comparison of uncertainty and random selection, crossed with ground truth and LLM labels, on four tasks and six datasets, with five seeds on primary cells, paired bootstrap intervals and Holm correction.
 \item An analysis of teacher errors by student confidence: do LLM mistakes concentrate where the student is unsure (Q2), do different LLMs fail on the same examples (Q3), and do larger teachers label better (Q4)?
+\item Mixing curves on every dataset: how many human labels, on top of LLM labels for the student's least confident sentences, it takes to beat the LLM, chosen on dev and confirmed on test (Section~\ref{sec:curves}).
 \item Cost, latency and size views of students and teachers, including a Pareto front and a quality-latency quadrant chart.
 \item An open command-line tool that runs the whole loop (score, select, label with any OpenAI-compatible endpoint, train with LoRA, report), with every paper run reproducible through it.
 \end{enumerate}
@@ -150,30 +151,6 @@ On CleanCoNLL, the no-prediction sensitivity block separates two effects. With g
 
 \paragraph{Q5 and Q6: better teachers, better students? Can the student beat its teacher?} A better teacher gives a better student where we can test it: with 400 random sentences, E4B labels train a student to \res{CleanCoNLLEfourBRandom} on CleanCoNLL and \res{HallmarksEfourBRandom} on Hallmarks, against \res{CleanCoNLLGemmaRandom} and \res{HallmarksGemmaRandom} with 12B labels (three seeds each). The student can beat its teacher. Trained on the whole Gemma-labelled pool (one seed), it exceeds Gemma's own test F1 on MIT Movie (\res{MITMovieGemmaWholePool} against \res{TeacherMITMovie}), BC5CDR (\res{BCfiveCDRGemmaWholePool} against \res{TeacherBCfiveCDR}) and MASSIVE English (\res{MassiveEnGemmaWholePool} against \res{TeacherMassiveEn}); with only 400 random sentences it already does so on MIT Movie (\res{MITMovieGemmaRandom}) and MASSIVE French (\res{MassiveFrGemmaRandom} against \res{TeacherMassiveFr}). On CrossRE it stays far below the teacher (\res{CrossREGemmaWholePool} against \res{TeacherCrossRE}), and the whole-pool CrossRE student trained on Gemma labels scores lower than the one trained on 200 random sentences.
 
-\paragraph{Mixing ground truth into LLM labels.} The thesis found on MIT Movie that a share of ground truth closes most of the gap to a fully human-labelled set. We repeat this on every dataset with min selection at the main budget: a random fraction of the selected sentences gets ground truth and the rest keeps Gemma labels (three seeds per cell; Table~\ref{tab:mixing}). MIT Movie reproduces the thesis: 50\% ground truth (\res{MITMovieMixFifty}) already matches all ground truth (\res{MITMovieGroundTruthMin}). No other dataset does. On CrossRE and MASSIVE every extra share helps by a similar step (CrossRE \res{CrossREGemmaMin}, \res{CrossREMixTwentyFive}, \res{CrossREMixFifty}, \res{CrossREMixSeventyFive}, \res{CrossREGroundTruthMin}), and on CleanCoNLL, BC5CDR and Hallmarks the first 25\% gives almost nothing. So a small human share is not a general substitute for full human labelling. A natural idea is to send the human labels to the sentences the student is least sure about. At 25\% this does not help: routed ground truth scores \res{BCfiveCDRMixTwentyFiveRouted} against \res{BCfiveCDRMixTwentyFive} for a random share on BC5CDR, \res{CleanCoNLLMixTwentyFiveRouted} against \res{CleanCoNLLMixTwentyFive} on CleanCoNLL, and \res{MITMovieMixTwentyFiveRouted} against \res{MITMovieMixTwentyFive} on MIT Movie.
-
-\begin{table}[t]
-\centering
-\footnotesize
-\setlength{\tabcolsep}{2.8pt}
-\begin{tabular}{lrrrrrr}
-\toprule
- & \multicolumn{5}{c}{Ground-truth share} & Routed \\
-Dataset & 0\% & 25\% & 50\% & 75\% & 100\% & 25\% \\
-\midrule
-CleanCoNLL & \res{CleanCoNLLGemmaMin} & \res{CleanCoNLLMixTwentyFive} & \res{CleanCoNLLMixFifty} & \res{CleanCoNLLMixSeventyFive} & \res{CleanCoNLLGroundTruthMin} & \res{CleanCoNLLMixTwentyFiveRouted} \\
-BC5CDR & \res{BCfiveCDRGemmaMin} & \res{BCfiveCDRMixTwentyFive} & \res{BCfiveCDRMixFifty} & \res{BCfiveCDRMixSeventyFive} & \res{BCfiveCDRGroundTruthMin} & \res{BCfiveCDRMixTwentyFiveRouted} \\
-MIT Movie & \res{MITMovieGemmaMin} & \res{MITMovieMixTwentyFive} & \res{MITMovieMixFifty} & \res{MITMovieMixSeventyFive} & \res{MITMovieGroundTruthMin} & \res{MITMovieMixTwentyFiveRouted} \\
-CrossRE & \res{CrossREGemmaMin} & \res{CrossREMixTwentyFive} & \res{CrossREMixFifty} & \res{CrossREMixSeventyFive} & \res{CrossREGroundTruthMin} & -- \\
-Hallmarks & \res{HallmarksGemmaMin} & \res{HallmarksMixTwentyFive} & \res{HallmarksMixFifty} & \res{HallmarksMixSeventyFive} & \res{HallmarksGroundTruthMin} & -- \\
-MASSIVE en & \res{MassiveEnGemmaMin} & \res{MassiveEnMixTwentyFive} & \res{MassiveEnMixFifty} & \res{MassiveEnMixSeventyFive} & \res{MassiveEnGroundTruthMin} & -- \\
-MASSIVE fr & \res{MassiveFrGemmaMin} & \res{MassiveFrMixTwentyFive} & \res{MassiveFrMixFifty} & \res{MassiveFrMixSeventyFive} & \res{MassiveFrGroundTruthMin} & -- \\
-\bottomrule
-\end{tabular}
-\caption{Mixing: test micro-F1 (\%) with min selection at the main budget, mean of three seeds (0\% and 100\%: five seeds; MASSIVE fr: three). The rest of each set keeps Gemma~4 12B labels. Routed: the ground-truth share goes to the least confident sentences.}
-\label{tab:mixing}
-\end{table}
-
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/deployment-ner/quadrants.pdf}
@@ -182,6 +159,43 @@ MASSIVE fr & \res{MassiveFrGemmaMin} & \res{MassiveFrMixTwentyFive} & \res{Massi
 \end{figure}
 
 \paragraph{Q7: cost and speed.} Figure~\ref{fig:quadrant} places students and teacher on one chart for NER, pooled over the three datasets. Gemma~4 12B labels at \res{DeployTeacherLatency} ms per sentence and reaches \res{DeployTeacher} F1. A student trained on 400 random Gemma-labelled sentences reaches \res{DeployStudentGemmaRandom} at \res{DeployStudentGemmaRandomLatency} ms, \res{DeploySpeedup} times faster; the estimated inference cost falls from \res{DeployTeacherCost} to \res{DeployStudentGemmaRandomCost} USD per million sentences. The same student trained on 400 ground-truth sentences reaches \res{DeployStudentTrueRandom}, and on 400 Gemma labels picked by min only \res{DeployStudentGemmaMin}; the untrained student scores \res{DeployZeroShot}. The Pareto front (Figure~\ref{fig:pareto}), learning curves (Figure~\ref{fig:learning}) and per-dataset cost curves, which add labelling and selection cost (Figure~\ref{fig:cost}), are in Appendix~\ref{sec:appendix}.
+
+\subsection{How many human labels does it take to beat the LLM?}
+\label{sec:curves}
+
+This is the question the thesis asked on MIT Movie, now on every dataset. The student ranks the pool once, least confident first, with sentences where it predicts nothing ranked last (rule 4 keeps them in the pool, and Section~\ref{sec:replication} shows that ranking them first wastes the budget on them). It takes the top $N \in \{100, 400, 1000, 2500\}$ sentences ($N \le 1000$ on CrossRE, whose pool holds 2{,}519). A random share of 0, 25, 50, 75 or 100\% of them gets human labels and the rest Gemma~4 12B labels. Three seeds per cell, the same $N$ sentences for every share. Two references bound each panel of Figure~\ref{fig:curves}: the student trained on the whole pool with Gemma labels (lower) and with human labels (upper), both with enough steps for two passes over the pool.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/mixing-curves.pdf}
+\caption{Test micro-F1 against the number of training sentences (log scale), one line per human share; the rest of each set has Gemma~4 12B labels. The rightmost point of each line is the whole pool. Red dashed line: Gemma's own test F1. Dotted lines: random selection with 0\% and 100\% human labels. Error bars: SD over three seeds.}
+\label{fig:curves}
+\end{figure*}
+
+\begin{table*}[t]
+\centering
+\small
+\InputIfFileExists{tables/curves.tex}{}{\textbf{??}}
+\caption{Test micro-F1 (\%). LLM: Gemma~4 12B on the test set. Whole pool: the student trained on every pool sentence with Gemma or human labels. Human share to beat the LLM: for $N$ ranked sentences, the smallest human share whose mean test F1 is above the LLM (descriptive; ``none'': no share does, --: not run). Fewest (dev): the cell with the fewest human labels whose seed-mean dev F1 beats Gemma's dev F1 with a paired bootstrap lower bound above zero, as human + Gemma-labelled sentences, and its test F1.}
+\label{tab:curves}
+\end{table*}
+
+\paragraph{The references.} Trained on the whole Gemma-labelled pool, the student lands near its teacher: \res{CleanCoNLLCurveZeroAtWholePool} against \res{TeacherCleanCoNLL} on CleanCoNLL and \res{BCfiveCDRCurveZeroAtWholePool} against \res{TeacherBCfiveCDR} on BC5CDR, and above it on MIT Movie (\res{MITMovieCurveZeroAtWholePool} against \res{TeacherMITMovie}) and MASSIVE French (\res{MassiveFrCurveZeroAtWholePool} against \res{TeacherMassiveFr}). Trained on the whole human-labelled pool, it reaches \res{CleanCoNLLCurveHundredAtWholePool} on CleanCoNLL and \res{MITMovieCurveHundredAtWholePool} on MIT Movie. The upper reference is not a ceiling: on Hallmarks, 2{,}500 ranked human-labelled sentences (\res{HallmarksCurveHundredAtTwentyFiveHundred}) score above the whole pool (\res{HallmarksCurveHundredAtWholePool}), whose seeds spread widely.
+
+\paragraph{A small human share beats the LLM.} Table~\ref{tab:curves} gives, for each $N$, the smallest human share that beats Gemma. The share falls as $N$ grows. On CleanCoNLL, 100 ranked sentences need half human labels (\res{CleanCoNLLCurveFiftyAtHundred} against \res{TeacherCleanCoNLL}), and 400 need a quarter (\res{CleanCoNLLCurveTwentyFiveAtFourHundred}). On MIT Movie and MASSIVE, Gemma labels alone are enough once the student sees enough ranked sentences (MIT Movie \res{MITMovieCurveZeroAtHundred} with 100). Hallmarks is the exception: no share beats Gemma below 1{,}000 sentences. The last two columns choose on dev instead of reading the test grid: the cell with the fewest human labels whose dev F1 beats Gemma's, then one test comparison per dataset, Holm-corrected over the seven. On test the chosen cell beats Gemma on MIT Movie with no human labels (\res{MITMovieFewestTestGap} points, interval \res{MITMovieFewestTestLow} to \res{MITMovieFewestTestHigh}, $p$\,\res{MITMovieFewestTestP}) and on MASSIVE English with none (\res{MassiveEnFewestTestGap}, $p$\,\res{MassiveEnFewestTestP}), on CrossRE with \res{CrossREFewestHuman} human labels (\res{CrossREFewestTestGap}, $p$\,\res{CrossREFewestTestP}), on BC5CDR with \res{BCfiveCDRFewestHuman} (\res{BCfiveCDRFewestTestGap}, $p$\,\res{BCfiveCDRFewestTestP}) and on Hallmarks with \res{HallmarksFewestHuman} (\res{HallmarksFewestTestGap}, $p$\,\res{HallmarksFewestTestP}). Two dev choices are not confirmed: CleanCoNLL with \res{CleanCoNLLFewestHuman} human labels (\res{CleanCoNLLFewestTestGap}, interval \res{CleanCoNLLFewestTestLow} to \res{CleanCoNLLFewestTestHigh}, $p$\,\res{CleanCoNLLFewestTestP}) and MASSIVE French with none (\res{MassiveFrFewestTestGap}, $p$\,\res{MassiveFrFewestTestP}). The dev rule stops at the first cell that clears the bar, which on these two is a cell just above the teacher; larger cells beat Gemma on test by more (Figure~\ref{fig:curves}).
+
+\paragraph{Does the ranking matter?} Against random selection of the same number of sentences, the ranking gains little on average and varies by dataset. With Gemma labels only, it helps most on CleanCoNLL (\res{CleanCoNLLCurveZeroAtHundred} against \res{CleanCoNLLCurveZeroAtHundredRandom} at 100 sentences); with human labels only, it helps on CrossRE (\res{CrossRECurveHundredAtHundred} against \res{CrossRECurveHundredAtHundredRandom}) and hurts on Hallmarks (\res{HallmarksCurveHundredAtHundred} against \res{HallmarksCurveHundredAtHundredRandom}).
+
+\paragraph{Is the confidence meaningful before training?} The ranking only makes sense if the untrained student's confidence says something about its errors. It does, on every dataset (Figure~\ref{fig:reliability}, Table~\ref{tab:reliability}): the share of correct predictions rises with confidence. Among zero-shot predictions with confidence of 0.9 or more, \res{MITMovieReliabilityZeroShotHigh}\% are correct on MIT Movie, \res{BCfiveCDRReliabilityZeroShotHigh}\% on BC5CDR and \res{CleanCoNLLReliabilityZeroShotHigh}\% on CleanCoNLL, against \res{CleanCoNLLReliabilityZeroShotLow}\% in the lowest well-filled bin of CleanCoNLL (from \res{CleanCoNLLReliabilityZeroShotLowFrom}). The level differs by task: \res{CrossREReliabilityZeroShotHigh}\% on CrossRE and \res{HallmarksReliabilityZeroShotHigh}\% on Hallmarks, where the untrained student is confident and often wrong. Confidence orders sentences well enough to rank them, but it is not a calibrated probability before training.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/reliability.pdf}
+\caption{Share of correct predictions against confidence, test set, ten equal-width bins with at least 20 items; extraction counts emitted spans, classification and relations count every label decision. Orange: zero-shot student (the model that ranks the pool). Blue: student trained on 400 random human-labelled sentences (CrossRE 200), seeds pooled. Dashed: perfect calibration.}
+\label{fig:reliability}
+\end{figure*}
+
+\paragraph{Gemma labels add little to the same human labels.} The mixed cells beat the LLM because Gemma labels are free, not because they add accuracy. With the same human-labelled sentences and nothing else, the student does as well or better: 100 random human-labelled CleanCoNLL sentences alone score \res{CleanCoNLLCurveHundredAtHundredRandom}. Adding Gemma labels for the whole rest of the pool to the same 100 human labels lowers this to \res{CleanCoNLLMinimumAtHundred} (Figure~\ref{fig:minimum}): thousands of teacher labels outvote a few hundred human ones. The pattern holds on all seven datasets: Gemma labels on the rest of the pool help only with very few human labels, 50 on most datasets and up to 200 on Hallmarks (with 50: \res{HallmarksMinimumAtFifty} against \res{HallmarksCurveHundredAtFiftyRandom}), and lower the score beyond that. For a practitioner, the cheapest student that beats the LLM is a few hundred human labels on top-ranked sentences, with or without the LLM.
 
 \subsection{Replicating the thesis experiments}
 \label{sec:replication}
@@ -199,7 +213,7 @@ We reran the thesis experiments on all seven dataset cells with the protocol abo
 
 The thesis ran sixteen experiments on MIT Movie: zero-shot and fully fine-tuned GLiNER, an Optuna search and a LoRA layer study, confidence brackets and a threshold sweep, four selection scores over fourteen budgets, a hard-example comparison of GLiNER and Gemma~3, students on LLM versus ground-truth labels, a mixing grid of ground truth and LLM labels, four teachers, synthetic data, a prompt validator and a cost study. It found, without stating it openly, that Gemma~3's F1 drops from 69.4 on the full test set to 56.9 on the 100 training sentences where GLiNER was least confident; this study turns that observation into question Q2.
 
-The thesis protocol had problems that this study fixes: the MIT Movie dev file was a copy of the test file, so Optuna, early stopping and threshold choice used test data; the pool filter removed sentences with no ground-truth entity; the saved adapter was the last checkpoint rather than the best; the Optuna pruner never received intermediate scores; and no result was repeated with a second seed. Rerun under the fixed protocol on all datasets (Section~\ref{sec:replication}), two thesis conclusions do not hold: its three selection scores pick the same sentences, so their ranking was noise, and its mixing result holds on MIT Movie only.
+The thesis protocol had problems that this study fixes: the MIT Movie dev file was a copy of the test file, so Optuna, early stopping and threshold choice used test data; the pool filter removed sentences with no ground-truth entity; the saved adapter was the last checkpoint rather than the best; the Optuna pruner never received intermediate scores; and no result was repeated with a second seed. Rerun under the fixed protocol on all datasets (Section~\ref{sec:replication}), one thesis conclusion does not hold: its three selection scores pick the same sentences, so their ranking was noise. Its central result, that a student trained on a mix of human and LLM labels beats the LLM with few human labels, holds on six of seven datasets (Section~\ref{sec:curves}), with the caveat that the same human labels alone do about as well.
 
 \section{Limitations}
 
@@ -239,6 +253,21 @@ The first version of the code was written by an AI coding assistant (OpenAI Code
 \caption{Test micro-F1 against the number of labelled sentences. Solid lines: ground truth; dashed lines: Gemma~4 12B labels. Grey lines: whole pool; dotted line: zero-shot student. Error bars: seed SD.}
 \label{fig:learning}
 \end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/minimum-human-labels.pdf}
+\caption{Same human labels, with and without Gemma labels on the rest of the pool. Blue: the whole pool, $H$ sentences with human labels (a nested random set) and Gemma labels on all others; $H = 0$ is drawn at the left edge. Green: the same number of random human-labelled sentences alone. Red dashed line: Gemma's test F1. Error bars: SD over three seeds.}
+\label{fig:minimum}
+\end{figure*}
+
+\begin{table}[h]
+\centering
+\small
+\InputIfFileExists{tables/reliability.tex}{}{\textbf{??}}
+\caption{Zero-shot student: share of correct predictions (\%) by confidence bin on the test set; -- marks bins with fewer than 20 items.}
+\label{tab:reliability}
+\end{table}
 
 \begin{figure*}[t]
 \centering
