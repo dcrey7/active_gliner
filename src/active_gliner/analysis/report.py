@@ -6,7 +6,22 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from . import aggregate, cost, deployment, figures, ladder, numbers, selector_audit, stats, teacher
+from active_gliner import matrix
+
+from . import (
+    aggregate,
+    cost,
+    curves,
+    deployment,
+    figures,
+    ladder,
+    minimum,
+    numbers,
+    reliability,
+    selector_audit,
+    stats,
+    teacher,
+)
 from . import tables as main_tables
 
 
@@ -140,6 +155,8 @@ def analyse(runs="runs", out="paper") -> dict:
     skipped = []
     df = aggregate.collect(runs)
     finished_runs = len(df)
+    # The mixing curves read whole-pool runs that are tagged as a training variant.
+    curve_rows = curves.curve_rows(df)
     # Training variants (LoRA layers, full fine-tune) share selector, N and seed with main
     # runs; keep them out of every main-run table and contrast.
     variants = df[df.variant.notna()] if "variant" in df else df.iloc[0:0]
@@ -184,6 +201,33 @@ def analyse(runs="runs", out="paper") -> dict:
             )
             figures.pareto_chart(group, directory)
             figures.quadrant_chart(group, directory)
+    teacher_f1 = {
+        (dataset, locale): tables["scores"][f"{dataset}/{locale}/{main_tables.MAIN_TEACHER}"]["f1"]
+        for dataset, locale in main_tables.DATASETS
+        if f"{dataset}/{locale}/{main_tables.MAIN_TEACHER}" in tables.get("scores", {})
+    }
+    pools = {key: matrix.pool_size(*key) for key in main_tables.DATASETS}
+    curves.figure(curve_rows, teacher_f1, pools, figure_dir)
+    minimum_rows = minimum.minimum_rows(variants, pools)
+    minimum_table = minimum.summary(minimum_rows)
+
+    def teacher_counts(dataset, locale, split, ids):
+        return teacher.teacher_scores(dataset, locale, main_tables.MAIN_TEACHER, split, ids)
+
+    chosen = minimum.choose(minimum_rows, teacher_counts)
+    # The paper's method: ranked sentences, a share of them with human labels.
+    fewest = minimum.choose(curves.ranked_cells(curve_rows), teacher_counts)
+    for name, found_by_key in (("Minimum human labels", chosen), ("Fewest ranked", fewest)):
+        for key, found in found_by_key.items():
+            if "missing" in found:
+                skipped.append(f"{name} {key}: {found['missing']}")
+    curve_table = curves.summary(curve_rows)
+    human_only = curve_table[(curve_table.share == 100) & (curve_table.rule == "random")]
+    minimum.figure(minimum_table, teacher_f1, chosen, figure_dir, human_only)
+    curves.latex_table(curve_table, teacher_f1, fewest, out / "tables" / "curves.tex")
+    reliability_tables = reliability.tables(df, runs)
+    reliability.figure(reliability_tables, figure_dir)
+    reliability.latex_table(reliability_tables, out / "tables" / "reliability.tex")
     result = _clean(
         dict(
             runs=df.to_dict("records"),
@@ -193,6 +237,8 @@ def analyse(runs="runs", out="paper") -> dict:
             equal_cost=equal_cost,
             deployment_points=points.to_dict("records"),
             prices=cost.prices(),
+            minimum_human_labels={f"{d}/{loc}": r for (d, loc), r in chosen.items()},
+            fewest_ranked={f"{d}/{loc}": r for (d, loc), r in fewest.items()},
             skipped=skipped,
         )
     )
@@ -219,6 +265,19 @@ def analyse(runs="runs", out="paper") -> dict:
                 macros[name + "P"] = format_p(entry["p_holm"], entry["interval"].get("n_boot"))
     macros.update(main_tables.cell_macros(df))
     macros.update(main_tables.mixing_macros(df))
+    macros.update(curves.macros(curves.summary(curve_rows)))
+    macros.update(reliability.macros(reliability_tables))
+    macros.update(minimum.macros(minimum_table, chosen))
+    macros.update(curves.random_macros(curve_table))
+    macros.update(curves.fewest_macros(fewest))
+    for key, found in fewest.items():
+        if "test" in found and key in main_tables.DATASETS:
+            name = main_tables.DATASETS[key][1] + "FewestTestP"
+            macros[name] = format_p(found["test"]["p_holm"], 1000)
+    for key, found in chosen.items():
+        if "test" in found and key in main_tables.DATASETS:
+            name = main_tables.DATASETS[key][1] + "MinimumTestP"
+            macros[name] = format_p(found["test"]["p_holm"], 1000)
     selector_means = main_tables.selector_macros(df)
     macros.update(selector_means)
     macros.update(selector_audit.thesis_selector_macros(df, selector_means))

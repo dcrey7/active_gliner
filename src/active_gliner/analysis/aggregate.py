@@ -93,19 +93,19 @@ def item_counts(gold: set, predicted: set) -> tuple[int, int, int]:
     return len(gold & predicted), len(predicted - gold), len(gold - predicted)
 
 
-def test_ids(run_dir) -> list[str]:
-    path = Path(run_dir) / "predictions/test.jsonl"
+def test_ids(run_dir, split="test") -> list[str]:
+    path = Path(run_dir) / f"predictions/{split}.jsonl"
     ids = [json.loads(line)["id"] for line in path.read_text().splitlines() if line.strip()]
     if len(set(ids)) != len(ids):
-        raise ValueError(f"Duplicate test predictions: {path}")
+        raise ValueError(f"Duplicate {split} predictions: {path}")
     return sorted(ids)
 
 
-def sentence_counts(run_dir) -> np.ndarray:
+def sentence_counts(run_dir, split="test") -> np.ndarray:
     """Return counts in sorted sentence-id order, shared by all paired arms."""
     directory = Path(run_dir)
-    cache = directory / "test_counts.npy"
-    inputs = [directory / "config.yaml", directory / "predictions/test.jsonl"]
+    cache = directory / f"{split}_counts.npy"
+    inputs = [directory / "config.yaml", directory / f"predictions/{split}.jsonl"]
     inputs += [
         directory / name for name in ("hashes.json", "pins.json") if (directory / name).exists()
     ]
@@ -113,7 +113,7 @@ def sentence_counts(run_dir) -> np.ndarray:
         from .stats import _counts
 
         counts = _counts(np.load(cache, allow_pickle=False))
-        if len(counts) != len(test_ids(directory)):
+        if len(counts) != len(test_ids(directory, split)):
             raise ValueError(f"Cached counts do not match prediction IDs: {directory}")
         return counts
 
@@ -121,16 +121,16 @@ def sentence_counts(run_dir) -> np.ndarray:
 
     cfg = yaml.safe_load((directory / "config.yaml").read_text())
     splits = data.load(cfg["dataset"], cfg.get("locale", "en-US"))
-    records = splits["test"][: cfg.get("test_limit")]
+    records = splits[split][: cfg.get(f"{split}_limit")]
     expected = {record.id: record for record in records}
     predictions = [
         json.loads(line)
-        for line in (directory / "predictions/test.jsonl").read_text().splitlines()
+        for line in (directory / f"predictions/{split}.jsonl").read_text().splitlines()
         if line.strip()
     ]
     actual = {p["id"]: p for p in predictions}
     if len(actual) != len(predictions) or set(actual) != set(expected):
-        raise ValueError(f"Test prediction IDs do not match the test split: {directory}")
+        raise ValueError(f"{split} prediction IDs do not match the {split} split: {directory}")
     hashes = directory / "hashes.json"
     if hashes.exists() and "split" in read_json(hashes):
         limited = {key: values[: cfg.get(f"{key}_limit")] for key, values in splits.items()}
@@ -144,5 +144,5 @@ def sentence_counts(run_dir) -> np.ndarray:
         ],
         dtype=np.int64,
     ).reshape(-1, 3)
-    np.save(directory / "test_counts.npy", counts)
+    np.save(cache, counts)
     return counts

@@ -99,6 +99,11 @@ def mixing_macros(df) -> dict:
     if "gt_fraction" not in df:
         return {}
     rows = df[df.gt_fraction.notna()]
+    # Main budget and the default no-prediction rule only: the mixing curves add runs at
+    # other budgets and with empty sentences last, which the curve figure reports.
+    rows = rows[rows.n == rows.dataset.map(MAIN_BUDGET).fillna(DEFAULT_BUDGET)]
+    if "no_prediction" in rows:
+        rows = rows[rows.no_prediction.fillna("zero") == "zero"]
     macros = {}
     keys = ["dataset", "locale", "selector", "gt_fraction", "gt_assignment"]
     for (dataset, locale, selector, fraction, assignment), group in rows.groupby(keys):

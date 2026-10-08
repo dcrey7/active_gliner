@@ -64,6 +64,7 @@ def main(argv: list[str] | None = None) -> int:
         if name == "run":
             sub.add_argument("--dataset", action="append")
             sub.add_argument("--labels", action="append")
+            sub.add_argument("--locale", action="append")
             sub.add_argument("--limit", type=int)
             sub.add_argument("--allow-default-recipe", action="store_true")
             sub.add_argument("--rerun-stale", action="store_true")
@@ -198,6 +199,7 @@ def main(argv: list[str] | None = None) -> int:
             blocks=args.block,
             datasets=getattr(args, "dataset", None),
             labels_sources=getattr(args, "labels", None),
+            locales=getattr(args, "locale", None),
         )
         if args.matrix_command == "list":
             counts = Counter(r.block for r in runs)

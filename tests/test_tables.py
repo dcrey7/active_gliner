@@ -85,6 +85,28 @@ def test_mixing_macros_split_by_fraction_and_assignment():
     }
 
 
+def test_mixing_macros_ignore_curve_runs():
+    # The mixing curves add runs at other budgets and with empty sentences last; the
+    # paper's main-budget mixing numbers must not average them in.
+    df = pd.DataFrame(
+        [
+            _row("gemma-4-12b", "min", 400, 1, 70.0, gt_fraction=0.25, gt_assignment="random"),
+            _row("gemma-4-12b", "min", 1000, 1, 90.0, gt_fraction=0.25, gt_assignment="random"),
+            _row(
+                "gemma-4-12b",
+                "min",
+                400,
+                1,
+                95.0,
+                gt_fraction=0.25,
+                gt_assignment="random",
+                no_prediction="last",
+            ),
+        ]
+    )
+    assert tables.mixing_macros(df) == {"CleanCoNLLMixTwentyFive": 70.0}
+
+
 def test_threshold_spread_macros():
     df = pd.DataFrame(
         [

@@ -26,7 +26,7 @@ class RunConfig(BaseModel):
     dataset: str
     block: str = "adhoc"
     gt_fraction: float | None = Field(default=None, ge=0, le=1)
-    gt_assignment: Literal["routed", "random"] | None = None
+    gt_assignment: Literal["routed", "random", "nested"] | None = None
     no_prediction: Literal["zero", "last"] = "zero"
     recipe_file: str | None = None
     recipe_hash: str | None = None
@@ -115,11 +115,24 @@ def _hash(value) -> str:
     ).hexdigest()
 
 
+def warm_start_dir(cfg: RunConfig) -> Path:
+    """A two-step run starts from the teacher-only whole-pool run of the same seed."""
+    first = cfg.model_copy(update={"gt_fraction": None, "gt_assignment": None, "variant": "long"})
+    return experiment_dir(first)
+
+
 def run_experiment(cfg: RunConfig) -> Path:
     import yaml
 
     if cfg.acq_threshold != 0.5:
         raise ValueError("The research acquisition threshold is frozen at 0.5")
+    # Two-step: step 1 is the finished teacher-only run; step 2 trains on the human set.
+    two_step = cfg.variant == "two-step"
+    if two_step:
+        if cfg.selector != "all" or cfg.gt_assignment != "nested":
+            raise ValueError("A two-step run needs the whole pool and a nested human set")
+        if not (warm_start_dir(cfg) / "metrics.json").exists():
+            raise FileNotFoundError(f"Step 1 is not finished: {warm_start_dir(cfg)}")
     started = time.monotonic()
     teacher = None
     if cfg.labels_source != "ground_truth":
@@ -217,7 +230,24 @@ def run_experiment(cfg: RunConfig) -> Path:
         write_json(run_dir / "gold_ids.json", sorted(gold))
     pool = {record.id: record for record in splits["pool"]}
     selected = [pool[item_id] for item_id in selected_ids]
-    if teacher:
+    if two_step:
+        # Step 1 already learned the teacher labels; step 2 sees human labels only.
+        selected = [record for record in selected if record.id in gold]
+        first = warm_start_dir(cfg) / "adapter/best"
+        run_pins = json.loads((run_dir / "pins.json").read_text())
+        run_pins["warm_start"] = {
+            "run": str(warm_start_dir(cfg)),
+            "adapter_hash": _hash(
+                {p.name: protocol.file_hash(p) for p in sorted(first.iterdir()) if p.is_file()}
+            ),
+        }
+        write_json(run_dir / "pins.json", run_pins)
+        del student
+        gc.collect()
+        torch.cuda.empty_cache()
+        # Merge step 1 into the weights; step 2 then trains a fresh LoRA, as every run does.
+        student = model.load_adapter(model.load_student(device="cuda"), first).merge_and_unload()
+    elif teacher:
         labelled = label_records(
             [record for record in selected if record.id not in gold],
             task_name,
