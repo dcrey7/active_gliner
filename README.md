@@ -147,8 +147,26 @@ Rules for contributors and coding agents are in `AGENTS.md`.
 
 This project grew out of the author's master thesis on MIT Movie. The thesis code, results and data are at the git tag [`thesis-v1`](https://github.com/dcrey7/active_gliner/tree/thesis-v1); they are no longer in the main tree. The full report is [here](https://drive.google.com/file/d/1eo1z6MbX-gSsD8jMPwdCOveldRVPxqrF/view?usp=drive_link). What the thesis did, and what the new study fixes, is listed in `docs/wiki/thesis-inventory.md`.
 
+## Citation
+
+If you use Active GLiNER, its code, its results or its ideas, in a paper, a product or a service, cite it:
+
+```bibtex
+@software{thomas2026activegliner,
+  author  = {Thomas, Abhishek},
+  title   = {Active {GLiNER}: Which Examples Should {LLM}s Label?},
+  year    = {2026},
+  url     = {https://github.com/dcrey7/active_gliner},
+  license = {Apache-2.0}
+}
+```
+
+GitHub shows the same entry under "Cite this repository" (from `CITATION.cff`).
+
 ## License
 
 The code in this repository is licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE).
+
+Under section 4 of the licence, anyone who redistributes this code or a work derived from it must keep the copyright notice and include the attribution in the [NOTICE](NOTICE) file.
 
 Datasets, model weights (GLiNER, GLiNER2, and others), and LLM outputs are not covered by this licence. Each keeps the licence and terms of its owner. Check them before you reuse or redistribute data or labels.

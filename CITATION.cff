@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Active GLiNER, its code, results or ideas, cite it as below."
+title: "Active GLiNER: Which Examples Should LLMs Label?"
+type: software
+authors:
+  - family-names: Thomas
+    given-names: Abhishek
+    email: abhi@recolli.com
+    affiliation: "Independent researcher, Paris, France"
+repository-code: "https://github.com/dcrey7/active_gliner"
+license: Apache-2.0
+version: 0.2.0.dev0
+date-released: 2026-10-08
+keywords:
+  - GLiNER
+  - active learning
+  - LLM annotation
+  - knowledge distillation
+  - information extraction
