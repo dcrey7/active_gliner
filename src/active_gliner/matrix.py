@@ -145,6 +145,7 @@ def build() -> list[RunConfig]:
             gt_assignment="random",
         )
     add("french", ["massive"], budgets=(400,), locale="fr-FR")
+    add_teacher_family(add)
     add_thesis_replication(add)
     taken = {run_name(cfg) for cfg in runs}
 
@@ -158,6 +159,24 @@ def build() -> list[RunConfig]:
 
     add_mixing_curves(add_new)
     return runs
+
+
+def add_teacher_family(add) -> None:
+    """A teacher from a second model family (OpenAI GPT-6 Luna) on the main-table cells.
+
+    Replaces the Cerebras API teachers, which never ran. Same selectors, budget and seeds
+    as the Gemma cells, so the primary interaction can be read for a second teacher.
+    """
+    english = ["cleanconll", "bc5cdr", "mit_movie", "crossre", "hallmarks", "massive"]
+    places = [(dataset, "en-US") for dataset in english] + [("massive", "fr-FR")]
+    for dataset, locale in places:
+        add(
+            "teacher_family",
+            [dataset],
+            sources=("gpt-6-luna",),
+            budgets=(MAIN_BUDGET.get(dataset, 400),),
+            locale=locale,
+        )
 
 
 def add_thesis_replication(add) -> None:

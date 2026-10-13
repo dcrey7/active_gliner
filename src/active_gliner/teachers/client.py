@@ -166,7 +166,7 @@ def label_records(
                 "model": cfg.model,
                 "messages": messages,
                 "temperature": cfg.temperature,
-                "max_tokens": cfg.max_tokens,
+                cfg.max_tokens_field: cfg.max_tokens,
             }
             if cfg.send_template_kwargs:
                 body["chat_template_kwargs"] = {"enable_thinking": cfg.thinking}

@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Literal
 
 import yaml
 from pydantic import BaseModel, Field
@@ -13,6 +14,8 @@ class TeacherConfig(BaseModel):
     api_key_env: str | None = None
     temperature: float = 0.0
     max_tokens: int = Field(default=512, gt=0)
+    # Newer OpenAI models reject max_tokens and take max_completion_tokens instead.
+    max_tokens_field: Literal["max_tokens", "max_completion_tokens"] = "max_tokens"
     workers: int = Field(default=8, gt=0)
     gpu_shared: bool = False
     thinking: bool = False

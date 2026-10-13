@@ -18,6 +18,7 @@ from . import (
     minimum,
     numbers,
     reliability,
+    second_teacher,
     selector_audit,
     stats,
     teacher,
@@ -228,6 +229,8 @@ def analyse(runs="runs", out="paper") -> dict:
     reliability_tables = reliability.tables(df, runs)
     reliability.figure(reliability_tables, figure_dir)
     reliability.latex_table(reliability_tables, out / "tables" / "reliability.tex")
+    second_table = second_teacher.cells(df)
+    second_teacher.latex_table(second_table, tables, out / "tables" / "second_teacher.tex")
     result = _clean(
         dict(
             runs=df.to_dict("records"),
@@ -239,6 +242,7 @@ def analyse(runs="runs", out="paper") -> dict:
             prices=cost.prices(),
             minimum_human_labels={f"{d}/{loc}": r for (d, loc), r in chosen.items()},
             fewest_ranked={f"{d}/{loc}": r for (d, loc), r in fewest.items()},
+            second_teacher=second_table.to_dict("records"),
             skipped=skipped,
         )
     )
@@ -286,6 +290,7 @@ def analyse(runs="runs", out="paper") -> dict:
     macros.update(main_tables.teacher_macros(tables.get("scores", {}), tables.get("bins", {})))
     macros.update(main_tables.ladder_macros(tables["ladder"]))
     macros.update(deployment.macros(points))
+    macros.update(second_teacher.macros(second_table, tables))
     numbers.write_macros(out / "numbers.tex", macros)
     main_tables.write_main_table(df, out / "tables" / "main_results.tex")
     return result

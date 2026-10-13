@@ -24,7 +24,7 @@ CURVE_BLOCKS = {"mixing_curve": 570, "minimum_human_labels": 147, "two_step": 14
 
 def test_matrix_has_unique_runs():
     runs = matrix.build()
-    assert len(runs) == 309 + sum(THESIS_BLOCKS.values()) + sum(CURVE_BLOCKS.values())
+    assert len(runs) == 309 + 42 + sum(THESIS_BLOCKS.values()) + sum(CURVE_BLOCKS.values())
     names = [matrix.run_name(r) for r in runs]
     assert len(set(names)) == len(runs)  # no replication run reuses a main folder
 
@@ -53,6 +53,7 @@ def test_matrix_blocks_match_the_design():
         "teacher_ladder_b": 15,
         "mixing": 6,
         "french": 12,
+        "teacher_family": 42,
     }
 
 
