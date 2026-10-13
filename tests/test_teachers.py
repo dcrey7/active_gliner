@@ -291,6 +291,23 @@ def test_request_body_is_deterministic_and_disables_thinking(tmp_path):
     assert body["response_format"]["type"] == "json_schema"
 
 
+def test_openai_teacher_sends_max_completion_tokens_and_no_reasoning(tmp_path):
+    from active_gliner.teachers.config import REPO_ROOT
+
+    cfg = TeacherConfig.from_yaml(REPO_ROOT / "configs/teachers/gpt-6-luna.yaml")
+    cfg = cfg.model_copy(update={"base_url": "http://fake/v1", "api_key_env": None})
+    calls = []
+    label_records(
+        [_rec("John runs .")], "ner", NER_LABELS, cfg, cache_dir=tmp_path, transport=_fake(calls)
+    )
+    body = calls[0]
+    assert body["max_completion_tokens"] == cfg.max_tokens
+    assert "max_tokens" not in body
+    assert body["reasoning_effort"] == "none"
+    assert body["temperature"] == 0
+    assert "chat_template_kwargs" not in body
+
+
 def test_retries_on_server_error(tmp_path):
     calls = []
     out = label_records(

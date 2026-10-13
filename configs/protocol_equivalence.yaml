@@ -39,3 +39,13 @@
     field was added, so earlier run configs dump the same. tests/test_matrix.py checks
     the new block. A digit-exact rerun of one finished run follows when a GPU lane is
     free and is recorded here.
+
+- code: d7ccf05973bf9225f389564333edb8bc3751010570f0c6ae44b73fb7b47528c8
+  replaced_by: teacher config field max_tokens_field (OpenAI models take max_completion_tokens)
+  checked: true
+  date: 2026-10-13
+  check: >
+    The client sends the token limit under cfg.max_tokens_field, whose default
+    "max_tokens" gives the same request body as before for every existing teacher;
+    only configs/teachers/gpt-6-luna.yaml sets max_completion_tokens.
+    tests/test_teachers.py checks both bodies. Student training code is unchanged.
