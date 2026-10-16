@@ -87,6 +87,23 @@ def test_curve_macros_name_share_and_budget():
     }
 
 
+def test_second_teacher_curve_shares_human_cells_and_tags_macros():
+    df = pd.DataFrame(
+        [
+            _row("ground_truth", "min", 1000, 86.0, no_prediction="last"),
+            _row("gpt-6-luna", "min", 1000, 80.0, no_prediction="last"),
+            _row("gemma-4-12b", "min", 1000, 77.0, no_prediction="last"),
+        ]
+    )
+    rows = curves.curve_rows(df, teacher="gpt-6-luna")
+    assert sorted(rows.labels) == ["gpt-6-luna", "ground_truth"]
+    macros = curves.macros(curves.summary(rows), tag="Luna")
+    assert macros == {
+        "CleanCoNLLLunaCurveHundredAtThousand": 86.0,
+        "CleanCoNLLLunaCurveZeroAtThousand": 80.0,
+    }
+
+
 def test_figure_writes_a_panel_per_dataset(tmp_path):
     df = pd.DataFrame(
         [
@@ -164,3 +181,33 @@ def test_latex_table_shows_references_shares_and_dev_choice(tmp_path):
         "CleanCoNLL & 76.0 & 74.0 & 90.0 & 100\\% & 25\\% & -- & -- & 100+300 & 78.0 \\\\"
     )
     assert curves.fewest_macros(chosen)["CleanCoNLLFewestTeacher"] == 300
+
+
+def test_summary_counts_quarter_shares_and_confirmed_choices():
+    rows = pd.DataFrame(
+        [
+            _row(
+                "gemma-4-12b",
+                "min",
+                1000,
+                80.0,
+                gt_fraction=0.25,
+                gt_assignment="random",
+                no_prediction="last",
+            ),
+            _row("gemma-4-12b", "min", 1000, 70.0, no_prediction="last"),
+        ]
+    )
+    table = curves.summary(curves.curve_rows(rows))
+    chosen = {
+        ("cleanconll", "en-US"): {"test": {"p_holm": 0.01}},
+        ("bc5cdr", "en-US"): {"test": {"p_holm": 0.2}},
+        ("crossre", "en-US"): {"human": None},
+    }
+    counts = curves.summary_counts(table, {("cleanconll", "en-US"): 76.0}, chosen, tag="Luna")
+    assert counts == {
+        "LunaQuarterAtThousandCount": 1,
+        "LunaQuarterAtThousandPlaces": 1,
+        "LunaFewestConfirmedCount": 1,
+        "LunaFewestPlaces": 3,
+    }

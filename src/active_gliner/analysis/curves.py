@@ -18,13 +18,13 @@ BUDGETS = {100: "Hundred", 400: "FourHundred", 1000: "Thousand", 2500: "TwentyFi
 WHOLE = "WholePool"
 
 
-def curve_rows(df: pd.DataFrame) -> pd.DataFrame:
+def curve_rows(df: pd.DataFrame, teacher: str = MAIN_TEACHER) -> pd.DataFrame:
     """Curve cells from every block: ranked (min, empty last) and random, plus whole pool.
 
     Columns added: rule ("ranked" or "random"), share (% human labels), budget (N, or
-    "all" for the whole pool).
+    "all" for the whole pool). The human-only cells are shared by every teacher.
     """
-    rows = df[df.labels.isin(["ground_truth", MAIN_TEACHER])].copy()
+    rows = df[df.labels.isin(["ground_truth", teacher])].copy()
     for column, default in (
         ("gt_fraction", None),
         ("gt_assignment", None),
@@ -58,15 +58,15 @@ def summary(rows: pd.DataFrame) -> pd.DataFrame:
     return grouped.agg(mean="mean", sd="std", seeds="count").reset_index()
 
 
-def macros(table: pd.DataFrame) -> dict:
-    """Ranked cells as macros: dataset + Curve + share + At + budget (mean test F1)."""
+def macros(table: pd.DataFrame, tag: str = "") -> dict:
+    """Ranked cells as macros: dataset + tag + Curve + share + At + budget (mean test F1)."""
     out = {}
     for row in table[table.rule == "ranked"].to_dict("records"):
         key = (row["dataset"], row["locale"])
         budget = WHOLE if row["budget"] == "all" else BUDGETS.get(row["budget"])
         if key not in DATASETS or budget is None or row["share"] not in SHARES:
             continue
-        name = DATASETS[key][1] + "Curve" + SHARES[row["share"]] + "At" + budget
+        name = DATASETS[key][1] + tag + "Curve" + SHARES[row["share"]] + "At" + budget
         out[name] = row["mean"]
     return out
 
@@ -75,7 +75,9 @@ def _x(budget, pool: int) -> float:
     return pool if budget == "all" else float(budget)
 
 
-def figure(rows: pd.DataFrame, teacher_f1: dict, pools: dict, out) -> Path | None:
+def figure(
+    rows: pd.DataFrame, teacher_f1: dict, pools: dict, out, name: str = "mixing-curves"
+) -> Path | None:
     """One panel per dataset; x is labelled sentences on a log scale (whole pool last)."""
     table = summary(rows)
     places = [key for key in DATASETS if key in set(zip(table.dataset, table.locale, strict=True))]
@@ -134,7 +136,7 @@ def figure(rows: pd.DataFrame, teacher_f1: dict, pools: dict, out) -> Path | Non
         ax.axis("off")
     handles, labels = axes.flat[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="lower right", fontsize="x-small", ncol=1)
-    return _save(fig, "mixing-curves", out)
+    return _save(fig, name, out)
 
 
 def ranked_cells(rows: pd.DataFrame) -> pd.DataFrame:
@@ -162,6 +164,25 @@ def smallest_share(table: pd.DataFrame, teacher_f1: dict) -> dict:
     return out
 
 
+def summary_counts(table: pd.DataFrame, teacher_f1: dict, chosen: dict, tag: str = "") -> dict:
+    """Counts the text quotes: places where a quarter or less beats the teacher at
+    1,000 sentences, and dev-chosen cells confirmed on test (Holm p below 0.05)."""
+    shares = smallest_share(table, teacher_f1)
+    quarter = sum(
+        1
+        for (d, loc, n), share in shares.items()
+        if n == 1000 and share is not None and share <= 25
+    )
+    places = sum(1 for (d, loc, n) in shares if n == 1000)
+    confirmed = sum(1 for r in chosen.values() if "test" in r and r["test"]["p_holm"] < 0.05)
+    return {
+        tag + "QuarterAtThousandCount": quarter,
+        tag + "QuarterAtThousandPlaces": places,
+        tag + "FewestConfirmedCount": confirmed,
+        tag + "FewestPlaces": len(chosen),
+    }
+
+
 def random_macros(table: pd.DataFrame) -> dict:
     """Random selection with teacher labels only (0%) or human labels only (100%)."""
     # Random runs also exist at 50 and 200 sentences (thesis budgets).
@@ -177,13 +198,13 @@ def random_macros(table: pd.DataFrame) -> dict:
     return out
 
 
-def fewest_macros(chosen: dict) -> dict:
+def fewest_macros(chosen: dict, tag: str = "") -> dict:
     """The dev-chosen fewest human labels in the ranked grid, confirmed once on test."""
     out = {}
     for key, result in chosen.items():
         if key not in DATASETS or "test" not in result:
             continue
-        name = DATASETS[key][1] + "Fewest"
+        name = DATASETS[key][1] + tag + "Fewest"
         out[name + "Human"] = result["human"]
         out[name + "Teacher"] = result["total"] - result["human"]
         out[name + "Share"] = 100 * result["share"]

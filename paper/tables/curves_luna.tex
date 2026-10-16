@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{Whole pool} & \multicolumn{4}{c}{Human share to beat the LLM} & \multicolumn{2}{c}{Fewest (dev)} \\
+Dataset & LLM & LLM & Human & 100 & 400 & 1{,}000 & 2{,}500 & Human+LLM & F1 \\
+\midrule
+CleanCoNLL & 79.4 & 76.0 & 90.0 & 75\% & 25\% & 25\% & 25\% & 100+0 & 81.3 \\
+BC5CDR & 79.0 & 79.9 & 87.4 & 75\% & 50\% & 25\% & 25\% & 200+200 & 79.9 \\
+MIT Movie & 68.8 & 71.8 & 88.6 & 25\% & 0\% & 0\% & 0\% & 0+400 & 72.5 \\
+CrossRE & 33.3 & 29.0 & 43.3 & 100\% & 50\% & 25\% & -- & 1000+0 & 42.7 \\
+Hallmarks & 42.0 & 42.9 & 45.3 & none & none & 50\% & 25\% & 750+250 & 45.0 \\
+MASSIVE en & 55.9 & 53.6 & 75.9 & 50\% & 25\% & 25\% & 50\% & 50+50 & 57.9 \\
+MASSIVE fr & 48.7 & 48.0 & 70.8 & 75\% & 25\% & 25\% & 25\% & 75+25 & 51.2 \\
+\bottomrule
+\end{tabular}
