@@ -158,7 +158,42 @@ def build() -> list[RunConfig]:
         taken.update(run_name(cfg) for cfg in fresh)
 
     add_mixing_curves(add_new)
+    add_teacher_family_curves(add_new)
     return runs
+
+
+def add_teacher_family_curves(add) -> None:
+    """The ranked mixing curves again with GPT-6 Luna as the teacher.
+
+    Checks that a small human share also beats a teacher from a second model family.
+    Only the cells with teacher labels run: the 100% human cells and the random-selection
+    lines do not depend on the teacher and are shared with the Gemma curves.
+    """
+    english = ["cleanconll", "bc5cdr", "mit_movie", "crossre", "hallmarks", "massive"]
+    places = [(dataset, "en-US") for dataset in english] + [("massive", "fr-FR")]
+    teacher = "gpt-6-luna"
+    for dataset, locale in places:
+        pool = pool_size(dataset, locale)
+        budgets = tuple(n for n in CURVE_BUDGETS if n < 0.9 * pool)
+        ranked = dict(selectors=("min",), no_prediction="last", budgets=budgets, locale=locale)
+        whole = dict(
+            selectors=("all",),
+            budgets=(1,),
+            locale=locale,
+            variant="long",
+            max_steps=long_steps(dataset, locale),
+        )
+        for cells in (ranked, whole):
+            add("teacher_family_curve", [dataset], sources=(teacher,), **cells)
+            for share in CURVE_SHARES:
+                add(
+                    "teacher_family_curve",
+                    [dataset],
+                    sources=(teacher,),
+                    gt_fraction=share,
+                    gt_assignment="random",
+                    **cells,
+                )
 
 
 def add_teacher_family(add) -> None:

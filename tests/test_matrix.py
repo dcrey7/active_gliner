@@ -19,7 +19,12 @@ THESIS_BLOCKS = {
 }
 # Thesis Fig 4.6.1 on every dataset and the minimum-human-labels curve
 # (docs/research/2026-10-02-1207-*); cells other blocks run are reused.
-CURVE_BLOCKS = {"mixing_curve": 570, "minimum_human_labels": 147, "two_step": 147}
+CURVE_BLOCKS = {
+    "mixing_curve": 570,
+    "minimum_human_labels": 147,
+    "two_step": 147,
+    "teacher_family_curve": 408,
+}
 
 
 def test_matrix_has_unique_runs():

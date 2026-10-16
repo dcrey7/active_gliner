@@ -158,6 +158,7 @@ def analyse(runs="runs", out="paper") -> dict:
     finished_runs = len(df)
     # The mixing curves read whole-pool runs that are tagged as a training variant.
     curve_rows = curves.curve_rows(df)
+    luna_curve_rows = curves.curve_rows(df, second_teacher.SECOND_TEACHER)
     # Training variants (LoRA layers, full fine-tune) share selector, N and seed with main
     # runs; keep them out of every main-run table and contrast.
     variants = df[df.variant.notna()] if "variant" in df else df.iloc[0:0]
@@ -226,6 +227,24 @@ def analyse(runs="runs", out="paper") -> dict:
     human_only = curve_table[(curve_table.share == 100) & (curve_table.rule == "random")]
     minimum.figure(minimum_table, teacher_f1, chosen, figure_dir, human_only)
     curves.latex_table(curve_table, teacher_f1, fewest, out / "tables" / "curves.tex")
+    # The same curves with the second teacher family (GPT-6 Luna).
+    luna_f1 = {
+        key: f1
+        for key in main_tables.DATASETS
+        if (f1 := second_teacher.teacher_f1(tables, *key, second_teacher.SECOND_TEACHER))
+        is not None
+    }
+
+    def luna_counts(dataset, locale, split, ids):
+        return teacher.teacher_scores(dataset, locale, second_teacher.SECOND_TEACHER, split, ids)
+
+    luna_fewest = minimum.choose(curves.ranked_cells(luna_curve_rows), luna_counts)
+    for key, found in luna_fewest.items():
+        if "missing" in found:
+            skipped.append(f"Fewest ranked, Luna {key}: {found['missing']}")
+    luna_curve_table = curves.summary(luna_curve_rows)
+    curves.figure(luna_curve_rows, luna_f1, pools, figure_dir, name="mixing-curves-luna")
+    curves.latex_table(luna_curve_table, luna_f1, luna_fewest, out / "tables" / "curves_luna.tex")
     reliability_tables = reliability.tables(df, runs)
     reliability.figure(reliability_tables, figure_dir)
     reliability.latex_table(reliability_tables, out / "tables" / "reliability.tex")
@@ -242,6 +261,7 @@ def analyse(runs="runs", out="paper") -> dict:
             prices=cost.prices(),
             minimum_human_labels={f"{d}/{loc}": r for (d, loc), r in chosen.items()},
             fewest_ranked={f"{d}/{loc}": r for (d, loc), r in fewest.items()},
+            fewest_ranked_luna={f"{d}/{loc}": r for (d, loc), r in luna_fewest.items()},
             second_teacher=second_table.to_dict("records"),
             skipped=skipped,
         )
@@ -274,6 +294,14 @@ def analyse(runs="runs", out="paper") -> dict:
     macros.update(minimum.macros(minimum_table, chosen))
     macros.update(curves.random_macros(curve_table))
     macros.update(curves.fewest_macros(fewest))
+    macros.update(curves.macros(luna_curve_table, tag="Luna"))
+    macros.update(curves.fewest_macros(luna_fewest, tag="Luna"))
+    macros.update(curves.summary_counts(curve_table, teacher_f1, fewest, tag="Gemma"))
+    macros.update(curves.summary_counts(luna_curve_table, luna_f1, luna_fewest, tag="Luna"))
+    for key, found in luna_fewest.items():
+        if "test" in found and key in main_tables.DATASETS:
+            name = main_tables.DATASETS[key][1] + "LunaFewestTestP"
+            macros[name] = format_p(found["test"]["p_holm"], 1000)
     for key, found in fewest.items():
         if "test" in found and key in main_tables.DATASETS:
             name = main_tables.DATASETS[key][1] + "FewestTestP"
