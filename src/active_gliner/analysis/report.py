@@ -185,9 +185,6 @@ def analyse(runs="runs", out="paper") -> dict:
         figures.cost_curves(df, dataset, figure_dir)
     figures.interaction_forest(primary, figure_dir)
     figures.teacher_bins_chart(bins, figure_dir)
-    # Different tasks and locales have different calibration populations.
-    for (dataset, locale), group in df.groupby(["dataset", "locale"]):
-        figures.calibration_chart(group.run_dir, figure_dir / f"{dataset}-{locale}")
     points = _deployment_points(df, skipped)
     if points.empty:
         # Per-run inference costs are not logged; build pooled NER points from timings.
