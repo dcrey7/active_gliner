@@ -270,24 +270,3 @@ def teacher_bins_chart(tables, out="paper/figures") -> Path | None:
     # Outside the axes, so no line is hidden.
     ax.legend(fontsize="small", loc="upper left", bbox_to_anchor=(1.02, 1))
     return _save(fig, "teacher-bins", out)
-
-
-def calibration_chart(run_dirs, out="paper/figures") -> Path | None:
-    available = [Path(path) for path in run_dirs if (Path(path) / "calibration.csv").exists()]
-    if not available:
-        return None
-    fig, ax = plt.subplots()
-    for directory in available:
-        rows = pd.read_csv(directory / "calibration.csv")
-        rows = rows[rows["count"] > 0]
-        ax.plot(rows.mean_confidence, rows.correctness, marker="o", label=str(directory))
-    ax.plot([0, 1], [0, 1], linestyle="--", color="gray")
-    ax.set(
-        xlabel="Mean confidence",
-        ylabel="Empirical correctness",
-        xlim=(0, 1),
-        ylim=(0, 1),
-        title="Descriptive calibration; extraction bins contain emitted items only",
-    )
-    ax.legend(fontsize="xx-small")
-    return _save(fig, "calibration", out)
