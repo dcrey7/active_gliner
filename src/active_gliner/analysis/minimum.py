@@ -178,7 +178,7 @@ def figure(
         return None
     columns = 4 if len(places) > 3 else len(places)
     lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(3.4 * columns, 2.9 * lines), squeeze=False)
+    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
     for ax, key in zip(axes.flat, places, strict=False):
         local = table[(table.dataset == key[0]) & (table.locale == key[1])].sort_values("human")
         # H = 0 cannot sit on a log axis; draw it at 10 and label it.
@@ -225,5 +225,5 @@ def figure(
     for ax in list(axes.flat)[len(places) :]:
         ax.axis("off")
     handles, labels = axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower right", fontsize="x-small")
+    fig.legend(handles, labels, loc="lower right", fontsize="small")
     return _save(fig, "minimum-human-labels", out)

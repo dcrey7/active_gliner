@@ -57,6 +57,26 @@ status: done
 + Macro diff - only 14 new macros, no old value changed. Paper 19 pages, 0 "??".
   `just check`: 332 passed, 1 skipped.
 
+## 3c. Story and plain-language pass (Claude only, no Codex)
+
++ Abstract 534 -> 278 words; the introduction says why LLM labels are used (humans slow
+  and costly, an LLM on every input slow, costly, sends data away; student 165x faster).
++ The introduction asks three plain questions and answers each in one sentence; new
+  overview diagram (Figure 1); four contributions instead of six.
++ "Words we use" paragraph in Setup (student, teacher, pool, dev, test, ground truth,
+  zero-shot, cell, seed, micro-F1, LoRA); jargon replaced (QAT/GGUF, TF32, "recipe").
++ Results follow the three questions; Q1-Q7 labels replaced by plain titles.
++ Thesis material in one short section; training tips moved to Appendix B.
++ Conclusion gains a four-step recipe.
++ Removed: Pareto, learning-curve and cost figures (unreadable or repeated); false
+  claim that ASO is reported; internal "rule 4" reference; stale median-line caption.
++ Figures redrawn near print size (readable text); teacher chart shows Gemma on the
+  seven main datasets only; decision curves enlarged; teacher error table full width.
++ CLINC150 intents and out-of-scope scored apart (student beats Gemma on intents,
+  finds 52% of out-of-scope; 250 in pool vs 1,000 in test).
++ All 26 arXiv citations checked against arXiv (title and first author match).
++ Checks: macros unchanged, 18 pages, no "??", `just check` 333 passed.
+
 ## 4. What changed on disk
 
 + src/active_gliner/data/uner_ewt.py, scripts/fetch_uner_ewt.py, data/splits/uner_ewt-en-US.json
@@ -76,3 +96,4 @@ status: done
 - 2026-10-26 01:13 CET - Created.
 - 2026-10-26 01:31 CET - Second Codex review applied.
 - 2026-10-26 01:45 CET - Published (PR 10, 11); arXiv package built.
+- 2026-10-26 12:35 CET - Story and plain-language pass; CLINC150 out-of-scope split.
