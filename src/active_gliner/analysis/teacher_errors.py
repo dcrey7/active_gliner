@@ -193,3 +193,49 @@ def boolq_length_macros() -> dict:
     splits = data.load("boolq", "en-US")
     longest = max(len(record.text.split()) for split in splits.values() for record in split)
     return {"BoolQMaxInputWords": f"{longest:,}"}
+
+
+def scope_split(per_type: list[dict]) -> tuple[float, float]:
+    """CLINC150 accuracy on the 150 intents and recall on out of scope, from per_type.csv rows."""
+    oos = next(row for row in per_type if row["label"] == "oos")
+    intents = [row for row in per_type if row["label"] != "oos"]
+    right = sum(int(row["tp"]) for row in intents)
+    total = sum(int(row["support"]) for row in intents)
+    return 100 * right / total, 100 * float(oos["recall"])
+
+
+def clinc_scope_macros(runs_root="runs", labels_root="labels") -> dict:
+    """CLINC150 reports the 150 intents and out of scope apart; our one accuracy mixes them.
+
+    Out of scope is 1.6% of the pool but 18% of test, so a student trained on the pool
+    rarely answers it. Teachers are read from the label cache, the student is the
+    whole-pool ground-truth run (mean over seeds).
+    """
+    import csv
+    import statistics
+    from glob import glob
+
+    splits = data.load("clinc150", "en-US")
+    found = {
+        "ClincPoolOos": f"{sum(r.gold['labels'] == ['oos'] for r in splits['pool']):,}",
+        "ClincPoolSize": f"{len(splits['pool']):,}",
+        "ClincTestOos": f"{sum(r.gold['labels'] == ['oos'] for r in splits['test']):,}",
+        "ClincTestSize": f"{len(splits['test']):,}",
+    }
+    test = splits["test"]
+    for teacher, tag in TEACHERS.items():
+        labels = teacher_labels(teacher, "clinc150", "en-US", labels_root)
+        right = Counter()
+        for record in test:
+            answer = (labels.get(record.id) or {}).get("labels", [])[:1]
+            part = "oos" if record.gold["labels"] == ["oos"] else "intents"
+            right[part, "n"] += 1
+            right[part, "ok"] += answer == record.gold["labels"]
+        found[f"Clinc{tag}TeacherIntents"] = 100 * right["intents", "ok"] / right["intents", "n"]
+        found[f"Clinc{tag}TeacherOos"] = 100 * right["oos", "ok"] / right["oos", "n"]
+    pattern = f"{runs_root}/decision/clinc150/en-US/ground_truth/all-seed?-long/per_type.csv"
+    pairs = [scope_split(list(csv.DictReader(open(path)))) for path in sorted(glob(pattern))]
+    if pairs:
+        found["ClincHumanWholeIntents"] = statistics.mean(p[0] for p in pairs)
+        found["ClincHumanWholeOos"] = statistics.mean(p[1] for p in pairs)
+    return found

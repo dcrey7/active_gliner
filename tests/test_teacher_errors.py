@@ -50,6 +50,16 @@ def test_latex_table_has_a_both_column(tmp_path):
     assert "& Both &" in text and "T & Gemma & 1 & 2 & 3 & 4 & 5 & 6 & 7" in text
 
 
+def test_scope_split_keeps_out_of_scope_apart():
+    rows = [
+        {"label": "alarm", "tp": "9", "support": "10", "recall": "0.9"},
+        {"label": "greeting", "tp": "7", "support": "10", "recall": "0.7"},
+        {"label": "oos", "tp": "1", "support": "4", "recall": "0.25"},
+    ]
+    intents, oos = teacher_errors.scope_split(rows)
+    assert intents == 80 and oos == 25
+
+
 def test_label_errors_count_none_sentences_given_a_label():
     records = [
         Record("a", None, "t", "classification", "en-US", "test", {"labels": []}),

@@ -445,6 +445,7 @@ def analyse(runs="runs", out="paper") -> dict:
     macros.update(teacher_errors.macros(error_table))
     macros.update(teacher_errors.majority_macros())
     macros.update(teacher_errors.boolq_length_macros())
+    macros.update(teacher_errors.clinc_scope_macros())
     macros.update(teacher_errors.org_as_loc_macros())
     macros.update(_held_boolq_macros(runs))
     numbers.write_macros(out / "numbers.tex", macros)
