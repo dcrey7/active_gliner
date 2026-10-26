@@ -1,0 +1,9 @@
+augmentation: false
+batch_size: 8
+lora_alpha: 64
+lora_dropout: 0.1
+lora_r: 32
+lora_targets:
+- encoder
+- classification_head
+task_lr: 0.0004019207998187699

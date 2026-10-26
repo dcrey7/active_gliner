@@ -109,30 +109,41 @@ def main(argv: list[str] | None = None) -> int:
     analyse_parser.add_argument("--out", default="paper")
     watch_parser = commands.add_parser("watch")
     watch_parser.add_argument("run_dir", type=Path)
-    for name in ("fit", "predict"):
+    for name in ("fit", "predict", "rank"):
         sub = commands.add_parser(name)
         sub.add_argument("--texts", required=True, type=Path)
         sub.add_argument(
-            "--task", required=True, choices=["ner", "slots", "classification", "relations"]
+            "--task",
+            required=True,
+            choices=["ner", "slots", "classification", "relations", "decision"],
         )
         sub.add_argument("--labels", required=True)
         if name == "predict":
             sub.add_argument("--adapter", required=True, type=Path)
             continue
+        if name == "rank":
+            sub.add_argument("--n", type=int, default=1000)
+            sub.add_argument("--human-share", type=float, default=0.25)
+            sub.add_argument("--seed", type=int, default=1)
+            sub.add_argument("--out", dest="out_dir", default="active-gliner-rank", type=Path)
+            continue
         sub.add_argument("--teacher-url", required=True)
         sub.add_argument("--teacher-model", required=True)
         sub.add_argument("--n", type=int, default=200)
-        sub.add_argument("--select", choices=["min", "random"], default="min")
+        sub.add_argument("--select", choices=["min", "random", "all"], default="min")
         sub.add_argument("--seed", type=int, default=1)
         sub.add_argument("--dev", type=Path)
+        sub.add_argument("--human", type=Path)
         sub.add_argument("--api-key-env")
         sub.add_argument("--out", dest="out_dir", default="active-gliner-out", type=Path)
-        sub.add_argument("--max-steps", type=int, default=500)
-        sub.add_argument("--eval-steps", type=int, default=50)
+        sub.add_argument("--max-steps", type=int, default=1000)
+        sub.add_argument("--eval-steps", type=int, default=100)
         sub.add_argument("--threshold", type=float, default=0.5)
+        sub.add_argument("--batch-size", type=int)
+        sub.add_argument("--grad-accum", type=int)
         sub.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
-    if args.command in {"fit", "predict"}:
+    if args.command in {"fit", "predict", "rank"}:
         from active_gliner import byod
 
         values = vars(args).copy()
@@ -141,6 +152,8 @@ def main(argv: list[str] | None = None) -> int:
             if args.command == "predict":
                 for prediction in byod.predict(**values):
                     print(json.dumps(prediction, ensure_ascii=False))
+            elif args.command == "rank":
+                print(byod.rank(**values))
             elif values.pop("dry_run"):
                 print(
                     json.dumps(

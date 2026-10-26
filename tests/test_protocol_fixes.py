@@ -367,7 +367,7 @@ def test_fingerprint_covers_only_protocol_code(path, expected):
     assert protocol.is_protocol_source(path) is expected
 
 
-# Exact numerics (Claude, 26 Sep)
+# Exact numerics (the author, 26 Sep)
 
 
 def test_exact_numerics_off_keeps_gliner2_defaults():
@@ -430,7 +430,7 @@ def test_relation_training_uses_fp32_under_exact_numerics():
     assert "not cfg.exact_numerics" in source
 
 
-# Resume after a new config field (Claude, 26 Sep)
+# Resume after a new config field (the author, 26 Sep)
 
 
 def _settings(**config):
@@ -462,7 +462,7 @@ def test_resume_rejects_a_changed_value():
     assert not tune.same_settings(_settings(task_lr=1e-4), _settings(task_lr=2e-4))
 
 
-# Round 34 (Claude): CrossRE head restriction and pruner warmup
+# Round 34 (the author): CrossRE head restriction and pruner warmup
 
 
 def test_crossre_search_can_be_limited_to_the_native_head():
@@ -495,7 +495,7 @@ def test_run_search_rejects_bad_search_options(tmp_path, kwargs):
         tune.run_search("crossre", out_root=tmp_path, **kwargs)
 
 
-# Shared diversity embeddings (Claude, 26 Sep)
+# Shared diversity embeddings (the author, 26 Sep)
 
 
 def test_diversity_embeddings_are_computed_once_and_shared(tmp_path, monkeypatch):

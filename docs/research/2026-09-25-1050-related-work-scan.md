@@ -1,7 +1,7 @@
 ---
 title: Related work scan for the Active GLiNER paper
 date: 2026-09-25 10:50 CEST
-author: Claude (research agent), checked against the arXiv API
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

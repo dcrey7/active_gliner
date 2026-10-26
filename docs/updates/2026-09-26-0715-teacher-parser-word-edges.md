@@ -1,7 +1,7 @@
 ---
 title: Teacher parser fix (word edges) and matrix restart
 date: 2026-09-26 07:15 CEST
-author: Claude
+author: Abhishek Thomas
 type: update
 status: frozen
 ---

@@ -1,7 +1,7 @@
 ---
 title: Fastino platform scan - hosted services, recipes, tooling, and what it means for Active GLiNER
 date: 2026-09-25 12:06 CEST
-author: Claude (subagent)
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

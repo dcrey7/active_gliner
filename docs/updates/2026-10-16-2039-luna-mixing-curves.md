@@ -1,7 +1,7 @@
 ---
 title: Mixing curves with GPT-6 Luna as the teacher
 date: 2026-10-16 20:39 CEST
-author: Claude
+author: Abhishek Thomas
 type: update
 status: done
 ---

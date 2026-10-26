@@ -1,7 +1,7 @@
 ---
 title: Refactor on gliner2, build steps 1-4
 date: 2026-09-25 13:05 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: update
 status: frozen
 ---
@@ -10,7 +10,7 @@ status: frozen
 
 ## 1. What I did
 
-+ O1 repo setup: `AGENTS.md` (Codex writes code, Claude reviews), `uv`, `ruff`, `pytest`, `justfile`. Thesis code tagged `thesis-v1` (local tag).
++ O1 repo setup: `AGENTS.md` (Codex writes code, the author reviews), `uv`, `ruff`, `pytest`, `justfile`. Thesis code tagged `thesis-v1` (local tag).
 + Studied `gliner2` 2.0.0 hands-on on the 3090, scanned the Fastino platform, and listed the thesis observability code.
 + Student changed to `fastino/gliner2.5-multi-v1` (Abhishek); MASSIVE fr-FR added; design section 13 (Codex rounds 20-21).
 + Refactor plan signed off by Codex (rounds 22-24).
@@ -33,7 +33,7 @@ status: frozen
 
 + Same seed, two runs, different dev F1 at step 20: 0.625 vs 0.604. GPU training is not deterministic by default (`cudnn.benchmark`). O7 measures this and turns on deterministic mode if cheap.
 + The thesis `data/mit-movie/dev.json` is an exact copy of `test.json` (original MIT labels, not the Galileo fix).
-+ Codex's sandbox has no GPU; GPU tests are run by Claude.
++ Codex's sandbox has no GPU; GPU tests are run by the author.
 + Not built yet: teachers (step 5), tuning, diversity selector, analysis scripts.
 
 ## 4. What changed on disk

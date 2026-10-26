@@ -1,7 +1,7 @@
 ---
 title: Repo clean-up, quickstart notebook, thesis replication start, silent OOM skips found
 date: 2026-09-29 11:57 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: update
 status: active
 ---
@@ -46,7 +46,7 @@ status: active
 
 + `src/active_gliner/{selection,run,protocol,train,matrix}.py`, `analysis/{aggregate,report,tables}.py`
 + `configs/protocol_equivalence.yaml`, `notebooks/`, `justfile`, `pyproject.toml`, `uv.lock` (nbclient, ipykernel as dev tools; no version changes)
-+ Lanes: `~/.claude/jobs/b454a3ee/tmp/thesis_lane.sh`, `repair_then_lane.sh`; logs in `tmp/thesis/`.
++ Lanes: `thesis_lane.sh`, `repair_then_lane.sh`; logs in `tmp/thesis/`.
 
 ## 5. What the next session does first
 

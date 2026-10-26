@@ -1,7 +1,7 @@
 ---
 title: How few human labels beat the LLM teacher - design draft for review
 date: 2026-10-02 12:07 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: research
 status: draft, for Codex review
 ---

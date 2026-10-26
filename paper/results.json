@@ -111190,12 +111190,12 @@
     }
   ],
   "skipped": [
-    "Teacher test table cleanconll/en-US/gemma-4-e4b: 2676 test labels missing in /home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/labels/gemma-4-e4b/cleanconll-en-US/ner-f36aef711332.jsonl",
-    "Teacher bins cleanconll/en-US/gemma-4-e4b: 12796 pool labels missing in /home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/labels/gemma-4-e4b/cleanconll-en-US/ner-f36aef711332.jsonl",
-    "Teacher test table hallmarks/en-US/gemma-4-e4b: 2834 test labels missing in /home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/labels/gemma-4-e4b/hallmarks-en-US/classification-e29c9ad5f79c.jsonl",
-    "Teacher bins hallmarks/en-US/gemma-4-e4b: 10960 pool labels missing in /home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/labels/gemma-4-e4b/hallmarks-en-US/classification-e29c9ad5f79c.jsonl",
-    "Teacher ladder boolq: [Errno 2] No such file or directory: '/home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/data/ladder/boolq-en-US.json'",
-    "Teacher ladder clinc150: [Errno 2] No such file or directory: '/home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/data/ladder/clinc150-en-US.json'",
-    "Teacher ladder uner_ewt: [Errno 2] No such file or directory: '/home/abhishek/Downloads/work/active_gliner/.claude/worktrees/v2-research-plan/data/ladder/uner_ewt-en-US.json'"
+    "Teacher test table cleanconll/en-US/gemma-4-e4b: 2676 test labels missing in labels/gemma-4-e4b/cleanconll-en-US/ner-f36aef711332.jsonl",
+    "Teacher bins cleanconll/en-US/gemma-4-e4b: 12796 pool labels missing in labels/gemma-4-e4b/cleanconll-en-US/ner-f36aef711332.jsonl",
+    "Teacher test table hallmarks/en-US/gemma-4-e4b: 2834 test labels missing in labels/gemma-4-e4b/hallmarks-en-US/classification-e29c9ad5f79c.jsonl",
+    "Teacher bins hallmarks/en-US/gemma-4-e4b: 10960 pool labels missing in labels/gemma-4-e4b/hallmarks-en-US/classification-e29c9ad5f79c.jsonl",
+    "Teacher ladder boolq: [Errno 2] No such file or directory: 'data/ladder/boolq-en-US.json'",
+    "Teacher ladder clinc150: [Errno 2] No such file or directory: 'data/ladder/clinc150-en-US.json'",
+    "Teacher ladder uner_ewt: [Errno 2] No such file or directory: 'data/ladder/uner_ewt-en-US.json'"
   ]
 }

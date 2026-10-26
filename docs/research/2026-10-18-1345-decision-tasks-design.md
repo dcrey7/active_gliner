@@ -1,7 +1,7 @@
 ---
 title: Design addendum - decision tasks (yes/no, choice, ordered levels)
 date: 2026-10-18 13:45 CEST
-author: Claude
+author: Abhishek Thomas
 type: research
 status: accepted by the owner (18 Oct 2026, "this also has to be part of it")
 ---

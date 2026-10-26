@@ -1,7 +1,7 @@
 ---
 title: Min selection picks empty sentences on NER (early main-run evidence)
 date: 2026-09-26 06:16 CEST
-author: Claude
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

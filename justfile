@@ -32,6 +32,12 @@ notebook:
     cd notebooks && uv run jupyter execute --inplace quickstart.ipynb
     uv run python notebooks/build_quickstart.py --drop-stderr
 
+# Rebuild and run one notebook per task type; needs a GPU and a teacher.
+task-notebooks:
+    uv run python notebooks/build_task_notebooks.py
+    bash scripts/run_task_notebooks.sh
+    uv run python notebooks/build_task_notebooks.py --drop-stderr
+
 # Keep the busy GPU and live teacher servers out of verification.
 check-cpu: lint fmt-check
     CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 uv run pytest -q -m 'not model and not teacher'

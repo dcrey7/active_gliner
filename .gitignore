@@ -32,3 +32,4 @@ runs-archives/
 runs-verify/
 # Files and runs the quickstart notebook writes
 notebooks/demo/
+notebooks/demo-*/

@@ -1,7 +1,7 @@
 ---
 title: Mixing curves on every dataset, in the paper
 date: 2026-10-08 11:40 CEST
-author: Claude
+author: Abhishek Thomas
 type: update
 status: done
 ---

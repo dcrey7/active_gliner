@@ -13,6 +13,12 @@ from active_gliner.data.records import Record
 from active_gliner.teachers import TeacherConfig
 from active_gliner.teachers.validate import empty_gold
 
+TASKS = ("ner", "relations", "classification", "slots", "decision")
+# The tuned training settings of the paper, one file per task type. They are a copy of
+# configs/recipes/ shipped inside the package; a test keeps the two copies equal.
+RECIPES = Path(__file__).with_name("recipes")
+SELECTORS = ("min", "random", "all")
+
 
 def _rows(path):
     path = Path(path)
@@ -67,6 +73,12 @@ def read_labelled(path: str | Path, task: str) -> list[Record]:
         record.source_split = "dev"
         if task == "classification":
             record.gold = {"labels": row["labels"]}
+        elif task == "decision":
+            # One answer per text, given as "label" or as a one-item "labels" list.
+            answer = row["labels"] if "labels" in row else [row["label"]]
+            if len(answer) != 1:
+                raise ValueError(f"A decision needs exactly one label: {row}")
+            record.gold = {"labels": answer}
         else:
             entities = _entities(record.text, row["entities"])
             if task != "relations":
@@ -120,12 +132,15 @@ def teacher_from_args(url: str, model: str, api_key_env: str | None) -> TeacherC
     )
 
 
-def plan(texts: str | Path, task: str, labels: str, n: int, select: str, seed: int) -> dict:
+def plan(texts: str | Path, task: str, labels: str, n: int | None, select: str, seed: int) -> dict:
     records = read_texts(texts, task)
-    if not 0 < n <= len(records):
+    if select == "all":
+        # "all" sends every text in the file to the LLM, for example the rest of a ranked set.
+        n = len(records)
+    if n is None or not 0 < n <= len(records):
         raise ValueError("n must be positive and no larger than the pool")
-    if select not in {"min", "random"} or seed < 0:
-        raise ValueError("Use min or random selection and a nonnegative seed")
+    if select not in SELECTORS or seed < 0:
+        raise ValueError("Use min, random or all selection and a nonnegative seed")
     return {
         "pool_size": len(records),
         "n": n,
@@ -133,6 +148,31 @@ def plan(texts: str | Path, task: str, labels: str, n: int, select: str, seed: i
         "task": task,
         "labels": parse_labels(labels),
     }
+
+
+def task_recipe(task: str) -> dict:
+    """The paper's tuned settings for this task type (learning rate, LoRA, relation head)."""
+    import yaml
+
+    if task not in TASKS:
+        raise ValueError(f"Unknown task: {task}")
+    return yaml.safe_load((RECIPES / f"{task}.yaml").read_text(encoding="utf-8"))
+
+
+def load_student(task: str, labels: dict[str, str], device: str | None = None):
+    """The pinned student, set up as in the paper: relations use the tuned relation head."""
+    import torch
+
+    from active_gliner import model
+
+    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+    student = model.load_student(device=device)
+    head = task_recipe(task).get("relation_head", "classifier")
+    if task == "relations" and head != "classifier":
+        from active_gliner.tasks.relation_heads import configure
+
+        configure(student, head, labels)
+    return student
 
 
 def _task(name):
@@ -155,16 +195,19 @@ def fit(
     labels: str,
     teacher_url: str,
     teacher_model: str,
-    n: int,
+    n: int | None = None,
     select: str = "min",
     seed: int = 1,
     dev: str | Path | None = None,
-    max_steps: int = 500,
-    eval_steps: int = 50,
+    human: str | Path | None = None,
+    max_steps: int = 1000,
+    eval_steps: int = 100,
     out_dir: str | Path = "active-gliner-out",
     api_key_env: str | None = None,
     transport=None,
     threshold: float = 0.5,
+    batch_size: int | None = None,
+    grad_accum: int | None = None,
 ) -> Path:
     import torch
     import yaml
@@ -177,7 +220,13 @@ def fit(
 
     started = time.monotonic()
     summary = plan(texts, task, labels, n, select, seed)
+    n = summary["n"]
     pool = _pool(texts, task)
+    # Human-labelled texts join the training set as they are; the LLM never sees them.
+    human_records = read_labelled(human, task) if human is not None else []
+    for record in human_records:
+        record.id = f"human:{record.id}"
+        record.source_split = "train"
     dev_records = read_labelled(dev, task) if dev is not None else None
     if dev_records is not None and not dev_records:
         raise ValueError("The dev set is empty")
@@ -191,9 +240,17 @@ def fit(
         n=n,
         seed=seed,
         selector=select,
+        # The paper's rule: texts where the student predicts nothing go last, not first.
+        no_prediction="last",
         labels_source="custom",
-        max_steps=max_steps,
-        eval_steps=eval_steps,
+        **{
+            **task_recipe(task),
+            "max_steps": max_steps,
+            "eval_steps": eval_steps,
+            # A smaller batch with accumulation keeps the update size when the GPU is shared.
+            **({"batch_size": batch_size} if batch_size else {}),
+            **({"grad_accum": grad_accum} if grad_accum else {}),
+        },
         acq_threshold=0.5,
         eval_threshold=threshold,
     )
@@ -215,6 +272,7 @@ def fit(
                 "seeds": seeds,
                 "texts": str(texts),
                 "dev": str(dev) if dev else None,
+                "human": str(human) if human else None,
                 "task": task,
                 "labels": labels,
                 "definitions": definitions,
@@ -222,7 +280,7 @@ def fit(
         ),
         encoding="utf-8",
     )
-    student = model.load_student(device="cuda")
+    student = load_student(task, labels, device="cuda")
     student.eval()
     selected_ids, _ = score_pool(student, cfg, seeds, out, task_module, labels, pool)
     by_id = {r.id: r for r in pool}
@@ -246,6 +304,7 @@ def fit(
         count = max(1, math.ceil(len(selected) * 0.1))
         dev_records, selected = selected[:count], selected[count:]
         metric = "teacher agreement (not accuracy)"
+    selected = human_records + selected
     splits = {"pool": pool, "train": selected, "dev": dev_records}
     write_json(
         out / "split_ids.json", {name: [r.id for r in rows] for name, rows in splits.items()}
@@ -290,16 +349,102 @@ def fit(
     )
 
 
-def predict(adapter: str | Path, task: str, labels: str, texts: str | Path) -> list[dict]:
+def record_to_row(record: Record, names: dict[str, str], with_labels: bool = True) -> dict:
+    """One JSONL row in the format fit, rank and predict read; names maps label codes to names.
+
+    Relation rows always keep their mentions, because the mentions are input, not labels.
+    """
+    row = {"id": record.id, "text": record.text}
+    gold, task = record.gold, record.task
+
+    def entity(span, label):
+        return {"text": span["text"], "start": span["start"], "end": span["end"], "label": label}
+
+    if task == "relations":
+        row["entities"] = [entity(e, e["label"]) for e in gold["entities"]]
+        if with_labels:
+            row["relations"] = [
+                {"head": r["head_id"], "tail": r["tail_id"], "type": names[r["type"]]}
+                for r in gold["relations"]
+            ]
+    elif not with_labels:
+        pass
+    elif task in {"ner", "slots"}:
+        row["entities"] = [entity(s, names[s["label"]]) for s in gold["spans"]]
+    elif task == "classification":
+        row["labels"] = [names[label] for label in gold["labels"]]
+    elif task == "decision":
+        row["label"] = names[gold["labels"][0]]
+    else:
+        raise ValueError(f"Unknown task: {task}")
+    return row
+
+
+def split_for_humans(rows: list[dict], human_share: float, seed: int) -> tuple[list, list]:
+    """A random share of the ranked rows goes to humans, the rest to the LLM."""
+    if not 0 <= human_share <= 1:
+        raise ValueError("human_share must be between 0 and 1")
+    order = list(range(len(rows)))
+    random.Random(seed).shuffle(order)
+    to_humans = set(order[: round(len(rows) * human_share)])
+    humans = [row for i, row in enumerate(rows) if i in to_humans]
+    rest = [row for i, row in enumerate(rows) if i not in to_humans]
+    return humans, rest
+
+
+def rank(
+    texts: str | Path,
+    task: str,
+    labels: str,
+    n: int,
+    human_share: float = 0.25,
+    seed: int = 1,
+    out_dir: str | Path = "active-gliner-rank",
+) -> Path:
+    """Rank the texts once, least sure first, and split the top n between humans and the LLM.
+
+    Writes for_humans.jsonl (a random share of the top n: label these by hand) and
+    for_llm.jsonl (the rest: pass it to fit with select="all" and human=...).
+    """
     import torch
 
+    from active_gliner.observe.logs import write_jsonl
+    from active_gliner.run import RunConfig, score_pool
+
+    summary = plan(texts, task, labels, n, "min", seed)
+    split_for_humans([], human_share, seed)
+    pool = _pool(texts, task)
+    cfg = RunConfig(
+        dataset="user",
+        out_root=str(Path(out_dir).parent),
+        n=n,
+        seed=seed,
+        selector="min",
+        no_prediction="last",
+        labels_source="custom",
+    )
+    seeds = {"selection": seed * 1000 + 1}
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=False)
+    student = load_student(task, summary["labels"])
+    student.eval()
+    selected_ids, _ = score_pool(student, cfg, seeds, out, _task(task), summary["labels"], pool)
+    del student
+    gc.collect()
+    torch.cuda.empty_cache()
+    rows = {r.id: row for r, (_, row) in zip(pool, _rows(texts), strict=True)}
+    humans, rest = split_for_humans([rows[i] for i in selected_ids], human_share, seed)
+    write_jsonl(out / "for_humans.jsonl", humans)
+    write_jsonl(out / "for_llm.jsonl", rest)
+    return out
+
+
+def predict(adapter: str | Path, task: str, labels: str, texts: str | Path) -> list[dict]:
     from active_gliner import model
 
     records = _pool(texts, task)
     if not records:
         return []
-    student = model.load_adapter(
-        model.load_student(device="cuda" if torch.cuda.is_available() else "cpu"), adapter
-    )
+    student = model.load_adapter(load_student(task, parse_labels(labels)), adapter)
     student.eval()
     return _task(task).predict(student, records, parse_labels(labels))

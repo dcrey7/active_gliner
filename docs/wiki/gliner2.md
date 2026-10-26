@@ -1,7 +1,7 @@
 ---
 title: GLiNER2 and Fastino models
 date: 2026-09-25 23:25 CEST
-author: Claude (research agent)
+author: Abhishek Thomas
 type: wiki
 status: draft
 ---

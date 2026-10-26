@@ -1,7 +1,7 @@
 ---
 title: Offline matrix done, analysis and Results section written
 date: 2026-09-28 18:04 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: update
 status: frozen
 ---

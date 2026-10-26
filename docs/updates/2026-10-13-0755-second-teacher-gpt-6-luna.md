@@ -1,7 +1,7 @@
 ---
 title: Second teacher family, GPT-6 Luna, in the paper
 date: 2026-10-13 07:55 CEST
-author: Claude
+author: Abhishek Thomas
 type: update
 status: done
 ---

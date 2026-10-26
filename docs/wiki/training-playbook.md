@@ -1,7 +1,7 @@
 ---
 title: Training playbook for the GLiNER2 student
 date: 2026-09-25 23:35 CEST
-author: Claude
+author: Abhishek Thomas
 type: wiki
 status: draft
 ---
