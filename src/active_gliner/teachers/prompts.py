@@ -63,6 +63,8 @@ def response_schema(task: str, labels: dict[str, str]) -> dict:
         )
     if task == "classification":
         return obj({"labels": array(label)})
+    if task == "decision":
+        return obj({"label": label})
     if task == "slots":
         return obj({"slots": obj({name: array(string) for name in sorted(labels.values())}, [])})
     raise ValueError(f"Unknown task: {task}")
@@ -78,6 +80,7 @@ def messages(
         "Return all applicable types for each pair; no relation means an empty types list "
         "or an omitted pair.",
         "classification": "Select all applicable labels. There can be none.",
+        "decision": "Choose exactly one label: the one that fits the input best.",
         "slots": "Extract slot values. Each natural label is an optional key with a value list.",
     }
     schema = response_schema(task, labels)

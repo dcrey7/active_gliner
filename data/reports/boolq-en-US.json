@@ -1,0 +1,30 @@
+{
+  "dataset": "boolq",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 8427,
+    "dev": 1000,
+    "test": 3270
+  },
+  "label_counts": {
+    "pool": {
+      "no": 3214,
+      "yes": 5213
+    },
+    "dev": {
+      "no": 339,
+      "yes": 661
+    },
+    "test": {
+      "no": 1237,
+      "yes": 2033
+    }
+  },
+  "empty_gold": {
+    "pool": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "split_hash": "592e18629b5b67181579c9d83c3b09c3feb7884ed4355a68791b0e7a5c634f29",
+  "misaligned_dev_rate": 0.0
+}

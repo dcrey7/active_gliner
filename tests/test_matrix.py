@@ -24,6 +24,11 @@ CURVE_BLOCKS = {
     "minimum_human_labels": 147,
     "two_step": 147,
     "teacher_family_curve": 408,
+    # docs/research/2026-10-18-1345-decision-tasks-design.md: 144 per decision dataset;
+    # SST-5 is held back (licence), so BoolQ and CLINC150 only.
+    "decision_curve": 288,
+    # UNER EWT, the open general-domain NER set: the same 144 cells.
+    "open_ner_curve": 144,
 }
 
 
@@ -259,3 +264,12 @@ def test_tuning_smoke(tmp_path):
 
 def test_every_research_run_uses_exact_numerics():
     assert all(cfg.exact_numerics for cfg in matrix.build())
+
+
+def test_boolq_splits_each_batch_but_learns_from_eight():
+    values = matrix.recipe("boolq")
+    assert (values["batch_size"], values["grad_accum"]) == (4, 2)
+    # Whole-pool runs still make two passes over the pool at 8 examples per step.
+    pool = matrix.pool_size("boolq", "en-US")
+    assert matrix.long_steps("boolq", "en-US") == max(1000, -(-2 * pool // 8))
+    assert "grad_accum" not in matrix.recipe("clinc150")

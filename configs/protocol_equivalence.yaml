@@ -49,3 +49,27 @@
     "max_tokens" gives the same request body as before for every existing teacher;
     only configs/teachers/gpt-6-luna.yaml sets max_completion_tokens.
     tests/test_teachers.py checks both bodies. Student training code is unchanged.
+
+- code: fb686a3a1c665716a8dbe9a1d4ebe455da525109bbffec585319d0100d2e7205
+  replaced_by: decision task (tasks/decision.py, BoolQ, CLINC150 and SST-5 loaders)
+  checked: true
+  date: 2026-10-18
+  check: >
+    New modules and new branches only. tasks/decision.py and the three loaders are new;
+    tasks.for_dataset and tasks.labels add decision datasets and the "oos" name, which no
+    earlier dataset has. prompts.py and validate.py add a "decision" branch; every other
+    task builds the same prompt, schema and parse result (prompt hashes unchanged, so the
+    label caches stay valid). train.py skips a training example only when a task returns
+    None, which only decisions do. splits.py adds a BoolQ branch. No config field changed.
+
+- code: 8a5056abfc33be730f01583203495604b65e942f1bba44e084f57daa7d89eef6
+  replaced_by: UNER EWT loader; SST-5 held back from the matrix
+  checked: true
+  date: 2026-10-18
+  check: >
+    New module and new dictionary entries only. data/uner_ewt.py is new; data/__init__.py,
+    tasks/__init__.py and matrix_run.py add the "uner_ewt" key, which no earlier dataset
+    uses. matrix.py moves the decision cells into add_two_teacher_curves with the same
+    arguments (same run names; tests/test_matrix.py counts them) and drops SST-5 from
+    DECISION_DATASETS. No loader, task, teacher or training code of an earlier dataset
+    changed, so every earlier run and label cache stays valid.

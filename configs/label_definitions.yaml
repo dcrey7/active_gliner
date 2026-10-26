@@ -3,6 +3,11 @@ cleanconll:
   LOC: Names of geographical areas, natural features, routes, buildings, or places, interpreted in context.
   ORG: Names of organizations, institutions, companies, publications, brands, teams, or other organized groups.
   MISC: Other named entities, including nationalities, languages, affiliations, events, works, ideologies, and expressions derived from names.
+# UNER EWT follows the CoNLL type guidelines, so it reuses the CleanCoNLL definitions.
+uner_ewt:
+  PER: Names or aliases of individual people, animals, or fictional characters.
+  LOC: Names of geographical areas, natural features, routes, buildings, or places, interpreted in context.
+  ORG: Names of organizations, institutions, companies, publications, brands, teams, or other organized groups.
 bc5cdr:
   Chemical: Named chemicals or drugs with identifiable composition, including structurally defined classes, abbreviations, and specified small biochemical substances.
   Disease: Disease or disorder mentions, including signs, symptoms, toxicity, and corresponding abbreviations or adjectival forms.

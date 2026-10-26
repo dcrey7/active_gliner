@@ -95,7 +95,8 @@ def write_results(study, directory: Path) -> dict:
 
 
 def suggest_params(trial, dataset: str, relation_heads=RELATION_HEADS) -> dict:
-    head = "classification_head" if dataset in {"crossre", "hallmarks"} else "extractive_head"
+    classify = {"crossre", "hallmarks", "boolq", "clinc150", "sst5"}
+    head = "classification_head" if dataset in classify else "extractive_head"
     targets = {
         "encoder_all": ["encoder", "all_task_heads"],
         "heads": ["all_task_heads"],

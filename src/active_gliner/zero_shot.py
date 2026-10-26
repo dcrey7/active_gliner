@@ -25,7 +25,7 @@ LADDER = {
     "gliner2.5-multi-v1": (model.STUDENT_REPO, model.STUDENT_SHA),
     "gliner2-large-v1": ("fastino/gliner2-large-v1", "bf90d758a5d482bbfc276041b8cb7b570e5318e3"),
 }
-# The six datasets plus MASSIVE French: 7 pairs per model.
+# The six datasets, MASSIVE French, the three decision datasets and UNER EWT: 11 pairs.
 PAIRS = [
     ("cleanconll", "en-US"),
     ("bc5cdr", "en-US"),
@@ -34,6 +34,10 @@ PAIRS = [
     ("hallmarks", "en-US"),
     ("massive", "en-US"),
     ("massive", "fr-FR"),
+    ("boolq", "en-US"),
+    ("clinc150", "en-US"),
+    ("sst5", "en-US"),
+    ("uner_ewt", "en-US"),
 ]
 # One batch size for every model keeps the latency comparison fair.
 BATCH_SIZE = 8

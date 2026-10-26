@@ -50,7 +50,16 @@ def recipe(dataset: str, *, required: bool = False) -> dict:
         raise ValueError("The frozen CrossRE recipe must include relation_neg_ratio")
     if required and dataset == "crossre" and "relation_head" not in values:
         raise ValueError("The frozen CrossRE recipe must include relation_head")
+    values = {**values, **MEMORY_SPLIT.get(dataset, {})}
     return {**values, "recipe_file": str(path), "recipe_hash": hashlib.sha256(raw).hexdigest()}
+
+
+# BoolQ passages reach 823 words, and a batch of 8 of them needs more GPU memory than one
+# run may take (23 Oct 2026). Two halves of 4 keep 8 examples per update, but it is not
+# the same training: length grouping uses the physical batch, and batch 8 drops the last
+# partial batch of each epoch while 4 x 2 trains it in a short extra update. Every BoolQ
+# run uses this setup, so BoolQ arms stay comparable with each other.
+MEMORY_SPLIT = {"boolq": {"batch_size": 4, "grad_accum": 2}}
 
 
 # Training variants of the thesis replication; they override the frozen recipe.
@@ -159,7 +168,72 @@ def build() -> list[RunConfig]:
 
     add_mixing_curves(add_new)
     add_teacher_family_curves(add_new)
+    add_decision_curves(add)
+    add_open_ner_curves(add)
     return runs
+
+
+# SST-5 is held back (18 Oct 2026): its licence is unknown and its five levels are binned
+# crowd sliders. Its loader, splits and teacher labels stay on disk; it gets no runs.
+DECISION_DATASETS = ("boolq", "clinc150")
+# Open general-domain NER next to CleanCoNLL, whose Reuters text is not open.
+OPEN_NER_DATASETS = ("uner_ewt",)
+
+
+def add_decision_curves(add) -> None:
+    """Decision tasks: the ranked mixing curves with both teachers, random lines, references.
+
+    Design: docs/research/2026-10-18-1345-decision-tasks-design.md. Every input gets an
+    answer, so "empty last" changes nothing; it keeps the run names of the other curves.
+    The whole pool runs only as the references (all human, all Gemma, all Luna).
+    """
+    for dataset in DECISION_DATASETS:
+        add_two_teacher_curves(add, "decision_curve", dataset)
+
+
+def add_open_ner_curves(add) -> None:
+    """UNER EWT gets the same cells as a decision dataset, under its own block name."""
+    for dataset in OPEN_NER_DATASETS:
+        add_two_teacher_curves(add, "open_ner_curve", dataset)
+
+
+def add_two_teacher_curves(add, block: str, dataset: str) -> None:
+    teachers = ("gemma-4-12b", "gpt-6-luna")
+    budgets = tuple(n for n in CURVE_BUDGETS if n < 0.9 * pool_size(dataset, "en-US"))
+    ranked = dict(selectors=("min",), no_prediction="last", budgets=budgets)
+    add(block, [dataset], sources=("ground_truth", *teachers), **ranked)
+    for share in CURVE_SHARES:
+        add(
+            block,
+            [dataset],
+            sources=teachers,
+            gt_fraction=share,
+            gt_assignment="random",
+            **ranked,
+        )
+    add(
+        block,
+        [dataset],
+        selectors=("random",),
+        sources=("ground_truth", "gemma-4-12b"),
+        budgets=budgets,
+    )
+    add(
+        block,
+        [dataset],
+        selectors=("random",),
+        sources=("gpt-6-luna",),
+        budgets=(400,),
+    )
+    add(
+        block,
+        [dataset],
+        selectors=("all",),
+        sources=("ground_truth", *teachers),
+        budgets=(1,),
+        variant="long",
+        max_steps=long_steps(dataset, "en-US"),
+    )
 
 
 def add_teacher_family_curves(add) -> None:
@@ -306,7 +380,10 @@ def long_steps(dataset: str, locale: str) -> int:
     The default 1000 steps cover under one pass of a large pool, which would flatten
     the right end of the curve for a reason that has nothing to do with the labels.
     """
-    batch = recipe(dataset).get("batch_size", RunConfig.model_fields["batch_size"].default)
+    values = recipe(dataset)
+    batch = values.get("batch_size", RunConfig.model_fields["batch_size"].default)
+    # One step learns from batch x grad_accum examples (MEMORY_SPLIT keeps this at 8).
+    batch *= values.get("grad_accum", 1)
     return max(1000, math.ceil(2 * pool_size(dataset, locale) / batch))
 
 

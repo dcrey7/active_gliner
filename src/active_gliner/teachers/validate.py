@@ -10,7 +10,7 @@ from active_gliner.data.records import Record
 def empty_gold(task: str) -> dict:
     if task == "relations":
         return {"entities": [], "relations": []}
-    if task == "classification":
+    if task in {"classification", "decision"}:
         return {"labels": []}
     if task in {"ner", "slots"}:
         return {"spans": []}
@@ -47,11 +47,13 @@ def parse(
         "ner": "entities",
         "relations": "relations",
         "classification": "labels",
+        "decision": "label",
         "slots": "slots",
     }[task]
-    if value == []:
+    # A decision always needs an answer, so an empty reply falls through to the schema error.
+    if value == [] and task != "decision":
         return gold, []
-    expected = dict if task == "slots" else list
+    expected = {"slots": dict, "decision": str}.get(task, list)
     if not isinstance(value, dict) or not isinstance(value.get(key), expected):
         return None, [{"kind": "schema", "message": f"Expected {key}: {expected.__name__}"}]
     raw = {natural: name for name, natural in labels.items()}
@@ -101,7 +103,11 @@ def parse(
                 gold["spans"].append(candidate)
 
     items = value[key]
-    if task == "classification":
+    if task == "decision":
+        # Exactly one allowed option; anything else leaves the gold empty (a miss).
+        if allowed(items):
+            gold["labels"] = [raw[items]]
+    elif task == "classification":
         accepted = {raw[label] for label in items if allowed(label)}
         gold["labels"] = [label for label in labels if label in accepted]
     elif task == "slots":

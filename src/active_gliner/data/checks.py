@@ -33,7 +33,7 @@ def check(name: str, locale: str = "en-US") -> dict:
                         first = record.text.find(value)
                         repeated += record.text.find(value, first + 1) >= 0
                         arguments += 1
-            elif record.task == "classification":
+            elif record.task in {"classification", "decision"}:
                 labels = record.gold["labels"]
             else:
                 labels = [span["label"] for span in record.gold["spans"]]
@@ -81,14 +81,25 @@ def altered_target_rate(dataset, locale: str = "en-US") -> dict:
                 surface = [t[0] for t in splitter(span["text"])]
                 size = len(surface)
                 total += 1
-                altered += any(
-                    words[i:i + size] == surface
-                    and (tokens[i][1], tokens[i + size - 1][2], span["label"]) not in gold
-                    for i in range(len(words) - size + 1)
-                ) if size else False
-        report[split] = {"altered": altered, "total": total,
-                         "rate": altered / total if total else 0.0}
+                altered += (
+                    any(
+                        words[i : i + size] == surface
+                        and (tokens[i][1], tokens[i + size - 1][2], span["label"]) not in gold
+                        for i in range(len(words) - size + 1)
+                    )
+                    if size
+                    else False
+                )
+        report[split] = {
+            "altered": altered,
+            "total": total,
+            "rate": altered / total if total else 0.0,
+        }
     altered = sum(row["altered"] for row in report.values())
     total = sum(row["total"] for row in report.values())
-    return {"splits": report, "altered": altered, "total": total,
-            "rate": altered / total if total else 0.0}
+    return {
+        "splits": report,
+        "altered": altered,
+        "total": total,
+        "rate": altered / total if total else 0.0,
+    }

@@ -6,14 +6,15 @@ from active_gliner import model, zero_shot
 from active_gliner.cli import main
 
 
-def test_ladder_has_four_models_and_28_pairs():
+def test_ladder_has_four_models_and_44_pairs():
     assert list(zero_shot.LADDER) == [
         "gliner2.5-small-v1",
         "gliner2.5-base-v1",
         "gliner2.5-multi-v1",
         "gliner2-large-v1",
     ]
-    assert len(zero_shot.LADDER) * len(zero_shot.PAIRS) == 28
+    # 7 extraction places, 3 decision datasets (SST-5 kept for zero-shot only) and UNER EWT.
+    assert len(zero_shot.LADDER) * len(zero_shot.PAIRS) == 44
 
 
 def test_multi_rung_is_the_pinned_student():

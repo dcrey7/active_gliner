@@ -15,15 +15,19 @@ class TrainingExample(dict):
 
 
 def for_dataset(name: str) -> ModuleType:
-    from . import classification, ner, relations, slots
+    from . import classification, decision, ner, relations, slots
 
     modules = {
         "cleanconll": ner,
         "bc5cdr": ner,
         "mit_movie": ner,
+        "uner_ewt": ner,
         "crossre": relations,
         "hallmarks": classification,
         "massive": slots,
+        "boolq": decision,
+        "clinc150": decision,
+        "sst5": decision,
     }
     if name not in modules:
         raise ValueError(f"Unknown dataset: {name}")
@@ -36,7 +40,7 @@ def labels(name: str, splits: dict[str, list[Record]]) -> dict[str, str]:
     for record in splits["pool"]:
         if name == "crossre":
             raw.update(r["type"] for r in record.gold["relations"])
-        elif name == "hallmarks":
+        elif name == "hallmarks" or record.task == "decision":
             raw.update(record.gold["labels"])
         else:
             raw.update(s["label"] for s in record.gold["spans"])
@@ -47,6 +51,8 @@ def labels(name: str, splits: dict[str, list[Record]]) -> dict[str, str]:
         "MISC": "miscellaneous",
         "Chemical": "chemical",
         "Disease": "disease",
+        # CLINC150 calls its out-of-scope class "oos".
+        "oos": "out of scope",
     }
     result = {
         label: label
