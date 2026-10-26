@@ -67,9 +67,12 @@ status: done
 
 ## 5. What the next session must do first
 
-+ Publish through public_squash.sh, PR, merge; then the arXiv package.
++ Done 01:40 - PR 10 (this work) and PR 11 (`just arxiv`) merged into master.
++ The owner submits dist/arxiv.tar.gz to arXiv from his account (copy in ~/Downloads/work).
++ The owner approved the BC5CDR rule: labels released as ids and offsets, never the text.
 
 ## Changelog
 
 - 2026-10-26 01:13 CET - Created.
 - 2026-10-26 01:31 CET - Second Codex review applied.
+- 2026-10-26 01:45 CET - Published (PR 10, 11); arXiv package built.
