@@ -11,6 +11,10 @@ TASKS = dict(
     cleanconll="ner",
     bc5cdr="ner",
     mit_movie="ner",
+    uner_ewt="ner",
+    boolq="decision",
+    clinc150="decision",
+    sst5="decision",
     crossre="relations",
     hallmarks="classification",
     massive="slots",
@@ -31,6 +35,9 @@ def collect(runs_root="runs") -> pd.DataFrame:
     root = Path(runs_root)
     for path in sorted(root.rglob("metrics.json")):
         directory = path.parent
+        # runs/held keeps superseded runs (BoolQ at batch 8, 22 Oct); they are not results.
+        if "held" in directory.relative_to(root).parts:
+            continue
         if not (directory / "config.yaml").exists():
             continue
         cfg = yaml.safe_load((directory / "config.yaml").read_text())

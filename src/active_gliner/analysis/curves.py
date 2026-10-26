@@ -58,15 +58,15 @@ def summary(rows: pd.DataFrame) -> pd.DataFrame:
     return grouped.agg(mean="mean", sd="std", seeds="count").reset_index()
 
 
-def macros(table: pd.DataFrame, tag: str = "") -> dict:
+def macros(table: pd.DataFrame, tag: str = "", places: dict = DATASETS) -> dict:
     """Ranked cells as macros: dataset + tag + Curve + share + At + budget (mean test F1)."""
     out = {}
     for row in table[table.rule == "ranked"].to_dict("records"):
         key = (row["dataset"], row["locale"])
         budget = WHOLE if row["budget"] == "all" else BUDGETS.get(row["budget"])
-        if key not in DATASETS or budget is None or row["share"] not in SHARES:
+        if key not in places or budget is None or row["share"] not in SHARES:
             continue
-        name = DATASETS[key][1] + tag + "Curve" + SHARES[row["share"]] + "At" + budget
+        name = places[key][1] + tag + "Curve" + SHARES[row["share"]] + "At" + budget
         out[name] = row["mean"]
     return out
 
@@ -76,11 +76,17 @@ def _x(budget, pool: int) -> float:
 
 
 def figure(
-    rows: pd.DataFrame, teacher_f1: dict, pools: dict, out, name: str = "mixing-curves"
+    rows: pd.DataFrame,
+    teacher_f1: dict,
+    pools: dict,
+    out,
+    name: str = "mixing-curves",
+    places: dict = DATASETS,
 ) -> Path | None:
     """One panel per dataset; x is labelled sentences on a log scale (whole pool last)."""
     table = summary(rows)
-    places = [key for key in DATASETS if key in set(zip(table.dataset, table.locale, strict=True))]
+    titles = places
+    places = [key for key in titles if key in set(zip(table.dataset, table.locale, strict=True))]
     if not places:
         return None
     columns = 4 if len(places) > 3 else len(places)
@@ -128,14 +134,22 @@ def figure(
         if teacher is not None:
             ax.axhline(teacher, color="red", linestyle="--", linewidth=1, label="teacher LLM")
         ax.set_xscale("log")
-        ax.set_title(DATASETS[(dataset, locale)][0], fontsize="medium")
+        ax.set_title(titles[(dataset, locale)][0], fontsize="medium")
         ax.set_xlabel("Labelled sentences (log)", fontsize="small")
         ax.set_ylabel("Test micro-F1 (%)", fontsize="small")
         ax.tick_params(labelsize="x-small")
     for ax in list(axes.flat)[len(places) :]:
         ax.axis("off")
     handles, labels = axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower right", fontsize="x-small", ncol=1)
+    if len(places) < lines * columns:
+        # The empty last panel holds the legend.
+        fig.legend(handles, labels, loc="lower right", fontsize="x-small", ncol=1)
+    else:
+        # Every panel holds data (the added families): keep the legend off the curves.
+        fig.tight_layout()
+        fig.legend(
+            handles, labels, loc="center left", bbox_to_anchor=(1.0, 0.5), fontsize="x-small"
+        )
     return _save(fig, name, out)
 
 
@@ -198,13 +212,13 @@ def random_macros(table: pd.DataFrame) -> dict:
     return out
 
 
-def fewest_macros(chosen: dict, tag: str = "") -> dict:
+def fewest_macros(chosen: dict, tag: str = "", places: dict = DATASETS) -> dict:
     """The dev-chosen fewest human labels in the ranked grid, confirmed once on test."""
     out = {}
     for key, result in chosen.items():
-        if key not in DATASETS or "test" not in result:
+        if key not in places or "test" not in result:
             continue
-        name = DATASETS[key][1] + tag + "Fewest"
+        name = places[key][1] + tag + "Fewest"
         out[name + "Human"] = result["human"]
         out[name + "Teacher"] = result["total"] - result["human"]
         out[name + "Share"] = 100 * result["share"]
@@ -215,7 +229,9 @@ def fewest_macros(chosen: dict, tag: str = "") -> dict:
     return {name: value for name, value in out.items() if value is not None}
 
 
-def latex_table(table: pd.DataFrame, teacher_f1: dict, chosen: dict, path) -> Path:
+def latex_table(
+    table: pd.DataFrame, teacher_f1: dict, chosen: dict, path, places: dict = DATASETS
+) -> Path:
     """References, smallest share that beats the teacher per N, and the dev-chosen cell."""
     lines = [
         "\\begin{tabular}{lrrr" + "r" * len(BUDGETS) + "rr}",
@@ -229,7 +245,7 @@ def latex_table(table: pd.DataFrame, teacher_f1: dict, chosen: dict, path) -> Pa
         "\\midrule",
     ]
     shares = smallest_share(table, teacher_f1)
-    for key, (label, _) in DATASETS.items():
+    for key, (label, _) in places.items():
         local = table[(table.dataset == key[0]) & (table.locale == key[1])]
         if local.empty:
             continue

@@ -15,7 +15,10 @@ from active_gliner.run import RunConfig, experiment_dir, run_experiment
 # Xid 109 faults kill runs. Both are retried in a fresh process.
 RETRY_ENV = "ACTIVE_GLINER_GPU_ATTEMPT"
 CONFIG_ENV = "ACTIVE_GLINER_RUN_CONFIG"
-MAX_GPU_RETRIES = 10
+# One lane runs at a time now, so a memory error is not another run's fault: with the
+# cap it repeats exactly. 10 retries burned 9 hours on BoolQ (22 Oct); 2 still cover an
+# Xid fault.
+MAX_GPU_RETRIES = 2
 GPU_RETRY_WAIT_S = 120.0
 RETRYABLE_SIGNS = (
     "out of memory",
@@ -27,17 +30,37 @@ RETRYABLE_SIGNS = (
 
 # Peak GPU memory seen per run on the 3090 (nvidia-smi, 27 Sep 2026), plus a margin.
 # Lanes share one GPU; a run that starts without room fails with out-of-memory.
-NEED_GIB = {"ner": 7, "classification": 5, "relations": 7, "slots": 13}
+# Decisions: not measured yet; BoolQ passages are long, so the NER margin is used.
+NEED_GIB = {"ner": 7, "classification": 5, "decision": 7, "relations": 7, "slots": 13}
 WHOLE_POOL_RELATIONS_GIB = 15
 EXCLUSIVE_TASKS = {"slots"}
 TASK_OF = {
     "cleanconll": "ner",
     "bc5cdr": "ner",
     "mit_movie": "ner",
+    "uner_ewt": "ner",
     "crossre": "relations",
     "hallmarks": "classification",
     "massive": "slots",
+    "boolq": "decision",
+    "clinc150": "decision",
+    "sst5": "decision",
 }
+
+
+# The owner's rule (23 Oct 2026): training may use the GPU up to about 23 GB, leaving at
+# least 1 GB for the desktop. 21 GiB for the run plus about 1 GiB of desktop leaves that
+# margin. The cap also makes the allocator return unused blocks. No result changes.
+GPU_CAP_GIB = float(os.environ.get("ACTIVE_GLINER_GPU_CAP_GIB", "21"))
+
+
+def cap_gpu_memory() -> None:
+    os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+    import torch
+
+    if torch.cuda.is_available():
+        total = torch.cuda.get_device_properties(0).total_memory
+        torch.cuda.set_per_process_memory_fraction(min(1.0, GPU_CAP_GIB * 2**30 / total))
 
 
 def needed_gib(cfg: RunConfig) -> float:
@@ -124,6 +147,7 @@ def main() -> None:
     raw = os.environ.get(CONFIG_ENV) or sys.stdin.read()
     cfg = RunConfig.model_validate_json(raw)
     attempt = int(os.environ.get(RETRY_ENV, "0"))
+    cap_gpu_memory()
     try:
         with heavy_task_lock(cfg, cfg.out_root):
             wait_for_gpu_memory(cfg)

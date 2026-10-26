@@ -6,3 +6,5 @@ mit_movie: v2
 crossre: v2
 hallmarks: v1  # gate 25 Sep: v1 0.4530 > v2 0.4393 dev micro-F1 (200 dev)
 massive: v2
+# UNER EWT (18 Oct 2026) inherits the CleanCoNLL choice: same PER/LOC/ORG types, no new gate.
+uner_ewt: v2

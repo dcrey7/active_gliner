@@ -18,6 +18,15 @@ DATASETS = {
     ("massive", "en-US"): ("MASSIVE en", "MassiveEn"),
     ("massive", "fr-FR"): ("MASSIVE fr", "MassiveFr"),
 }
+# Decision datasets (docs/research/2026-10-18-1345-*): a separate section of the paper,
+# kept out of DATASETS so the extraction tables and their Holm families stay unchanged.
+DECISIONS = {
+    ("boolq", "en-US"): ("BoolQ", "BoolQ"),
+    ("clinc150", "en-US"): ("CLINC150", "Clinc"),
+}
+# SST-5 is held back (licence unknown, binned crowd labels); see matrix.DECISION_DATASETS.
+# UNER EWT, the open general-domain NER set. Also kept out of DATASETS (same reason).
+OPEN_NER = {("uner_ewt", "en-US"): ("UNER EWT", "UnerEwt")}
 LABELS = {"ground_truth": ("Ground truth", "GroundTruth"), "gemma-4-12b": ("Gemma 4 12B", "Gemma")}
 # The smaller ladder teacher: macros only, not a row of the main table.
 LADDER_LABELS = {"gemma-4-e4b": ("Gemma 4 E4B", "EfourB")}

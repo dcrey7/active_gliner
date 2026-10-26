@@ -1,0 +1,39 @@
+{
+  "dataset": "sst5",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 8544,
+    "dev": 1101,
+    "test": 2210
+  },
+  "label_counts": {
+    "pool": {
+      "negative": 2218,
+      "neutral": 1624,
+      "positive": 2322,
+      "very negative": 1092,
+      "very positive": 1288
+    },
+    "dev": {
+      "negative": 289,
+      "neutral": 229,
+      "positive": 279,
+      "very negative": 139,
+      "very positive": 165
+    },
+    "test": {
+      "negative": 633,
+      "neutral": 389,
+      "positive": 510,
+      "very negative": 279,
+      "very positive": 399
+    }
+  },
+  "empty_gold": {
+    "pool": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "split_hash": "b34d75879e5cc51bdaee130b2548265e708f1c40930b8de09eb59c56c8999b95",
+  "misaligned_dev_rate": 0.0
+}

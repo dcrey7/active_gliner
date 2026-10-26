@@ -34,7 +34,8 @@ def load(root: Path, locale: str) -> dict[str, list[Record]]:
                 "entities": [dict(spans[a, b], label=label) for a, b, label in row["ner"]],
                 "relations": [
                     {
-                        "head": spans[r[0], r[1]], "tail": spans[r[2], r[3]],
+                        "head": spans[r[0], r[1]],
+                        "tail": spans[r[2], r[3]],
                         "head_id": mention_ids[starts[r[0]], ends[r[1]]],
                         "tail_id": mention_ids[starts[r[2]], ends[r[3]]],
                         "type": r[4],

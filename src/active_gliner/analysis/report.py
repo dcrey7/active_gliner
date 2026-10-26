@@ -22,6 +22,8 @@ from . import (
     selector_audit,
     stats,
     teacher,
+    teacher_errors,
+    tolerance,
 )
 from . import tables as main_tables
 
@@ -149,6 +151,84 @@ def _deployment_points(df, skipped):
     return pd.DataFrame(output)
 
 
+def _places(rows: pd.DataFrame, places: dict) -> pd.DataFrame:
+    """Keep the curve rows of the given (dataset, locale) places."""
+    keys = list(zip(rows.dataset, rows.locale, strict=True))
+    return rows[[key in places for key in keys]]
+
+
+def _family_results(
+    rows_by_teacher: dict, tables: dict, figure_dir, out, skipped, places: dict, family: str
+) -> dict:
+    """Curves of an added family for each teacher: table, figure, dev-chosen fewest.
+
+    Decisions and UNER EWT were added after the pre-registered analysis, so each family
+    gets its own Holm family and its own tables (family "Decision" or "OpenNer").
+    """
+    pools = {key: matrix.pool_size(*key) for key in places}
+    result = {"tables": [], "f1": [], "results": {}, "macros": {}}
+    for teacher_name, rows in rows_by_teacher.items():
+        tag = "Gemma" if teacher_name == main_tables.MAIN_TEACHER else "Luna"
+        f1 = {
+            key: value
+            for key in places
+            if (value := second_teacher.teacher_f1(tables, *key, teacher_name)) is not None
+        }
+
+        def counts(dataset, locale, split, ids, teacher_name=teacher_name):
+            return teacher.teacher_scores(dataset, locale, teacher_name, split, ids)
+
+        table = curves.summary(rows)
+        fewest = minimum.choose(curves.ranked_cells(rows), counts) if len(rows) else {}
+        for key, found in fewest.items():
+            if "missing" in found:
+                skipped.append(f"{family} fewest, {tag} {key}: {found['missing']}")
+        curves.figure(
+            rows, f1, pools, figure_dir, name=f"{_slug(family)}-curves-{tag.lower()}", places=places
+        )
+        curves.latex_table(
+            table, f1, fewest, out / "tables" / f"{_slug(family)}_{tag.lower()}.tex", places=places
+        )
+        macros = result["macros"]
+        macros.update(curves.macros(table, tag=tag, places=places))
+        macros.update(curves.fewest_macros(fewest, tag=tag, places=places))
+        macros.update(curves.summary_counts(table, f1, fewest, tag=family + tag))
+        for key, value in f1.items():
+            macros["Teacher" + places[key][1] + ("" if tag == "Gemma" else "Luna")] = value
+        for key, found in fewest.items():
+            if "test" in found:
+                macros[places[key][1] + tag + "FewestTestP"] = format_p(
+                    found["test"]["p_holm"], 1000
+                )
+        result["tables"].append(table)
+        result["f1"].append(f1)
+        result["results"][tag] = {f"{d}/{loc}": r for (d, loc), r in fewest.items()}
+    return result
+
+
+def _held_boolq_macros(runs) -> dict:
+    """BoolQ cells trained both at batch 8 (runs/held) and at 4 x 2: test F1 differences."""
+    diffs = []
+    for old in sorted(Path(runs).glob("held/boolq-*/*/*/*/metrics.json")):
+        locale, source, name = old.parts[-4:-1]
+        new = Path(runs) / "decision" / "boolq" / locale / source / name / "metrics.json"
+        if new.exists():
+            before = json.loads(old.read_text())["test"]["micro"]["f1"]
+            after = json.loads(new.read_text())["test"]["micro"]["f1"]
+            diffs.append(100 * (after - before))
+    if not diffs:
+        return {}
+    return {
+        "BoolQBatchCheckCells": len(diffs),
+        "BoolQBatchCheckMeanDiff": sum(diffs) / len(diffs),
+        "BoolQBatchCheckMaxDiff": max(abs(d) for d in diffs),
+    }
+
+
+def _slug(family: str) -> str:
+    return {"Decision": "decision", "OpenNer": "open-ner"}[family]
+
+
 def analyse(runs="runs", out="paper") -> dict:
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
@@ -157,8 +237,18 @@ def analyse(runs="runs", out="paper") -> dict:
     df = aggregate.collect(runs)
     finished_runs = len(df)
     # The mixing curves read whole-pool runs that are tagged as a training variant.
-    curve_rows = curves.curve_rows(df)
-    luna_curve_rows = curves.curve_rows(df, second_teacher.SECOND_TEACHER)
+    curve_rows = _places(curves.curve_rows(df), main_tables.DATASETS)
+    luna_curve_rows = _places(
+        curves.curve_rows(df, second_teacher.SECOND_TEACHER), main_tables.DATASETS
+    )
+    decision_rows = {
+        name: _places(curves.curve_rows(df, name), main_tables.DECISIONS)
+        for name in (main_tables.MAIN_TEACHER, second_teacher.SECOND_TEACHER)
+    }
+    open_ner_rows = {
+        name: _places(curves.curve_rows(df, name), main_tables.OPEN_NER)
+        for name in (main_tables.MAIN_TEACHER, second_teacher.SECOND_TEACHER)
+    }
     # Training variants (LoRA layers, full fine-tune) share selector, N and seed with main
     # runs; keep them out of every main-run table and contrast.
     variants = df[df.variant.notna()] if "variant" in df else df.iloc[0:0]
@@ -207,7 +297,8 @@ def analyse(runs="runs", out="paper") -> dict:
     }
     pools = {key: matrix.pool_size(*key) for key in main_tables.DATASETS}
     curves.figure(curve_rows, teacher_f1, pools, figure_dir)
-    minimum_rows = minimum.minimum_rows(variants, pools)
+    # The pre-registered minimum-human-labels curve covers only the main datasets.
+    minimum_rows = minimum.minimum_rows(_places(variants, main_tables.DATASETS), pools)
     minimum_table = minimum.summary(minimum_rows)
 
     def teacher_counts(dataset, locale, split, ids):
@@ -245,7 +336,35 @@ def analyse(runs="runs", out="paper") -> dict:
     reliability_tables = reliability.tables(df, runs)
     reliability.figure(reliability_tables, figure_dir)
     reliability.latex_table(reliability_tables, out / "tables" / "reliability.tex")
-    second_table = second_teacher.cells(df)
+    second_table = second_teacher.cells(_places(df, main_tables.DATASETS))
+    decisions = _family_results(
+        decision_rows, tables, figure_dir, out, skipped, main_tables.DECISIONS, "Decision"
+    )
+    open_ner = _family_results(
+        open_ner_rows, tables, figure_dir, out, skipped, main_tables.OPEN_NER, "OpenNer"
+    )
+    tolerance_table = tolerance.rows(
+        {
+            main_tables.MAIN_TEACHER: pd.concat(
+                [curve_table, decisions["tables"][0], open_ner["tables"][0]]
+            ),
+            second_teacher.SECOND_TEACHER: pd.concat(
+                [luna_curve_table, decisions["tables"][1], open_ner["tables"][1]]
+            ),
+        },
+        {
+            main_tables.MAIN_TEACHER: {**teacher_f1, **decisions["f1"][0], **open_ner["f1"][0]},
+            second_teacher.SECOND_TEACHER: {
+                **luna_f1,
+                **decisions["f1"][1],
+                **open_ner["f1"][1],
+            },
+        },
+        {**main_tables.DATASETS, **main_tables.OPEN_NER, **main_tables.DECISIONS},
+    )
+    tolerance.latex_table(tolerance_table, out / "tables" / "tolerance.tex")
+    error_table = teacher_errors.rows()
+    teacher_errors.latex_table(error_table, out / "tables" / "teacher_errors.tex")
     second_teacher.latex_table(second_table, tables, out / "tables" / "second_teacher.tex")
     result = _clean(
         dict(
@@ -260,6 +379,10 @@ def analyse(runs="runs", out="paper") -> dict:
             fewest_ranked={f"{d}/{loc}": r for (d, loc), r in fewest.items()},
             fewest_ranked_luna={f"{d}/{loc}": r for (d, loc), r in luna_fewest.items()},
             second_teacher=second_table.to_dict("records"),
+            decisions=decisions["results"],
+            open_ner=open_ner["results"],
+            tolerance=tolerance_table.to_dict("records"),
+            teacher_errors=error_table.to_dict("records"),
             skipped=skipped,
         )
     )
@@ -316,6 +439,14 @@ def analyse(runs="runs", out="paper") -> dict:
     macros.update(main_tables.ladder_macros(tables["ladder"]))
     macros.update(deployment.macros(points))
     macros.update(second_teacher.macros(second_table, tables))
+    macros.update(decisions["macros"])
+    macros.update(open_ner["macros"])
+    macros.update(tolerance.macros(tolerance_table))
+    macros.update(teacher_errors.macros(error_table))
+    macros.update(teacher_errors.majority_macros())
+    macros.update(teacher_errors.boolq_length_macros())
+    macros.update(teacher_errors.org_as_loc_macros())
+    macros.update(_held_boolq_macros(runs))
     numbers.write_macros(out / "numbers.tex", macros)
     main_tables.write_main_table(df, out / "tables" / "main_results.tex")
     return result

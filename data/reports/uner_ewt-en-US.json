@@ -1,0 +1,33 @@
+{
+  "dataset": "uner_ewt",
+  "locale": "en-US",
+  "sizes": {
+    "pool": 12543,
+    "dev": 2001,
+    "test": 2077
+  },
+  "label_counts": {
+    "pool": {
+      "LOC": 2712,
+      "ORG": 1436,
+      "PER": 2874
+    },
+    "dev": {
+      "LOC": 399,
+      "ORG": 224,
+      "PER": 343
+    },
+    "test": {
+      "LOC": 317,
+      "ORG": 322,
+      "PER": 449
+    }
+  },
+  "empty_gold": {
+    "pool": 8280,
+    "dev": 1377,
+    "test": 1368
+  },
+  "split_hash": "cbc4b18a3667984bb5086c5e26988e11b9bfedd7ed6e3d665a1ba36648323dd1",
+  "misaligned_dev_rate": 0.0
+}

@@ -118,6 +118,9 @@ def train(
         result = []
         for record in records:
             example = task.to_training_example(record, labels, **kwargs)
+            # A decision has no "none" answer, so an invalid teacher answer trains nothing.
+            if example is None:
+                continue
             if record.task in {"ner", "slots"} and not training_targets_match(record, example):
                 raise ValueError(f"Training targets differ from supplied spans: {record.id}")
             result.extend(example if isinstance(example, list) else [example])

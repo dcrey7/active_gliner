@@ -21,6 +21,16 @@ def make_splits(source: dict[str, list[Record]], name: str) -> dict[str, list[Re
             "dev": [r for r in candidates if r.id in holdout],
             "test": source["test"],
         }
+    if name == "boolq":
+        # BoolQ has no labelled test split: HF validation is the test set, dev comes from train.
+        ids = sorted(r.id for r in candidates)
+        random.Random(20261018).shuffle(ids)
+        holdout = set(ids[:1000])
+        return {
+            "pool": [r for r in candidates if r.id not in holdout],
+            "dev": [r for r in candidates if r.id in holdout],
+            "test": source["test"],
+        }
     return {"pool": candidates, "dev": source["dev"], "test": source["test"]}
 
 

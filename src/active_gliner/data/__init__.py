@@ -1,11 +1,33 @@
-from . import bc5cdr, cleanconll, crossre, hallmarks, massive, mit_movie
+from . import (
+    bc5cdr,
+    boolq,
+    cleanconll,
+    clinc150,
+    crossre,
+    hallmarks,
+    massive,
+    mit_movie,
+    sst5,
+    uner_ewt,
+)
 from .common import raw_dir
 from .records import Record, gold_spans
 from .splits import make_splits, read_split_ids, split_hash, write_split_ids
 
 LOADERS = {
     module.__name__.rsplit(".", 1)[-1]: module
-    for module in (bc5cdr, cleanconll, crossre, hallmarks, massive, mit_movie)
+    for module in (
+        bc5cdr,
+        boolq,
+        cleanconll,
+        clinc150,
+        crossre,
+        hallmarks,
+        massive,
+        mit_movie,
+        sst5,
+        uner_ewt,
+    )
 }
 __all__ = [
     "Record",
