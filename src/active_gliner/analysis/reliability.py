@@ -131,7 +131,7 @@ def figure(all_tables: dict, out) -> Path | None:
         return None
     columns = 4 if len(places) > 3 else len(places)
     lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(3.2 * columns, 3.0 * lines), squeeze=False)
+    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
     styles = {"zero-shot": ("tab:orange", "o"), "trained": ("tab:blue", "s")}
     for ax, key in zip(axes.flat, places, strict=False):
         for model, table in all_tables[key].items():

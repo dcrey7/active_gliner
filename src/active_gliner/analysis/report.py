@@ -274,7 +274,16 @@ def analyse(runs="runs", out="paper") -> dict:
         figures.learning_curves(df, dataset, figure_dir)
         figures.cost_curves(df, dataset, figure_dir)
     figures.interaction_forest(primary, figure_dir)
-    figures.teacher_bins_chart(bins, figure_dir)
+    # One teacher on the seven main datasets: more lines would not be readable.
+    figures.teacher_bins_chart(
+        {
+            main_tables.DATASETS[(d, loc)][0]: table
+            for key, table in bins.items()
+            for d, loc, teacher in [key.split("/")]
+            if teacher == "gemma-4-12b" and (d, loc) in main_tables.DATASETS
+        },
+        figure_dir,
+    )
     points = _deployment_points(df, skipped)
     if points.empty:
         # Per-run inference costs are not logged; build pooled NER points from timings.

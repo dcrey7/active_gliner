@@ -136,22 +136,28 @@ def learning_curves(df, dataset, out="paper/figures") -> list[Path]:
     return paths
 
 
+# Single-column charts print about 3.1 in wide, so they are drawn small to keep text readable.
 def interaction_forest(report, out="paper/figures") -> Path | None:
     rows = [(task, entry) for task, entry in report["interactions"].items() if "mean" in entry]
     if not rows:
         return None
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4.0, 2.6))
     for i, (_, entry) in enumerate(rows):
         ax.plot(entry["mean"], i, "o", color="tab:blue")
         interval = entry.get("interval", {})
         if "low" in interval:
             ax.hlines(i, interval["low"], interval["high"], color="tab:blue")
     ax.axvline(0, color="gray", linestyle="--")
+    names = {
+        "ner": "NER",
+        "relations": "Relations",
+        "classification": "Multi-label",
+        "slots": "Slots",
+    }
     ax.set(
         yticks=range(len(rows)),
-        yticklabels=[name for name, _ in rows],
+        yticklabels=[names.get(name, name) for name, _ in rows],
         xlabel="Interaction (F1 points)",
-        title="95% paired intervals: test uncertainty only",
     )
     return _save(fig, "interaction-forest", out)
 
@@ -178,7 +184,7 @@ def _bubbles(ax, points, x):
             group.loc[known, x],
             group.loc[known, "f1"],
             s=sizes[known] * 20,
-            label=f"{family} (area: parameters in billions)",
+            label=family,
             alpha=0.7,
             color=color,
         )
@@ -199,7 +205,7 @@ def _bubbles(ax, points, x):
             (row[x], row.f1),
             xytext=(5, -12 if below else 5),
             textcoords="offset points",
-            fontsize=8,
+            fontsize=7,
         )
         if pd.notna(row.get("sd")):
             ax.errorbar(row[x], row.f1, yerr=row["sd"], color="gray", capsize=3)
@@ -215,14 +221,13 @@ def pareto_chart(points, out="paper/figures") -> Path | None:
     points = _points(points, "cost")
     if points.empty:
         return None
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4.2, 3.2))
     _bubbles(ax, points, "cost")
     names = pareto_front(points, "cost", "f1")
     front = points[points.name.isin(names)].sort_values("cost")
     ax.plot(front.cost, front.f1, linestyle="--", color="gray")
     ax.set(
         xlabel="Inference cost per 1M sentences (USD, estimated; log scale)",
-        title="Observed point-estimate front",
     )
     return _save(fig, "pareto", out)
 
@@ -231,10 +236,8 @@ def quadrant_chart(points, out="paper/figures") -> Path | None:
     points = _points(points, "latency_ms")
     if points.empty:
         return None
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4.2, 3.2))
     _bubbles(ax, points, "latency_ms")
-    ax.axvline(points.latency_ms.median(), linestyle=":", color="gray")
-    ax.axhline(points.f1.median(), linestyle=":", color="gray")
     for _, row in points.iterrows():
         source = points[points.name == row.get("zero_shot_name")]
         if len(source) == 1:
@@ -246,24 +249,24 @@ def quadrant_chart(points, out="paper/figures") -> Path | None:
                 xytext=(start.latency_ms, start.f1),
                 arrowprops={"arrowstyle": "->", "color": "black"},
             )
-    ax.set(xlabel="Latency (ms per sentence, log scale)", title="Descriptive median splits")
+    ax.set(xlabel="Latency (ms per sentence, log scale)")
     return _save(fig, "quadrants", out)
 
 
 def teacher_bins_chart(tables, out="paper/figures") -> Path | None:
     if not tables:
         return None
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4.8, 3.0))
     for name, table in tables.items():
         table = pd.DataFrame(table)
-        ax.plot(table["bin"], 100 * table.f1, marker="o", label=name.replace("/", ", "))
+        ax.plot(table["bin"], 100 * table.f1, marker="o", label=name)
     bins = sorted(pd.DataFrame(next(iter(tables.values())))["bin"])
     names = [str(b + 1) for b in bins]
     names[0] += "\nleast sure"
     names[-1] += "\nmost sure"
     ax.set_xticks(bins, names)
     ax.set(
-        xlabel="Student confidence group (equal-size groups; ties split by stable rank)",
+        xlabel="Untrained student's confidence, in four equal groups",
         ylabel="Teacher micro-F1 (%)",
         ylim=(0, 100),
     )

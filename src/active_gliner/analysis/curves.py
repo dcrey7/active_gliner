@@ -91,7 +91,7 @@ def figure(
         return None
     columns = 4 if len(places) > 3 else len(places)
     lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(3.4 * columns, 2.9 * lines), squeeze=False)
+    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
     colors = plt.get_cmap("viridis")
     for ax, (dataset, locale) in zip(axes.flat, places, strict=False):
         local = table[(table.dataset == dataset) & (table.locale == locale)]
@@ -143,13 +143,11 @@ def figure(
     handles, labels = axes.flat[0].get_legend_handles_labels()
     if len(places) < lines * columns:
         # The empty last panel holds the legend.
-        fig.legend(handles, labels, loc="lower right", fontsize="x-small", ncol=1)
+        fig.legend(handles, labels, loc="lower right", fontsize="small", ncol=1)
     else:
         # Every panel holds data (the added families): keep the legend off the curves.
         fig.tight_layout()
-        fig.legend(
-            handles, labels, loc="center left", bbox_to_anchor=(1.0, 0.5), fontsize="x-small"
-        )
+        fig.legend(handles, labels, loc="center left", bbox_to_anchor=(1.0, 0.5), fontsize="small")
     return _save(fig, name, out)
 
 

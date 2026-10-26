@@ -20,7 +20,7 @@ TASK_FAMILY = {
     "mit_movie": "NER",
     "uner_ewt": "NER",
     "crossre": "Relations",
-    "hallmarks": "Classification",
+    "hallmarks": "Multi-label",
     "massive": "Slots",
     "boolq": "Decision",
     "clinc150": "Decision",
