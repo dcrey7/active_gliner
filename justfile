@@ -18,6 +18,10 @@ test:
 
 check: lint fmt-check test
 
+# Pack the paper for arXiv into dist/arxiv.tar.gz (sources, figures, tables, main.bbl).
+arxiv:
+    bash scripts/arxiv_package.sh
+
 run-smoke:
     HF_HUB_OFFLINE=1 uv run pytest -q tests/test_run_smoke.py
 
