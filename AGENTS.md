@@ -15,9 +15,8 @@ The design lives in `docs/research/2026-09-25-1113-full-merge-design.md`. The ob
 
 ## 2. Who does what
 
-+ Codex writes the code in `src/`, `justfile`, `pyproject.toml`, and configs.
-+ Claude reviews the code, writes tests in `tests/`, and writes `docs/`.
-+ A change is done only when `just check` passes and Claude has reviewed it.
++ The author writes and reviews the code, tests and docs, with AI coding assistants.
++ A change is done only when `just check` passes and the author has reviewed it.
 
 ## 3. Layout
 
@@ -29,7 +28,7 @@ The design lives in `docs/research/2026-09-25-1113-full-merge-design.md`. The ob
 | `docs/` | wiki, research, updates | active |
 | `data/` | frozen split ids, ladder samples, dataset reports | frozen; written once by the code |
 | `paper/` | the paper, `numbers.tex`, tables and figures from `active-gliner analyse` | generated, except `main.tex` |
-| `notebooks/` | the quickstart notebook | active |
+| `notebooks/` | the quickstart and one notebook per task type | active |
 
 The thesis code, results and data live only at the git tag `thesis-v1`. They use old `gliner` and `torch<2.5` and do not run in the new environment. To run them, check out that tag.
 

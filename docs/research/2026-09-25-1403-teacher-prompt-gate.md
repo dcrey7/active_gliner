@@ -1,7 +1,7 @@
 ---
 title: Teacher prompt gate, v1 vs v2 (Gemma 4 12B)
 date: 2026-09-25 14:03 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

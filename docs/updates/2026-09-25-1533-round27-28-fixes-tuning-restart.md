@@ -1,7 +1,7 @@
 ---
 title: Round-27 and round-28 fixes, first tuning result, tuning restart
 date: 2026-09-25 15:33 CEST
-author: Claude (review, tests) with Codex (code)
+author: Abhishek Thomas
 type: update
 status: frozen
 ---
@@ -10,16 +10,16 @@ status: frozen
 
 ## 1. What we did
 
-+ Claude reviewed the Codex fixes for the nine round-27 audit findings. Commit `1ad11ab`.
-+ Claude wrote `tests/test_protocol_fixes.py`, with one or more tests per finding.
++ The author reviewed the Codex fixes for the nine round-27 audit findings. Commit `1ad11ab`.
++ The author wrote `tests/test_protocol_fixes.py`, with one or more tests per finding.
   + One test checks that the training collator marks only the supplied occurrence of a repeated word. It uses the real student processor and runs on the CPU.
-+ Claude updated `tests/test_relations_pairs.py` to the typed CrossRE markers `[H:person]` and `[T:location]`.
-+ Claude found three new defects. Codex fixed them in commit `a98e141`:
++ The author updated `tests/test_relations_pairs.py` to the typed CrossRE markers `[H:person]` and `[T:location]`.
++ The author found three new defects. Codex fixed them in commit `a98e141`:
   1. The tuning process leaked GPU memory across trials, and trials failed with out-of-memory errors.
   2. Failed trials were silent. Now the error text goes into `trials.jsonl`, and `--freeze` refuses a search with failed trials.
   3. The protocol fingerprint hashed every `.py` file. Now it hashes only the code that changes training, selection or scoring (`protocol.PROTOCOL_MODULES`).
-+ Claude archived the old CleanCoNLL tuning in `runs/tuning_archive/cleanconll-old-targets/`. It used the old training targets and lost 5 trials.
-+ Claude restarted the tuning of all four tasks with the fixed code (log `tune_all3.log`).
++ The author archived the old CleanCoNLL tuning in `runs/tuning_archive/cleanconll-old-targets/`. It used the old training targets and lost 5 trials.
++ The author restarted the tuning of all four tasks with the fixed code (log `tune_all3.log`).
 
 ## 2. What we measured
 

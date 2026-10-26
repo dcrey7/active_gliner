@@ -392,7 +392,8 @@ def analyse(runs="runs", out="paper") -> dict:
             open_ner=open_ner["results"],
             tolerance=tolerance_table.to_dict("records"),
             teacher_errors=error_table.to_dict("records"),
-            skipped=skipped,
+            # Relative paths: the published results must not show the local folder layout.
+            skipped=[entry.replace(f"{Path.cwd()}/", "") for entry in skipped],
         )
     )
     (out / "results.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")

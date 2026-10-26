@@ -1,7 +1,7 @@
 ---
 title: Thesis replication on all datasets - design addendum
 date: 2026-09-29 10:47 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

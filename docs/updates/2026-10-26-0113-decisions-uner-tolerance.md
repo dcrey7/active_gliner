@@ -1,7 +1,7 @@
 ---
 title: Decision tasks, UNER EWT and the cross-task tolerance answer
 date: 2026-10-26 01:13 CET
-author: Claude
+author: Abhishek Thomas
 type: update
 status: done
 ---
@@ -57,7 +57,7 @@ status: done
 + Macro diff - only 14 new macros, no old value changed. Paper 19 pages, 0 "??".
   `just check`: 332 passed, 1 skipped.
 
-## 3c. Story and plain-language pass (Claude only, no Codex)
+## 3c. Story and plain-language pass (the author only, no Codex)
 
 + Abstract 534 -> 278 words; the introduction says why LLM labels are used (humans slow
   and costly, an LLM on every input slow, costly, sends data away; student 165x faster).
@@ -76,6 +76,31 @@ status: done
   finds 52% of out-of-scope; 250 in pool vs 1,000 in test).
 + All 26 arXiv citations checked against arXiv (title and first author match).
 + Checks: macros unchanged, 18 pages, no "??", `just check` 333 passed.
+
+## 3d. The tool, the README, the notebooks, no AI author
+
++ The tool learns the decision task (`label` per row) and the paper's recipe:
+  `active-gliner rank` (zero-shot ranking, empty predictions last, a random share to
+  humans), then `fit --select all --human <file>`.
++ `fit`, `rank` and `predict` use the paper's tuned settings per task type
+  (`src/active_gliner/recipes/`, a tested copy of `configs/recipes/`). Relations load the
+  native relation head, as the paper runs do.
++ Bug found by the notebooks: before this, `fit` used generic settings. Relations trained
+  to 0.0 dev F1 (no relation head), and the decision run ran out of GPU memory
+  (augmentation on, LoRA on every task head).
++ One notebook per task type (`notebooks/task_*.ipynb`, built by
+  `notebooks/build_task_notebooks.py`, run by `just task-notebooks`).
++ `fit` trains 1,000 steps and checks dev every 100 steps by default, as the paper does
+  (before: 500 and 50).
++ Notebook results, dev F1 zero-shot -> trained, one run, seed 1, 1,000 ranked texts,
+  250 human, Gemma 4 12B for the rest: NER 47.4 -> 74.6, relations 9.6 -> 21.4,
+  multi-label 21.0 -> 43.6, slots 25.4 -> 63.6, decision 68.7 -> 92.7. Relations sits
+  between the paper's CrossRE points at 1,000 texts (20.5 LLM only, 27.1 with 25%
+  ground truth; test, mean over seeds).
++ `just check`: 339 passed, 1 skipped (GPU tests included).
++ README rewritten: five task types, the recipe, file formats, per-task tolerance.
++ Docs and AGENTS.md name the author, not an AI product; the paper's AI disclosure names
+  no product.
 
 ## 4. What changed on disk
 
@@ -97,3 +122,4 @@ status: done
 - 2026-10-26 01:31 CET - Second Codex review applied.
 - 2026-10-26 01:45 CET - Published (PR 10, 11); arXiv package built.
 - 2026-10-26 12:35 CET - Story and plain-language pass; CLINC150 out-of-scope split.
+- 2026-10-26 15:52 CET - Tool recipes, rank and human mixing; README; task notebooks.

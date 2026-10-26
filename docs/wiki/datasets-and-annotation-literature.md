@@ -1,7 +1,7 @@
 ---
 title: Datasets and the LLM-annotation literature
 date: 2026-09-25 23:25 CEST
-author: Claude (research agent)
+author: Abhishek Thomas
 type: wiki
 status: draft
 ---

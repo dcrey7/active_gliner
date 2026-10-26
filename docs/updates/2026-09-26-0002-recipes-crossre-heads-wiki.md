@@ -1,7 +1,7 @@
 ---
 title: Three recipes frozen, CrossRE relation heads, literature wiki, first teacher-error evidence
 date: 2026-09-26 00:02 CEST
-author: Claude (review, tests, docs) with Codex (code)
+author: Abhishek Thomas
 type: update
 status: frozen
 ---

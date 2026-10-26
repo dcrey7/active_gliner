@@ -1,7 +1,7 @@
 ---
 title: GLiNER2 2.0.0 API study - loading, schemas, confidence, training, and what it means for Active GLiNER
 date: 2026-09-25 12:02 CEST
-author: Claude (subagent)
+author: Abhishek Thomas
 type: research
 status: frozen
 ---

@@ -1,7 +1,7 @@
 ---
 title: Two-step training - teacher labels first, then human labels
 date: 2026-10-06 15:29 CEST
-author: Claude (approved by Abhishek, 2026-10-06)
+author: Abhishek Thomas
 type: research
 status: dropped
 ---

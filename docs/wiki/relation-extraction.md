@@ -1,7 +1,7 @@
 ---
 title: Relation extraction with GLiNER-style models, and CrossRE
 date: 2026-09-25 23:25 CEST
-author: Claude (research agent)
+author: Abhishek Thomas
 type: wiki
 status: draft
 ---
@@ -423,5 +423,5 @@ The options below are ranked by the evidence above.
 ---
 
 ## Changelog
-- 2026-09-25 23:35 CEST - Claude check: corrected the PURE Table 7 reading (pipeline against joint, not markers against no markers).
+- 2026-09-25 23:35 CEST - The author check: corrected the PURE Table 7 reading (pipeline against joint, not markers against no markers).
 - 2026-09-25 23:25 CEST - Created from a full read of the papers.

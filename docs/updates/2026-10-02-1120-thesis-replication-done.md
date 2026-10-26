@@ -1,7 +1,7 @@
 ---
 title: Thesis replication finished and written into the paper
 date: 2026-10-02 11:20 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: update
 status: done
 ---

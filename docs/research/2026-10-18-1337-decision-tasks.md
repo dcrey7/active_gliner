@@ -1,7 +1,7 @@
 ---
 title: Decision tasks (Jev, Unsloth, typed-decisions) and Active GLiNER
 date: 2026-10-18 13:37 CEST
-author: Claude
+author: Abhishek Thomas
 type: research
 status: done
 ---

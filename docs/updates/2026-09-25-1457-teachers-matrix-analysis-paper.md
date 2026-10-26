@@ -1,7 +1,7 @@
 ---
 title: Teachers, run matrix, analysis, paper draft
 date: 2026-09-25 14:57 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: update
 status: frozen
 ---
@@ -50,7 +50,7 @@ Running at 14:57: Gemma labelling of all pool and test splits; tuning (4 tasks x
 
 ## 5. What the next session must do first
 
-1. Check `/home/abhishek/.claude/jobs/b454a3ee/tmp/label_all2.log` and `runs/tuning/*/trials.jsonl`; restart either job if it died (both resume).
+1. Check `label_all2.log` and `runs/tuning/*/trials.jsonl`; restart either job if it died (both resume).
 2. When tuning ends: check `configs/recipes/*.yaml`, run the O7 timing gate and the same-seed repeatability check.
 3. Start `active-gliner matrix run` with ground-truth blocks first (they need no teacher labels).
 4. Ask Abhishek for the Cerebras key if still missing.

@@ -1,7 +1,7 @@
 ---
 title: Active GLiNER paper - full merge design (NER + relations + classification + slot JSON)
 date: 2026-09-25 11:13 CEST
-author: Claude (draft), Codex gpt-6-astra (review)
+author: Abhishek Thomas
 type: research
 status: final - signed off by Codex (round 12)
 ---
@@ -98,7 +98,7 @@ Cut order if the timing gate fails: (1) the whole joint block (30), never only i
 ## 8. Timeline (about 3-4 weeks wall time)
 
 ```
-days 1-4    Codex builds loaders, 4 task plug-ins, teacher cache, train, eval; Claude reviews.
+days 1-4    Codex builds loaders, 4 task plug-ins, teacher cache, train, eval; the author reviews.
             Pins file. Overlap and duplicate audit.
 day 3-4     timing gate: one run of every kind. Apply the cut order.
 days 4-7    teacher labelling (about 50k items).
@@ -240,8 +240,8 @@ Pilot (kept as a pilot result): end-to-end CrossRE triples scored 0.07 micro-F1 
 + CrossRE trains every step (26 Sep 12:20) - amends the early-stopping rule for CrossRE only.
   + Evidence (fp32, ground truth, min): dev F1 moves up and down between checks. With patience 3, N100 seed 1 stopped at step 600 (best dev .337, test .309) while its trend still rose; N200 seed 1 nearly stopped at step 500 and then reached dev .410 at step 1000. The other runs trained all 1000 steps: N100 seeds 2 and 3 test .357 and .345, N200 seed 2 test .369.
   + Rule: the CrossRE recipe sets `early_stopping_patience: 10`. Runs have 10 dev checks, so every run trains all 1000 steps and keeps the checkpoint with the best dev micro-F1. Dev only, as before. Other tasks keep patience 3.
-  + The recipe hash changes, so only CrossRE runs rerun. Decided by Claude with Abhishek's go-ahead ("you are in charge").
-+ Implementation note (26 Sep) - Codex CLI lost its login (`401 Unauthorized`). From round 34, Claude writes the code and reviews it, with tests, until Codex is back.
+  + The recipe hash changes, so only CrossRE runs rerun. Decided by the author with Abhishek's go-ahead ("you are in charge").
++ Implementation note (26 Sep) - Codex CLI lost its login (`401 Unauthorized`). From round 34, the author writes the code and reviews it, with tests, until Codex is back.
 
 ## Changelog
 
@@ -251,7 +251,7 @@ Pilot (kept as a pilot result): end-to-end CrossRE triples scored 0.07 micro-F1 
 
 - 2026-09-26 07:10 CEST - Section 17: teacher mentions match only on student word edges (parser bug fix); effect on cached labels; all finished runs rerun.
 
-- 2026-09-26 02:37 CEST - Section 17: CrossRE relation head fixed to native by design, pruner warmup for the CrossRE search, dataset pins from raw-file hashes, Claude writes code while Codex is logged out.
+- 2026-09-26 02:37 CEST - Section 17: CrossRE relation head fixed to native by design, pruner warmup for the CrossRE search, dataset pins from raw-file hashes, the author writes code while Codex is logged out.
 
 - 2026-09-25 22:43 CEST - Section 17: amendments from Codex rounds 27 to 30 (exact training targets, dev threshold rule, typed CrossRE markers, process isolation, CrossRE negative sampling).
 

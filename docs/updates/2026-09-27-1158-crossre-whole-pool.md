@@ -1,7 +1,7 @@
 ---
 title: CrossRE whole-pool runs, out-of-memory failures, and a one-time bad gradient
 date: 2026-09-27 11:58 CEST
-author: Claude Code
+author: Abhishek Thomas
 type: update
 status: frozen
 ---

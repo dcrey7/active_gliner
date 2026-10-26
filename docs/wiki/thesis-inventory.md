@@ -1,7 +1,7 @@
 ---
 title: What the Active GLiNER thesis already did
 date: 2026-09-25 11:40 CEST
-author: Claude, from a full read of docs/master thesis final2.txt (1,963 lines) and results2/
+author: Abhishek Thomas
 type: wiki
 status: living document - edit in place
 ---

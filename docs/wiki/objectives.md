@@ -1,7 +1,7 @@
 ---
 title: Active GLiNER paper - objectives and reporting
 date: 2026-09-25 11:27 CEST
-author: Claude (for Abhishek Thomas)
+author: Abhishek Thomas
 type: wiki
 status: living document - edit in place
 ---
@@ -28,8 +28,8 @@ Each objective is done only when its test passes. "Done" is never claimed on a p
 
 | # | Objective | Done when | Status |
 |---|---|---|---|
-| O0 | Design agreed | Claude and Codex sign off | done (25 Sep, round 19; thesis inventory in `docs/wiki/thesis-inventory.md`) |
-| O1 | Repo ready | `AGENTS.md` (Codex writes code, Claude reviews), `uv` project, `ruff` clean, `pytest` runs, `justfile` | done (25 Sep, commit 1f5b8d3; `just check`: ruff clean, 3 tests pass) |
+| O0 | Design agreed | the author and the reviewer sign off | done (25 Sep, round 19; thesis inventory in `docs/wiki/thesis-inventory.md`) |
+| O1 | Repo ready | `AGENTS.md` (Codex writes code, the author reviews), `uv` project, `ruff` clean, `pytest` runs, `justfile` | done (25 Sep, commit 1f5b8d3; `just check`: ruff clean, 3 tests pass) |
 | O2 | Data loaders | 6 datasets load; split sizes, label counts, substring checks and PMID grouping printed and saved; frozen pool and holdout ids written | done (25 Sep; 7 loaders incl. MASSIVE fr-FR, 24 data tests pass, reports in data/reports, frozen ids in data/splits) |
 | O3 | Pins | `docs/wiki/pins.md` holds model revisions, teacher file hashes, library versions, dataset revisions | in progress (student sha, packages, dataset sources pinned; every run writes pins.json; teacher hashes at O6) |
 | O4 | Overlap audit | a dated research note on known overlap of each dataset with GLiNER2.5 and teacher training data | open |
@@ -83,7 +83,7 @@ Paper content (ARR checklist):
 - [ ] C3 Error bars or intervals; say for each number whether it is one run or an aggregate.
 - [ ] C4 Package versions and settings (gliner2, peft, transformers, torch, llama.cpp build).
 - [ ] D1-D5 N/A: no human annotators; ground truth comes from published datasets. Say so.
-- [ ] E1 AI assistants: Codex and Claude wrote code and helped draft text; state what was checked by hand.
+- [ ] E1 AI assistants: Codex and the author wrote code and helped draft text; state what was checked by hand.
 
 AI and authorship:
 

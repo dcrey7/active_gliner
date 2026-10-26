@@ -1,0 +1,14 @@
+augmentation: false
+batch_size: 16
+# CrossRE dev F1 dips between checks; patience 3 cut 1 of 5 runs short.
+# 10 checks (1000 steps / 100) means every run trains all steps and keeps the best dev checkpoint.
+early_stopping_patience: 10
+lora_alpha: 32
+lora_dropout: 0.0
+lora_r: 16
+lora_targets:
+- encoder
+- relation_scorer
+relation_head: native
+relation_neg_ratio: 1.0
+task_lr: 0.0009433746945314401

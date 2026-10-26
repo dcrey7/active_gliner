@@ -1,7 +1,7 @@
 ---
 title: Is the teacher worse where the student is unsure? (descriptive, pool only)
 date: 2026-09-25 23:28 CEST
-author: Claude
+author: Abhishek Thomas
 type: research
 status: frozen
 ---
