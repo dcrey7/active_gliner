@@ -112,7 +112,8 @@ def latex_table(table: pd.DataFrame, path) -> Path:
                 " & ".join(
                     [row["family"], row["title"], TEACHER_TAGS[row["teacher"]]]
                     + [f"{row['quality']:.0f}\\%"]
-                    + [f"{value:.1f}" for value in losses]
+                    # Math mode, so a negative loss prints a true minus sign like the other tables.
+                    + [f"${value:.1f}$" for value in losses]
                     + [f"{int(row['safe_llm_share'])}\\%", _share(row["share_to_beat"])]
                 )
                 + " \\\\"

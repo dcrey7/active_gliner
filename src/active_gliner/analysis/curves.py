@@ -7,9 +7,10 @@ Design: docs/research/2026-10-02-1207-minimum-human-labels-design.md.
 
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import FuncFormatter, NullLocator
 
+from . import style
 from .figures import _save
 from .tables import DATASETS, MAIN_TEACHER
 
@@ -75,6 +76,12 @@ def _x(budget, pool: int) -> float:
     return pool if budget == "all" else float(budget)
 
 
+SHARE_NAMES = {0: "LLM only", 25: "25% human", 50: "50% human", 75: "75% human", 100: "humans only"}
+# The figure shows three shares, so each panel reads at a glance; 50% and 75% lie between
+# them and every share is in the tables.
+SHOWN = {0: "#86b6ef", 25: "#2a78d6", 100: "#104281"}
+
+
 def figure(
     rows: pd.DataFrame,
     teacher_f1: dict,
@@ -89,65 +96,46 @@ def figure(
     places = [key for key in titles if key in set(zip(table.dataset, table.locale, strict=True))]
     if not places:
         return None
-    columns = 4 if len(places) > 3 else len(places)
-    lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
-    colors = plt.get_cmap("viridis")
-    for ax, (dataset, locale) in zip(axes.flat, places, strict=False):
+    columns = min(4, len(places))
+    # Four panels fill the page width; one or two fill a column.
+    width = style.TEXT_WIDTH if columns == 4 else style.COLUMN_WIDTH
+    fig, axes = style.panels(len(places), columns, width, panel_height=1.75)
+    for ax, (dataset, locale) in zip(axes, places, strict=True):
         local = table[(table.dataset == dataset) & (table.locale == locale)]
         pool = pools[(dataset, locale)]
-        for share in sorted(SHARES):
-            ranked = local[(local.share == share) & (local.rule.isin(["ranked"]))].copy()
-            # The whole pool uses every sentence, so it closes both the ranked line and
-            # the random line.
+        for share, color in SHOWN.items():
+            ranked = local[(local.share == share) & (local.rule == "ranked")].copy()
             if ranked.empty:
                 continue
             ranked["x"] = [_x(b, pool) for b in ranked.budget]
             ranked = ranked.sort_values("x")
-            ax.errorbar(
+            spread = ranked.sd.fillna(0)
+            ax.fill_between(
                 ranked.x,
-                ranked["mean"],
-                yerr=ranked.sd.fillna(0),
-                marker="o",
-                markersize=3,
-                linewidth=1.2,
-                color=colors(share / 100 * 0.9),
-                label=f"{share}% human",
+                ranked["mean"] - spread,
+                ranked["mean"] + spread,
+                color=color,
+                alpha=0.15,
+                linewidth=0,
             )
-        for share in (0, 100):
-            random = local[(local.share == share) & (local.rule == "random")].copy()
-            whole = local[(local.share == share) & (local.budget == "all")]
-            random = pd.concat([random, whole])
-            if random.empty:
-                continue
-            random["x"] = [_x(b, pool) for b in random.budget]
-            random = random.sort_values("x")
-            ax.plot(
-                random.x,
-                random["mean"],
-                linestyle=":",
-                color=colors(share / 100 * 0.9),
-                linewidth=1,
-                label=f"{share}% human, random" if ax is axes.flat[0] else None,
-            )
+            ax.plot(ranked.x, ranked["mean"], marker="o", color=color, label=SHARE_NAMES[share])
         teacher = teacher_f1.get((dataset, locale))
         if teacher is not None:
-            ax.axhline(teacher, color="red", linestyle="--", linewidth=1, label="teacher LLM")
+            ax.axhline(
+                teacher,
+                color=style.TEACHER,
+                linestyle=(0, (4, 2)),
+                linewidth=1.2,
+                label="LLM teacher",
+            )
         ax.set_xscale("log")
-        ax.set_title(titles[(dataset, locale)][0], fontsize="medium")
-        ax.set_xlabel("Labelled sentences (log)", fontsize="small")
-        ax.set_ylabel("Test micro-F1 (%)", fontsize="small")
-        ax.tick_params(labelsize="x-small")
-    for ax in list(axes.flat)[len(places) :]:
-        ax.axis("off")
-    handles, labels = axes.flat[0].get_legend_handles_labels()
-    if len(places) < lines * columns:
-        # The empty last panel holds the legend.
-        fig.legend(handles, labels, loc="lower right", fontsize="small", ncol=1)
-    else:
-        # Every panel holds data (the added families): keep the legend off the curves.
-        fig.tight_layout()
-        fig.legend(handles, labels, loc="center left", bbox_to_anchor=(1.0, 0.5), fontsize="small")
+        ax.xaxis.set_major_formatter(FuncFormatter(style.compact))
+        ax.xaxis.set_minor_locator(NullLocator())
+        style.title(ax, titles[(dataset, locale)][0], dataset)
+    fig.supxlabel("Labelled sentences (log scale)")
+    fig.supylabel("Test micro-F1 (%)")
+    handles, labels = axes[0].get_legend_handles_labels()
+    style.top_legend(fig, handles, labels, columns=4 if columns >= 3 else 2)
     return _save(fig, name, out)
 
 

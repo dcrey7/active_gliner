@@ -40,7 +40,7 @@ def test_rows_report_quality_loss_and_share_to_beat(tmp_path):
     assert macros["MITMovieGemmaToleranceShare"] == 25
     assert macros["MITMovieGemmaToleranceSafeShare"] == 25
     text = tolerance.latex_table(rows, tmp_path / "t.tex").read_text()
-    assert "NER & MIT Movie & Gemma & 92\\% & 0.6 & 2.3 & 5.2 & 9.2 & 25\\% & 25\\%" in text
+    assert "NER & MIT Movie & Gemma & 92\\% & $0.6$ & $2.3$ & $5.2$ & $9.2$ & 25\\% & 25\\%" in text
 
 
 def test_empty_table_writes_a_header_only(tmp_path):

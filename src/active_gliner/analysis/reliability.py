@@ -12,12 +12,12 @@ in the ground truth), every label decision for classification and relation pairs
 import json
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import pandas as pd
 
 from active_gliner import data, tasks
 from active_gliner.evaluate.errors import items
 
+from . import style
 from .figures import _save
 from .tables import DATASETS, DEFAULT_BUDGET, MAIN_BUDGET, ZERO_SHOT_STUDENT
 
@@ -129,31 +129,36 @@ def figure(all_tables: dict, out) -> Path | None:
     places = [key for key, models in all_tables.items() if models]
     if not places:
         return None
-    columns = 4 if len(places) > 3 else len(places)
-    lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
-    styles = {"zero-shot": ("tab:orange", "o"), "trained": ("tab:blue", "s")}
-    for ax, key in zip(axes.flat, places, strict=False):
+    fig, axes = style.panels(len(places), 4, style.TEXT_WIDTH, panel_height=1.8)
+    looks = {"zero-shot": (style.ORANGE, "o"), "trained": (style.BLUE, "s")}
+    for ax, key in zip(axes, places, strict=True):
+        ax.plot(
+            [0, 1],
+            [0, 1],
+            linestyle=(0, (3, 2)),
+            color=style.FRAME,
+            linewidth=0.9,
+            label="perfect calibration",
+        )
         for model, table in all_tables[key].items():
             shown = table[table["count"] >= 20]
-            color, marker = styles[model]
+            color, marker = looks[model]
             ax.plot(
                 shown.mean_confidence,
                 shown.correct,
                 color=color,
                 marker=marker,
-                markersize=3,
+                markersize=3.8,
                 label=model,
             )
-        ax.plot([0, 1], [0, 1], linestyle="--", color="gray", linewidth=0.8)
-        ax.set(xlim=(0, 1), ylim=(0, 1), title=DATASETS[key][0])
-        ax.set_xlabel("Confidence", fontsize="small")
-        ax.set_ylabel("Share correct", fontsize="small")
-        ax.tick_params(labelsize="x-small")
-    for ax in list(axes.flat)[len(places) :]:
-        ax.axis("off")
-    handles, labels = axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower right", fontsize="small")
+        ax.set(xlim=(0, 1), ylim=(0, 1), xticks=[0, 0.5, 1], yticks=[0, 0.5, 1])
+        style.title(ax, DATASETS[key][0], key[0])
+    fig.supxlabel("Confidence")
+    fig.supylabel("Share correct")
+    handles, labels = axes[0].get_legend_handles_labels()
+    wanted = ("zero-shot", "trained", "perfect calibration")
+    order = [labels.index(name) for name in wanted if name in labels]
+    style.top_legend(fig, [handles[i] for i in order], [labels[i] for i in order], columns=3)
     return _save(fig, "reliability", out)
 
 
