@@ -2,21 +2,20 @@
 
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.ticker import FuncFormatter, NullLocator
+
+from . import style  # noqa: F401  (sets the figure style)
 
 
 def _save(fig, name, out):
     path = Path(out)
     path.mkdir(parents=True, exist_ok=True)
-    fig.tight_layout()
     # No creation date in the PDF, so a rerun on the same runs gives the same file.
-    fig.savefig(path / f"{name}.pdf", bbox_inches="tight", metadata={"CreationDate": None})
-    fig.savefig(path / f"{name}.png", dpi=180, bbox_inches="tight")
+    fig.savefig(path / f"{name}.pdf", metadata={"CreationDate": None})
+    fig.savefig(path / f"{name}.png", dpi=180)
     plt.close(fig)
     return path / f"{name}.pdf"
 
@@ -83,13 +82,13 @@ def cost_curves(df, dataset, out="paper/figures") -> list[Path]:
 def _reference_lines(ax, df, dataset, locale) -> None:
     """Context only (design): the whole-pool runs above, the zero-shot student below."""
     local = df[(df.dataset == dataset) & (df.get("locale", "en-US") == locale)]
-    for label, style in (("ground_truth", "-"), ("gemma-4-12b", "--")):
+    for label, dash in (("ground_truth", "-"), ("gemma-4-12b", "--")):
         whole = local[(local.selector == "all") & (local.labels == label)]
         if not whole.empty:
             ax.axhline(
                 whole.f1.mean(),
                 color="gray",
-                linestyle=style,
+                linestyle=dash,
                 linewidth=1,
                 label=f"whole pool, {label}",
             )
@@ -136,29 +135,41 @@ def learning_curves(df, dataset, out="paper/figures") -> list[Path]:
     return paths
 
 
-# Single-column charts print about 3.1 in wide, so they are drawn small to keep text readable.
+TASK_NAMES = {
+    "ner": "NER",
+    "relations": "Relations",
+    "classification": "Multi-label",
+    "slots": "Slots",
+}
+
+
 def interaction_forest(report, out="paper/figures") -> Path | None:
+    """One row per task: the interaction and its 95% interval, coloured by task."""
     rows = [(task, entry) for task, entry in report["interactions"].items() if "mean" in entry]
     if not rows:
         return None
-    fig, ax = plt.subplots(figsize=(4.0, 2.6))
-    for i, (_, entry) in enumerate(rows):
-        ax.plot(entry["mean"], i, "o", color="tab:blue")
+    fig, ax = plt.subplots(figsize=(style.COLUMN_WIDTH, 0.42 * len(rows) + 0.55))
+    ax.axvline(0, color=style.FRAME, linewidth=0.9, zorder=1)
+    for i, (task, entry) in enumerate(rows):
+        name = TASK_NAMES.get(task, task)
+        color = style.TASK_COLORS.get(name, style.BLUE)
         interval = entry.get("interval", {})
         if "low" in interval:
-            ax.hlines(i, interval["low"], interval["high"], color="tab:blue")
-    ax.axvline(0, color="gray", linestyle="--")
-    names = {
-        "ner": "NER",
-        "relations": "Relations",
-        "classification": "Multi-label",
-        "slots": "Slots",
-    }
-    ax.set(
-        yticks=range(len(rows)),
-        yticklabels=[names.get(name, name) for name, _ in rows],
-        xlabel="Interaction (F1 points)",
-    )
+            ax.hlines(i, interval["low"], interval["high"], color=color, linewidth=2.6, alpha=0.35)
+        ax.plot(entry["mean"], i, "o", color=color, markersize=6.5, zorder=3)
+        ax.annotate(
+            f"{entry['mean']:+.1f}",
+            (entry["mean"], i),
+            xytext=(0, 7),
+            textcoords="offset points",
+            ha="center",
+            fontsize=7.5,
+            color=style.INK,
+        )
+    ax.set_yticks(range(len(rows)), [TASK_NAMES.get(task, task) for task, _ in rows])
+    ax.set_ylim(-0.6, len(rows) - 0.3)
+    ax.grid(axis="y", visible=False)
+    ax.set_xlabel("Interaction (F1 points)")
     return _save(fig, "interaction-forest", out)
 
 
@@ -232,44 +243,145 @@ def pareto_chart(points, out="paper/figures") -> Path | None:
     return _save(fig, "pareto", out)
 
 
+ZERO_SHOT_NAMES = {
+    "gliner2.5-small-v1": "GLiNER2.5 small",
+    "gliner2.5-base-v1": "GLiNER2.5 base",
+    "gliner2.5-multi-v1": "GLiNER2.5 multi (our student)",
+    "gliner2-large-v1": "GLiNER2 large",
+}
+STUDENT_NAMES = {
+    ("ground_truth", "random"): "human labels, random",
+    ("gemma-4-12b", "random"): "Gemma labels, random",
+    ("gemma-4-12b", "min"): "Gemma labels, min",
+}
+
+
 def quadrant_chart(points, out="paper/figures") -> Path | None:
+    """Speed against quality for NER: zero-shot models, trained students, the LLM teacher."""
     points = _points(points, "latency_ms")
     if points.empty:
         return None
-    fig, ax = plt.subplots(figsize=(4.2, 3.2))
-    _bubbles(ax, points, "latency_ms")
-    for _, row in points.iterrows():
-        source = points[points.name == row.get("zero_shot_name")]
-        if len(source) == 1:
-            start = source.iloc[0]
-            # The end point's own name states the selector and label source.
-            ax.annotate(
-                "",
-                xy=(row.latency_ms, row.f1),
-                xytext=(start.latency_ms, start.f1),
-                arrowprops={"arrowstyle": "->", "color": "black"},
+    family = points.get("family", pd.Series("", index=points.index)).fillna("")
+    zero = points[family.str.startswith("zero-shot")]
+    students = points[family == "fine-tuned student"]
+    teachers = points[family.str.contains("teacher")]
+    fig, ax = plt.subplots(figsize=(style.COLUMN_WIDTH, 2.6))
+    ax.set_xscale("log")
+    ax.set_xlim(1.2, 1500)
+    ax.set_ylim(50, 92)
+    ax.xaxis.set_major_formatter(FuncFormatter(style.compact))
+    ax.xaxis.set_minor_locator(NullLocator())
+    base = zero[zero.name == "gliner2.5-multi-v1"]
+    best = students.sort_values("f1").iloc[-1] if not students.empty else None
+    if not base.empty and best is not None:
+        ax.annotate(
+            "",
+            xy=(best.latency_ms, best.f1),
+            xytext=(base.iloc[0].latency_ms, base.iloc[0].f1),
+            arrowprops={
+                "arrowstyle": "-|>",
+                "color": style.LEADER,
+                "linewidth": 0.8,
+                "shrinkA": 4,
+                "shrinkB": 5,
+            },
+        )
+    ax.scatter(
+        zero.latency_ms,
+        zero.f1,
+        s=28,
+        color="#b7bfcd",
+        edgecolor="white",
+        linewidth=0.6,
+        zorder=3,
+        label="zero-shot GLiNER",
+    )
+    ax.scatter(
+        students.latency_ms,
+        students.f1,
+        s=34,
+        color=style.BLUE,
+        edgecolor="white",
+        linewidth=0.6,
+        zorder=4,
+        label="fine-tuned student",
+    )
+    if "sd" in students:
+        for _, row in students.dropna(subset=["sd"]).iterrows():
+            ax.vlines(
+                row.latency_ms,
+                row.f1 - row.sd,
+                row.f1 + row.sd,
+                color=style.BLUE,
+                linewidth=1.0,
+                alpha=0.5,
+                zorder=2,
             )
-    ax.set(xlabel="Latency (ms per sentence, log scale)")
+    ax.scatter(
+        teachers.latency_ms,
+        teachers.f1,
+        s=90,
+        marker="*",
+        color=style.TEACHER,
+        edgecolor=style.INK,
+        linewidth=0.6,
+        zorder=4,
+        label="LLM teacher",
+    )
+    # Names: zero-shot models and students sit near 2 ms, so their labels go to the right
+    # in two columns, spread apart so they never overlap.
+    zero_y = style.spread(list(zero.f1), gap=2.6)
+    for (_, row), y in zip(zero.iterrows(), zero_y, strict=True):
+        name = ZERO_SHOT_NAMES.get(row["name"], row["name"])
+        style.label_at(ax, (row.latency_ms, row.f1), (9, y), name)
+    student_y = style.spread(list(students.f1), gap=3.2)
+    for (_, row), y in zip(students.iterrows(), student_y, strict=True):
+        name = STUDENT_NAMES.get((row.get("labels"), row.get("selector")), row["name"])
+        style.label_at(ax, (row.latency_ms, row.f1), (4, y), name)
+    for _, row in teachers.iterrows():
+        style.label_at(
+            ax, (row.latency_ms, row.f1), (row.latency_ms, row.f1 - 6), "Gemma 4 12B", ha="center"
+        )
+    ax.set_xlabel("Latency (ms per sentence, log scale)")
+    ax.set_ylabel("Test micro-F1 (%)")
     return _save(fig, "quadrants", out)
 
 
+NAME_TASKS = {
+    "CleanCoNLL": "NER",
+    "BC5CDR": "NER",
+    "MIT Movie": "NER",
+    "CrossRE": "Relations",
+    "Hallmarks": "Multi-label",
+    "MASSIVE en": "Slots",
+    "MASSIVE fr": "Slots",
+}
+
+
 def teacher_bins_chart(tables, out="paper/figures") -> Path | None:
+    """Teacher F1 by the student's confidence group; lines coloured by task, named at the end."""
     if not tables:
         return None
-    fig, ax = plt.subplots(figsize=(4.8, 3.0))
+    fig, ax = plt.subplots(figsize=(style.COLUMN_WIDTH, 2.4))
+    ends = []
     for name, table in tables.items():
-        table = pd.DataFrame(table)
-        ax.plot(table["bin"], 100 * table.f1, marker="o", label=name)
+        table = pd.DataFrame(table).sort_values("bin")
+        color = style.TASK_COLORS.get(NAME_TASKS.get(name, ""), style.BLUE)
+        ax.plot(table["bin"], 100 * table.f1, marker="o", color=color, linewidth=1.6)
+        ends.append((name, table["bin"].iloc[-1], 100 * table.f1.iloc[-1]))
+    places = style.spread([y for _, _, y in ends], gap=5.0)
+    for (name, x, y), place in zip(ends, places, strict=True):
+        style.label_at(ax, (x, y), (x + 0.35, place), name)
     bins = sorted(pd.DataFrame(next(iter(tables.values())))["bin"])
     names = [str(b + 1) for b in bins]
     names[0] += "\nleast sure"
     names[-1] += "\nmost sure"
     ax.set_xticks(bins, names)
+    # Room on the right for the dataset names, inside the axes so the figure keeps its size.
+    ax.set_xlim(bins[0] - 0.25, bins[-1] + 1.45)
     ax.set(
-        xlabel="Untrained student's confidence, in four equal groups",
+        xlabel="Untrained student's confidence (four equal groups)",
         ylabel="Teacher micro-F1 (%)",
         ylim=(0, 100),
     )
-    # Outside the axes, so no line is hidden.
-    ax.legend(fontsize="small", loc="upper left", bbox_to_anchor=(1.02, 1))
     return _save(fig, "teacher-bins", out)

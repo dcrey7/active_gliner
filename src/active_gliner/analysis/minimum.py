@@ -10,14 +10,17 @@ F1 with a paired bootstrap lower bound above zero. Test is read once, at that H 
 
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.ticker import NullLocator
 
+from . import style
 from .aggregate import sentence_counts, test_ids
 from .figures import _save
 from .stats import holm, micro_f1
 from .tables import DATASETS, MAIN_TEACHER
+
+HUMAN_ONLY = "#7d869a"  # a reference line, so a quiet slate
 
 
 def minimum_rows(df: pd.DataFrame, pools: dict) -> pd.DataFrame:
@@ -176,21 +179,12 @@ def figure(
     places = [key for key in DATASETS if key in set(zip(table.dataset, table.locale, strict=True))]
     if not places:
         return None
-    columns = 4 if len(places) > 3 else len(places)
-    lines = (len(places) + columns - 1) // columns
-    fig, axes = plt.subplots(lines, columns, figsize=(2.2 * columns, 2.0 * lines), squeeze=False)
-    for ax, key in zip(axes.flat, places, strict=False):
+    fig, axes = style.panels(len(places), 4, style.TEXT_WIDTH, panel_height=1.75)
+    for ax, key in zip(axes, places, strict=True):
         local = table[(table.dataset == key[0]) & (table.locale == key[1])].sort_values("human")
-        # H = 0 cannot sit on a log axis; draw it at 10 and label it.
+        # H = 0 cannot sit on a log axis; draw it at 10 and label it 0.
         x = local.human.clip(lower=10)
-        ax.errorbar(
-            x,
-            local["mean"],
-            yerr=local.sd.fillna(0),
-            marker="o",
-            markersize=3,
-            label="human + teacher labels on the rest",
-        )
+        spread = local.sd.fillna(0)
         if human_only is not None:
             alone = human_only[
                 (human_only.dataset == key[0]) & (human_only.locale == key[1])
@@ -204,26 +198,56 @@ def figure(
                 alone.x,
                 alone["mean"],
                 marker="s",
-                markersize=3,
-                color="tab:green",
+                markersize=3.8,
+                color=HUMAN_ONLY,
                 label="human labels only",
             )
+        ax.fill_between(
+            x,
+            local["mean"] - spread,
+            local["mean"] + spread,
+            color=style.BLUE,
+            alpha=0.15,
+            linewidth=0,
+        )
+        ax.plot(
+            x,
+            local["mean"],
+            marker="o",
+            color=style.BLUE,
+            label="human labels + LLM labels on the rest",
+        )
         teacher = teacher_f1.get(key)
         if teacher is not None:
-            ax.axhline(teacher, color="red", linestyle="--", linewidth=1, label="teacher LLM")
+            ax.axhline(
+                teacher,
+                color=style.TEACHER,
+                linestyle=(0, (4, 2)),
+                linewidth=1.2,
+                label="LLM teacher",
+            )
         human = chosen.get(key, {}).get("human")
-        if human:
-            ax.axvline(human, color="gray", linestyle=":", linewidth=1, label="chosen on dev")
+        if human is not None:
+            pick = local[local.human == human]
+            if not pick.empty:
+                ax.plot(
+                    max(human, 10),
+                    pick["mean"].iloc[0],
+                    marker="*",
+                    markersize=10,
+                    color=style.BLUE,
+                    markeredgecolor=style.INK,
+                    markeredgewidth=0.6,
+                    linestyle="none",
+                    zorder=5,
+                    label="chosen on dev",
+                )
         ax.set_xscale("log")
-        ticks = [10, 100, 1000, 10000]
-        ax.set_xticks(ticks)
-        ax.set_xticklabels(["0", "100", "1000", "10000"])
-        ax.set_title(DATASETS[key][0], fontsize="medium")
-        ax.set_xlabel("Human-labelled sentences (log)", fontsize="small")
-        ax.set_ylabel("Test micro-F1 (%)", fontsize="small")
-        ax.tick_params(labelsize="x-small")
-    for ax in list(axes.flat)[len(places) :]:
-        ax.axis("off")
-    handles, labels = axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower right", fontsize="small")
+        ax.set_xticks([10, 100, 1000, 10000], ["0", "100", "1k", "10k"])
+        ax.xaxis.set_minor_locator(NullLocator())
+        style.title(ax, DATASETS[key][0], key[0])
+    fig.supxlabel("Human-labelled sentences (log scale)")
+    fig.supylabel("Test micro-F1 (%)")
+    handles, labels = axes[0].get_legend_handles_labels()
+    style.top_legend(fig, handles, labels, columns=4)
     return _save(fig, "minimum-human-labels", out)
