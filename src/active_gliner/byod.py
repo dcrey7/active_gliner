@@ -14,6 +14,18 @@ from active_gliner.teachers import TeacherConfig
 from active_gliner.teachers.validate import empty_gold
 
 TASKS = ("ner", "relations", "classification", "slots", "decision")
+# Share of ranked texts that go to humans, by task type. From the paper's recipe table:
+# the largest LLM share that lost at most two F1 points against all human labels on
+# every paper dataset of the type, with Gemma 4 12B labels (1,000 ranked texts).
+# Relations and slots lost more with any LLM share, so every text goes to humans.
+# To only beat the LLM, 0.25 is enough on most paper datasets.
+DEFAULT_HUMAN_SHARE = {
+    "decision": 0.5,
+    "ner": 0.75,
+    "classification": 0.75,
+    "relations": 1.0,
+    "slots": 1.0,
+}
 # The tuned training settings of the paper, one file per task type. They are a copy of
 # configs/recipes/ shipped inside the package; a test keeps the two copies equal.
 RECIPES = Path(__file__).with_name("recipes")
@@ -136,8 +148,9 @@ def plan(texts: str | Path, task: str, labels: str, n: int | None, select: str, 
     records = read_texts(texts, task)
     if select == "all":
         # "all" sends every text in the file to the LLM, for example the rest of a ranked set.
+        # The file is empty when every ranked text went to humans.
         n = len(records)
-    if n is None or not 0 < n <= len(records):
+    elif n is None or not 0 < n <= len(records):
         raise ValueError("n must be positive and no larger than the pool")
     if select not in SELECTORS or seed < 0:
         raise ValueError("Use min, random or all selection and a nonnegative seed")
@@ -227,17 +240,21 @@ def fit(
     for record in human_records:
         record.id = f"human:{record.id}"
         record.source_split = "train"
+    if not pool and not human_records:
+        raise ValueError("Nothing to train on: no texts for the LLM and no human labels")
     dev_records = read_labelled(dev, task) if dev is not None else None
     if dev_records is not None and not dev_records:
         raise ValueError("The dev set is empty")
     if dev_records is None and n < 2:
-        raise ValueError("At least two selected texts are needed for a teacher holdout")
-    if task == "relations" and not any(len(r.gold["entities"]) >= 2 for r in pool):
+        raise ValueError("Pass a dev set, or at least two texts for a teacher holdout")
+    given = pool + human_records
+    if task == "relations" and not any(len(r.gold["entities"]) >= 2 for r in given):
         raise ValueError("Relation training requires supplied entities in the texts JSONL")
     cfg = RunConfig(
         dataset="user",
         out_root=str(Path(out_dir).parent),
-        n=n,
+        # With no texts for the LLM, the run trains on the human labels alone.
+        n=n or len(human_records),
         seed=seed,
         selector=select,
         # The paper's rule: texts where the student predicts nothing go last, not first.
@@ -282,7 +299,9 @@ def fit(
     )
     student = load_student(task, labels, device="cuda")
     student.eval()
-    selected_ids, _ = score_pool(student, cfg, seeds, out, task_module, labels, pool)
+    selected_ids = []
+    if pool:
+        selected_ids, _ = score_pool(student, cfg, seeds, out, task_module, labels, pool)
     by_id = {r.id: r for r in pool}
     selected = [by_id[i] for i in selected_ids]
     labelled = label_records(
@@ -397,7 +416,7 @@ def rank(
     task: str,
     labels: str,
     n: int,
-    human_share: float = 0.25,
+    human_share: float | None = None,
     seed: int = 1,
     out_dir: str | Path = "active-gliner-rank",
 ) -> Path:
@@ -405,7 +424,10 @@ def rank(
 
     Writes for_humans.jsonl (a random share of the top n: label these by hand) and
     for_llm.jsonl (the rest: pass it to fit with select="all" and human=...).
+    With no human_share, the share follows the task type (DEFAULT_HUMAN_SHARE).
     """
+    if human_share is None:
+        human_share = DEFAULT_HUMAN_SHARE[task]
     import torch
 
     from active_gliner.observe.logs import write_jsonl

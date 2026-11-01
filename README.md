@@ -15,13 +15,13 @@ You want a model that finds names, relations, labels or answers in text, fast an
   almost the same NER score (75.3 against 76.4 F1).
 
 Active GLiNER does this with GLiNER2.5 as the small model. It also answers the question the
-paper asks: **which examples should the LLM label, and how many should humans label instead?**
+paper asks: **how should you mix human and LLM labels, and how does the mix change per task?**
 
 ```
 your unlabelled texts
    │  1. the untrained small model ranks them once, least sure first
    ▼
-top N texts ──> a random quarter: human labels
+top N texts ──> a random share: human labels (the share follows the task type)
            └──> the rest: LLM labels
    │  2. train the small model on both (LoRA)
    ▼
@@ -70,16 +70,19 @@ trains for 1,000 steps. The last column is dev F1 from one run (seed 1):
 ## The recipe, step by step
 
 **1. Rank once, and split.** The untrained model scores every text. `rank` takes the 1,000 it is
-least sure about (texts where it finds nothing go last) and puts a random quarter of them aside
-for humans.
+least sure about (texts where it finds nothing go last) and puts a random share of them aside
+for humans. The share follows the task type (see [What the paper found](#what-the-paper-found));
+`--human-share` sets your own.
 
 ```bash
 active-gliner rank --texts texts.jsonl --task ner \
   --labels "drug:a medicine or chemical,dose:an amount of a drug" \
-  --n 1000 --human-share 0.25 --out ranked
+  --n 1000 --out ranked
 ```
 
-This writes `ranked/for_humans.jsonl` and `ranked/for_llm.jsonl`.
+This writes `ranked/for_humans.jsonl` and `ranked/for_llm.jsonl`. For relations and slots the
+default sends every text to humans, so `for_llm.jsonl` is empty: `fit` then trains on the human
+labels alone and never calls the LLM (pass `--dev`).
 
 **2. Label the human share.** People label `for_humans.jsonl` by hand, in the same format as the
 dev file (see below). Save it as `human.jsonl`.
@@ -111,7 +114,7 @@ The same from Python:
 ```python
 from active_gliner import byod
 
-ranked = byod.rank("texts.jsonl", "ner", "drug,dose", n=1000, human_share=0.25, out_dir="ranked")
+ranked = byod.rank("texts.jsonl", "ner", "drug,dose", n=1000, out_dir="ranked")
 run = byod.fit(
     texts=ranked / "for_llm.jsonl", select="all", human="human.jsonl",
     task="ner", labels="drug,dose", dev="dev.jsonl",
@@ -156,24 +159,36 @@ One JSON object per line. Unlabelled texts need only `text`. Labelled files (dev
 
 ## What the paper found
 
-The paper is [`paper/main.pdf`](paper/main.pdf). It asks three questions on nine datasets with
-two LLM teachers (Gemma 4 12B and GPT-6 Luna).
+The paper is [`paper/main.pdf`](paper/main.pdf): *Active GLiNER: How to Mix Human and LLM Labels
+to Train a Small Extraction Model*. It runs one round on nine datasets, with LLM teachers of two
+sizes and two families (Gemma 4 E4B and 12B, GPT-6 Luna).
 
-1. **Should the small model choose which texts the LLM labels?** Mostly no. Picking the texts it
-   is least sure about does not beat random picking, mostly because it picks texts with nothing
-   to find. That is why `rank` puts those texts last.
-2. **How should human and LLM labels be mixed?** Rank once, give a random quarter of the top
-   1,000 to humans and the rest to the LLM. A quarter or fewer human labels beats the LLM itself
-   on 6 of 7 test sets.
-3. **How many LLM labels can each task take?** It depends on the task:
++ Why LLM labels - one LLM pass labels the training data; the small model then runs 165 times
+  faster than the LLM at almost its NER score.
++ Why not LLM-written texts - in the author's thesis they could not replace human examples.
++ Which examples - mostly not the ones the small model is least sure about: they are often texts
+  with nothing to find. That is why `rank` puts those texts last and splits the top at random.
++ Which LLM - a bigger one labels better (Gemma 4 12B beat E4B on 5 of 6 datasets) and trains a
+  better small model. Another family (GPT-6 Luna) adds only 0.26 F1 points to the small model.
++ How many labels - about 1,000 ranked texts. A quarter human beats the LLM itself on 6 of 7
+  datasets.
++ What mix per task - it depends on the task:
 
-| Task | LLM share that costs under about 2 F1 points | Why |
-|---|---|---|
-| decision | half, or more | one answer from a list with plain names |
-| NER | a quarter | a few common entity types |
-| multi-label classification | a quarter at most | the LLM labels many texts the expert marked as none |
-| relations | less than a quarter | the LLM is weak on relations |
-| slots | less than a quarter | the LLM fills slots in commands that have none |
+| Task | LLM share that costs at most 2 F1 points | `rank` default human share | Why |
+|---|---|---|---|
+| `decision` | 50 to 100% | 0.5 | one answer from a list with plain names |
+| `ner` | 25% | 0.75 | a few common entity types |
+| `classification` | 0 to 25% | 0.75 | the LLM labels many texts the expert marked as none |
+| `relations` | 0% | 1.0 | the LLM is weak on relations |
+| `slots` | 0% | 1.0 | the LLM fills slots in commands that have none |
+
+The LLM share is the range over the paper's datasets and both teachers, from 1,000 ranked texts.
+The default human share keeps the loss within 2 points with Gemma 4 12B labels.
+
+Pick the goal that fits your budget:
+
++ Close to all-human quality - keep the default human share.
++ Only beat the LLM - `--human-share 0.25` was enough on 6 of 7 paper datasets.
 
 Before you start, score the LLM on a few hundred labelled dev texts. If it often adds labels
 where the dev set has none, give humans a larger share.
@@ -246,7 +261,7 @@ service, cite it:
 ```bibtex
 @software{thomas2026activegliner,
   author  = {Thomas, Abhishek},
-  title   = {Active {GLiNER}: Which Examples Should {LLM}s Label?},
+  title   = {Active {GLiNER}: How to Mix Human and {LLM} Labels to Train a Small Extraction Model},
   year    = {2026},
   url     = {https://github.com/dcrey7/active_gliner},
   license = {Apache-2.0}

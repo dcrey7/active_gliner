@@ -194,8 +194,12 @@ torch.cuda.empty_cache()""",
         """## 3. Rank once and split between humans and the LLM
 
 `rank` scores every text with the untrained student, takes the 1,000 it is least sure
-about (texts where it finds nothing go last), and puts a random quarter of them in
+about (texts where it finds nothing go last), and puts a random share of them in
 `for_humans.jsonl`. The rest goes in `for_llm.jsonl`.
+
+This demo passes `human_share=0.25`: the goal is only to beat the LLM, and the demo shows both
+label sources. Without it, `rank` uses the default for the task type, which keeps the student
+within two F1 points of all human labels (see the README).
 
 From a terminal:
 

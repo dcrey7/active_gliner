@@ -87,6 +87,37 @@ def macros(table: pd.DataFrame) -> dict:
         # No human share beats the teacher (pandas stores the None as NaN).
         if row["share_to_beat"] is not None and not pd.isna(row["share_to_beat"]):
             found[prefix + "Share"] = int(row["share_to_beat"])
+    found.update(family_macros(table))
+    return found
+
+
+# LaTeX macro names cannot hold a hyphen.
+FAMILY_TAGS = {
+    "NER": "NER",
+    "Relations": "Relations",
+    "Multi-label": "MultiLabel",
+    "Slots": "Slots",
+    "Decision": "Decision",
+}
+
+
+def family_macros(table: pd.DataFrame) -> dict:
+    """Per task family: the lowest and highest safe LLM share over datasets and teachers.
+
+    GemmaLow is the lowest safe share with the main teacher; the tool's default human
+    share per task type is 100 minus it.
+    """
+    found = {}
+    if table.empty:
+        return found
+    for family, group in table.groupby("family"):
+        tag = "TaskType" + FAMILY_TAGS[family]
+        found[tag + "SafeShareLow"] = int(group.safe_llm_share.min())
+        found[tag + "SafeShareHigh"] = int(group.safe_llm_share.max())
+        gemma = group[group.teacher == "gemma-4-12b"]
+        if not gemma.empty:
+            found[tag + "SafeShareGemmaLow"] = int(gemma.safe_llm_share.min())
+            found[tag + "DefaultHumanShare"] = 100 - int(gemma.safe_llm_share.min())
     return found
 
 

@@ -43,6 +43,23 @@ def test_rows_report_quality_loss_and_share_to_beat(tmp_path):
     assert "NER & MIT Movie & Gemma & 92\\% & $0.6$ & $2.3$ & $5.2$ & $9.2$ & 25\\% & 25\\%" in text
 
 
+def test_family_macros_give_the_safe_share_range():
+    table = pd.DataFrame(
+        [
+            dict(family="NER", teacher="gemma-4-12b", safe_llm_share=25),
+            dict(family="NER", teacher="gpt-6-luna", safe_llm_share=50),
+            dict(family="Multi-label", teacher="gpt-6-luna", safe_llm_share=0),
+        ]
+    )
+    found = tolerance.family_macros(table)
+    assert found["TaskTypeNERSafeShareLow"] == 25
+    assert found["TaskTypeNERSafeShareHigh"] == 50
+    assert found["TaskTypeNERSafeShareGemmaLow"] == 25
+    assert found["TaskTypeMultiLabelSafeShareHigh"] == 0
+    assert "TaskTypeMultiLabelSafeShareGemmaLow" not in found
+    assert tolerance.family_macros(pd.DataFrame()) == {}
+
+
 def test_empty_table_writes_a_header_only(tmp_path):
     path = tolerance.latex_table(pd.DataFrame(), tmp_path / "t.tex")
     assert "\\bottomrule" in path.read_text()

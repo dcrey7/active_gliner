@@ -123,7 +123,12 @@ def main(argv: list[str] | None = None) -> int:
             continue
         if name == "rank":
             sub.add_argument("--n", type=int, default=1000)
-            sub.add_argument("--human-share", type=float, default=0.25)
+            sub.add_argument(
+                "--human-share",
+                type=float,
+                default=None,
+                help="share of the top n for humans; default: by task type",
+            )
             sub.add_argument("--seed", type=int, default=1)
             sub.add_argument("--out", dest="out_dir", default="active-gliner-rank", type=Path)
             continue
