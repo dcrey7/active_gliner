@@ -117,6 +117,69 @@ def test_split_for_humans_is_a_seeded_random_share():
         byod.split_for_humans(rows, 1.5, seed=3)
 
 
+def test_default_human_share_follows_the_paper_recipe():
+    # The recipe table of the paper prints these shares from the run logs (numbers.tex).
+    numbers = Path(__file__).parents[1] / "paper" / "numbers.tex"
+    text = numbers.read_text(encoding="utf-8")
+    tags = {
+        "decision": "Decision",
+        "ner": "NER",
+        "classification": "MultiLabel",
+        "relations": "Relations",
+        "slots": "Slots",
+    }
+    for task, tag in tags.items():
+        macro = f"\\newcommand{{\\TaskType{tag}DefaultHumanShare}}"
+        value = text.split(macro, 1)[1].split("}", 1)[0].lstrip("{")
+        assert byod.DEFAULT_HUMAN_SHARE[task] == int(value) / 100
+
+
+def test_plan_accepts_an_empty_llm_file_when_all_texts_went_to_humans(tmp_path):
+    p = tmp_path / "for_llm.jsonl"
+    p.write_text("")
+    assert byod.plan(p, "slots", "date", None, "all", 1)["n"] == 0
+    with pytest.raises(ValueError):
+        byod.plan(p, "slots", "date", 1, "min", 1)
+
+
+@pytest.mark.model
+def test_fit_trains_on_human_labels_only_when_no_text_is_left_for_the_llm(tmp_path):
+    import torch
+
+    if not torch.cuda.is_available():
+        pytest.skip("needs the GPU")
+
+    def handler(request):
+        raise AssertionError("the LLM must not be called")
+
+    p = tmp_path / "texts.jsonl"
+    _write(p, [{"text": f"is item {i} in stock ?"} for i in range(30)])
+    ranked = byod.rank(p, "decision", "yes,no", n=10, human_share=1.0, out_dir=tmp_path / "r")
+    assert (ranked / "for_llm.jsonl").read_text() == ""
+    humans = [json.loads(line) for line in (ranked / "for_humans.jsonl").read_text().splitlines()]
+    labelled = tmp_path / "human.jsonl"
+    _write(labelled, [{"text": row["text"], "label": "no"} for row in humans])
+    dev = tmp_path / "dev.jsonl"
+    _write(dev, [{"text": "is the box in stock ?", "label": "yes"}])
+    out = byod.fit(
+        texts=ranked / "for_llm.jsonl",
+        task="decision",
+        labels="yes,no",
+        teacher_url="http://fake/v1",
+        teacher_model="fake",
+        select="all",
+        human=labelled,
+        dev=dev,
+        max_steps=4,
+        eval_steps=2,
+        out_dir=tmp_path / "out",
+        transport=httpx.MockTransport(handler),
+    )
+    split = json.loads((out / "split_ids.json").read_text())
+    assert len(split["train"]) == 10 and all(i.startswith("human:") for i in split["train"])
+    assert (out / "adapter/best/adapter_config.json").exists()
+
+
 @pytest.mark.model
 def test_rank_then_fit_mixes_human_and_llm_labels(tmp_path):
     import torch

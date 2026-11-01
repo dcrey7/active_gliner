@@ -219,6 +219,10 @@ def ladder_macros(ladder: dict) -> dict:
         if overlap is not None:
             macros[name + "Overlap"] = overlap
         macros[name + "Sentences"] = entry["n"]
+    # The larger teacher is "better" where the whole gap interval lies above zero.
+    gaps = [entry["gap"] for entry in ladder.values() if "gap" in entry]
+    macros["LadderPlaces"] = len(gaps)
+    macros["LadderBetterCount"] = sum(gap["interval"]["low"] > 0 for gap in gaps)
     return macros
 
 

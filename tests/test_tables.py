@@ -172,6 +172,7 @@ def test_teacher_and_ladder_macros():
     assert macros["LadderBCfiveCDRTwelveB"] == 82.0
     assert macros["LadderBCfiveCDRGapLow"] == 3.0
     assert macros["LadderBCfiveCDROverlap"] == 0.6
+    assert macros["LadderPlaces"] == 1 and macros["LadderBetterCount"] == 1
     numbers.write_macros("/dev/null", macros)  # raises on a bad name
 
 
