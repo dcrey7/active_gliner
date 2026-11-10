@@ -1,3 +1,5 @@
+% arXiv compiles with pdfLaTeX and looks for this line; Tectonic (XeTeX) must skip it.
+\ifdefined\XeTeXversion\else\pdfoutput=1\fi
 \documentclass[11pt]{article}
 \usepackage[preprint]{acl}
 \usepackage{times}
